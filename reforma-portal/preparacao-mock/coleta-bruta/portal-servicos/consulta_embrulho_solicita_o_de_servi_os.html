@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="csrf-token" content="WCY4OTxxsBrOUFaCCe5K1pnLes5uJVeV3kkJEulq" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SEDUR - Portal de serviços da Prefeitura Municipal de Salvador</title>
+
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            localStorage.setItem('theme', 'light');
+            window.Alpine.store('theme', 'light');
+        });
+    </script>
+
+    <script type="text/javascript">const Ziggy={"url":"http:\/\/servicos.sedur.salvador.ba.gov.br","port":null,"defaults":{},"routes":{"filament.exports.download":{"uri":"filament\/exports\/{export}\/download","methods":["GET","HEAD"],"parameters":["export"],"bindings":{"export":"id"}},"filament.imports.failed-rows.download":{"uri":"filament\/imports\/{import}\/failed-rows\/download","methods":["GET","HEAD"],"parameters":["import"],"bindings":{"import":"id"}},"default.livewire.update":{"uri":"livewire\/update","methods":["POST"]},"livewire.upload-file":{"uri":"livewire\/upload-file","methods":["POST"]},"livewire.preview-file":{"uri":"livewire\/preview-file\/{filename}","methods":["GET","HEAD"],"parameters":["filename"]},"shared.servicos.pix.gerar":{"uri":"shared\/servicos\/pix","methods":["GET","HEAD"]},"shared.servicos.pix.consultar":{"uri":"shared\/servicos\/pix\/{barcode}","methods":["GET","HEAD"],"parameters":["barcode"]},"ignition.healthCheck":{"uri":"_ignition\/health-check","methods":["GET","HEAD"]},"ignition.executeSolution":{"uri":"_ignition\/execute-solution","methods":["POST"]},"ignition.updateConfig":{"uri":"_ignition\/update-config","methods":["POST"]},"home":{"uri":"\/","methods":["GET","HEAD"]},"contato":{"uri":"contato","methods":["GET","HEAD"]},"formularios":{"uri":"formularios","methods":["GET","HEAD"]},"geoservicos":{"uri":"geoservicos","methods":["GET","HEAD"]},"instabilidade":{"uri":"instabilidade","methods":["GET","HEAD"]},"consultas":{"uri":"consultas","methods":["GET","HEAD"]},"consultas.auto-de-infracao":{"uri":"consultas\/auto-de-infracao","methods":["GET","HEAD"]},"consultas.classificacao-risco":{"uri":"consultas\/classificacao-risco","methods":["GET","HEAD"]},"consultas.atividades-permitidas-autonomos":{"uri":"consultas\/atividades-permitidas-autonomos","methods":["GET","HEAD"]},"consultas.atividades-permitidas-residencias":{"uri":"consultas\/atividades-permitidas-residencias","methods":["GET","HEAD"]},"paginas.iframe":{"uri":"paginas\/iframe\/{data}","methods":["GET","HEAD"],"parameters":["data"]},"paginas.iptu-verde":{"uri":"paginas\/iptu-verde","methods":["GET","HEAD"]},"carta":{"uri":"carta-servicos","methods":["GET","HEAD"]},"carta.servicosDispensadosLicenca":{"uri":"carta-servicos\/servicos-dispensados-licenca","methods":["GET","HEAD"]},"carta.grupo":{"uri":"carta-servicos\/{codigo}","methods":["GET","HEAD"],"parameters":["codigo"]},"servico":{"uri":"carta-servicos\/detalhe-servico\/{codigo}","methods":["GET","HEAD"],"parameters":["codigo"]},"servico.iframe":{"uri":"carta-servicos\/detalhe-servico\/{codigo}\/iframe","methods":["GET","HEAD"],"parameters":["codigo"]},"lei-transparencia":{"uri":"lei-transparencia","methods":["GET","HEAD"]},"transparencia.carnaval.index":{"uri":"transparencia\/carnaval","methods":["GET","HEAD"]},"transparencia.carnaval.publicidade":{"uri":"transparencia\/carnaval\/publicidade","methods":["GET","HEAD"]},"transparencia.carnaval.exploracao":{"uri":"transparencia\/carnaval\/exploracao","methods":["GET","HEAD"]},"transparencia.carnaval.praticavel":{"uri":"transparencia\/carnaval\/praticavel","methods":["GET","HEAD"]},"transparencia.carnaval.balcao":{"uri":"transparencia\/carnaval\/balcao","methods":["GET","HEAD"]},"govbr":{"uri":"govbr","methods":["GET","HEAD"]},"storage":{"uri":"storage\/{path}","methods":["GET","HEAD"],"wheres":{"path":".*"},"parameters":["path"]}}};!function(t,e){"object"==typeof exports&&"undefined"!=typeof module?module.exports=e():"function"==typeof define&&define.amd?define(e):(t||self).route=e()}(this,function(){function t(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,u(r.key),r)}}function e(e,n,r){return n&&t(e.prototype,n),r&&t(e,r),Object.defineProperty(e,"prototype",{writable:!1}),e}function n(){return n=Object.assign?Object.assign.bind():function(t){for(var e=1;e<arguments.length;e++){var n=arguments[e];for(var r in n)({}).hasOwnProperty.call(n,r)&&(t[r]=n[r])}return t},n.apply(null,arguments)}function r(t){return r=Object.setPrototypeOf?Object.getPrototypeOf.bind():function(t){return t.__proto__||Object.getPrototypeOf(t)},r(t)}function o(){try{var t=!Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],function(){}))}catch(t){}return(o=function(){return!!t})()}function i(t,e){return i=Object.setPrototypeOf?Object.setPrototypeOf.bind():function(t,e){return t.__proto__=e,t},i(t,e)}function u(t){var e=function(t){if("object"!=typeof t||!t)return t;var e=t[Symbol.toPrimitive];if(void 0!==e){var n=e.call(t,"string");if("object"!=typeof n)return n;throw new TypeError("@@toPrimitive must return a primitive value.")}return String(t)}(t);return"symbol"==typeof e?e:e+""}function f(t){var e="function"==typeof Map?new Map:void 0;return f=function(t){if(null===t||!function(t){try{return-1!==Function.toString.call(t).indexOf("[native code]")}catch(e){return"function"==typeof t}}(t))return t;if("function"!=typeof t)throw new TypeError("Super expression must either be null or a function");if(void 0!==e){if(e.has(t))return e.get(t);e.set(t,n)}function n(){return function(t,e,n){if(o())return Reflect.construct.apply(null,arguments);var r=[null];r.push.apply(r,e);var u=new(t.bind.apply(t,r));return n&&i(u,n.prototype),u}(t,arguments,r(this).constructor)}return n.prototype=Object.create(t.prototype,{constructor:{value:n,enumerable:!1,writable:!0,configurable:!0}}),i(n,t)},f(t)}const c=String.prototype.replace,l=/%20/g,a={RFC1738:function(t){return c.call(t,l,"+")},RFC3986:function(t){return String(t)}};var s="RFC3986";const p=Object.prototype.hasOwnProperty,y=Array.isArray,d=new WeakMap;var b=function(t,e){return d.set(t,e),t};function v(t){return d.has(t)}var h=function(t){return d.get(t)},m=function(t,e){d.set(t,e)};const g=function(){const t=[];for(let e=0;e<256;++e)t.push("%"+((e<16?"0":"")+e.toString(16)).toUpperCase());return t}(),w=function(t,e){const n=e&&e.plainObjects?Object.create(null):{};for(let e=0;e<t.length;++e)void 0!==t[e]&&(n[e]=t[e]);return n},j=function t(e,n,r){if(!n)return e;if("object"!=typeof n){if(y(e))e.push(n);else{if(!e||"object"!=typeof e)return[e,n];if(v(e)){var o=h(e)+1;e[o]=n,m(e,o)}else(r&&(r.plainObjects||r.allowPrototypes)||!p.call(Object.prototype,n))&&(e[n]=!0)}return e}if(!e||"object"!=typeof e){if(v(n)){for(var i=Object.keys(n),u=r&&r.plainObjects?{__proto__:null,0:e}:{0:e},f=0;f<i.length;f++)u[parseInt(i[f],10)+1]=n[i[f]];return b(u,h(n)+1)}return[e].concat(n)}let c=e;return y(e)&&!y(n)&&(c=w(e,r)),y(e)&&y(n)?(n.forEach(function(n,o){if(p.call(e,o)){const i=e[o];i&&"object"==typeof i&&n&&"object"==typeof n?e[o]=t(i,n,r):e.push(n)}else e[o]=n}),e):Object.keys(n).reduce(function(e,o){const i=n[o];return e[o]=p.call(e,o)?t(e[o],i,r):i,e},c)},O=1024,E=function(t,e,n,r){if(v(t)){var o=h(t)+1;return t[o]=e,m(t,o),t}var i=[].concat(t,e);return i.length>n?b(w(i,{plainObjects:r}),i.length-1):i},T=function(t,e){if(y(t)){const n=[];for(let r=0;r<t.length;r+=1)n.push(e(t[r]));return n}return e(t)},R=Object.prototype.hasOwnProperty,k={brackets:function(t){return t+"[]"},comma:"comma",indices:function(t,e){return t+"["+e+"]"},repeat:function(t){return t}},S=Array.isArray,I=Array.prototype.push,A=function(t,e){I.apply(t,S(e)?e:[e])},D=Date.prototype.toISOString,$={addQueryPrefix:!1,allowDots:!1,allowEmptyArrays:!1,arrayFormat:"indices",charset:"utf-8",charsetSentinel:!1,delimiter:"&",encode:!0,encodeDotInKeys:!1,encoder:function(t,e,n,r,o){if(0===t.length)return t;let i=t;if("symbol"==typeof t?i=Symbol.prototype.toString.call(t):"string"!=typeof t&&(i=String(t)),"iso-8859-1"===n)return escape(i).replace(/%u[0-9a-f]{4}/gi,function(t){return"%26%23"+parseInt(t.slice(2),16)+"%3B"});let u="";for(let t=0;t<i.length;t+=O){const e=i.length>=O?i.slice(t,t+O):i,n=[];for(let t=0;t<e.length;++t){let r=e.charCodeAt(t);45===r||46===r||95===r||126===r||r>=48&&r<=57||r>=65&&r<=90||r>=97&&r<=122||"RFC1738"===o&&(40===r||41===r)?n[n.length]=e.charAt(t):r<128?n[n.length]=g[r]:r<2048?n[n.length]=g[192|r>>6]+g[128|63&r]:r<55296||r>=57344?n[n.length]=g[224|r>>12]+g[128|r>>6&63]+g[128|63&r]:(t+=1,r=65536+((1023&r)<<10|1023&e.charCodeAt(t)),n[n.length]=g[240|r>>18]+g[128|r>>12&63]+g[128|r>>6&63]+g[128|63&r])}u+=n.join("")}return u},encodeValuesOnly:!1,format:s,formatter:a[s],indices:!1,serializeDate:function(t){return D.call(t)},skipNulls:!1,strictNullHandling:!1},N={},_=function(t,e,n,r,o,i,u,f,c,l,a,s,p,y,d,b,v,h){let m=t,g=h,w=0,j=!1;for(;void 0!==(g=g.get(N))&&!j;){const e=g.get(t);if(w+=1,void 0!==e){if(e===w)throw new RangeError("Cyclic object value");j=!0}void 0===g.get(N)&&(w=0)}if("function"==typeof l?m=l(e,m):m instanceof Date?m=p(m):"comma"===n&&S(m)&&(m=T(m,function(t){return t instanceof Date?p(t):t})),null===m){if(i)return c&&!b?c(e,$.encoder,v,"key",y):e;m=""}if("string"==typeof(O=m)||"number"==typeof O||"boolean"==typeof O||"symbol"==typeof O||"bigint"==typeof O||function(t){return!(!t||"object"!=typeof t||!(t.constructor&&t.constructor.isBuffer&&t.constructor.isBuffer(t)))}(m))return c?[d(b?e:c(e,$.encoder,v,"key",y))+"="+d(c(m,$.encoder,v,"value",y))]:[d(e)+"="+d(String(m))];var O;const E=[];if(void 0===m)return E;let R;if("comma"===n&&S(m))b&&c&&(m=T(m,c)),R=[{value:m.length>0?m.join(",")||null:void 0}];else if(S(l))R=l;else{const t=Object.keys(m);R=a?t.sort(a):t}const k=f?e.replace(/\./g,"%2E"):e,I=r&&S(m)&&1===m.length?k+"[]":k;if(o&&S(m)&&0===m.length)return I+"[]";for(let e=0;e<R.length;++e){const g=R[e],j="object"==typeof g&&void 0!==g.value?g.value:m[g];if(u&&null===j)continue;const O=s&&f?g.replace(/\./g,"%2E"):g,T=S(m)?"function"==typeof n?n(I,O):I:I+(s?"."+O:"["+O+"]");h.set(t,w);const k=new WeakMap;k.set(N,h),A(E,_(j,T,n,r,o,i,u,f,"comma"===n&&b&&S(m)?null:c,l,a,s,p,y,d,b,v,k))}return E},x=Object.prototype.hasOwnProperty,C=Array.isArray,P={allowDots:!1,allowEmptyArrays:!1,allowPrototypes:!1,allowSparse:!1,arrayLimit:20,charset:"utf-8",charsetSentinel:!1,comma:!1,decodeDotInKeys:!1,decoder:function(t,e,n){const r=t.replace(/\+/g," ");if("iso-8859-1"===n)return r.replace(/%[0-9a-f]{2}/gi,unescape);try{return decodeURIComponent(r)}catch(t){return r}},delimiter:"&",depth:5,duplicates:"combine",ignoreQueryPrefix:!1,interpretNumericEntities:!1,parameterLimit:1e3,parseArrays:!0,plainObjects:!1,strictNullHandling:!1},F=function(t){return t.replace(/&#(\d+);/g,function(t,e){return String.fromCharCode(parseInt(e,10))})},U=function(t,e){return t&&"string"==typeof t&&e.comma&&t.indexOf(",")>-1?t.split(","):t},q=function(t,e,n,r){if(!t)return;const o=n.allowDots?t.replace(/\.([^.[]+)/g,"[$1]"):t,i=/(\[[^[\]]*])/g;let u=n.depth>0&&/(\[[^[\]]*])/.exec(o);const f=u?o.slice(0,u.index):o,c=[];if(f){if(!n.plainObjects&&x.call(Object.prototype,f)&&!n.allowPrototypes)return;c.push(f)}let l=0;for(;n.depth>0&&null!==(u=i.exec(o))&&l<n.depth;){if(l+=1,!n.plainObjects&&x.call(Object.prototype,u[1].slice(1,-1))&&!n.allowPrototypes)return;c.push(u[1])}return u&&c.push("["+o.slice(u.index)+"]"),function(t,e,n,r){let o=r?e:U(e,n);for(let e=t.length-1;e>=0;--e){let r;const i=t[e];if("[]"===i&&n.parseArrays)r=v(o)?o:n.allowEmptyArrays&&(""===o||n.strictNullHandling&&null===o)?[]:E([],o,n.arrayLimit,n.plainObjects);else{r=n.plainObjects?Object.create(null):{};const t="["===i.charAt(0)&&"]"===i.charAt(i.length-1)?i.slice(1,-1):i,e=n.decodeDotInKeys?t.replace(/%2E/g,"."):t,u=parseInt(e,10);n.parseArrays||""!==e?!isNaN(u)&&i!==e&&String(u)===e&&u>=0&&n.parseArrays&&u<=n.arrayLimit?(r=[],r[u]=o):"__proto__"!==e&&(r[e]=o):r={0:o}}o=r}return o}(c,e,n,r)};function K(t,e){const n=function(t){if(!t)return P;if(void 0!==t.allowEmptyArrays&&"boolean"!=typeof t.allowEmptyArrays)throw new TypeError("`allowEmptyArrays` option can only be `true` or `false`, when provided");if(void 0!==t.decodeDotInKeys&&"boolean"!=typeof t.decodeDotInKeys)throw new TypeError("`decodeDotInKeys` option can only be `true` or `false`, when provided");if(null!=t.decoder&&"function"!=typeof t.decoder)throw new TypeError("Decoder has to be a function.");if(void 0!==t.charset&&"utf-8"!==t.charset&&"iso-8859-1"!==t.charset)throw new TypeError("The charset option must be either utf-8, iso-8859-1, or undefined");const e=void 0===t.charset?P.charset:t.charset,n=void 0===t.duplicates?P.duplicates:t.duplicates;if("combine"!==n&&"first"!==n&&"last"!==n)throw new TypeError("The duplicates option must be either combine, first, or last");return{allowDots:void 0===t.allowDots?!0===t.decodeDotInKeys||P.allowDots:!!t.allowDots,allowEmptyArrays:"boolean"==typeof t.allowEmptyArrays?!!t.allowEmptyArrays:P.allowEmptyArrays,allowPrototypes:"boolean"==typeof t.allowPrototypes?t.allowPrototypes:P.allowPrototypes,allowSparse:"boolean"==typeof t.allowSparse?t.allowSparse:P.allowSparse,arrayLimit:"number"==typeof t.arrayLimit?t.arrayLimit:P.arrayLimit,charset:e,charsetSentinel:"boolean"==typeof t.charsetSentinel?t.charsetSentinel:P.charsetSentinel,comma:"boolean"==typeof t.comma?t.comma:P.comma,decodeDotInKeys:"boolean"==typeof t.decodeDotInKeys?t.decodeDotInKeys:P.decodeDotInKeys,decoder:"function"==typeof t.decoder?t.decoder:P.decoder,delimiter:"string"==typeof t.delimiter||(r=t.delimiter,"[object RegExp]"===Object.prototype.toString.call(r))?t.delimiter:P.delimiter,depth:"number"==typeof t.depth||!1===t.depth?+t.depth:P.depth,duplicates:n,ignoreQueryPrefix:!0===t.ignoreQueryPrefix,interpretNumericEntities:"boolean"==typeof t.interpretNumericEntities?t.interpretNumericEntities:P.interpretNumericEntities,parameterLimit:"number"==typeof t.parameterLimit?t.parameterLimit:P.parameterLimit,parseArrays:!1!==t.parseArrays,plainObjects:"boolean"==typeof t.plainObjects?t.plainObjects:P.plainObjects,strictNullHandling:"boolean"==typeof t.strictNullHandling?t.strictNullHandling:P.strictNullHandling};var r}(e);if(""===t||null==t)return n.plainObjects?Object.create(null):{};const r="string"==typeof t?function(t,e){const n={__proto__:null},r=(e.ignoreQueryPrefix?t.replace(/^\?/,""):t).split(e.delimiter,Infinity===e.parameterLimit?void 0:e.parameterLimit);let o,i=-1,u=e.charset;if(e.charsetSentinel)for(o=0;o<r.length;++o)0===r[o].indexOf("utf8=")&&("utf8=%E2%9C%93"===r[o]?u="utf-8":"utf8=%26%2310003%3B"===r[o]&&(u="iso-8859-1"),i=o,o=r.length);for(o=0;o<r.length;++o){if(o===i)continue;const t=r[o],f=t.indexOf("]="),c=-1===f?t.indexOf("="):f+1;let l,a;-1===c?(l=e.decoder(t,P.decoder,u,"key"),a=e.strictNullHandling?null:""):(l=e.decoder(t.slice(0,c),P.decoder,u,"key"),a=T(U(t.slice(c+1),e),function(t){return e.decoder(t,P.decoder,u,"value")})),a&&e.interpretNumericEntities&&"iso-8859-1"===u&&(a=F(a)),t.indexOf("[]=")>-1&&(a=C(a)?[a]:a);const s=x.call(n,l);s&&"combine"===e.duplicates?n[l]=E(n[l],a,e.arrayLimit,e.plainObjects):s&&"last"!==e.duplicates||(n[l]=a)}return n}(t,n):t;let o=n.plainObjects?Object.create(null):{};const i=Object.keys(r);for(let e=0;e<i.length;++e){const u=i[e],f=q(u,r[u],n,"string"==typeof t);o=j(o,f,n)}return!0===n.allowSparse?o:function(t){const e=[{obj:{o:t},prop:"o"}],n=[];for(let t=0;t<e.length;++t){const r=e[t],o=r.obj[r.prop],i=Object.keys(o);for(let t=0;t<i.length;++t){const r=i[t],u=o[r];"object"==typeof u&&null!==u&&-1===n.indexOf(u)&&(e.push({obj:o,prop:r}),n.push(u))}}return function(t){for(;t.length>1;){const e=t.pop(),n=e.obj[e.prop];if(y(n)){const t=[];for(let e=0;e<n.length;++e)void 0!==n[e]&&t.push(n[e]);e.obj[e.prop]=t}}}(e),t}(o)}var Z=/*#__PURE__*/function(){function t(t,e,n){var r,o;this.name=t,this.definition=e,this.bindings=null!=(r=e.bindings)?r:{},this.wheres=null!=(o=e.wheres)?o:{},this.config=n}var n=t.prototype;return n.matchesUrl=function(t){var e,n=this;if(!this.definition.methods.includes("GET"))return!1;var r=this.template.replace(/[.*+$()[\]]/g,"\\$&").replace(/(\/?){([^}?]*)(\??)}/g,function(t,e,r,o){var i,u="(?<"+r+">"+((null==(i=n.wheres[r])?void 0:i.replace(/(^\^)|(\$$)/g,""))||"[^/?]+")+")";return o?"("+e+u+")?":""+e+u}).replace(/^\w+:\/\//,""),o=t.replace(/^\w+:\/\//,"").split("?"),i=o[0],u=o[1],f=null!=(e=new RegExp("^"+r+"/?$").exec(i))?e:new RegExp("^"+r+"/?$").exec(decodeURI(i));if(f){for(var c in f.groups)f.groups[c]="string"==typeof f.groups[c]?decodeURIComponent(f.groups[c]):f.groups[c];return{params:f.groups,query:K(u)}}return!1},n.compile=function(t){var e=this;return this.parameterSegments.length?this.template.replace(/{([^}?]+)(\??)}/g,function(n,r,o){var i,u;if(!o&&[null,void 0].includes(t[r]))throw new Error("Ziggy error: '"+r+"' parameter is required for route '"+e.name+"'.");if(e.wheres[r]&&!new RegExp("^"+(o?"("+e.wheres[r]+")?":e.wheres[r])+"$").test(null!=(u=t[r])?u:""))throw new Error("Ziggy error: '"+r+"' parameter '"+t[r]+"' does not match required format '"+e.wheres[r]+"' for route '"+e.name+"'.");return encodeURI(null!=(i=t[r])?i:"").replace(/%7C/g,"|").replace(/%25/g,"%").replace(/\$/g,"%24")}).replace(this.config.absolute?/(\.[^/]+?)(\/\/)/:/(^)(\/\/)/,"$1/").replace(/\/+$/,""):this.template},e(t,[{key:"template",get:function(){var t=(this.origin+"/"+this.definition.uri).replace(/\/+$/,"");return""===t?"/":t}},{key:"origin",get:function(){return this.config.absolute?this.definition.domain?""+this.config.url.match(/^\w+:\/\//)[0]+this.definition.domain+(this.config.port?":"+this.config.port:""):this.config.url:""}},{key:"parameterSegments",get:function(){var t,e;return null!=(t=null==(e=this.template.match(/{[^}?]+\??}/g))?void 0:e.map(function(t){return{name:t.replace(/{|\??}/g,""),required:!/\?}$/.test(t)}}))?t:[]}}])}(),B=/*#__PURE__*/function(t){function r(e,r,o,i){var u;if(void 0===o&&(o=!0),(u=t.call(this)||this).t=null!=i?i:"undefined"!=typeof Ziggy?Ziggy:null==globalThis?void 0:globalThis.Ziggy,!u.t&&"undefined"!=typeof document&&document.getElementById("ziggy-routes-json")&&(globalThis.Ziggy=JSON.parse(document.getElementById("ziggy-routes-json").textContent),u.t=globalThis.Ziggy),u.t=n({},u.t,{absolute:o}),e){if(!u.t.routes[e])throw new Error("Ziggy error: route '"+e+"' is not in the route list.");u.i=new Z(e,u.t.routes[e],u.t),u.u=u.l(r)}return u}var o,u;u=t,(o=r).prototype=Object.create(u.prototype),o.prototype.constructor=o,i(o,u);var f=r.prototype;return f.toString=function(){var t=this,e=Object.keys(this.u).filter(function(e){return!t.i.parameterSegments.some(function(t){return t.name===e})}).filter(function(t){return"_query"!==t}).reduce(function(e,r){var o;return n({},e,((o={})[r]=t.u[r],o))},{});return this.i.compile(this.u)+function(t,e){let n=t;const r=function(t){if(!t)return $;if(void 0!==t.allowEmptyArrays&&"boolean"!=typeof t.allowEmptyArrays)throw new TypeError("`allowEmptyArrays` option can only be `true` or `false`, when provided");if(void 0!==t.encodeDotInKeys&&"boolean"!=typeof t.encodeDotInKeys)throw new TypeError("`encodeDotInKeys` option can only be `true` or `false`, when provided");if(null!=t.encoder&&"function"!=typeof t.encoder)throw new TypeError("Encoder has to be a function.");const e=t.charset||$.charset;if(void 0!==t.charset&&"utf-8"!==t.charset&&"iso-8859-1"!==t.charset)throw new TypeError("The charset option must be either utf-8, iso-8859-1, or undefined");let n=s;if(void 0!==t.format){if(!R.call(a,t.format))throw new TypeError("Unknown format option provided.");n=t.format}const r=a[n];let o,i=$.filter;if(("function"==typeof t.filter||S(t.filter))&&(i=t.filter),o=t.arrayFormat in k?t.arrayFormat:"indices"in t?t.indices?"indices":"repeat":$.arrayFormat,"commaRoundTrip"in t&&"boolean"!=typeof t.commaRoundTrip)throw new TypeError("`commaRoundTrip` must be a boolean, or absent");return{addQueryPrefix:"boolean"==typeof t.addQueryPrefix?t.addQueryPrefix:$.addQueryPrefix,allowDots:void 0===t.allowDots?!0===t.encodeDotInKeys||$.allowDots:!!t.allowDots,allowEmptyArrays:"boolean"==typeof t.allowEmptyArrays?!!t.allowEmptyArrays:$.allowEmptyArrays,arrayFormat:o,charset:e,charsetSentinel:"boolean"==typeof t.charsetSentinel?t.charsetSentinel:$.charsetSentinel,commaRoundTrip:t.commaRoundTrip,delimiter:void 0===t.delimiter?$.delimiter:t.delimiter,encode:"boolean"==typeof t.encode?t.encode:$.encode,encodeDotInKeys:"boolean"==typeof t.encodeDotInKeys?t.encodeDotInKeys:$.encodeDotInKeys,encoder:"function"==typeof t.encoder?t.encoder:$.encoder,encodeValuesOnly:"boolean"==typeof t.encodeValuesOnly?t.encodeValuesOnly:$.encodeValuesOnly,filter:i,format:n,formatter:r,serializeDate:"function"==typeof t.serializeDate?t.serializeDate:$.serializeDate,skipNulls:"boolean"==typeof t.skipNulls?t.skipNulls:$.skipNulls,sort:"function"==typeof t.sort?t.sort:null,strictNullHandling:"boolean"==typeof t.strictNullHandling?t.strictNullHandling:$.strictNullHandling}}(e);let o,i;"function"==typeof r.filter?(i=r.filter,n=i("",n)):S(r.filter)&&(i=r.filter,o=i);const u=[];if("object"!=typeof n||null===n)return"";const f=k[r.arrayFormat],c="comma"===f&&r.commaRoundTrip;o||(o=Object.keys(n)),r.sort&&o.sort(r.sort);const l=new WeakMap;for(let t=0;t<o.length;++t){const e=o[t];r.skipNulls&&null===n[e]||A(u,_(n[e],e,f,c,r.allowEmptyArrays,r.strictNullHandling,r.skipNulls,r.encodeDotInKeys,r.encode?r.encoder:null,r.filter,r.sort,r.allowDots,r.serializeDate,r.format,r.formatter,r.encodeValuesOnly,r.charset,l))}const p=u.join(r.delimiter);let y=!0===r.addQueryPrefix?"?":"";return r.charsetSentinel&&(y+="iso-8859-1"===r.charset?"utf8=%26%2310003%3B&":"utf8=%E2%9C%93&"),p.length>0?y+p:""}(n({},e,this.u._query),{addQueryPrefix:!0,arrayFormat:"indices",encodeValuesOnly:!0,skipNulls:!0,encoder:function(t,e){return"boolean"==typeof t?Number(t):e(t)}})},f.p=function(t){var e=this;t?this.t.absolute&&t.startsWith("/")&&(t=this.v().host+t):t=this.h();var r={},o=Object.entries(this.t.routes).find(function(n){return r=new Z(n[0],n[1],e.t).matchesUrl(t)})||[void 0,void 0];return n({name:o[0]},r,{route:o[1]})},f.h=function(){var t=this.v(),e=t.pathname,n=t.search;return(this.t.absolute?t.host+e:e.replace(this.t.url.replace(/^\w*:\/\/[^/]+/,""),"").replace(/^\/+/,"/"))+n},f.current=function(t,e){var r=this.p(),o=r.name,i=r.params,u=r.query,f=r.route;if(!t)return o;var c=new RegExp("^"+t.replace(/\./g,"\\.").replace(/\*/g,".*")+"$").test(o);if([null,void 0].includes(e)||!c)return c;var l=new Z(o,f,this.t);e=this.l(e,l);var a=n({},i,u);if(Object.values(e).every(function(t){return!t})&&!Object.values(a).some(function(t){return void 0!==t}))return!0;var s=function(t,e){return Object.entries(t).every(function(t){var n=t[0],r=t[1];return Array.isArray(r)&&Array.isArray(e[n])?r.every(function(t){return e[n].includes(t)||e[n].includes(decodeURIComponent(t))}):"object"==typeof r&&"object"==typeof e[n]&&null!==r&&null!==e[n]?s(r,e[n]):e[n]==r||e[n]==decodeURIComponent(r)})};return s(e,a)},f.v=function(){var t,e,n,r,o,i,u="undefined"!=typeof window?window.location:{},f=u.host,c=u.pathname,l=u.search;return{host:null!=(t=null==(e=this.t.location)?void 0:e.host)?t:void 0===f?"":f,pathname:null!=(n=null==(r=this.t.location)?void 0:r.pathname)?n:void 0===c?"":c,search:null!=(o=null==(i=this.t.location)?void 0:i.search)?o:void 0===l?"":l}},f.has=function(t){return this.t.routes.hasOwnProperty(t)},f.l=function(t,e){var r=this;void 0===t&&(t={}),void 0===e&&(e=this.i),null!=t||(t={}),t=["string","number"].includes(typeof t)?[t]:t;var o=e.parameterSegments.filter(function(t){return!r.t.defaults[t.name]});if(Array.isArray(t))t=t.reduce(function(t,e,r){var i,u;return n({},t,o[r]?((i={})[o[r].name]=e,i):"object"==typeof e?e:((u={})[e]="",u))},{});else if(1===o.length&&!t.hasOwnProperty(o[0].name)&&(t.hasOwnProperty(Object.values(e.bindings)[0])||t.hasOwnProperty("id"))){var i;(i={})[o[0].name]=t,t=i}return n({},this.m(e),this.j(t,e))},f.m=function(t){var e=this;return t.parameterSegments.filter(function(t){return e.t.defaults[t.name]}).reduce(function(t,r,o){var i,u=r.name;return n({},t,((i={})[u]=e.t.defaults[u],i))},{})},f.j=function(t,e){var r=e.bindings,o=e.parameterSegments;return Object.entries(t).reduce(function(t,e){var i,u,f=e[0],c=e[1];if(!c||"object"!=typeof c||Array.isArray(c)||!o.some(function(t){return t.name===f}))return n({},t,((u={})[f]=c,u));var l=c.hasOwnProperty(r[f])?r[f]:c.hasOwnProperty("id")?"id":void 0;if(void 0===l)throw new Error("Ziggy error: object passed as '"+f+"' parameter is missing route model binding key '"+r[f]+"'.");return n({},t,((i={})[f]=c[l],i))},{})},f.valueOf=function(){return this.toString()},e(r,[{key:"params",get:function(){var t=this.p();return n({},t.params,t.query)}},{key:"routeParams",get:function(){return this.p().params}},{key:"queryParams",get:function(){return this.p().query}}])}(/*#__PURE__*/f(String));return function(t,e,n,r){var o=new B(t,e,n,r);return t?o.toString():o}});
+</script>        <link rel="preload" as="style" href="http://servicos.sedur.salvador.ba.gov.br/build/assets/app-bdde0d7a.css" /><link rel="modulepreload" href="http://servicos.sedur.salvador.ba.gov.br/build/assets/app-4d66e8fb.js" /><link rel="stylesheet" href="http://servicos.sedur.salvador.ba.gov.br/build/assets/app-bdde0d7a.css" data-navigate-track="reload" /><script type="module" src="http://servicos.sedur.salvador.ba.gov.br/build/assets/app-4d66e8fb.js" data-navigate-track="reload"></script>    <!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+    <link
+            href="http://servicos.sedur.salvador.ba.gov.br/css/husam-tariq/filament-timepicker/husam-tariq/filament-timepicker4.0.2.0.css?v=4.0.2.0"
+            rel="stylesheet"
+            data-navigate-track
+        />
+                <link
+            href="http://servicos.sedur.salvador.ba.gov.br/css/solution-forest/filament-tree/filament-tree-min.css?v=3.1.4.0"
+            rel="stylesheet"
+            data-navigate-track
+        />
+                <link
+            href="http://servicos.sedur.salvador.ba.gov.br/fonts/filament/filament/inter/index.css?v=4.8.4.0"
+            rel="stylesheet"
+            data-navigate-track
+        />
+    
+<style>
+    :root {
+         --danger-50:oklch(0.971 0.013 17.38);  --danger-100:oklch(0.936 0.032 17.717);  --danger-200:oklch(0.885 0.062 18.334);  --danger-300:oklch(0.808 0.114 19.571);  --danger-400:oklch(0.704 0.191 22.216);  --danger-500:oklch(0.637 0.237 25.331);  --danger-600:oklch(0.577 0.245 27.325);  --danger-700:oklch(0.505 0.213 27.518);  --danger-800:oklch(0.444 0.177 26.899);  --danger-900:oklch(0.396 0.141 25.723);  --danger-950:oklch(0.258 0.092 26.042);  --gray-50:oklch(0.985 0 0);  --gray-100:oklch(0.967 0.001 286.375);  --gray-200:oklch(0.92 0.004 286.32);  --gray-300:oklch(0.871 0.006 286.286);  --gray-400:oklch(0.705 0.015 286.067);  --gray-500:oklch(0.552 0.016 285.938);  --gray-600:oklch(0.442 0.017 285.786);  --gray-700:oklch(0.37 0.013 285.805);  --gray-800:oklch(0.274 0.006 286.033);  --gray-900:oklch(0.21 0.006 285.885);  --gray-950:oklch(0.141 0.005 285.823);  --info-50:oklch(0.97 0.014 254.604);  --info-100:oklch(0.932 0.032 255.585);  --info-200:oklch(0.882 0.059 254.128);  --info-300:oklch(0.809 0.105 251.813);  --info-400:oklch(0.707 0.165 254.624);  --info-500:oklch(0.623 0.214 259.815);  --info-600:oklch(0.546 0.245 262.881);  --info-700:oklch(0.488 0.243 264.376);  --info-800:oklch(0.424 0.199 265.638);  --info-900:oklch(0.379 0.146 265.522);  --info-950:oklch(0.282 0.091 267.935);  --primary-50:oklch(0.987 0.022 95.277);  --primary-100:oklch(0.962 0.059 95.617);  --primary-200:oklch(0.924 0.12 95.746);  --primary-300:oklch(0.879 0.169 91.605);  --primary-400:oklch(0.828 0.189 84.429);  --primary-500:oklch(0.769 0.188 70.08);  --primary-600:oklch(0.666 0.179 58.318);  --primary-700:oklch(0.555 0.163 48.998);  --primary-800:oklch(0.473 0.137 46.201);  --primary-900:oklch(0.414 0.112 45.904);  --primary-950:oklch(0.279 0.077 45.635);  --success-50:oklch(0.982 0.018 155.826);  --success-100:oklch(0.962 0.044 156.743);  --success-200:oklch(0.925 0.084 155.995);  --success-300:oklch(0.871 0.15 154.449);  --success-400:oklch(0.792 0.209 151.711);  --success-500:oklch(0.723 0.219 149.579);  --success-600:oklch(0.627 0.194 149.214);  --success-700:oklch(0.527 0.154 150.069);  --success-800:oklch(0.448 0.119 151.328);  --success-900:oklch(0.393 0.095 152.535);  --success-950:oklch(0.266 0.065 152.934);  --warning-50:oklch(0.987 0.022 95.277);  --warning-100:oklch(0.962 0.059 95.617);  --warning-200:oklch(0.924 0.12 95.746);  --warning-300:oklch(0.879 0.169 91.605);  --warning-400:oklch(0.828 0.189 84.429);  --warning-500:oklch(0.769 0.188 70.08);  --warning-600:oklch(0.666 0.179 58.318);  --warning-700:oklch(0.555 0.163 48.998);  --warning-800:oklch(0.473 0.137 46.201);  --warning-900:oklch(0.414 0.112 45.904);  --warning-950:oklch(0.279 0.077 45.635);     }
+
+    </style>
+</head>
+
+<body class="flex flex-col min-h-100vh bg-gray-portal">
+    <div class="flex-1">
+                    <div>
+    <div class="bg-white hidden lg:flex">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-12 items-center py-6">
+                <div class="col-span-2 hidden lg:flex">
+                    <a href="http://servicos.sedur.salvador.ba.gov.br" class="flex items-center">
+                        <img class="w-full" src="http://servicos.sedur.salvador.ba.gov.br/img/logo.svg" alt="Logo"/>
+                    </a>
+                </div>
+                <div class="col-span-10 hidden lg:flex lg:justify-end">
+                    <ul class="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0 items-center">
+                        <li>
+                            <a href="http://servicos.sedur.salvador.ba.gov.br"
+                               class="block py-2 pl-3 pr-4 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                               aria-current="page">
+                                Início
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://servicos.sedur.salvador.ba.gov.br/carta-servicos"
+                               class="block py-2 pl-3 pr-4 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0">
+                                Carta de Serviços
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://servicos.sedur.salvador.ba.gov.br/contato"
+                               class="block py-2 pl-3 pr-4 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0">
+                                Canais de Atendimento
+                            </a>
+                        </li>
+
+                        <li>
+                                                            <a
+                                    href="https://sso.salvador.ba.gov.br/govbr/authorize/?client_id=SedurMais-PortalServicos-Prd&amp;state=http%3A%2F%2Fservicos.sedur.salvador.ba.gov.br%2Fpaginas%2Fiframe%2FeyJ1cmxfaWZyYW1lIjoiaHR0cHM6XC9cL2FwaS5zZWR1ci5zYWx2YWRvci5iYS5nb3YuYnJcL2s4c1wvcHJkXC9zZXJ2aWNvc29ubGluZVwvV2ViXC9jb25zdWx0YXNlLnBocCIsInVybF92b2x0YXIiOiJodHRwOlwvXC9zZXJ2aWNvcy5zZWR1ci5zYWx2YWRvci5iYS5nb3YuYnJcL2NvbnN1bHRhcyIsInVybF9yZWRpcmVjdCI6bnVsbCwidGl0bGUiOiJTb2xpY2l0YVx1MDBlN1x1MDBlM28gZGUgU2VydmlcdTAwZTdvcyIsImNvdmVyX3RpdGxlIjoiQ29uc3VsdGFzIn0%3D"
+                                    class="hidden sm:flex flex-row items-center gap-2 font-medium rounded-full text-sm px-4 py-2 md:px-5 md:py-2.5 bg-gray-100 border-gray-200 border text-blue-portal"
+                                >
+                                    Entrar com
+                                    <img src="http://servicos.sedur.salvador.ba.gov.br/img/logo-gov.png" height="20px" width="60px" alt=""/>
+                                </a>
+                                                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="http://servicos.sedur.salvador.ba.gov.br">
+            <img class="w-[180px]" src="http://servicos.sedur.salvador.ba.gov.br/img/logo.svg" alt=""/>
+        </a>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+    <div class="lg:hidden sidebar overflow-y-scroll flex flex-col min-h-100vh" id="sidebar">
+        <div class="px-5 py-5 flex-1">
+            <a href="http://servicos.sedur.salvador.ba.gov.br">
+                <img class="w-[150px]" src="http://servicos.sedur.salvador.ba.gov.br/img/logo.svg"/>
+            </a>
+            <ul class="sidebar-list">
+                <li>
+                    <hr/>
+                </li>
+                <li>
+                    <a class="text-base text-blue-portal font-bold hover:text-cyan-900" href="/">
+                        Início
+                    </a>
+                </li>
+                <li>
+                    <a class="text-base text-blue-portal font-bold hover:text-cyan-900" href="http://servicos.sedur.salvador.ba.gov.br/carta-servicos">
+                        Carta de Serviços
+                    </a>
+                </li>
+                <li>
+                    <a class="text-base text-blue-portal font-bold hover:text-cyan-900" href="/contato">
+                        Canais de atendimento
+                    </a>
+                </li>
+                <li>
+                    <hr/>
+                </li>
+
+                                    <li>
+                        <a
+                            href="https://sso.salvador.ba.gov.br/govbr/authorize/?client_id=SedurMais-PortalServicos-Prd&amp;state=http%3A%2F%2Fservicos.sedur.salvador.ba.gov.br%2Fpaginas%2Fiframe%2FeyJ1cmxfaWZyYW1lIjoiaHR0cHM6XC9cL2FwaS5zZWR1ci5zYWx2YWRvci5iYS5nb3YuYnJcL2s4c1wvcHJkXC9zZXJ2aWNvc29ubGluZVwvV2ViXC9jb25zdWx0YXNlLnBocCIsInVybF92b2x0YXIiOiJodHRwOlwvXC9zZXJ2aWNvcy5zZWR1ci5zYWx2YWRvci5iYS5nb3YuYnJcL2NvbnN1bHRhcyIsInVybF9yZWRpcmVjdCI6bnVsbCwidGl0bGUiOiJTb2xpY2l0YVx1MDBlN1x1MDBlM28gZGUgU2VydmlcdTAwZTdvcyIsImNvdmVyX3RpdGxlIjoiQ29uc3VsdGFzIn0%3D"
+                            class="bg-yellow-portal px-3 py-2 rounded-lg font-bold text-base text-blue-portal hover:opacity-90 text-center"
+                        >
+                            Entre ou cadastre-se
+                        </a>
+                    </li>
+                            </ul>
+        </div>
+    </div>
+</div>
+        
+        
+        <div wire:snapshot="{&quot;data&quot;:{&quot;data&quot;:[{&quot;url_iframe&quot;:&quot;https:\/\/api.sedur.salvador.ba.gov.br\/k8s\/prd\/servicosonline\/Web\/consultase.php&quot;,&quot;url_voltar&quot;:&quot;http:\/\/servicos.sedur.salvador.ba.gov.br\/consultas&quot;,&quot;url_redirect&quot;:null,&quot;title&quot;:&quot;Solicita\u00e7\u00e3o de Servi\u00e7os&quot;,&quot;cover_title&quot;:&quot;Consultas&quot;},{&quot;s&quot;:&quot;arr&quot;}]},&quot;memo&quot;:{&quot;id&quot;:&quot;HZzWgQAdLqrBV2rKGDtN&quot;,&quot;name&quot;:&quot;app.livewire.paginas.iframe&quot;,&quot;path&quot;:&quot;paginas\/iframe\/eyJ1cmxfaWZyYW1lIjoiaHR0cHM6XC9cL2FwaS5zZWR1ci5zYWx2YWRvci5iYS5nb3YuYnJcL2s4c1wvcHJkXC9zZXJ2aWNvc29ubGluZVwvV2ViXC9jb25zdWx0YXNlLnBocCIsInVybF92b2x0YXIiOiJodHRwOlwvXC9zZXJ2aWNvcy5zZWR1ci5zYWx2YWRvci5iYS5nb3YuYnJcL2NvbnN1bHRhcyIsInVybF9yZWRpcmVjdCI6bnVsbCwidGl0bGUiOiJTb2xpY2l0YVx1MDBlN1x1MDBlM28gZGUgU2VydmlcdTAwZTdvcyIsImNvdmVyX3RpdGxlIjoiQ29uc3VsdGFzIn0=&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;pt_BR&quot;},&quot;checksum&quot;:&quot;9272b56ce5b4d38bf1e9b0ed96361e77cb33e1e6999aba33aefb45854b080f8e&quot;}" wire:effects="{&quot;partials&quot;:[]}" wire:id="HZzWgQAdLqrBV2rKGDtN">
+    <!--[if BLOCK]><![endif]-->        <div
+            class="bg-center bg-no-repeat lg:items-end cover-i py-6 w-full"
+            style="background-image: url(http://servicos.sedur.salvador.ba.gov.br/img/banner-fundo.jpg)"
+        >
+            <div class="container mx-auto">
+                <div class="grid grid-cols-12">
+                    <div class="col-span-12">
+                        <h1 class="text-white font-bold text-3xl sm:text-3xl text-center">
+                            Consultas
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gray-portal py-12 flex-1">
+            <div class="container mx-auto">
+                <div class="grid grid-cols-12 mb-8">
+                    <div class="col-span-12 text-center">
+                        <div class="flex flex-row justify-between items-center">
+                            <div class="flex flex-col items-start text-left">
+                                <div class="text-3xl font-bold text-blue-portal">
+                                    Solicitação de Serviços
+                                </div>
+                            </div>
+
+                            <a
+                                href="http://servicos.sedur.salvador.ba.gov.br/consultas"
+                                class="hover:bg-blue-portal-5 hover:text-white transition-all py-2 px-5 border-[1px] rounded-lg border-blue-portal-5 text-blue-portal-5 flex items-center gap-3"
+                            >
+                                <i class="fa-solid fa-chevron-left"></i> Voltar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-12">
+                    <div class="col-span-12">
+                        <!--[if BLOCK]><![endif]-->                            <iframe src="https://api.sedur.salvador.ba.gov.br/k8s/prd/servicosonline/Web/consultase.php" allowFullScreen class="bg-white w-full h-[500px]"></iframe>
+                        <!--[if ENDBLOCK]><![endif]-->                    </div>
+                </div>
+            </div>
+        </div>
+    <!--[if ENDBLOCK]><![endif]--></div>
+    </div>
+
+            <!--[if BLOCK]><![endif]--><div>
+    <section wire:snapshot="{&quot;data&quot;:{&quot;data&quot;:[{&quot;logo_principal&quot;:&quot;https:\/\/servicos.sedur.salvador.ba.gov.br\/storage\/portal-servicos\/footer\/01JW9M9BW2JPTWKNTFK9SAX8P7.svg&quot;,&quot;logo_secundaria&quot;:&quot;https:\/\/servicos.sedur.salvador.ba.gov.br\/storage\/portal-servicos\/footer\/01JW9M9BYJ76Y0M06Z1XHJDKH8.png&quot;,&quot;endereco&quot;:&quot; Av. ACM, n\u00ba 3224, Caminho das \u00c1rvores - Salvador\/BA. Edf.Empresarial Thom\u00e9 de Souza \/ T\u00e9rreo - CEP.: 41110-700&quot;,&quot;horario_titulo&quot;:&quot;Hor\u00e1rios&quot;,&quot;horario_detalhe&quot;:&quot;Seg. a Sex. 09h \u00e0s 16h&quot;,&quot;icon_horario&quot;:&quot;https:\/\/servicos.sedur.salvador.ba.gov.br\/storage\/&quot;,&quot;direitos&quot;:&quot; \u00a9SEDUR | Todos os direitos reservados.&quot;},{&quot;s&quot;:&quot;arr&quot;}]},&quot;memo&quot;:{&quot;id&quot;:&quot;Adv9Ho9jiseefuTNeubR&quot;,&quot;name&quot;:&quot;paginas.home.componentes.footer&quot;,&quot;path&quot;:&quot;paginas\/iframe\/eyJ1cmxfaWZyYW1lIjoiaHR0cHM6XC9cL2FwaS5zZWR1ci5zYWx2YWRvci5iYS5nb3YuYnJcL2s4c1wvcHJkXC9zZXJ2aWNvc29ubGluZVwvV2ViXC9jb25zdWx0YXNlLnBocCIsInVybF92b2x0YXIiOiJodHRwOlwvXC9zZXJ2aWNvcy5zZWR1ci5zYWx2YWRvci5iYS5nb3YuYnJcL2NvbnN1bHRhcyIsInVybF9yZWRpcmVjdCI6bnVsbCwidGl0bGUiOiJTb2xpY2l0YVx1MDBlN1x1MDBlM28gZGUgU2VydmlcdTAwZTdvcyIsImNvdmVyX3RpdGxlIjoiQ29uc3VsdGFzIn0=&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;pt_BR&quot;},&quot;checksum&quot;:&quot;227b9b4de172bc2ded70347880d4cb2c4fa0f91ca4ea1729105e553d0c45f89a&quot;}" wire:effects="{&quot;partials&quot;:[]}" wire:id="Adv9Ho9jiseefuTNeubR"
+        id="footer"
+        class="bg-blue-portal-5 pt-[50px] pb-[20px] dark:bg-gray-900"
+    >
+        <div class="container mx-auto">
+            <div class="grid grid-cols-12 gap-5 mb-5">
+                <div class="col-span-12 lg:col-span-4 flex flex-col gap-4 items-between">
+                    <div class="flex flex-row items-end gap-5">
+                        <a
+                            class="w-full sm:w-[230px] lg:w-[260px]"
+                            href="http://servicos.sedur.salvador.ba.gov.br"
+                        >
+                            <img
+                                class="flex w-full"
+                                src="https://servicos.sedur.salvador.ba.gov.br/storage/portal-servicos/footer/01JW9M9BW2JPTWKNTFK9SAX8P7.svg"
+                                alt="logo"
+                            />
+                        </a>
+                    </div>
+                </div>
+
+                
+                <div class="col-span-12 lg:col-span-4 flex flex-col gap-2 lg:items-center sm:items-start">
+                    <div class="flex lg:justify-center w-full">
+                        <img
+                            class="flex"
+                            src="https://servicos.sedur.salvador.ba.gov.br/storage/portal-servicos/footer/01JW9M9BYJ76Y0M06Z1XHJDKH8.png"
+                            alt="logo_sedur"
+                            width="60%"
+                        />
+                    </div>
+                    <div class="text-white font-normal text-sm text-center">
+                         Av. ACM, nº 3224, Caminho das Árvores - Salvador/BA. Edf.Empresarial Thomé de Souza / Térreo - CEP.: 41110-700
+                    </div>
+                </div>
+
+                <div class="col-span-12 lg:col-span-4 flex flex-col gap-3 items-center sm:items-start lg:items-end mt-5">
+                    <div class="flex flex-row items-center gap-5">
+                        <div class="w-[40px] h-[40px] bg-gray-200 dark:bg-white rounded-lg flex items-center justify-center">
+                            <img
+                                class="flex"
+                                src="https://servicos.sedur.salvador.ba.gov.br/storage/"
+                                alt="horário"
+                            />
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="text-white text-sm">
+                                Horários
+                            </div>
+                            <div class="text-base text-white font-semibold">
+                                Seg. a Sex. 09h às 16h
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-12 mb-5">
+                <div class="col-span-12">
+                    <div class="h-[1px] bg-white/20 dark:bg-white"></div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-12">
+                <div class="col-span-12 text-center">
+                    <div class="text-white font-normal text-sm">
+                         ©SEDUR | Todos os direitos reservados.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!--[if ENDBLOCK]><![endif]-->    
+    <script src="/livewire/livewire.min.js?id=57eb113f"   data-csrf="WCY4OTxxsBrOUFaCCe5K1pnLes5uJVeV3kkJEulq" data-update-uri="/livewire/update" data-navigate-once="true"></script>
+    <script>
+        window.filamentData = []    </script>
+
+            
+            <script
+                src="http://servicos.sedur.salvador.ba.gov.br/js/filament/actions/actions.js?v=4.8.4.0"
+                
+                
+                
+                
+                
+                
+            ></script>
+        
+                
+            <script
+                src="http://servicos.sedur.salvador.ba.gov.br/js/filament/notifications/notifications.js?v=4.8.4.0"
+                
+                
+                
+                
+                
+                
+            ></script>
+        
+                
+            <script
+                src="http://servicos.sedur.salvador.ba.gov.br/js/filament/schemas/schemas.js?v=4.8.4.0"
+                
+                
+                
+                
+                
+                
+            ></script>
+        
+                
+            <script
+                src="http://servicos.sedur.salvador.ba.gov.br/js/filament/support/support.js?v=4.8.4.0"
+                
+                
+                
+                
+                
+                
+            ></script>
+        
+                
+            <script
+                src="http://servicos.sedur.salvador.ba.gov.br/js/filament/tables/tables.js?v=4.8.4.0"
+                
+                
+                
+                
+                
+                
+            ></script>
+        
+                
+            <script
+                src="http://servicos.sedur.salvador.ba.gov.br/js/husam-tariq/filament-timepicker/husam-tariq/filament-timepicker4.0.2.0.js?v=4.0.2.0"
+                
+                
+                
+                
+                
+                
+            ></script>
+        
+                
+            <script
+                src="http://servicos.sedur.salvador.ba.gov.br/js/sedur/filament-anexo-field/sedur-anexo-field-init.js?v=0.1.19.0"
+                
+                
+                
+                
+                
+                
+            ></script>
+        
+                
+            <script
+                src="http://servicos.sedur.salvador.ba.gov.br/js/solution-forest/filament-tree/filament-tree.js?v=3.1.4.0"
+                
+                
+                
+                
+                
+                
+            ></script>
+        
+                
+            <script
+                src="http://servicos.sedur.salvador.ba.gov.br/js/filament/filament/echo.js?v=4.8.4.0"
+                
+                
+                
+                
+                
+                
+            ></script>
+        
+                
+            <script
+                src="http://servicos.sedur.salvador.ba.gov.br/js/filament/filament/app.js?v=4.8.4.0"
+                
+                
+                
+                
+                
+                
+            ></script>
+        
+    
+<style>
+    :root {
+            }
+
+    </style>
+    <a id="pojo-a11y-skip-content" class="pojo-skip-link pojo-skip-content" tabindex="1" accesskey="s" href="#content">Pular para o conteúdo</a>
+<nav id="pojo-a11y-toolbar" class="pojo-a11y-toolbar-left" role="navigation">
+    <div class="pojo-a11y-toolbar-toggle">
+        <a class="pojo-a11y-toolbar-link pojo-a11y-toolbar-toggle-link" href="javascript:void(0);" title="Ferramentas de Acessibilidade" role="button">
+            <span class="pojo-sr-only sr-only">Barra de Ferramentas Aberta</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor" width="1em">
+                <title>Ferramentas de Acessibilidade</title>
+                <path d="M50 .8c5.7 0 10.4 4.7 10.4 10.4S55.7 21.6 50 21.6s-10.4-4.7-10.4-10.4S44.3.8 50 .8zM92.2 32l-21.9 2.3c-2.6.3-4.6 2.5-4.6 5.2V94c0 2.9-2.3 5.2-5.2 5.2H60c-2.7 0-4.9-2.1-5.2-4.7l-2.2-24.7c-.1-1.5-1.4-2.5-2.8-2.4-1.3.1-2.2 1.1-2.4 2.4l-2.2 24.7c-.2 2.7-2.5 4.7-5.2 4.7h-.5c-2.9 0-5.2-2.3-5.2-5.2V39.4c0-2.7-2-4.9-4.6-5.2L7.8 32c-2.6-.3-4.6-2.5-4.6-5.2v-.5c0-2.6 2.1-4.7 4.7-4.7h.5c19.3 1.8 33.2 2.8 41.7 2.8s22.4-.9 41.7-2.8c2.6-.2 4.9 1.6 5.2 4.3v1c-.1 2.6-2.1 4.8-4.8 5.1z"/>					</svg>
+        </a>
+    </div>
+    <div class="pojo-a11y-toolbar-overlay">
+        <div class="pojo-a11y-toolbar-inner">
+            <p class="pojo-a11y-toolbar-title">Ferramentas de Acessibilidade</p>
+
+            <ul class="pojo-a11y-toolbar-items pojo-a11y-tools">
+                <li class="pojo-a11y-toolbar-item">
+                    <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-resize-font pojo-a11y-btn-resize-plus" data-action="resize-plus" data-action-group="resize" tabindex="-1" role="button">
+                        <span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Aumentar Texto</title><path fill="currentColor" d="M256 200v16c0 4.25-3.75 8-8 8h-56v56c0 4.25-3.75 8-8 8h-16c-4.25 0-8-3.75-8-8v-56h-56c-4.25 0-8-3.75-8-8v-16c0-4.25 3.75-8 8-8h56v-56c0-4.25 3.75-8 8-8h16c4.25 0 8 3.75 8 8v56h56c4.25 0 8 3.75 8 8zM288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.75-14.25 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z"></path></svg></span><span class="pojo-a11y-toolbar-text">Aumentar Texto</span>								</a>
+                </li>
+
+                <li class="pojo-a11y-toolbar-item">
+                    <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-resize-font pojo-a11y-btn-resize-minus" data-action="resize-minus" data-action-group="resize" tabindex="-1" role="button">
+                        <span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Diminuir Texto</title><path fill="currentColor" d="M256 200v16c0 4.25-3.75 8-8 8h-144c-4.25 0-8-3.75-8-8v-16c0-4.25 3.75-8 8-8h144c4.25 0 8 3.75 8 8zM288 208c0-61.75-50.25-112-112-112s-112 50.25-112 112 50.25 112 112 112 112-50.25 112-112zM416 416c0 17.75-14.25 32-32 32-8.5 0-16.75-3.5-22.5-9.5l-85.75-85.5c-29.25 20.25-64.25 31-99.75 31-97.25 0-176-78.75-176-176s78.75-176 176-176 176 78.75 176 176c0 35.5-10.75 70.5-31 99.75l85.75 85.75c5.75 5.75 9.25 14 9.25 22.5z"></path></svg></span><span class="pojo-a11y-toolbar-text">Diminuir Texto</span>								</a>
+                </li>
+
+                <li class="pojo-a11y-toolbar-item">
+                    <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-background-group pojo-a11y-btn-grayscale" data-action="grayscale" data-action-group="schema" tabindex="-1" role="button">
+                        <span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Escala de Cinza</title><path fill="currentColor" d="M15.75 384h-15.75v-352h15.75v352zM31.5 383.75h-8v-351.75h8v351.75zM55 383.75h-7.75v-351.75h7.75v351.75zM94.25 383.75h-7.75v-351.75h7.75v351.75zM133.5 383.75h-15.5v-351.75h15.5v351.75zM165 383.75h-7.75v-351.75h7.75v351.75zM180.75 383.75h-7.75v-351.75h7.75v351.75zM196.5 383.75h-7.75v-351.75h7.75v351.75zM235.75 383.75h-15.75v-351.75h15.75v351.75zM275 383.75h-15.75v-351.75h15.75v351.75zM306.5 383.75h-15.75v-351.75h15.75v351.75zM338 383.75h-15.75v-351.75h15.75v351.75zM361.5 383.75h-15.75v-351.75h15.75v351.75zM408.75 383.75h-23.5v-351.75h23.5v351.75zM424.5 383.75h-8v-351.75h8v351.75zM448 384h-15.75v-352h15.75v352z"></path></svg></span><span class="pojo-a11y-toolbar-text">Escala de Cinza</span>								</a>
+                </li>
+
+                <li class="pojo-a11y-toolbar-item">
+                    <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-background-group pojo-a11y-btn-high-contrast" data-action="high-contrast" data-action-group="schema" tabindex="-1" role="button">
+                        <span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Alto Contraste</title><path fill="currentColor" d="M192 360v-272c-75 0-136 61-136 136s61 136 136 136zM384 224c0 106-86 192-192 192s-192-86-192-192 86-192 192-192 192 86 192 192z"></path></svg></span><span class="pojo-a11y-toolbar-text">Alto Contraste</span>								</a>
+                </li>
+
+                <li class="pojo-a11y-toolbar-item">
+                    <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-background-group pojo-a11y-btn-negative-contrast" data-action="negative-contrast" data-action-group="schema" tabindex="-1" role="button">
+
+                        <span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Contraste Negativo</title><path fill="currentColor" d="M416 240c-23.75-36.75-56.25-68.25-95.25-88.25 10 17 15.25 36.5 15.25 56.25 0 61.75-50.25 112-112 112s-112-50.25-112-112c0-19.75 5.25-39.25 15.25-56.25-39 20-71.5 51.5-95.25 88.25 42.75 66 111.75 112 192 112s149.25-46 192-112zM236 144c0-6.5-5.5-12-12-12-41.75 0-76 34.25-76 76 0 6.5 5.5 12 12 12s12-5.5 12-12c0-28.5 23.5-52 52-52 6.5 0 12-5.5 12-12zM448 240c0 6.25-2 12-5 17.25-46 75.75-130.25 126.75-219 126.75s-173-51.25-219-126.75c-3-5.25-5-11-5-17.25s2-12 5-17.25c46-75.5 130.25-126.75 219-126.75s173 51.25 219 126.75c3 5.25 5 11 5 17.25z"></path></svg></span><span class="pojo-a11y-toolbar-text">Contraste Negativo</span>								</a>
+                </li>
+
+                <li class="pojo-a11y-toolbar-item">
+                    <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-background-group pojo-a11y-btn-light-background" data-action="light-background" data-action-group="schema" tabindex="-1" role="button">
+                        <span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Fundo Claro</title><path fill="currentColor" d="M184 144c0 4.25-3.75 8-8 8s-8-3.75-8-8c0-17.25-26.75-24-40-24-4.25 0-8-3.75-8-8s3.75-8 8-8c23.25 0 56 12.25 56 40zM224 144c0-50-50.75-80-96-80s-96 30-96 80c0 16 6.5 32.75 17 45 4.75 5.5 10.25 10.75 15.25 16.5 17.75 21.25 32.75 46.25 35.25 74.5h57c2.5-28.25 17.5-53.25 35.25-74.5 5-5.75 10.5-11 15.25-16.5 10.5-12.25 17-29 17-45zM256 144c0 25.75-8.5 48-25.75 67s-40 45.75-42 72.5c7.25 4.25 11.75 12.25 11.75 20.5 0 6-2.25 11.75-6.25 16 4 4.25 6.25 10 6.25 16 0 8.25-4.25 15.75-11.25 20.25 2 3.5 3.25 7.75 3.25 11.75 0 16.25-12.75 24-27.25 24-6.5 14.5-21 24-36.75 24s-30.25-9.5-36.75-24c-14.5 0-27.25-7.75-27.25-24 0-4 1.25-8.25 3.25-11.75-7-4.5-11.25-12-11.25-20.25 0-6 2.25-11.75 6.25-16-4-4.25-6.25-10-6.25-16 0-8.25 4.5-16.25 11.75-20.5-2-26.75-24.75-53.5-42-72.5s-25.75-41.25-25.75-67c0-68 64.75-112 128-112s128 44 128 112z"></path></svg></span><span class="pojo-a11y-toolbar-text">Fundo Claro</span>								</a>
+                </li>
+
+                <li class="pojo-a11y-toolbar-item">
+                    <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-links-underline" data-action="links-underline" data-action-group="toggle" tabindex="-1" role="button">
+                        <span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Links Sublinhados</title><path fill="currentColor" d="M364 304c0-6.5-2.5-12.5-7-17l-52-52c-4.5-4.5-10.75-7-17-7-7.25 0-13 2.75-18 8 8.25 8.25 18 15.25 18 28 0 13.25-10.75 24-24 24-12.75 0-19.75-9.75-28-18-5.25 5-8.25 10.75-8.25 18.25 0 6.25 2.5 12.5 7 17l51.5 51.75c4.5 4.5 10.75 6.75 17 6.75s12.5-2.25 17-6.5l36.75-36.5c4.5-4.5 7-10.5 7-16.75zM188.25 127.75c0-6.25-2.5-12.5-7-17l-51.5-51.75c-4.5-4.5-10.75-7-17-7s-12.5 2.5-17 6.75l-36.75 36.5c-4.5 4.5-7 10.5-7 16.75 0 6.5 2.5 12.5 7 17l52 52c4.5 4.5 10.75 6.75 17 6.75 7.25 0 13-2.5 18-7.75-8.25-8.25-18-15.25-18-28 0-13.25 10.75-24 24-24 12.75 0 19.75 9.75 28 18 5.25-5 8.25-10.75 8.25-18.25zM412 304c0 19-7.75 37.5-21.25 50.75l-36.75 36.5c-13.5 13.5-31.75 20.75-50.75 20.75-19.25 0-37.5-7.5-51-21.25l-51.5-51.75c-13.5-13.5-20.75-31.75-20.75-50.75 0-19.75 8-38.5 22-52.25l-22-22c-13.75 14-32.25 22-52 22-19 0-37.5-7.5-51-21l-52-52c-13.75-13.75-21-31.75-21-51 0-19 7.75-37.5 21.25-50.75l36.75-36.5c13.5-13.5 31.75-20.75 50.75-20.75 19.25 0 37.5 7.5 51 21.25l51.5 51.75c13.5 13.5 20.75 31.75 20.75 50.75 0 19.75-8 38.5-22 52.25l22 22c13.75-14 32.25-22 52-22 19 0 37.5 7.5 51 21l52 52c13.75 13.75 21 31.75 21 51z"></path></svg></span><span class="pojo-a11y-toolbar-text">Links Sublinhados</span>								</a>
+                </li>
+
+                <li class="pojo-a11y-toolbar-item">
+                    <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-readable-font" data-action="readable-font" data-action-group="toggle" tabindex="-1" role="button">
+                        <span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Fonte Legível</title><path fill="currentColor" d="M181.25 139.75l-42.5 112.5c24.75 0.25 49.5 1 74.25 1 4.75 0 9.5-0.25 14.25-0.5-13-38-28.25-76.75-46-113zM0 416l0.5-19.75c23.5-7.25 49-2.25 59.5-29.25l59.25-154 70-181h32c1 1.75 2 3.5 2.75 5.25l51.25 120c18.75 44.25 36 89 55 133 11.25 26 20 52.75 32.5 78.25 1.75 4 5.25 11.5 8.75 14.25 8.25 6.5 31.25 8 43 12.5 0.75 4.75 1.5 9.5 1.5 14.25 0 2.25-0.25 4.25-0.25 6.5-31.75 0-63.5-4-95.25-4-32.75 0-65.5 2.75-98.25 3.75 0-6.5 0.25-13 1-19.5l32.75-7c6.75-1.5 20-3.25 20-12.5 0-9-32.25-83.25-36.25-93.5l-112.5-0.5c-6.5 14.5-31.75 80-31.75 89.5 0 19.25 36.75 20 51 22 0.25 4.75 0.25 9.5 0.25 14.5 0 2.25-0.25 4.5-0.5 6.75-29 0-58.25-5-87.25-5-3.5 0-8.5 1.5-12 2-15.75 2.75-31.25 3.5-47 3.5z"></path></svg></span><span class="pojo-a11y-toolbar-text">Fonte Legível</span>								</a>
+                </li>
+                <li class="pojo-a11y-toolbar-item">
+                    <a href="#" class="pojo-a11y-toolbar-link pojo-a11y-btn-reset" data-action="reset" tabindex="-1" role="button">
+                        <span class="pojo-a11y-toolbar-icon"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1em" viewBox="0 0 448 448"><title>Reiniciar</title><path fill="currentColor" d="M384 224c0 105.75-86.25 192-192 192-57.25 0-111.25-25.25-147.75-69.25-2.5-3.25-2.25-8 0.5-10.75l34.25-34.5c1.75-1.5 4-2.25 6.25-2.25 2.25 0.25 4.5 1.25 5.75 3 24.5 31.75 61.25 49.75 101 49.75 70.5 0 128-57.5 128-128s-57.5-128-128-128c-32.75 0-63.75 12.5-87 34.25l34.25 34.5c4.75 4.5 6 11.5 3.5 17.25-2.5 6-8.25 10-14.75 10h-112c-8.75 0-16-7.25-16-16v-112c0-6.5 4-12.25 10-14.75 5.75-2.5 12.75-1.25 17.25 3.5l32.5 32.25c35.25-33.25 83-53 132.25-53 105.75 0 192 86.25 192 192z"></path></svg></span>
+                        <span class="pojo-a11y-toolbar-text">Reiniciar</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+</div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.getElementById("mobile-menu");
+            const sidebar = document.getElementById("sidebar");
+            const backdrop = document.createElement("div");
+            backdrop.className = "backdrop";
+
+            document.body.appendChild(backdrop);
+
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener("click", toggleSidebar);
+            }
+
+            function toggleSidebar() {
+                sidebar.classList.toggle("active");
+                backdrop.classList.toggle("active");
+                document.body.classList.toggle("sidebar-active"); // Toggle da classe no body
+            }
+
+            backdrop.addEventListener("click", () => {
+                if (sidebar.classList.contains("active")) {
+                    toggleSidebar();
+                }
+            });
+
+            return () => {
+                if (mobileMenuToggle) {
+                    mobileMenuToggle.removeEventListener("click", toggleSidebar);
+                }
+                backdrop.removeEventListener("click", toggleSidebar);
+                document.body.removeChild(backdrop);
+            };
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>:: SEDUR - Secretaria Municipal de Desenvolvimento Urbano ::</title>
+<link href="css/estilo.css" rel="stylesheet" type="text/css" />
+</head>
+<script language="javascript">
+function testaForm(n,o)
+{
+/*
+    if (n=='Consultar')
+    {
+      if ((document.flocal.numalv.value =="") && (document.flocal.numproc.value =="") 
+	       && (document.flocal.cep.value =="") && (document.flocal.logradouro.value =="") && (document.flocal.bairro.value =="") 
+		   && (document.flocal.numero.value =="")&& (document.flocal.contato.value =="")
+		   && (document.flocal.solicitante.value =="")&& (document.flocal.dtini_ent.value =="")&& (document.flocal.dtfim_ent.value =="")&& (document.flocal.dtini_def.value =="")&& (document.flocal.dtfim_def.value ==""))
+      {
+     	  alert("Informe algum parâmetro para a consulta!");
+          document.flocal.tipo.focus();
+	      return false;
+      }
+    }
+	if (n=='Cancelar')
+	{
+	   document.flocal.contato.value="";
+	}
+	
+	*/
+    document.flocal.acao.value = n;
+    document.flocal.submit();
+    return true;
+}
+function mascara_data(frm, atual, data, proximo)
+{
+  var mydata = '';
+  mydata = mydata + data;
+  if (mydata.length == 2)
+  {
+    mydata = mydata + '/';
+	document.forms[frm].elements[atual].value = mydata	
+  }
+  if (mydata.length == 5)
+  {
+    mydata = mydata + '/';
+	document.forms[frm].elements[atual].value = mydata		
+  }
+  if (mydata.length == 10)
+  {
+    verifica_data(frm, atual, data, proximo);
+  }
+}
+          
+function verifica_data(frm, atual, data, proximo)
+{
+	dia = (document.forms[frm].elements[atual].value.substring(0,2));
+	mes = (document.forms[frm].elements[atual].value.substring(3,5));
+	ano = (document.forms[frm].elements[atual].value.substring(6,10));
+
+    dt1 = ano + '/' + mes + '/' + dia;
+
+	situacao = "";
+	// verifica o dia valido para cada mes
+	if ((dia < 01)||(dia < 01 || dia > 30) && (  mes == 04 || mes == 06 || mes == 09 || mes == 11 ) || dia > 31)
+    {
+		situacao = "falsa";
+	}
+	// verifica se o mes e valido
+	if (mes < 01 || mes > 12 )
+    {
+		situacao = "falsa";
+	}
+	// verifica se e ano bissexto
+	if (mes == 2 && ( dia < 01 || dia > 29 || ( dia > 28 && (parseInt(ano / 4) != ano / 4))))
+    {
+		situacao = "falsa";
+	}
+    if (document.forms[frm].elements[atual].value == "")	
+    {
+		situacao = "falsa";
+	}
+	if (situacao == "falsa")
+    {
+		alert("Data inválida!");
+       document.forms[frm].elements[atual].focus();
+	}
+    else 
+	{
+		document.forms[frm].elements[proximo].focus();
+	}	
+}
+</script>
+
+<body>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td valign="top">
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" >
+    <tr>
+      <td width="745" valign="top">
+        <form method="post" name="flocal" action="consulta-AOP.php" onSubmit="return testaForm();">
+          <font face="Arial, Helvetica, sans-serif">
+          <input type="hidden" name="acao" size="1" value="">
+          <input type="hidden" name="contato" size="1" value="">
+          </font> 
+
+			          
+         <table width="600" cellspacing="0" cellpadding="0" align="center" class="borda">
+            <tr> 
+              <td width="600"> 
+                <table width="600" align="center" height="192" class="borda">
+                		<!--
+                      <tr> 
+                        <td width="129" height="20"><font class="fonte-h3">N&uacute;mero 
+                          do Alvar&aacute;: </font></td>
+                        <td height="20" colspan="3"><input type="text" name="numalv" size="10" class="caixabusca" maxlength="9" value="" onkeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;" />                        </td>
+                      </tr>
+                      <tr> 
+                        <td height="20"><font class="fonte-h3">Processo:</font></td>
+                        <td height="20" colspan="3"><font class="fonte-h0"> 
+                          <input type="text" name="origemproc" size="11" class="caixabusca" maxlength="10" value="5911000000" onkeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;" />
+                          / 
+                          <input type="text" name="anoproc" size="5" class="caixabusca" maxlength="4" value="" onkeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;" />
+                          / 
+                          <input type="text" name="numproc" size="10" class="caixabusca" maxlength="9" value="" onkeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;" />
+                          <font class="fonte-h0">(Origem / Ano / N&ordm; Processo)</font> 
+                          </font>                          </td>
+                      </tr>
+                      -->
+                                            <!--
+                      <tr> 
+
+                        <td height="20"><font class="fonte-h3">Nome / Raz&atilde;o Social :</font></td>
+                        <td height="20" colspan="3"><input type="text" name="solicitante" readonly size="45" class="caixabusca" value="" />
+                          <input type="button" class="botao" name="filtra_contato" value="Filtrar" onclick="return testaForm('Buscar_Contato');"/></td>
+                      </tr>
+                      
+                      -->
+
+                                            <tr>
+                        <td height="20"><font class="fonte-h3">CEP:</font></td>
+                        <td height="20"><input type="text" name="cep" size="10" class="caixabusca" value="" onkeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;" /></td>
+                        <td height="20">&nbsp;</td>
+                        <td height="20">&nbsp;</td>
+                      </tr>
+                      <tr> 
+                        <td height="20"><font class="fonte-h3">Logradouro:</font></td>
+                        <td height="20" colspan="3"><input type="text" name="parte_logradouro" class="caixabusca" value="" />
+                          <input type="button" class="botao" name="filtra_logradouro" value="Filtrar" onclick="return testaForm('Localizar_Logradouro');" />
+                          <select name="logradouro" id="logradouro" class="caixabusca" style="width:50%" onchange="return testaForm();">
+                            <OPTION value="" SELECTED>Informe o Logradouro</OPTION>                          </select></td>
+                      </tr>
+                      
+                      
+                      <tr>
+                        <td height="28"><font class="fonte-h3">Bairro:</font></td>
+                        <td height="28" colspan="5"><input type="text" name="parte_bairro" id="parte_bairro" class="caixabusca" value="" />
+                          <input type="button" class="botao" name="filtra_bairro" value="Filtrar" onclick="return testaForm('Localizar_Bairro');" />
+                          <select name="bairro" id="bairro" class="caixabusca" style="width:50%">
+                            <OPTION value="" SELECTED>Informe o Bairro</OPTION>                          </select></td>
+                      </tr>
+                     
+                      <tr>
+
+                        <td width="105" height="31"><font class="fonte-h3">Data de Entrada:</font></td>
+                		<td width="182">  
+                        <input type="text" class="caixabusca" name="dtini_def" size="11" value="" maxlength="10" onkeyup="mascara_data('flocal','dtini_def',this.value,'dtfim_def');" />
+                            a
+                        <input type="text" class="caixabusca" name="dtfim_def" size="11" value="" maxlength="10" onkeyup="mascara_data('flocal','dtfim_def',this.value,'consultar');" />
+</td>
+                      </tr>
+                      <tr> 
+                        <td colspan="4" align="center" height="33"> <input type="button" class="botao" value="Consultar" name="consultar" onClick="return testaForm('Consultar');"> 
+                          <input type="button" class="botao" value="Limpar" name="limpar" onClick="return testaForm('Limpar');">                        </td>
+                      </tr>
+                  </table>				</td>
+             </tr>
+            </table>
+            <br>
+                        </form>		</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

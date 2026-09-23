@@ -1,0 +1,5 @@
+# Melhorias
+
+- Redundância: O cliente já está em serviços, por isso, não deveria receber um aviso que o local e horário para aquele serviço é no mesmo local que está 24 horas (ele já sabe disso). Devia retirar a aba local e horário nesse caso. A aba mostra apenas “Portal de Serviços (www.servicos.sedur.salvador.ba.gov.br) / 24 horas”.
+- Frase cortada em duas linhas. Na aba “Documentação Exigida”, o nome do documento é completado numa linha separada, como “Observação”, e a leitura fica quebrada: “Alvará de Autorização (cópia)” + “Observação: ou número do processo que licenciou o projeto”. Escrever o nome completo numa linha só (ex.: “Alvará de Autorização (cópia) ou número do processo que licenciou o projeto”).
+- Erros de português no texto padrão da procuração (aba “Documentação Exigida”): “considerara” (sem acento; o certo é “considerará”), “1(um)” (o certo é “1 (um)”) e “Sedur” (no resto do portal é “SEDUR”). A frase também começa mal (“As procurações sem prazo de vigência, a Sedur…”). Corrigir uma vez no texto padrão e vale para todas as fichas.

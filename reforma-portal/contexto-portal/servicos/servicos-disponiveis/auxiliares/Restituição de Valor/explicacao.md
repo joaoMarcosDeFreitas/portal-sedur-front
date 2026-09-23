@@ -1,0 +1,6 @@
+# Melhorias
+
+- Aba “Taxas” sem informação. Abre uma tabela só com os títulos “Descrição” e “Valor (R$)”, sem nenhuma linha, e o parágrafo padrão sobre a lei. A pessoa não fica sabendo se há taxa ou não. Mostrar o valor, escrever “Sem taxa” ou retirar a aba.
+- Formulário guardado em dois lugares. “Formulário para Solicitação de Restituição de Valor Pessoa Física”; “Formulário para Solicitação de Restituição de Valor Pessoa Jurídica” estão linkados para o site antigo (/arquivos/2017/11/solicitacao_restituicao_PFisica_SEDUR.pdf…), e a página Formulários do portal guarda uma cópia idêntica. Se um dos dois for atualizado, o outro fica desatualizado. Deixar uma cópia só e linkar sempre para ela.
+- Poluição visual. As abas “Informações” e “Local e horário” mostram só “N/A”. Quando alguma aba não há conteúdo para mostrar, o melhor a se fazer é retirar a mesma.
+- Erros de português no texto padrão da procuração (aba “Documentação Exigida”): “considerara” (sem acento; o certo é “considerará”), “1(um)” (o certo é “1 (um)”) e “Sedur” (no resto do portal é “SEDUR”). A frase também começa mal (“As procurações sem prazo de vigência, a Sedur…”). Corrigir uma vez no texto padrão e vale para todas as fichas.

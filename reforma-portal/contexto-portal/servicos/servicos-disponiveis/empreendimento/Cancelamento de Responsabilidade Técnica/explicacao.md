@@ -1,0 +1,8 @@
+# Melhorias
+
+- Sem como prosseguir. A ficha não tem o botão “Abrir processo” nem “Emissão de DAM”. Não encontrei, em nenhuma aba, uma explicação clara de como solicitar o serviço. Deveria, uma vez que não há opção remota, ter uma explicação de como prosseguir, para que fique claro ao usuário.
+- Contradição. A documentação pede “Comprovante de pagamento da taxa (DAM)”, mas a ficha não tem o botão de “Emissão de DAM” e não diz onde pagar (e a aba “Informações” diz que o serviço é isento). Explicar como e onde se paga, ou tirar o item da lista.
+- Aba “Taxas” sem informação. Abre uma tabela só com os títulos “Descrição” e “Valor (R$)”, sem nenhuma linha, e o parágrafo padrão sobre a lei. A pessoa não fica sabendo se há taxa ou não. Mostrar o valor, escrever “Sem taxa” ou retirar a aba.
+- Informação no lugar errado. A isenção (“Serviço isento”) está escrita na aba “Informações”, enquanto a aba “Taxas” não mostra valor nenhum. Escrever “Isento” na aba “Taxas”.
+- Redundância: O cliente já está em serviços, por isso, não deveria receber um aviso que o local e horário para aquele serviço é no mesmo local que está 24 horas (ele já sabe disso). Devia retirar a aba local e horário nesse caso. A aba mostra apenas “Portal de Serviços (www.servicos.sedur.salvador.ba.gov.br) / 24 horas”.
+- Erros de português no texto padrão da procuração (aba “Documentação Exigida”): “considerara” (sem acento; o certo é “considerará”), “1(um)” (o certo é “1 (um)”) e “Sedur” (no resto do portal é “SEDUR”). A frase também começa mal (“As procurações sem prazo de vigência, a Sedur…”). Corrigir uma vez no texto padrão e vale para todas as fichas.

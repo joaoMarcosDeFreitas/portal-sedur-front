@@ -1,0 +1,1047 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+	<!--ATIVAÇÃO DE COMPATIBILIDADE E PROTEÇÃO CONTRA ATAQUES DO TIPO XSS-->
+	<!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+	<!--meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1,maximum-scale=1,user-scalable=no"-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-XSS-Protection" content="1">
+	<meta http-equiv="x-dns-prefetch-control" content="off">
+	<!--ATIVAÇÃO DE COMPATIBILIDADE E PROTEÇÃO CONTRA ATAQUES DO TIPO XSS-->
+	
+	
+			
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="/var/www/html/sedur/favicon.ico"> -->
+
+	
+	
+	
+	<meta name="google-site-verification" content="3XxLThCC-_tkg2qtziw_KG01DRXRqWTMM91thC8V6RM" />
+	<!--OBS: ENCONTRAM-SE NO TYPE HEAD AS META TAGS DESCRIPTION E KEYWORDS-->
+	<meta charset="utf-8" />
+	<base href="http://sedur.salvador.ba.gov.br/noticias" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>SEDUR - Secretaria Municipal de Desenvolvimento Urbano</title>
+	<link href="/noticias?format=feed&amp;type=rss" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
+	<link href="/noticias?format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
+	<link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://sedur.salvador.ba.gov.br/templates/sedur/assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="http://sedur.salvador.ba.gov.br/templates/sedur/assets/css/template.css" rel="stylesheet" />
+	<link href="/media/jui/css/chosen.css?679d790b1094210fb236c0ff53f74be4" rel="stylesheet" />
+	<link href="/media/com_finder/css/finder.css?679d790b1094210fb236c0ff53f74be4" rel="stylesheet" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"22909366ce58408ae6c2893dcedeb15b","system.paths":{"root":"","base":""}}</script>
+	<script src="/media/jui/js/chosen.jquery.min.js?679d790b1094210fb236c0ff53f74be4"></script>
+	<script>
+
+	jQuery(function ($) {
+		initChosen();
+		$("body").on("subform-row-add", initChosen);
+
+		function initChosen(event, container)
+		{
+			container = container || document;
+			$(container).find(".advancedSelect").chosen({"disable_search_threshold":10,"search_contains":true,"allow_single_deselect":true,"placeholder_text_multiple":"Digite ou selecione algumas op\u00e7\u00f5es","placeholder_text_single":"Selecione uma op\u00e7\u00e3o","no_results_text":"Selecione alguma op\u00e7\u00e3o"});
+		}
+	});
+	
+jQuery(document).ready(function() {
+	var value, searchword = jQuery('#mod-finder-searchword92');
+
+		// Get the current value.
+		value = searchword.val();
+
+		// If the current value equals the default value, clear it.
+		searchword.on('focus', function ()
+		{
+			var el = jQuery(this);
+
+			if (el.val() === 'Pesquisar...')
+			{
+				el.val('');
+			}
+		});
+
+		// If the current value is empty, set the previous value.
+		searchword.on('blur', function ()
+		{
+			var el = jQuery(this);
+
+			if (!el.val())
+			{
+				el.val(value);
+			}
+		});
+
+		jQuery('#mod-finder-searchform92').on('submit', function (e)
+		{
+			e.stopPropagation();
+			var advanced = jQuery('#mod-finder-advanced92');
+
+			// Disable select boxes with no value selected.
+			if (advanced.length)
+			{
+				advanced.find('select').each(function (index, el)
+				{
+					var el = jQuery(el);
+
+					if (!el.val())
+					{
+						el.attr('disabled', 'disabled');
+					}
+				});
+			}
+		});});
+	</script>
+
+</head>
+
+	
+<body>
+	
+    <!-- Pop-up de Aviso -->
+          <!-- <div id="dialog-message" style="position: fixed; z-index: 4000; margin-left: 30px; margin-top: 100px; right: 30px;">
+          <div class="d-flex flex-row-reverse">
+        	<button style="margin-bottom: 10px" type="button" class="btn-close btn-lg" aria-label="Close" onclick="popUp()" id="botaoFechar">X</button>
+          </div>
+    		
+          <a href="#">
+            <p>
+              <img src="http://sedur.salvador.ba.gov.br//images/avisoLicenciamento31012025.jpeg" style="width: 600px;">
+			</p>
+          </a>
+		</div> -->
+        <!-- Fim -->
+      
+    
+	<div id="header-section1-internas" class="navbar-fixed-top not-print" style="display:none;">
+        
+  		<div class="wrapper">
+            
+  			<a id="logo-internas" href="http://www.salvador.ba.gov.br" target="_parent" title="Ir para o Portal Salvador">Prefeitura Municipal de Salvador</a>    
+
+            <div class="float-right"> 
+
+                <div class="social-links float-left font-bold">
+                    <ul class="float-left">
+                        <li class="facebook"><a href="https://www.facebook.com/pages/Prefeitura-de-Salvador/472097156139269" target="_blank">Facebook</a></li>
+                        <li class="youtube"><a href="http://www.youtube.com/prefeituradosalvador" target="_blank">YouTube</a></li>
+                        <li class="flickr"><a href="http://www.flickr.com/photos/prefeituradesalvador" target="_blank">Flickr</a></li>
+                        <li class="twitter"><a href="https://twitter.com/prefsalvador" target="_blank">Twitter</a></li>
+                    </ul>
+                </div>  
+
+            </div> 
+  
+        </div>
+</div>
+
+<style type="text/css">
+	#header-section1-internas {
+	    background-color: #34558c;
+	    height: 48px;
+	    border-top: 1px solid #3e66a3;
+	}
+	.wrapper {
+	    width: 100%;
+	    margin: 0 auto;
+	}
+	#logo-internas {
+		display: block;
+		float: left;
+		background: transparent url(http://sedur.salvador.ba.gov.br//images/logo/logo-internas.png) left center no-repeat;
+		/* Mp2 background: transparent url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/logo-internas.png) left center no-repeat;*/
+        width: 284px;
+		height: 43px;
+		text-indent: -5000em;
+		margin-left:10px;
+	}
+	.float-right {
+	    float: right;
+	}
+	.social-links {
+	    /* padding-top: 35px; */
+	    width: 100%;
+	}
+	.float-left {
+	    float: left;
+	}
+	.social-links ul {
+	    list-style: none;
+	    padding: 0;
+	    margin: 5px 0 0 0;
+	}
+	.social-links .facebook {
+    	background-image: url(http://sedur.salvador.ba.gov.br//images/logo/facebook-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/facebook-icon.png); */                    
+	}
+	.social-links .youtube {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/youtube-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/youtube-icon.png); */                       
+	}
+	.social-links .flickr {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/flickr-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/flickr-icon.png); */ 
+	}
+	.social-links .twitter {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/twitter-icon.png);
+        /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/twitter-icon.png); */                       
+	}
+	.social-links ul li {
+	    float: left;
+	    margin-right: 7px;
+	}
+	.social-links ul li a {
+	    width: 35px;
+	    height: 35px;
+	    text-indent: -5000em;
+	    display: block;
+	}
+                        
+                              
+</style>
+	<!-- Começo Navbar -->
+
+	<div class="container-fluid" style="padding-right: 0px; padding-left: 0px; border:0px solid #000">
+		<header>
+			<div class="row" style="margin: 0%; background-color: white; padding: 2% 0; border:0px solid #008000">
+					<div class="col-md-3 offset-1 col-sm-0" style="border:0px solid #000"> 
+						<a href="/index.php">
+							<img id = "img_marca_old" src="http://sedur.salvador.ba.gov.br//images/logo/logo-black.png" class="img-responsive" alt="logo">
+						</a>
+      			    </div>
+					
+                    <div class="barramenu col-md-8 col-sm-12" style="border:0px solid #000">
+                        <nav id='cssmenu'  style="margin-left: 0px;">
+                            <div id="head-mobile" style="border:0px solid #f00"></div>
+                            <div class="button" style="border:0px solid #ff0"></div>
+                            <ul class="nav menu" style="float: right;">
+<li class="item-102 deeper parent menu-style"><a href="#" >INSTITUCIONAL</a><ul class="dropdown-menu"><li class="item-156 menu-style"><a href="/institucional/dirigentes" >Dirigentes</a></li><li class="item-157 menu-style"><a href="/institucional/estrutura-organizacional" >Estrutura Organizacional</a></li><li class="item-149 menu-style"><a href="/institucional/area-de-atuacao" >Área de Atuação</a></li></ul></li><li class="item-106 menu-style"><a href="https://servicos.sedur.salvador.ba.gov.br/#/portal/home" >SERVIÇOS</a></li><li class="item-154 current active menu-style"><a href="/noticias" >NOTÍCIAS</a></li><li class="item-151 menu-style"><a href="/legislacao" >LEGISLAÇÃO</a></li><li class="item-155 menu-style"><a href="/licitacoes" >LICITAÇÕES</a></li><li class="item-171 menu-style"><a href="/transparencia" >TRANSPARÊNCIA</a></li></ul>
+
+
+
+<!-- <style>
+
+	.item-161{
+		margin-left: 18%;
+	}
+
+
+	@media (min-width: 320px) and (max-width:767px) {
+		.item-161{
+		margin-left: 0%;
+		}
+
+	}
+
+	
+	@media (min-width: 767px) and (max-width:999px) {
+		.item-161{
+			margin-left: 0%;
+		}
+	}
+
+
+</style> -->
+
+
+
+
+                        </nav>	
+                    </div>
+ 			</div>
+				
+		</header>
+	</div>
+
+
+				<div class="container-fluid">
+				<div class="row">
+					<div class="col-9 offset-2">
+						<div class="row" style="padding-top:40px; padding-bottom: 26px;">
+							<div class="col-auto mr-auto">
+								<header >
+										<h2 class="artigos_internos" itemprop="headline">Notícias SEDUR</h2>
+								</header>
+							</div>
+							<div class="center veja-todas col-auto" style="float:right;">
+								
+<div class="finder">
+	<form id="mod-finder-searchform92" action="/component/finder/search" method="get" class="form-search" role="search">
+		<label for="mod-finder-searchword92" class="element-invisible finder">Buscar</label><input type="text" name="q" id="mod-finder-searchword92" class="search-query input-medium" size="25" value="" placeholder="Pesquisar..."/>
+						<input type="hidden" name="Itemid" value="154" />	</form>
+</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+
+		
+	<!-- Fim Navbar -->
+		
+	
+	              <div class="no-home">
+                  <div class="container-fluid">
+                      <div class="row">
+                         <div class="col-9 offset-2">
+                              
+                              <div class="category-list">
+
+<div>
+	<div class="content-category">
+		
+				
+							
+				<!-- 
+<header class="bg_topo_interna">
+    <header class="banner_topo"   style="background-color: #FAFAFA; padding-left: 0px;">
+        <header class="noticias_interna col-xs-8 col-sm-5 col-md-5 col-lg-5">
+                <h1>Notícias SEDUR</h1>
+        </header>
+    </header>
+</header> -->
+
+    <div style="margin-bottom: 10%;">
+        <div class="blog" itemscope itemtype="https://schema.org/Blog">
+                            <div class="items-row id-910 cols-1 row-fluid clearfix">
+                <div class="span12">
+                    <div class="item column-1" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+                        <div class="col-md-12 col-sm-12" style="padding-left: 0px;">
+                            <div class="page-header header-maisnoticias">
+                              <!-- Mp2 retirei <h2 itemprop="name">
+                                    <a href="/noticias/910-conselho-municipal-avanca-nas-discussoes-para-revisao-do-pddu-de-salvador" itemprop="url" style="color:#f7f7f7;">
+                                        Conselho municipal avança nas discussões para revisão do PDDU de Salvador    
+                                    </a>
+                                </h2> -->
+                            </div> 
+                        </div>
+                        
+                        <dl class="article-info muted">
+                            <dt class="article-info-term">
+                            </dt>
+                            <dd class="published">
+                                <img src="/images/page_todasasnoticias/calendario_icon.png" style="width:20px;" alt="">
+                                <time style="font-weight:bold;" datetime="2021-07-26T15:05:16+00:00" itemprop="datePublished"> 11-09-26 </time>
+                            </dd>
+                        </dl>
+
+                        <div class="row">
+
+                            <div class="col-md-4 col-sm-12">
+                                <div class="pull-left item-image">
+                                    <a href="/noticias/910-conselho-municipal-avanca-nas-discussoes-para-revisao-do-pddu-de-salvador">
+                                                                                    <img src="/images/noticias/10_09_2026-Reunio_Do_Conselho_Municipal_Do_PDDU-Fotos_Otvio_Santos_SECOM_PMS_22.jpg" alt="" itemprop="thumbnailUrl" />
+                                                                            </a>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-5 col-sm-12 page-header header-maisnoticias" style="text-align: left;">
+                               
+                                 <h2 itemprop="name">
+                                    <a href="/noticias/910-conselho-municipal-avanca-nas-discussoes-para-revisao-do-pddu-de-salvador" itemprop="url" style="color:#1f5da6;">
+                                        Conselho municipal avança nas discussões para revisão do PDDU de Salvador    
+                                    </a>
+                                </h2>      
+  
+                            </div>
+                            
+                                          
+                            <div class="col-md-2 col-sm-12 page-header header-maisnoticias">
+    
+                            </div>              
+                                          
+
+                        </div>
+                    </div>
+                    <!-- end item -->
+                </div><!-- end span -->
+            </div><!-- end row -->
+                                <div class="items-row id-909 cols-1 row-fluid clearfix">
+                <div class="span12">
+                    <div class="item column-1" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+                        <div class="col-md-12 col-sm-12" style="padding-left: 0px;">
+                            <div class="page-header header-maisnoticias">
+                              <!-- Mp2 retirei <h2 itemprop="name">
+                                    <a href="/noticias/909-conecta-pddu-reune-setor-produtivo-e-sociedade-civil-para-discutir-desenvolvimento-da-peninsula-de-itapagipe" itemprop="url" style="color:#f7f7f7;">
+                                        Conecta PDDU reúne setor produtivo e sociedade civil para discutir desenvolvimento da Península de Itapagipe    
+                                    </a>
+                                </h2> -->
+                            </div> 
+                        </div>
+                        
+                        <dl class="article-info muted">
+                            <dt class="article-info-term">
+                            </dt>
+                            <dd class="published">
+                                <img src="/images/page_todasasnoticias/calendario_icon.png" style="width:20px;" alt="">
+                                <time style="font-weight:bold;" datetime="2021-07-26T15:05:16+00:00" itemprop="datePublished"> 08-09-26 </time>
+                            </dd>
+                        </dl>
+
+                        <div class="row">
+
+                            <div class="col-md-4 col-sm-12">
+                                <div class="pull-left item-image">
+                                    <a href="/noticias/909-conecta-pddu-reune-setor-produtivo-e-sociedade-civil-para-discutir-desenvolvimento-da-peninsula-de-itapagipe">
+                                                                                    <img src="/images/noticias/Conecta_PDDU_-_Fotos_-_Ascom_Sedur_1.jpeg" alt="" itemprop="thumbnailUrl" />
+                                                                            </a>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-5 col-sm-12 page-header header-maisnoticias" style="text-align: left;">
+                               
+                                 <h2 itemprop="name">
+                                    <a href="/noticias/909-conecta-pddu-reune-setor-produtivo-e-sociedade-civil-para-discutir-desenvolvimento-da-peninsula-de-itapagipe" itemprop="url" style="color:#1f5da6;">
+                                        Conecta PDDU reúne setor produtivo e sociedade civil para discutir desenvolvimento da Península de Itapagipe    
+                                    </a>
+                                </h2>      
+  
+                            </div>
+                            
+                                          
+                            <div class="col-md-2 col-sm-12 page-header header-maisnoticias">
+    
+                            </div>              
+                                          
+
+                        </div>
+                    </div>
+                    <!-- end item -->
+                </div><!-- end span -->
+            </div><!-- end row -->
+                                <div class="items-row id-908 cols-1 row-fluid clearfix">
+                <div class="span12">
+                    <div class="item column-1" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+                        <div class="col-md-12 col-sm-12" style="padding-left: 0px;">
+                            <div class="page-header header-maisnoticias">
+                              <!-- Mp2 retirei <h2 itemprop="name">
+                                    <a href="/noticias/908-prefeitura-lanca-programa-para-recuperar-fachadas-e-estimular-retomada-economica-da-baixa-dos-sapateiros-e-barroquinha" itemprop="url" style="color:#f7f7f7;">
+                                        Prefeitura lança programa para recuperar fachadas e estimular retomada econômica da Baixa dos Sapateiros e Barroquinha    
+                                    </a>
+                                </h2> -->
+                            </div> 
+                        </div>
+                        
+                        <dl class="article-info muted">
+                            <dt class="article-info-term">
+                            </dt>
+                            <dd class="published">
+                                <img src="/images/page_todasasnoticias/calendario_icon.png" style="width:20px;" alt="">
+                                <time style="font-weight:bold;" datetime="2021-07-26T15:05:16+00:00" itemprop="datePublished"> 31-08-26 </time>
+                            </dd>
+                        </dl>
+
+                        <div class="row">
+
+                            <div class="col-md-4 col-sm-12">
+                                <div class="pull-left item-image">
+                                    <a href="/noticias/908-prefeitura-lanca-programa-para-recuperar-fachadas-e-estimular-retomada-economica-da-baixa-dos-sapateiros-e-barroquinha">
+                                                                                    <img src="/images/noticias/Renova_Baixa_dos_Sapateiros_-_Fotos_-_Igor_Santos_-_Secom_PMS_5.jpeg" alt="" itemprop="thumbnailUrl" />
+                                                                            </a>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-5 col-sm-12 page-header header-maisnoticias" style="text-align: left;">
+                               
+                                 <h2 itemprop="name">
+                                    <a href="/noticias/908-prefeitura-lanca-programa-para-recuperar-fachadas-e-estimular-retomada-economica-da-baixa-dos-sapateiros-e-barroquinha" itemprop="url" style="color:#1f5da6;">
+                                        Prefeitura lança programa para recuperar fachadas e estimular retomada econômica da Baixa dos Sapateiros e Barroquinha    
+                                    </a>
+                                </h2>      
+  
+                            </div>
+                            
+                                          
+                            <div class="col-md-2 col-sm-12 page-header header-maisnoticias">
+    
+                            </div>              
+                                          
+
+                        </div>
+                    </div>
+                    <!-- end item -->
+                </div><!-- end span -->
+            </div><!-- end row -->
+                                <div class="items-row id-907 cols-1 row-fluid clearfix">
+                <div class="span12">
+                    <div class="item column-1" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+                        <div class="col-md-12 col-sm-12" style="padding-left: 0px;">
+                            <div class="page-header header-maisnoticias">
+                              <!-- Mp2 retirei <h2 itemprop="name">
+                                    <a href="/noticias/907-pddu-orienta-crescimento-de-salvador-e-consolida-planejamento-para-futuro-da-cidade" itemprop="url" style="color:#f7f7f7;">
+                                        PDDU orienta crescimento de Salvador e consolida planejamento para futuro da cidade    
+                                    </a>
+                                </h2> -->
+                            </div> 
+                        </div>
+                        
+                        <dl class="article-info muted">
+                            <dt class="article-info-term">
+                            </dt>
+                            <dd class="published">
+                                <img src="/images/page_todasasnoticias/calendario_icon.png" style="width:20px;" alt="">
+                                <time style="font-weight:bold;" datetime="2021-07-26T15:05:16+00:00" itemprop="datePublished"> 27-08-26 </time>
+                            </dd>
+                        </dl>
+
+                        <div class="row">
+
+                            <div class="col-md-4 col-sm-12">
+                                <div class="pull-left item-image">
+                                    <a href="/noticias/907-pddu-orienta-crescimento-de-salvador-e-consolida-planejamento-para-futuro-da-cidade">
+                                                                                    <img src="/images/noticias/Salvador_foto_Valter_Pontes_SECOM3.jpg" alt="" itemprop="thumbnailUrl" />
+                                                                            </a>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-5 col-sm-12 page-header header-maisnoticias" style="text-align: left;">
+                               
+                                 <h2 itemprop="name">
+                                    <a href="/noticias/907-pddu-orienta-crescimento-de-salvador-e-consolida-planejamento-para-futuro-da-cidade" itemprop="url" style="color:#1f5da6;">
+                                        PDDU orienta crescimento de Salvador e consolida planejamento para futuro da cidade    
+                                    </a>
+                                </h2>      
+  
+                            </div>
+                            
+                                          
+                            <div class="col-md-2 col-sm-12 page-header header-maisnoticias">
+    
+                            </div>              
+                                          
+
+                        </div>
+                    </div>
+                    <!-- end item -->
+                </div><!-- end span -->
+            </div><!-- end row -->
+                                <div class="items-row id-906 cols-1 row-fluid clearfix">
+                <div class="span12">
+                    <div class="item column-1" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+                        <div class="col-md-12 col-sm-12" style="padding-left: 0px;">
+                            <div class="page-header header-maisnoticias">
+                              <!-- Mp2 retirei <h2 itemprop="name">
+                                    <a href="/noticias/906-prefeitura-e-cartorios-unem-esforcos-para-dar-mais-celeridade-aos-processos-de-imoveis-em-salvador" itemprop="url" style="color:#f7f7f7;">
+                                        Prefeitura e cartórios unem esforços para dar mais celeridade aos processos de imóveis em Salvador    
+                                    </a>
+                                </h2> -->
+                            </div> 
+                        </div>
+                        
+                        <dl class="article-info muted">
+                            <dt class="article-info-term">
+                            </dt>
+                            <dd class="published">
+                                <img src="/images/page_todasasnoticias/calendario_icon.png" style="width:20px;" alt="">
+                                <time style="font-weight:bold;" datetime="2021-07-26T15:05:16+00:00" itemprop="datePublished"> 19-08-26 </time>
+                            </dd>
+                        </dl>
+
+                        <div class="row">
+
+                            <div class="col-md-4 col-sm-12">
+                                <div class="pull-left item-image">
+                                    <a href="/noticias/906-prefeitura-e-cartorios-unem-esforcos-para-dar-mais-celeridade-aos-processos-de-imoveis-em-salvador">
+                                                                                    <img src="/images/noticias/ee968caf-2e62-407d-9cf8-5837b0334521.jpeg" alt="" itemprop="thumbnailUrl" />
+                                                                            </a>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-5 col-sm-12 page-header header-maisnoticias" style="text-align: left;">
+                               
+                                 <h2 itemprop="name">
+                                    <a href="/noticias/906-prefeitura-e-cartorios-unem-esforcos-para-dar-mais-celeridade-aos-processos-de-imoveis-em-salvador" itemprop="url" style="color:#1f5da6;">
+                                        Prefeitura e cartórios unem esforços para dar mais celeridade aos processos de imóveis em Salvador    
+                                    </a>
+                                </h2>      
+  
+                            </div>
+                            
+                                          
+                            <div class="col-md-2 col-sm-12 page-header header-maisnoticias">
+    
+                            </div>              
+                                          
+
+                        </div>
+                    </div>
+                    <!-- end item -->
+                </div><!-- end span -->
+            </div><!-- end row -->
+                                <div class="items-row id-905 cols-1 row-fluid clearfix">
+                <div class="span12">
+                    <div class="item column-1" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+                        <div class="col-md-12 col-sm-12" style="padding-left: 0px;">
+                            <div class="page-header header-maisnoticias">
+                              <!-- Mp2 retirei <h2 itemprop="name">
+                                    <a href="/noticias/905-conselho-municipal-da-cidade-define-cronograma-das-camaras-tematicas-para-revisao-do-pddu" itemprop="url" style="color:#f7f7f7;">
+                                        Conselho Municipal da Cidade define cronograma das câmaras temáticas para revisão do PDDU    
+                                    </a>
+                                </h2> -->
+                            </div> 
+                        </div>
+                        
+                        <dl class="article-info muted">
+                            <dt class="article-info-term">
+                            </dt>
+                            <dd class="published">
+                                <img src="/images/page_todasasnoticias/calendario_icon.png" style="width:20px;" alt="">
+                                <time style="font-weight:bold;" datetime="2021-07-26T15:05:16+00:00" itemprop="datePublished"> 18-08-26 </time>
+                            </dd>
+                        </dl>
+
+                        <div class="row">
+
+                            <div class="col-md-4 col-sm-12">
+                                <div class="pull-left item-image">
+                                    <a href="/noticias/905-conselho-municipal-da-cidade-define-cronograma-das-camaras-tematicas-para-revisao-do-pddu">
+                                                                                    <img src="/images/noticias/296d85e2-ff1c-4f05-996e-486cdb10e4da_2.jpeg" alt="" itemprop="thumbnailUrl" />
+                                                                            </a>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-5 col-sm-12 page-header header-maisnoticias" style="text-align: left;">
+                               
+                                 <h2 itemprop="name">
+                                    <a href="/noticias/905-conselho-municipal-da-cidade-define-cronograma-das-camaras-tematicas-para-revisao-do-pddu" itemprop="url" style="color:#1f5da6;">
+                                        Conselho Municipal da Cidade define cronograma das câmaras temáticas para revisão do PDDU    
+                                    </a>
+                                </h2>      
+  
+                            </div>
+                            
+                                          
+                            <div class="col-md-2 col-sm-12 page-header header-maisnoticias">
+    
+                            </div>              
+                                          
+
+                        </div>
+                    </div>
+                    <!-- end item -->
+                </div><!-- end span -->
+            </div><!-- end row -->
+                                <div class="items-row id-904 cols-1 row-fluid clearfix">
+                <div class="span12">
+                    <div class="item column-1" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+                        <div class="col-md-12 col-sm-12" style="padding-left: 0px;">
+                            <div class="page-header header-maisnoticias">
+                              <!-- Mp2 retirei <h2 itemprop="name">
+                                    <a href="/noticias/904-sedur-e-sefaz-promovem-reuniao-para-fortalecer-integracao-e-aprimorar-servicos-ao-cidadao" itemprop="url" style="color:#f7f7f7;">
+                                        Sedur e Sefaz promovem reunião para fortalecer integração e aprimorar serviços ao cidadão    
+                                    </a>
+                                </h2> -->
+                            </div> 
+                        </div>
+                        
+                        <dl class="article-info muted">
+                            <dt class="article-info-term">
+                            </dt>
+                            <dd class="published">
+                                <img src="/images/page_todasasnoticias/calendario_icon.png" style="width:20px;" alt="">
+                                <time style="font-weight:bold;" datetime="2021-07-26T15:05:16+00:00" itemprop="datePublished"> 07-08-26 </time>
+                            </dd>
+                        </dl>
+
+                        <div class="row">
+
+                            <div class="col-md-4 col-sm-12">
+                                <div class="pull-left item-image">
+                                    <a href="/noticias/904-sedur-e-sefaz-promovem-reuniao-para-fortalecer-integracao-e-aprimorar-servicos-ao-cidadao">
+                                                                                    <img src="/images/noticias/296d85e2-ff1c-4f05-996e-486cdb10e4da_2.jpeg" alt="" itemprop="thumbnailUrl" />
+                                                                            </a>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-5 col-sm-12 page-header header-maisnoticias" style="text-align: left;">
+                               
+                                 <h2 itemprop="name">
+                                    <a href="/noticias/904-sedur-e-sefaz-promovem-reuniao-para-fortalecer-integracao-e-aprimorar-servicos-ao-cidadao" itemprop="url" style="color:#1f5da6;">
+                                        Sedur e Sefaz promovem reunião para fortalecer integração e aprimorar serviços ao cidadão    
+                                    </a>
+                                </h2>      
+  
+                            </div>
+                            
+                                          
+                            <div class="col-md-2 col-sm-12 page-header header-maisnoticias">
+    
+                            </div>              
+                                          
+
+                        </div>
+                    </div>
+                    <!-- end item -->
+                </div><!-- end span -->
+            </div><!-- end row -->
+                                <div class="items-row id-903 cols-1 row-fluid clearfix">
+                <div class="span12">
+                    <div class="item column-1" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+                        <div class="col-md-12 col-sm-12" style="padding-left: 0px;">
+                            <div class="page-header header-maisnoticias">
+                              <!-- Mp2 retirei <h2 itemprop="name">
+                                    <a href="/noticias/903-conselho-municipal-de-salvador-debate-revisao-do-pddu-e-da-louos" itemprop="url" style="color:#f7f7f7;">
+                                        Conselho Municipal de Salvador debate revisão do PDDU e da Louos    
+                                    </a>
+                                </h2> -->
+                            </div> 
+                        </div>
+                        
+                        <dl class="article-info muted">
+                            <dt class="article-info-term">
+                            </dt>
+                            <dd class="published">
+                                <img src="/images/page_todasasnoticias/calendario_icon.png" style="width:20px;" alt="">
+                                <time style="font-weight:bold;" datetime="2021-07-26T15:05:16+00:00" itemprop="datePublished"> 31-07-26 </time>
+                            </dd>
+                        </dl>
+
+                        <div class="row">
+
+                            <div class="col-md-4 col-sm-12">
+                                <div class="pull-left item-image">
+                                    <a href="/noticias/903-conselho-municipal-de-salvador-debate-revisao-do-pddu-e-da-louos">
+                                                                                    <img src="/images/noticias/ed68fda2-ee5d-4313-a3e7-0e804d884dc4.jpeg" alt="" itemprop="thumbnailUrl" />
+                                                                            </a>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-5 col-sm-12 page-header header-maisnoticias" style="text-align: left;">
+                               
+                                 <h2 itemprop="name">
+                                    <a href="/noticias/903-conselho-municipal-de-salvador-debate-revisao-do-pddu-e-da-louos" itemprop="url" style="color:#1f5da6;">
+                                        Conselho Municipal de Salvador debate revisão do PDDU e da Louos    
+                                    </a>
+                                </h2>      
+  
+                            </div>
+                            
+                                          
+                            <div class="col-md-2 col-sm-12 page-header header-maisnoticias">
+    
+                            </div>              
+                                          
+
+                        </div>
+                    </div>
+                    <!-- end item -->
+                </div><!-- end span -->
+            </div><!-- end row -->
+                                <div class="items-row id-902 cols-1 row-fluid clearfix">
+                <div class="span12">
+                    <div class="item column-1" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+                        <div class="col-md-12 col-sm-12" style="padding-left: 0px;">
+                            <div class="page-header header-maisnoticias">
+                              <!-- Mp2 retirei <h2 itemprop="name">
+                                    <a href="/noticias/902-sedur-e-fieb-celebram-acordo-de-cooperacao-tecnica-para-fortalecer-sustentabilidade-e-gestao-de-residuos" itemprop="url" style="color:#f7f7f7;">
+                                        Sedur e FIEB celebram acordo de cooperação técnica para fortalecer sustentabilidade e gestão de resíduos    
+                                    </a>
+                                </h2> -->
+                            </div> 
+                        </div>
+                        
+                        <dl class="article-info muted">
+                            <dt class="article-info-term">
+                            </dt>
+                            <dd class="published">
+                                <img src="/images/page_todasasnoticias/calendario_icon.png" style="width:20px;" alt="">
+                                <time style="font-weight:bold;" datetime="2021-07-26T15:05:16+00:00" itemprop="datePublished"> 31-07-26 </time>
+                            </dd>
+                        </dl>
+
+                        <div class="row">
+
+                            <div class="col-md-4 col-sm-12">
+                                <div class="pull-left item-image">
+                                    <a href="/noticias/902-sedur-e-fieb-celebram-acordo-de-cooperacao-tecnica-para-fortalecer-sustentabilidade-e-gestao-de-residuos">
+                                                                                    <img src="/images/noticias/296d85e2-ff1c-4f05-996e-486cdb10e4da_2.jpeg" alt="" itemprop="thumbnailUrl" />
+                                                                            </a>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-5 col-sm-12 page-header header-maisnoticias" style="text-align: left;">
+                               
+                                 <h2 itemprop="name">
+                                    <a href="/noticias/902-sedur-e-fieb-celebram-acordo-de-cooperacao-tecnica-para-fortalecer-sustentabilidade-e-gestao-de-residuos" itemprop="url" style="color:#1f5da6;">
+                                        Sedur e FIEB celebram acordo de cooperação técnica para fortalecer sustentabilidade e gestão de resíduos    
+                                    </a>
+                                </h2>      
+  
+                            </div>
+                            
+                                          
+                            <div class="col-md-2 col-sm-12 page-header header-maisnoticias">
+    
+                            </div>              
+                                          
+
+                        </div>
+                    </div>
+                    <!-- end item -->
+                </div><!-- end span -->
+            </div><!-- end row -->
+                                <div class="items-row id-901 cols-1 row-fluid clearfix">
+                <div class="span12">
+                    <div class="item column-1" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+                        <div class="col-md-12 col-sm-12" style="padding-left: 0px;">
+                            <div class="page-header header-maisnoticias">
+                              <!-- Mp2 retirei <h2 itemprop="name">
+                                    <a href="/noticias/901-sedur-interdita-sete-ferros-velhos-irregulares-em-operacao-integrada-com-a-ssp" itemprop="url" style="color:#f7f7f7;">
+                                        Sedur interdita sete ferros-velhos irregulares em operação integrada com a SSP    
+                                    </a>
+                                </h2> -->
+                            </div> 
+                        </div>
+                        
+                        <dl class="article-info muted">
+                            <dt class="article-info-term">
+                            </dt>
+                            <dd class="published">
+                                <img src="/images/page_todasasnoticias/calendario_icon.png" style="width:20px;" alt="">
+                                <time style="font-weight:bold;" datetime="2021-07-26T15:05:16+00:00" itemprop="datePublished"> 23-07-26 </time>
+                            </dd>
+                        </dl>
+
+                        <div class="row">
+
+                            <div class="col-md-4 col-sm-12">
+                                <div class="pull-left item-image">
+                                    <a href="/noticias/901-sedur-interdita-sete-ferros-velhos-irregulares-em-operacao-integrada-com-a-ssp">
+                                                                                    <img src="/images/noticias/operao_ferro_velho_ascom_sedur_1.jpeg" alt="" itemprop="thumbnailUrl" />
+                                                                            </a>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-5 col-sm-12 page-header header-maisnoticias" style="text-align: left;">
+                               
+                                 <h2 itemprop="name">
+                                    <a href="/noticias/901-sedur-interdita-sete-ferros-velhos-irregulares-em-operacao-integrada-com-a-ssp" itemprop="url" style="color:#1f5da6;">
+                                        Sedur interdita sete ferros-velhos irregulares em operação integrada com a SSP    
+                                    </a>
+                                </h2>      
+  
+                            </div>
+                            
+                                          
+                            <div class="col-md-2 col-sm-12 page-header header-maisnoticias">
+    
+                            </div>              
+                                          
+
+                        </div>
+                    </div>
+                    <!-- end item -->
+                </div><!-- end span -->
+            </div><!-- end row -->
+                    </div>
+    </div>
+       
+
+
+		<div class="pagination">
+							<p class="counter pull-right"> Página 1 de 81 </p>
+						<ul>
+	<li class="pagination-start"><span class="pagenav">Início</span></li>
+	<li class="pagination-prev"><span class="pagenav">Anterior</span></li>
+			<li><span class="pagenav">1</span></li>			<li><a href="/noticias?start=10" class="pagenav">2</a></li>			<li><a href="/noticias?start=20" class="pagenav">3</a></li>			<li><a href="/noticias?start=30" class="pagenav">4</a></li>			<li><a href="/noticias?start=40" class="pagenav">5</a></li>			<li><a href="/noticias?start=50" class="pagenav">6</a></li>			<li><a href="/noticias?start=60" class="pagenav">7</a></li>			<li><a href="/noticias?start=70" class="pagenav">8</a></li>			<li><a href="/noticias?start=80" class="pagenav">9</a></li>			<li><a href="/noticias?start=90" class="pagenav">10</a></li>		<li class="pagination-next"><a title="Próximo" href="/noticias?start=10" class="hasTooltip pagenav">Próximo</a></li>
+	<li class="pagination-end"><a title="Fim" href="/noticias?start=800" class="hasTooltip pagenav">Fim</a></li>
+</ul>
+ </div>
+	
+			</div>
+</div>
+
+
+</div>
+                          </div> 
+                      </div>
+                  </div>
+              </div>
+                            <!--VERIFICAÇÃO PARA INCLUSÃO DE PÁGINA-->
+	</main>
+	
+<footer>
+
+<!-- inicio Mp2 -->
+      
+        
+  	  <div class="container-fluid">
+              <div class="row justify-content-start text-center">
+                  <div class="col-12" style="padding-top:5px; padding-bottom: 1px;"></div>
+              </div>
+      </div>
+       
+      <div class="container-fluid">
+          <div class="row justify-content-start text-center sty">
+              <div class="col-12 endereco">
+                  <b>&copy; 2021 - Secretaria Municipal de Desenvolvimento Urbano. Todos os direitos reservados.</b>
+              </div>
+          </div>
+      </div>
+       
+  	  <div class="container-fluid">
+              <div class="row justify-content-start text-center">
+                  <div class="col-12" style="padding-top:1px; padding-bottom: 1px;"></div>
+              </div>
+      </div>
+       
+         
+    <div class="container-fluid bannerfoot">
+
+              <div class="row">
+
+                    <!-- inic coluna3 ACESSO RAPIDO-->
+                    <div class="bfooter1 col-xs-12 col-sm-6 col-md-3" style="padding-top:30px; padding-left:20px; border:0px solid #fff">
+                       <ul class="none">
+                         <h5><font size="2px" color="#FFD190"><B>ACESSO RÁPIDO</B></font></h5>
+                         <li><a href="https://sedur.salvador.ba.gov.br/acessoremoto/" target="_blank" alt="Acesso Interno SEDUR"><font color="white" style="font-family:'Roboto' sans-serif; font-size:12px">Acesso Interno</font></a></li>
+       					 <li><a href="https://agendamento.sedur.salvador.ba.gov.br/sas/#agendamento" target="_blank" alt="Agendamento"><font color="white" style="font-family:'Roboto', sans-serif;  font-size:12px">Agendamento</font></a></li>
+                    	 <!-- 4ls; Modificação da página Canais de Atendimento-->
+       					 <!-- <li><a href="/./canais-de-atendimento" target="_blanck" alt="Canais Atendimento"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px">Canais de Atendimento</font></a></li> -->
+                    	<li><a href="https://servicos.sedur.salvador.ba.gov.br/#/portal/contacts" target="_blanck" alt="Canais Atendimento"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px">Canais de Atendimento</font></a></li>
+                         <!-- Fim -->
+                         <li><a href="http://www.falasalvador.ba.gov.br/portal/portal/" target="_blank" alt="Portal Fala Salvador"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px"> Portal Fala Salvador</font></a></li>
+                           <!--<li>
+                           	Prefeitura Municipal de Salvador<br>
+                           	13.927.801/0029-40
+                           </li>-->
+                       </ul>
+                    </div>   
+
+
+                    <!-- inic coluna1 SEDUR -->
+                    <div class="bfooter2 col-xs-12 col-sm-6 col-md-4" style="text-align:left; padding-top:60px; border:0px solid #fff">
+                        <img class = "img-responsive" src="http://sedur.salvador.ba.gov.br//images/logo/logo-white.png" alt="logo SEDUR">
+                    </div>
+
+
+                    <!-- inic coluna2 PREFEITURA -->
+                    <!-- <div class="bfooter3 col-xs-12 col-sm-6 col-md-3" style="text-align:left; padding-top:50px; border:0px solid #fff">
+                        <img id = "img_sedur_branca" src="http://sedur.salvador.ba.gov.br//images/logo/PREFEITURA_RET_COMPL_Branc_Ftrans2.png" alt="logo Prefeitura" width="200px" hight="auto">
+                    </div> -->
+
+
+
+                    <!-- inic coluna4 GOOGLE-->             
+                    <div class="bfooter4 col-xs-12 col-sm-6 col-md-3 offset-2" style="padding-top:10px; font-family:'Roboto', sans-serif; font-size:12px; color:white;">
+                      <a href="https://www.google.com/maps/place/SEDUR+-+Secretaria+Municipal+de+Desenvolvimento+e+Urbanismo/@-12.9847353,-38.4661181,1236a,35y,90h/data=!3m1!1e3!4m5!3m4!1s0x7161b34826018a3:0x6f1379fe7b002977!8m2!3d-12.9876324!4d-38.4666753?hl=pt-BR" target="_blank" alt="Endereo Sedur"><img src="http://sedur.salvador.ba.gov.br//images/imagens/END_SEDUR.png" width="100%" height="auto" style="border:3px solid #ffffff;"></a> 
+       				  <p>Av.ACM, nº3224, Caminho das Árvores - Salvador/Ba. Edf.Empresarial Thomé de Souza / Térreo - CEP.: 41110-700 </p>
+                     </div>
+
+              </div>
+
+    </div>       
+         
+    
+          
+    
+ <!-- fim Mp2 -->  
+     
+                  
+                  
+</footer>
+
+    <script src="http://sedur.salvador.ba.gov.br/templates/sedur/assets/js/js.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<script src="http://sedur.salvador.ba.gov.br/templates/sedur/assets/js/imageMapResizer.min.js"></script>
+	<script type="text/javascript">
+		$('map').imageMapResize();
+	</script>
+
+
+	<script>
+  
+  
+  function popUp(){
+    document.getElementById("dialog-message").style.display = "none";
+};   
+  
+  (function($) {
+$.fn.menumaker = function(options) {  
+ var cssmenu = $(this), settings = $.extend({
+   format: "dropdown",
+   sticky: false
+ }, options);
+ return this.each(function() {
+   $(this).find(".button").on('click', function(){
+     $(this).toggleClass('menu-opened');
+     var mainmenu = $(this).next('ul');
+     if (mainmenu.hasClass('open')) { 
+       mainmenu.slideToggle().removeClass('open');
+     }
+     else {
+       mainmenu.slideToggle().addClass('open');
+       if (settings.format === "dropdown") {
+         mainmenu.find('ul').show();
+       }
+     }
+   });
+   cssmenu.find('li ul').parent().addClass('has-sub');
+multiTg = function() {
+     cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
+     cssmenu.find('.submenu-button').on('click', function() {
+       $(this).toggleClass('submenu-opened');
+       if ($(this).siblings('ul').hasClass('open')) {
+         $(this).siblings('ul').removeClass('open').slideToggle();
+       }
+       else {
+         $(this).siblings('ul').addClass('open').slideToggle();
+       }
+     });
+   };
+   if (settings.format === 'multitoggle') multiTg();
+   else cssmenu.addClass('dropdown');
+   if (settings.sticky === true) cssmenu.css('position', 'fixed');
+resizeFix = function() {
+  var mediasize = 1000;
+     if ($( window ).width() > mediasize) {
+       cssmenu.find('ul').show();
+     }
+     if ($(window).width() <= mediasize) {
+       cssmenu.find('ul').hide().removeClass('open');
+     }
+   };
+   resizeFix();
+   return $(window).on('resize', resizeFix);
+ });
+  };
+})(jQuery);
+
+(function($){
+$(document).ready(function(){
+$("#cssmenu").menumaker({
+   format: "multitoggle"
+});
+});
+})(jQuery);
+$( "li.item-161" ).find( "span" ).css('display', 'none');
+$( "li.item-162" ).find( "span" ).css('display', 'none');
+</script>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+	
+</body>
+	
+	
+	
+</html>
+
+
+
+		
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>:: SEDUR - Secretaria Municipal de Desenvolvimento Urbano ::</title>
+<link href="../css/estilo.css" rel="stylesheet" type="text/css" />
+<style>
+a:link {
+	font:11px "Trebuchet MS";
+	color:#1F1A17;
+	text-decoration: none;	
+}
+
+a:hover {
+	font:11px "Trebuchet MS";
+	color:#1F1A17;
+	text-decoration: underline;
+}
+
+a:visited {
+	font:11px "Trebuchet MS";
+	color:#1F1A17;
+	text-decoration: none;	
+}
+
+a:active {
+	font:11px "Trebuchet MS";
+	color:#1F1A17;
+	text-decoration: none;	
+}
+
+.fonte-h0{
+	font:11px "Trebuchet MS"; 
+	color:#1F1A17;
+	text-decoration: none;	
+	
+}	
+</style>
+<script language="javascript">
+function testaForm(n,o)
+{
+    document.flocal.acao.value = n;
+    document.flocal.submit();
+    return true;
+}
+</script>
+</head>
+<body>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td valign="top">
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" >
+    <tr>
+      <td width="700" valign="top">
+        <form method="post" name="flocal" action="consulta-processos-convite-geral.php">
+           <input type="hidden" name="acao" size="1" value="">
+        <br>
+        <TABLE WIDTH="700" BORDER=0 CELLPADDING=0 CELLSPACING=1 ALIGN="CENTER">
+          <tr>
+            <td width="128" height="29"><strong><font face="arial,tahoma" size="2">Grupo de Servi&ccedil;o:</font></strong></td>
+            <td width="569"><span class="textos-label">
+              <select name="gruposervico" class="caixabusca">
+                <OPTION value="" SELECTED>Selecione uma op&ccedil;&atilde;o</OPTION><OPTION value="31">ADMINISTRATIVO</OPTION><OPTION value="113">AMBIENTAL</OPTION><OPTION value="9">AUXILIARES</OPTION><OPTION value="51">CARNAVAL</OPTION><OPTION value="151">DESENVOLVIMENTO ECONÔMICO</OPTION><OPTION value="2">EMPREENDIMENTO</OPTION><OPTION value="91">EVENTOS</OPTION><OPTION value="153">FESTAS POPULARES</OPTION><OPTION value="4">FISCALIZAÇÃO</OPTION><OPTION value="71">JURÍDICO</OPTION><OPTION value="154">OBRAS ESPECIAIS</OPTION><OPTION value="155">PARCELAMENTO DO SOLO</OPTION><OPTION value="131">PROJETOS</OPTION><OPTION value="3">PUBLICIDADE</OPTION><OPTION value="152">TELECOMUNICAÇÕES</OPTION><OPTION value="115">URBANISMO</OPTION><OPTION value="1">VIABILIDADE DE LOCALIZAÇÃO</OPTION>              </select>
+            </span></td>            
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td><input type="button" class="botao" value="Consultar" name="consultar" onclick="return testaForm('Consultar');" />
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td></td>
+          </tr>
+        </table>
+		  
+            </form>           
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

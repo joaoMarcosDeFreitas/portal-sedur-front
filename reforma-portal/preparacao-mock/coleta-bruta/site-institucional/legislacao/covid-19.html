@@ -1,0 +1,1559 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+	<!--ATIVAÇÃO DE COMPATIBILIDADE E PROTEÇÃO CONTRA ATAQUES DO TIPO XSS-->
+	<!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+	<!--meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1,maximum-scale=1,user-scalable=no"-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-XSS-Protection" content="1">
+	<meta http-equiv="x-dns-prefetch-control" content="off">
+	<!--ATIVAÇÃO DE COMPATIBILIDADE E PROTEÇÃO CONTRA ATAQUES DO TIPO XSS-->
+	
+	
+			
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="/var/www/html/sedur/favicon.ico"> -->
+
+	
+	
+	
+	<meta name="google-site-verification" content="3XxLThCC-_tkg2qtziw_KG01DRXRqWTMM91thC8V6RM" />
+	<!--OBS: ENCONTRAM-SE NO TYPE HEAD AS META TAGS DESCRIPTION E KEYWORDS-->
+	<meta charset="utf-8" />
+	<base href="http://sedur.salvador.ba.gov.br/covid-19" />
+	<meta name="author" content="Super User" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>SEDUR - Secretaria Municipal de Desenvolvimento Urbano</title>
+	<link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://sedur.salvador.ba.gov.br/templates/sedur/assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="http://sedur.salvador.ba.gov.br/templates/sedur/assets/css/template.css" rel="stylesheet" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"11714fe24c80912fef90c4cce1670178","system.paths":{"root":"","base":""}}</script>
+
+</head>
+
+	
+<body>
+	
+    <!-- Pop-up de Aviso -->
+          <!-- <div id="dialog-message" style="position: fixed; z-index: 4000; margin-left: 30px; margin-top: 100px; right: 30px;">
+          <div class="d-flex flex-row-reverse">
+        	<button style="margin-bottom: 10px" type="button" class="btn-close btn-lg" aria-label="Close" onclick="popUp()" id="botaoFechar">X</button>
+          </div>
+    		
+          <a href="#">
+            <p>
+              <img src="http://sedur.salvador.ba.gov.br//images/avisoLicenciamento31012025.jpeg" style="width: 600px;">
+			</p>
+          </a>
+		</div> -->
+        <!-- Fim -->
+      
+    
+	<div id="header-section1-internas" class="navbar-fixed-top not-print" style="display:none;">
+        
+  		<div class="wrapper">
+            
+  			<a id="logo-internas" href="http://www.salvador.ba.gov.br" target="_parent" title="Ir para o Portal Salvador">Prefeitura Municipal de Salvador</a>    
+
+            <div class="float-right"> 
+
+                <div class="social-links float-left font-bold">
+                    <ul class="float-left">
+                        <li class="facebook"><a href="https://www.facebook.com/pages/Prefeitura-de-Salvador/472097156139269" target="_blank">Facebook</a></li>
+                        <li class="youtube"><a href="http://www.youtube.com/prefeituradosalvador" target="_blank">YouTube</a></li>
+                        <li class="flickr"><a href="http://www.flickr.com/photos/prefeituradesalvador" target="_blank">Flickr</a></li>
+                        <li class="twitter"><a href="https://twitter.com/prefsalvador" target="_blank">Twitter</a></li>
+                    </ul>
+                </div>  
+
+            </div> 
+  
+        </div>
+</div>
+
+<style type="text/css">
+	#header-section1-internas {
+	    background-color: #34558c;
+	    height: 48px;
+	    border-top: 1px solid #3e66a3;
+	}
+	.wrapper {
+	    width: 100%;
+	    margin: 0 auto;
+	}
+	#logo-internas {
+		display: block;
+		float: left;
+		background: transparent url(http://sedur.salvador.ba.gov.br//images/logo/logo-internas.png) left center no-repeat;
+		/* Mp2 background: transparent url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/logo-internas.png) left center no-repeat;*/
+        width: 284px;
+		height: 43px;
+		text-indent: -5000em;
+		margin-left:10px;
+	}
+	.float-right {
+	    float: right;
+	}
+	.social-links {
+	    /* padding-top: 35px; */
+	    width: 100%;
+	}
+	.float-left {
+	    float: left;
+	}
+	.social-links ul {
+	    list-style: none;
+	    padding: 0;
+	    margin: 5px 0 0 0;
+	}
+	.social-links .facebook {
+    	background-image: url(http://sedur.salvador.ba.gov.br//images/logo/facebook-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/facebook-icon.png); */                    
+	}
+	.social-links .youtube {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/youtube-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/youtube-icon.png); */                       
+	}
+	.social-links .flickr {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/flickr-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/flickr-icon.png); */ 
+	}
+	.social-links .twitter {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/twitter-icon.png);
+        /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/twitter-icon.png); */                       
+	}
+	.social-links ul li {
+	    float: left;
+	    margin-right: 7px;
+	}
+	.social-links ul li a {
+	    width: 35px;
+	    height: 35px;
+	    text-indent: -5000em;
+	    display: block;
+	}
+                        
+                              
+</style>
+	<!-- Começo Navbar -->
+
+	<div class="container-fluid" style="padding-right: 0px; padding-left: 0px; border:0px solid #000">
+		<header>
+			<div class="row" style="margin: 0%; background-color: white; padding: 2% 0; border:0px solid #008000">
+					<div class="col-md-3 offset-1 col-sm-0" style="border:0px solid #000"> 
+						<a href="/index.php">
+							<img id = "img_marca_old" src="http://sedur.salvador.ba.gov.br//images/logo/logo-black.png" class="img-responsive" alt="logo">
+						</a>
+      			    </div>
+					
+                    <div class="barramenu col-md-8 col-sm-12" style="border:0px solid #000">
+                        <nav id='cssmenu'  style="margin-left: 0px;">
+                            <div id="head-mobile" style="border:0px solid #f00"></div>
+                            <div class="button" style="border:0px solid #ff0"></div>
+                            <ul class="nav menu" style="float: right;">
+<li class="item-102 deeper parent menu-style"><a href="#" >INSTITUCIONAL</a><ul class="dropdown-menu"><li class="item-156 menu-style"><a href="/institucional/dirigentes" >Dirigentes</a></li><li class="item-157 menu-style"><a href="/institucional/estrutura-organizacional" >Estrutura Organizacional</a></li><li class="item-149 menu-style"><a href="/institucional/area-de-atuacao" >Área de Atuação</a></li></ul></li><li class="item-106 menu-style"><a href="https://servicos.sedur.salvador.ba.gov.br/#/portal/home" >SERVIÇOS</a></li><li class="item-154 menu-style"><a href="/noticias" >NOTÍCIAS</a></li><li class="item-151 menu-style"><a href="/legislacao" >LEGISLAÇÃO</a></li><li class="item-155 menu-style"><a href="/licitacoes" >LICITAÇÕES</a></li><li class="item-171 menu-style"><a href="/transparencia" >TRANSPARÊNCIA</a></li></ul>
+
+
+
+<!-- <style>
+
+	.item-161{
+		margin-left: 18%;
+	}
+
+
+	@media (min-width: 320px) and (max-width:767px) {
+		.item-161{
+		margin-left: 0%;
+		}
+
+	}
+
+	
+	@media (min-width: 767px) and (max-width:999px) {
+		.item-161{
+			margin-left: 0%;
+		}
+	}
+
+
+</style> -->
+
+
+
+
+                        </nav>	
+                    </div>
+ 			</div>
+				
+		</header>
+	</div>
+
+
+	
+	<!-- Fim Navbar -->
+		
+	
+	              <div class="no-home">
+                  <div class="container-fluid">
+                      <div class="row">
+                         <div class="col-9 offset-2">
+                              
+                              <div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+		
+	
+	     
+            
+      <div class="page-header">
+		
+			<h2 class="artigos_internos" itemprop="headline" style="width: 182px;">Covid-19</h2>
+									
+   
+          
+          <!-- Mp2 - Vou inserir 1 div botão voltar linha 301 a 303-->
+     <div class="voltarBTN" style="text-align: right;"><a href="JavaScript: window.history.back();"><button class="btn btn-warning" style="font-size: 15px; font-family: 'Roboto'; color: white; background-color: #006CB5; border-color: #006CB5; font-weight: bold; margin-right: 18px;" type="button">Voltar</button></a>
+     </div>   
+  	<br><br>
+<!-- Mp2 div botao voltar -->          
+      
+          
+          </div>
+         
+  
+          
+					
+		
+	
+	
+		
+							
+<!-- Mp2 Retirei a inclusão de imagem automaticamente das noticias
+      
+<img class="img-responsive" title="" src="/" alt=""/>
+
+fim retirar imagem -->    
+      
+	<div itemprop="articleBody">
+		<div class="col-md-12 col-12 table-responsive" style="text-align: justify; float: center;">
+<table class="table table-striped table-sm" style="width: 100%; height: 87px;">
+<thead>
+<tr style="height: 16.8px;">
+<th style="text-align: center; width: 6%; height: 16.8px;" scope="col">Data</th>
+<th style="text-align: center; width: 13.6938%; height: 16.8px;" scope="col">Nº Legislação</th>
+<th style="text-align: center; width: 72.3062%; height: 16.8px;" scope="col">Descrição</th>
+<th style="text-align: center; width: 4%; height: 16.8px;" scope="col">Arquivo</th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">12/04/2022</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 35.355/2022</td>
+<td style="width: 72.3062%; height: 31px;">Altera protocolo geral e setoriais, na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/pdf/dec_35355_2022.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">04/04/2022</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 35.310/2022</td>
+<td style="width: 72.3062%; height: 31px;">Altera protocolo geral e setoriais, na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/pdf/dec_35310_2022.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">24/03/2022</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 35.289/2022</td>
+<td style="width: 72.3062%; height: 31px;">Altera o art. 3º do Decreto nº 34.123/2021 e protocolos setoriais, na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/pdf/dec_35289_2022.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">11/03/2022</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 35.241/2022</td>
+<td style="width: 72.3062%; height: 31px;">Altera o art. 3º do Decreto nº 34.123/2021, na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/pdf/dec_35241_2022.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">03/03/2022</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 35.214/2022</td>
+<td style="width: 72.3062%; height: 31px;">Altera o art. 3º do Decreto nº 34.123/2021, e protocolos setoriais, na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/pdf/dec_35214_2022.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">08/02/2022</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 35.133/2022</td>
+<td style="width: 72.3062%; height: 27px;">Altera o art. 2º do Decreto nº 33.719/2021, na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/pdf/dec_35133_2022.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">28/01/2022</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 35.094/2022</td>
+<td style="width: 72.3062%; height: 27px;">Altera o art. 3º do Decreto nº 34.123/2021, na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/pdf/dec_35094_2022.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">21/01/2022</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 35.089/2022</td>
+<td style="width: 72.3062%; height: 27px;">Altera o art. 3º do Decreto nº 34.123/2021, na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/pdf/dec_35089_2022.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">11/01/2022</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 35.072/2022</td>
+<td style="width: 72.3062%; height: 27px;">Altera o art. 3º do Decreto nº 34.123/2021, na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/pdf/dec_35072_2022.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">05/01/2022</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 35.067/2022</td>
+<td style="width: 72.3062%; height: 27px;">Altera o art. 3º do Decreto nº 34.123/2021, na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/pdf/dec_35067_2022.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">30/11/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 34.850/2021</td>
+<td style="width: 72.3062%; height: 27px;">Altera o art. 3º do Decreto nº 34.123/2021 na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/pdf/dec_34850_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">16/11/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 34.764/2021</td>
+<td style="width: 72.3062%; height: 27px;">Altera protocolos setoriais para funcionamento das atividades na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/arquivos/2021/11/dec_34764_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">29/10/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 34.686/2021</td>
+<td style="width: 72.3062%; height: 27px;">Altera protocolos setoriais para funcionamento das atividades na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/arquivos/2021/10/dec_34686_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">28/10/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 34.671/2021</td>
+<td style="width: 72.3062%; height: 27px;">Altera protocolos setoriais para funcionamento das atividades na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/arquivos/2021/10/dec_34671_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">09/10/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 34.567/2021</td>
+<td style="width: 72.3062%; height: 31px;">Define protocolo para retorno do público aos estádios, para jogos de futebol, altera o Anexo III do Decreto nº 33.717, de 01 de abril de 2021 e os protocolos setoriais para funcionamento das atividades na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/arquivos/2021/10/dec_34567_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">23/09/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 34.501/2021</td>
+<td style="width: 72.3062%; height: 27px;">Altera protocolos setoriais para funcionamento das atividades na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/arquivos/2021/09/dec_34501_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">17/09/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 34.461/2021</td>
+<td style="width: 72.3062%; height: 27px;">Define protocolo setorial, altera o Anexo III do Decreto nº 33.717, de 01 de abril de 2021 na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/arquivos/2021/09/dec_34461_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">10/09/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 34.424/2021</td>
+<td style="width: 72.3062%; height: 31px;">Define o protocolo para Eventos Culturais e Artísticos, altera o Anexo III do Decreto nº 33.717, de 01 de abril de 2021 e protocolos setoriais para funcionamento das atividades na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/arquivos/2021/09/dec_34424_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">10/09/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 34.423/2021</td>
+<td style="width: 72.3062%; height: 27px;">Altera os protocolos geral e setoriais para funcionamento das atividades na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/arquivos/2021/09/dec_34423_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">09/09/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 34.414/2021</td>
+<td style="width: 72.3062%; height: 31px;">Altera o Anexo III do Decreto nº 33.717, de 01 de abril de 2021 e os protocolos geral e setoriais para funcionamento das atividades na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/arquivos/2021/09/dec_34414_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">02/09/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 34.399/2021</td>
+<td style="width: 72.3062%; height: 31px;">Altera o Anexo III do Decreto nº 33.717, de 01 de abril de 2021 e protocolos setoriais para funcionamento das atividades na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/arquivos/2021/09/Dec_34399_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">05/08/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 34.244/2021</td>
+<td style="width: 72.3062%; height: 31px;">Define o protocolo setorial para feiras, congressos, exposições e similares, altera o Anexo III do Decreto nº 33.717, de 01 de abril de 2021 e os protocolos setoriais para funcionamento das atividades na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/arquivos/2021/08/dec_34244_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">15/07/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 34.147/2021</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/arquivos/2021/07/dec_34147_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">09/07/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 34.127/2021</td>
+<td style="width: 72.3062%; height: 27px;">Define protocolos setoriais na forma que indica e da outras providências.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2021/07/dec_34127_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">08/07/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 34.124/2021</td>
+<td style="width: 72.3062%; height: 27px;">Define protocolos setoriais na forma que indica e dá outras providências * republicado por ter saído com incorreção</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2021/07/dec_34124_2021_republicado.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">08/07/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 34.123/2021</td>
+<td style="width: 72.3062%; height: 31px;">Autoriza o avanço para a Fase Verde da reabertura dos setores que tiveram as atividades suspensas em decorrência das medidas de preservação da vida e enfrentamento à pandemia causada pelo novo coronavírus na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/07/dec_34123_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">08/07/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 34.122/2021</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus na forma que indica e dá outras providências</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/07/dec_34122_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">01/07/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 34.101/2021</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/07/dec_34101_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">28/06/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 34.085/2021</td>
+<td style="width: 72.3062%; height: 27px;">Altera dispositivo do Decreto nº 34.075, de 25 de junho de 2021 na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2021/06/dec_34085_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">25/06/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 34.075/2021</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/06/dec_34075_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">18/06/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 34.059/2021</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/06/dec_34059_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">11/06/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 34.023/2021</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus na forma que indica e dá outras providências</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/06/dec_34023_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">07/06/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 33.988/2021</td>
+<td style="width: 72.3062%; height: 27px;">Regulamenta o Sistema de Controle Interno Integrado do Poder Executivo do Município do Salvador.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2021/06/dec_33988_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">04/06/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.987/2021</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/06/dec_33987_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">31/05/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.965/2021</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/05/dec_33965_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">27/05/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.953/2021</td>
+<td style="width: 72.3062%; height: 31px;">Dispõe sobre o horário de início e de encerramento das atividades comerciais e de serviços no período de 28 a 31 de maio de 2021, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/05/dec_33953_2021.pdf" target="_blank" rel="noopener noreferrer"> <img src="/images/icon/pdf.png" alt="Edital" /> </a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">22/05/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.930/2021</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/05/dec_33930_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">14/05/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.898/2021</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/05/dec_33898_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">11/05/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 33.885/2021</td>
+<td style="width: 72.3062%; height: 27px;">Define protocolos setoriais na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2021/05/dec_33885_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">11/05/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.884/2021</td>
+<td style="width: 72.3062%; height: 31px;">Autoriza o avanço para a Fase Amarela da reabertura dos setores que tiveram as atividades suspensas em decorrência das medidas de preservação da vida e enfrentamento à pandemia causada pelo novo coronavírus na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/05/dec_33884_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">08/05/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.877/2021</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/05/dec_33877_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">01/05/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 33.841/2021</td>
+<td style="width: 72.3062%; height: 27px;">Revoga dispositivos dos Decretos nº 33.811, de 23 de abril de 2021 e nº 33.812, de 24 de abril de 2021, na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2021/05/dec_33841_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">30/04/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 33.840/2021</td>
+<td style="width: 72.3062%; height: 27px;">Define o protocolo para uso das praias na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2021/05/dec_33840_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">30/04/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.839/2021</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/05/dec_33839_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">24/04/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.813/2021</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/05/dec_33813_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">24/04/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.812/2021</td>
+<td style="width: 72.3062%; height: 31px;">Define o protocolo para o funcionamento das atividades de classe com a presença de alunos das redes pública e privada de ensino no Município de Salvador na forma que indica</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/04/dec_33812_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">23/04/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 33.811/2021</td>
+<td style="width: 72.3062%; height: 27px;">Autoriza a retomada das atividades letivas presenciais nas redes pública e privada de ensino na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2021/04/dec_33811_2021-1.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">19/04/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 33.801/2021</td>
+<td style="width: 72.3062%; height: 27px;">Altera dispositivos dos Decretos nº 33.717, de 01 de abril de 2021 e nº 33.719, de 03 de abril de 2021, na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2021/04/dec_33801_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">18/04/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.793/2021</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus na forma que indica e dá outras providências (republicado)</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/04/dec_33793_2021_republicado.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">09/04/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 33.756/2021</td>
+<td style="width: 72.3062%; height: 27px;">Altera os anexos I a III do Decreto nº 33.717, de 01 de abril de 2021, na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">04/04/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 33.733/2021</td>
+<td style="width: 72.3062%; height: 27px;">Altera dispositivos dos Decretos nº 33.717, de 01 de abril de 2021 e nº 33.719, de 03 de abril de 2021, na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2021/04/dec_33733_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">03/04/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.720/2021</td>
+<td style="width: 72.3062%; height: 31px;">Autoriza a implementação da Fase Vermelha da reabertura dos setores que tiveram as atividades suspensas em decorrência das medidas de preservação da vida e enfrentamento à pandemia causada pelo novo coronavírus na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/04/dec_33720_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">03/04/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 33.719/2021</td>
+<td style="width: 72.3062%; height: 27px;">Define os protocolos geral e setoriais na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2021/04/dec_33719_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">03/04/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.718/2021</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/04/dec_33718_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">01/04/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.717/2021</td>
+<td style="width: 72.3062%; height: 31px;">Dispõe sobre os critérios para reativação dos setores que tiveram as atividades suspensas em decorrência das medidas para preservação da vida e enfrentamento à pandemia causada pelo novo coronavírus na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/04/dec_33717_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">27/03/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 33.697/2021</td>
+<td style="width: 72.3062%; height: 27px;">Altera medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2021/03/dec_33697_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">25/03/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.688/2021</td>
+<td style="width: 72.3062%; height: 31px;">Estabelece e prorroga medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/03/dec_33688_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">20/03/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.668/2021</td>
+<td style="width: 72.3062%; height: 31px;">Estabelece medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus na forma que indica e dá outras providências</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/03/dec_33668_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">12/03/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 33.635/2021</td>
+<td style="width: 72.3062%; height: 27px;">Estabelece e prorroga medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2021/03/dec_33635_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">07/03/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.612/2021</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/03/dec_33612_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">03/03/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 33.605/2021</td>
+<td style="width: 72.3062%; height: 27px;">Altera o Decreto Municipal nº 33.600 de 02 de março de 2021 na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2021/03/dec_33605_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">02/03/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 33.600/2021</td>
+<td style="width: 72.3062%; height: 27px;">Estabelece medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2021/03/dec_33600_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">01/03/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 33.592/2021</td>
+<td style="width: 72.3062%; height: 27px;">Prorroga medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2021/03/dec_33592_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">28/02/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 33.587/2021</td>
+<td style="width: 72.3062%; height: 27px;">Estabelece e prorroga medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2021/03/DEC_33587_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">25/02/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 33.583/2021</td>
+<td style="width: 72.3062%; height: 27px;">Estabelece e prorroga medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2021/02/dec_33583_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">22/02/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.569/2021</td>
+<td style="width: 72.3062%; height: 31px;">Estabelece e prorroga medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/02/dec_33569_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">19/02/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.563/2021</td>
+<td style="width: 72.3062%; height: 31px;">Estabelece medidas regionalizadas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/02/dec_33563_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">16/02/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 33.547/2021</td>
+<td style="width: 72.3062%; height: 27px;">Estabelece medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2021/02/dec_33547_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">05/02/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.506/2021</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do Município de Salvador, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/02/dec_33506_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">02/02/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.488/2021</td>
+<td style="width: 72.3062%; height: 31px;">Dispõe sobre medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do Município de Salvador, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/02/dec_33488_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">28/01/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.469/2021</td>
+<td style="width: 72.3062%; height: 31px;">Dispõe sobre a adoção do regime especial de trabalho remoto nas atividades pedagógicas não presenciais e no ensino híbrido no âmbito da Rede Pública Municipal de Ensino, devido à suspensão das atividades de classe e prevenção ao contágio pelo Coronavírus (COVID-19).</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/01/dec_33469_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">27/01/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.466/2021</td>
+<td style="width: 72.3062%; height: 31px;">Dispõe sobre medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do Município de Salvador, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/01/dec_33466_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">25/01/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.456/2021</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do Município de Salvador, na forma que indica e dá outras providências.(republicado)</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/01/dec_33456_2021_republicado.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">20/01/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.446/2021</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do Município de Salvador, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/01/dec_33446_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">09/01/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.433/2021</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do Município de Salvador, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/01/dec_33433_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">05/01/2021</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.430/2021</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do Município de Salvador, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2021/01/dec_33430_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">22/12/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.411/2020</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do Município de Salvador, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/12/dec_33411_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">11/12/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.318/2020</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do Município de Salvador, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/12/dec_33318_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">07/12/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 33.238/2020</td>
+<td style="width: 72.3062%; height: 27px;">Estabelece medidas de combate à pandemia em decorrência da Infecção Humana pelo novo coronavírus e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/12/dec-33238_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">28/11/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.188/2020</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do Município de Salvador, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/11/dec_33188_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">25/11/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 33.171/2020</td>
+<td style="width: 72.3062%; height: 27px;">Define protocolo setorial para o Mercado de Itapuã na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/11/dec_33171_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">25/11/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.170/2020</td>
+<td style="width: 72.3062%; height: 31px;">Autoriza, de forma excepcional, o funcionamento dos Shopping Centers em horário especial no dia 27 de novembro de 2020, na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/11/dec_33170_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">13/11/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 33.115/2020</td>
+<td style="width: 72.3062%; height: 27px;">Altera protocolos setoriais na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/11/dec_33115_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">12/11/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.111/2020</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do Município de Salvador, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/11/dec_33111_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 47px;">
+<td style="text-align: center; width: 6%; height: 47px;">09/11/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 47px;">Decreto nº 33.100/2020</td>
+<td style="width: 72.3062%; height: 47px;">Altera dispositivo do Decreto nº 32.925, de 02 de outubro de 2020, que regulamenta os Benefícios Fiscais destinados a mitigar os impactos econômicos decorrentes das medidas de enfrentamento da pandemia do novo coronavírus, (COVID-19) instituídos pela Lei nº 9.548, de 02 de outubro de 2020, na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 47px;"><a href="/images/arquivos_processos/2020/11/dec_33100_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">04/11/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 33.077/2020</td>
+<td style="width: 72.3062%; height: 27px;">Define protocolo setorial para o Mercado São Miguel na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/11/dec_33077_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">30/10/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.059/2020</td>
+<td style="width: 72.3062%; height: 31px;">Dispõe sobre a retomada e estabelece protocolo setorial para as atividades das Instituições de Ensino Superior, na forma que indica, e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/11/dec_33059_2020-1.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">28/10/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 33.046/2020</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do Município de Salvador, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/10/dec_33046_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">27/10/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 33.037/2020</td>
+<td style="width: 72.3062%; height: 27px;">Altera protocolos setoriais na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/10/dec_33037_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">16/10/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.985/2020</td>
+<td style="width: 72.3062%; height: 27px;">Estabelece protocolos setoriais para eventos sociais e circos na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/10/dec_32895_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">13/10/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.964/2020</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do Município de Salvador, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/10/dec_32964_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">09/10/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.958/2020</td>
+<td style="width: 72.3062%; height: 27px;">Revoga dispositivo do Decreto nº 32.461 de 2020, na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/10/dec_32958_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">02/10/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.911/2020</td>
+<td style="width: 72.3062%; height: 27px;">Altera protocolos setoriais na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/10/dec_32911_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">29/09/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.890/2020</td>
+<td style="width: 72.3062%; height: 27px;">Define medidas complementares para o enfrentamento da pandemia decorrente do coronavírus.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/10/dec_32890_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">28/09/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.881/2020</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do Município de Salvador, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/09/dec_32881_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">25/09/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.874/2020</td>
+<td style="width: 72.3062%; height: 31px;">Estabelece protocolos setoriais para parques públicos municipais e restaurantes populares municipais na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">18/09/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.842/2020</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/09/dec_32842_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">18/09/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.841/2020</td>
+<td style="width: 72.3062%; height: 27px;">Define protocolo setorial para praias, revoga dispositivo do Decreto n° 32.326 de 2020 na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/09/dec_32841_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">14/09/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.815/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define protocolo setorial para o mercado das Flores e para o Mercado do Bonfim e revoga dispositivos do Decreto nº 32.280/2020 na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/09/dec_32815_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">12/09/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.816/2020</td>
+<td style="width: 72.3062%; height: 27px;">Prorroga medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do Município de Salvador.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/09/dec_32816_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">11/09/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.814/2020</td>
+<td style="width: 72.3062%; height: 27px;">Estabelece protocolos setoriais para realização das atividades na forma que indica</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/09/dec_32814_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">11/09/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.813/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/09/dec_32813_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">04/09/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.798/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define protocolos setoriais para funcionamento de cursos livres e cursos de reciclagem de vigilantes de segurança na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/09/dec_32798_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">04/09/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.797/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades (republicado)</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/09/dec_32797_2020-1.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">29/08/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.770/2020</td>
+<td style="width: 72.3062%; height: 27px;">Estabelece protocolos para o funcionamento dos órgãos integrantes da estrutura organizacional da Prefeitura Municipal de Salvador</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/08/dec_32770_2020-compactado.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">29/08/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.769/2020</td>
+<td style="width: 72.3062%; height: 31px;">Autoriza o funcionamento e define o protocolo para a atividade dos clubes sociais, recreativos e esportivos, com previsão de retomada na Fase 3, observado o disposto no Decreto nº 32.580, de 15 de julho de 2020</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/09/dec_32769_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">28/08/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.768/2020</td>
+<td style="width: 72.3062%; height: 27px;">Prorroga medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do Município de Salvador</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/09/dec_32768_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">28/08/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.767/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/09/dec_32767_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">24/08/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.747/2020</td>
+<td style="width: 72.3062%; height: 27px;">Define protocolo setorial para funcionamento das autoescolas na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/08/dec_32747_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">21/08/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.735/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/08/dec_32735_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">21/08/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.734/2020</td>
+<td style="width: 72.3062%; height: 31px;">Altera o Protocolo Setorial dos Serviços de Clínicas e Consultórios, definido conforme art. 10 do Decreto nº 32.461, de 01 de junho de 2020, na forma que indica</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/08/dec_32734_2020-1.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">18/08/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.713/2020</td>
+<td style="width: 72.3062%; height: 27px;">Estabelece o protocolo setorial para a reabertura do Elevador Lacerda.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/08/dec_32713_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">14/08/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.700/2020</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">14/08/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.699/2020</td>
+<td style="width: 72.3062%; height: 27px;">Prorroga medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do Município de Salvador</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/08/dec_32699_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">13/08/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.694/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/08/dec_32694_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">12/08/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.686/2020</td>
+<td style="width: 72.3062%; height: 27px;">Dispõe sobre protocolos setoriais para realização de atividades econômicas e sociais</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/08/dec_32686_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">08/08/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.675/2020</td>
+<td style="width: 72.3062%; height: 31px;">Autoriza a implementação da Fase 2 da reabertura dos setores que tiveram as atividades suspensas em decorrência das medidas para enfrentamento e prevenção à pandemia causada pelo novo coronavírus na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/08/dec_32675_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">06/08/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.663/2020</td>
+<td style="width: 72.3062%; height: 27px;">Autoriza, de forma excepcional, o funcionamento dos Shopping Centers em horário especial no dia 08 de agosto de 2020</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/08/dec_32663_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">06/08/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.662/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/08/dec_32662_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">05/08/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.656/2020</td>
+<td style="width: 72.3062%; height: 27px;">Estabelece protocolos setoriais para realização das atividades na forma que indica</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/08/dec_32656_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">30/07/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.636/2020</td>
+<td style="width: 72.3062%; height: 27px;">Estabelece a classificação de risco das atividades econômicas no Município de Salvador</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/08/dec-32636-2020-salvador-ba.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">30/07/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.631/2020</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/08/dec_32631_2020-compactado.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">30/07/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.630/2020</td>
+<td style="width: 72.3062%; height: 27px;">Prorroga medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do Município de Salvador</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/08/dec_32630_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">30/07/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.629/2020</td>
+<td style="width: 72.3062%; height: 27px;">Estabelece o protocolo setorial para a reabertura do Mercado Modelo</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/08/dec_32629_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">24/07/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.615/2020</td>
+<td style="width: 72.3062%; height: 31px;">Reestabelece a exigência do pagamento pela utilização dos estacionamentos públicos abertos localizados em vias públicas – Zona Azul, suspensa como medida de prevenção e enfrentamento do COVID-19, na forma que indica e dá outras providências</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/07/dec_32615_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">23/07/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.610/2020</td>
+<td style="width: 72.3062%; height: 31px;">Autoriza a implementação da Fase 1 da reabertura dos setores que tiveram as atividades suspensas em decorrência das medidas para enfrentamento e prevenção à pandemia causada pelo novo coronavírus na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/07/dec_32610_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">22/07/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.606/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/07/dec_32606_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">20/07/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.597/2020</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga o prazo de ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/07/dec_32597_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">18/07/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.589/2020</td>
+<td style="width: 72.3062%; height: 27px;">Estabelece protocolos setoriais para realização de atividades na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/07/dec_32589_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">15/07/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.581/2020</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do Município de Salvador, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/07/dec_32581_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">15/07/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.580/2020</td>
+<td style="width: 72.3062%; height: 31px;">Dispõe sobre critérios de reabertura dos setores que tiveram as atividades suspensas em decorrência das medidas para enfrentamento e prevenção à pandemia causada pelo novo coronavírus na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/07/dec_32580_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">15/07/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.579/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/07/dec_32579_2020-compactado.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">11/07/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.572/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/07/dec_32572_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">09/07/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.569/2020</td>
+<td style="width: 72.3062%; height: 27px;">Estabelece protocolo setorial para treinamentos em clubes profissionais de futebol – 2ª Etapa, na forma que indica</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/07/dec_32569_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">08/07/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.563/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/07/dec_32563_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">07/07/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.561/2020</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do Município de Salvador, estabelece protocolos setoriais na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/07/dec_32561_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">04/07/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.547/2020</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga o prazo de ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/07/dec_32547_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">30/06/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.543/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades, na forma que indica e dá outras providências</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/07/dec_32543_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">26/06/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.540/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/06/dec_32540_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">19/06/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.511/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/06/dec_32511_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">16/06/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.500/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/06/dec_32500_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">15/06/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.499/2020</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do Município de Salvador, estabelece protocolos setoriais na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/06/dec_32499_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">15/06/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.498/2020</td>
+<td style="width: 72.3062%; height: 27px;">Define medidas para o funcionamento das agências bancárias e lotéricas, e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/06/dec_32498_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">12/06/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.493/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/06/dec_32493_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">09/06/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.485/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/06/dec_32485_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">08/06/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.483/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">05/06/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.478/2020</td>
+<td style="width: 72.3062%; height: 27px;">Altera dispositivo do Decreto nº 32.461, de 01 de junho de 2020, na forma que indica.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/06/dec_32478_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">05/06/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.477/2020</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga o prazo de ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/06/dec_32477_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">05/06/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Portaria SEDUR nº 184/2020</td>
+<td style="text-align: left; width: 72.3062%; height: 31px;">Dispõe sobre as medidas de comunicação previstas no protocolo geral para funcionamento dos estabelecimentos comerciais e de prestação de serviço no município de Salvador.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/06/portaria_sedur_184_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">04/06/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.470/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/06/dec_32470_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">01/06/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.461/2020</td>
+<td style="width: 72.3062%; height: 31px;">Prorroga medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do Município de Salvador, estabelece protocolos geral e setoriais para realização de atividades econômicas na forma que indica (republicado)</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/06/dec_32461_2020-1.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">01/06/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.460/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades (republicado)</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/06/dec_32460_2020-1.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">28/05/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.444/2020</td>
+<td style="width: 72.3062%; height: 27px;">Define regras gerais para realização de atividade econômica na forma que indica</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">28/05/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.443/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/06/dec_32443_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">26/05/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.440/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/06/dec_32440_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">23/05/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.432/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/05/dec_32432_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">23/05/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.431/2020</td>
+<td style="width: 72.3062%; height: 27px;">Dispõe sobre a antecipação de feriado municipal, observado o disposto na Lei 9.528, de 23 de maio de 2020 (republicado)</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/05/dec_32431_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">20/05/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.427/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/05/dec_32427_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">18/05/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.416/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/05/dec_32416_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">18/05/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.415/2020</td>
+<td style="width: 72.3062%; height: 27px;">Define regras gerais para realização de atividade econômica, prorroga medidas de prevenção e controle para enfrentamento do COVID-19</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/05/dec_32415_2020_republicado.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">12/05/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.399/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades(republicado)</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/05/dec_32399_2020_republicado.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">09/05/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.390/2020</td>
+<td style="width: 72.3062%; height: 27px;">Prorroga a data de início das medidas previstas no Decreto nº 32.389, de 08 de maio de 2020 – (republicado)</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/05/dec_32390_2020_retificado.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">08/05/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.389/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define ações regionalizadas para enfrentamento da pandemia decorrente do coronavírus mediante apoio e proteção aos moradores e restrição de atividades</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/05/dec_32389_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">06/05/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.384/2020</td>
+<td style="width: 72.3062%; height: 31px;">Dispõe sobre novas medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do município de Salvador e dá outras providências</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/05/dec_32384_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">04/05/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.378/2020</td>
+<td style="width: 72.3062%; height: 27px;">Dispõe sobre novas medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do município de Salvador.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/05/dec_32378_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">22/04/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.364/2020</td>
+<td style="width: 72.3062%; height: 27px;">Dispõe sobre novas medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do município de Salvador.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/04/dec_32364_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">20/04/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.357/2020</td>
+<td style="width: 72.3062%; height: 27px;">Define medidas complementares para enfrentamento da pandemia decorrente do coronavírus (republicado)</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/04/dec_32357_2020-1.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">16/04/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.352/2020</td>
+<td style="width: 72.3062%; height: 27px;">Dispõe sobre novas medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do município de Salvador.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/04/dec_32352_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">15/04/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.350/2020</td>
+<td style="width: 72.3062%; height: 27px;">Dispõe sobre novas medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do município de Salvador.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/04/dec_32350_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">14/04/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.347/2020</td>
+<td style="width: 72.3062%; height: 27px;">Dispõe sobre medidas administrativas de controle e redução de despesas no âmbito do Município de Salvador (republicado)</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/04/dec_32347_2020-1.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">14/04/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.346/2020</td>
+<td style="width: 72.3062%; height: 27px;">Define medidas complementares para enfrentamento da pandemia decorrente do coronavírus.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/04/dec_32346_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">11/04/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.337/2020</td>
+<td style="width: 72.3062%; height: 27px;">Define medidas complementares para o enfrentamento da pandemia decorrente do coronavírus.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/04/dec_32337_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">07/04/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.332/2020</td>
+<td style="width: 72.3062%; height: 27px;">Dispõe sobre novas medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do município de Salvador. (republicado)</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/04/Dec_32332_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">01/04/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.320/2020</td>
+<td style="width: 72.3062%; height: 27px;">Define medidas para o funcionamento das agências bancárias</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/04/Dec_32320_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">31/03/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.317/2020</td>
+<td style="width: 72.3062%; height: 27px;">Dispõe sobre novas medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do município de Salvador.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/04/Dec_32317_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">27/03/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.304/2020</td>
+<td style="width: 72.3062%; height: 31px;">Define medidas complementares para enfrentamento da emergência de saúde pública de importância internacional decorrente do coronavírus.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/03/Dec_32304_2020-2.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">26/03/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.297/2020</td>
+<td style="width: 72.3062%; height: 27px;">Define medidas complementares para o enfrentamento da pandemia decorrente do coronavírus.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/03/Dec_32297_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">25/03/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Portaria SEDUR nº 250/2020</td>
+<td style="text-align: left; width: 72.3062%; height: 31px;">Suspender prazos no âmbito da Secretaria Municipal de Desenvolvimento e Urbanismo</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/03/Portaria_SEDUR_250_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">25/03/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.287/2020</td>
+<td style="width: 72.3062%; height: 31px;">Determina a requisição administrativa de serviços e define medidas complementares para enfrentamento da emergência de saúde pública de importância internacional decorrente coronavírus.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/03/Dec_32287_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">23/03/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.280/2020</td>
+<td style="width: 72.3062%; height: 27px;">Define medidas complementares para o enfrentamento</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/03/Dec_32280_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">21/03/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.275/2020</td>
+<td style="width: 72.3062%; height: 31px;">Determina a requisição administrativa de bens, em razão da necessidade de enfrentamento da emergência de saúde pública de importância internacional</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/04/Dec_32275_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">19/03/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.272/2020</td>
+<td style="width: 72.3062%; height: 27px;">Define medidas complementares para o enfrentamento da pandemia decorrente do coronavírus.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/03/Dec_32272_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">18/03/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.268/2020</td>
+<td style="width: 72.3062%; height: 31px;">Declara situação de emergência no Município de Salvador e define outras medidas para o enfrentamento da pandemia decorrente do coronavírus.</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/03/Dec_32268_2020-1.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">16/03/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.256/2020</td>
+<td style="width: 72.3062%; height: 27px;">Dispõe sobre novas medidas de prevenção e controle para enfrentamento do COVID-19 no âmbito do município de Salvador.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/03/Dec_32256_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 31px;">
+<td style="text-align: center; width: 6%; height: 31px;">14/03/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 31px;">Decreto nº 32.249/2020</td>
+<td style="width: 72.3062%; height: 31px;">Estabelece orientações aos órgãos e entidades integrantes da Administração Pública Municipal Direta e Indireta, quanto às medidas de proteção para enfrentamento da emergência de saúde pública de importância internacional decorrente do coronavírus (COVID-19)</td>
+<td style="text-align: center; width: 4%; height: 31px;"><a href="/images/arquivos_processos/2020/04/Dec_32249_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr style="height: 27px;">
+<td style="text-align: center; width: 6%; height: 27px;">14/03/2020</td>
+<td style="text-align: left; width: 13.6938%; height: 27px;">Decreto nº 32.248/2020</td>
+<td style="width: 72.3062%; height: 27px;">Dispõe sobre as medidas temporárias de prevenção e controle para enfrentamento do COVID-19 no âmbito do município de Salvador.</td>
+<td style="text-align: center; width: 4%; height: 27px;"><a href="/images/arquivos_processos/2020/04/Dec_32248_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+</tbody>
+</table>
+</div> 	</div>
+
+								</div>
+                          </div> 
+                      </div>
+                  </div>
+              </div>
+                            <!--VERIFICAÇÃO PARA INCLUSÃO DE PÁGINA-->
+	</main>
+	
+<footer>
+
+<!-- inicio Mp2 -->
+      
+        
+  	  <div class="container-fluid">
+              <div class="row justify-content-start text-center">
+                  <div class="col-12" style="padding-top:5px; padding-bottom: 1px;"></div>
+              </div>
+      </div>
+       
+      <div class="container-fluid">
+          <div class="row justify-content-start text-center sty">
+              <div class="col-12 endereco">
+                  <b>&copy; 2021 - Secretaria Municipal de Desenvolvimento Urbano. Todos os direitos reservados.</b>
+              </div>
+          </div>
+      </div>
+       
+  	  <div class="container-fluid">
+              <div class="row justify-content-start text-center">
+                  <div class="col-12" style="padding-top:1px; padding-bottom: 1px;"></div>
+              </div>
+      </div>
+       
+         
+    <div class="container-fluid bannerfoot">
+
+              <div class="row">
+
+                    <!-- inic coluna3 ACESSO RAPIDO-->
+                    <div class="bfooter1 col-xs-12 col-sm-6 col-md-3" style="padding-top:30px; padding-left:20px; border:0px solid #fff">
+                       <ul class="none">
+                         <h5><font size="2px" color="#FFD190"><B>ACESSO RÁPIDO</B></font></h5>
+                         <li><a href="https://sedur.salvador.ba.gov.br/acessoremoto/" target="_blank" alt="Acesso Interno SEDUR"><font color="white" style="font-family:'Roboto' sans-serif; font-size:12px">Acesso Interno</font></a></li>
+       					 <li><a href="https://agendamento.sedur.salvador.ba.gov.br/sas/#agendamento" target="_blank" alt="Agendamento"><font color="white" style="font-family:'Roboto', sans-serif;  font-size:12px">Agendamento</font></a></li>
+                    	 <!-- 4ls; Modificação da página Canais de Atendimento-->
+       					 <!-- <li><a href="/./canais-de-atendimento" target="_blanck" alt="Canais Atendimento"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px">Canais de Atendimento</font></a></li> -->
+                    	<li><a href="https://servicos.sedur.salvador.ba.gov.br/#/portal/contacts" target="_blanck" alt="Canais Atendimento"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px">Canais de Atendimento</font></a></li>
+                         <!-- Fim -->
+                         <li><a href="http://www.falasalvador.ba.gov.br/portal/portal/" target="_blank" alt="Portal Fala Salvador"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px"> Portal Fala Salvador</font></a></li>
+                           <!--<li>
+                           	Prefeitura Municipal de Salvador<br>
+                           	13.927.801/0029-40
+                           </li>-->
+                       </ul>
+                    </div>   
+
+
+                    <!-- inic coluna1 SEDUR -->
+                    <div class="bfooter2 col-xs-12 col-sm-6 col-md-4" style="text-align:left; padding-top:60px; border:0px solid #fff">
+                        <img class = "img-responsive" src="http://sedur.salvador.ba.gov.br//images/logo/logo-white.png" alt="logo SEDUR">
+                    </div>
+
+
+                    <!-- inic coluna2 PREFEITURA -->
+                    <!-- <div class="bfooter3 col-xs-12 col-sm-6 col-md-3" style="text-align:left; padding-top:50px; border:0px solid #fff">
+                        <img id = "img_sedur_branca" src="http://sedur.salvador.ba.gov.br//images/logo/PREFEITURA_RET_COMPL_Branc_Ftrans2.png" alt="logo Prefeitura" width="200px" hight="auto">
+                    </div> -->
+
+
+
+                    <!-- inic coluna4 GOOGLE-->             
+                    <div class="bfooter4 col-xs-12 col-sm-6 col-md-3 offset-2" style="padding-top:10px; font-family:'Roboto', sans-serif; font-size:12px; color:white;">
+                      <a href="https://www.google.com/maps/place/SEDUR+-+Secretaria+Municipal+de+Desenvolvimento+e+Urbanismo/@-12.9847353,-38.4661181,1236a,35y,90h/data=!3m1!1e3!4m5!3m4!1s0x7161b34826018a3:0x6f1379fe7b002977!8m2!3d-12.9876324!4d-38.4666753?hl=pt-BR" target="_blank" alt="Endereo Sedur"><img src="http://sedur.salvador.ba.gov.br//images/imagens/END_SEDUR.png" width="100%" height="auto" style="border:3px solid #ffffff;"></a> 
+       				  <p>Av.ACM, nº3224, Caminho das Árvores - Salvador/Ba. Edf.Empresarial Thomé de Souza / Térreo - CEP.: 41110-700 </p>
+                     </div>
+
+              </div>
+
+    </div>       
+         
+    
+          
+    
+ <!-- fim Mp2 -->  
+     
+                  
+                  
+</footer>
+
+    <script src="http://sedur.salvador.ba.gov.br/templates/sedur/assets/js/js.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<script src="http://sedur.salvador.ba.gov.br/templates/sedur/assets/js/imageMapResizer.min.js"></script>
+	<script type="text/javascript">
+		$('map').imageMapResize();
+	</script>
+
+
+	<script>
+  
+  
+  function popUp(){
+    document.getElementById("dialog-message").style.display = "none";
+};   
+  
+  (function($) {
+$.fn.menumaker = function(options) {  
+ var cssmenu = $(this), settings = $.extend({
+   format: "dropdown",
+   sticky: false
+ }, options);
+ return this.each(function() {
+   $(this).find(".button").on('click', function(){
+     $(this).toggleClass('menu-opened');
+     var mainmenu = $(this).next('ul');
+     if (mainmenu.hasClass('open')) { 
+       mainmenu.slideToggle().removeClass('open');
+     }
+     else {
+       mainmenu.slideToggle().addClass('open');
+       if (settings.format === "dropdown") {
+         mainmenu.find('ul').show();
+       }
+     }
+   });
+   cssmenu.find('li ul').parent().addClass('has-sub');
+multiTg = function() {
+     cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
+     cssmenu.find('.submenu-button').on('click', function() {
+       $(this).toggleClass('submenu-opened');
+       if ($(this).siblings('ul').hasClass('open')) {
+         $(this).siblings('ul').removeClass('open').slideToggle();
+       }
+       else {
+         $(this).siblings('ul').addClass('open').slideToggle();
+       }
+     });
+   };
+   if (settings.format === 'multitoggle') multiTg();
+   else cssmenu.addClass('dropdown');
+   if (settings.sticky === true) cssmenu.css('position', 'fixed');
+resizeFix = function() {
+  var mediasize = 1000;
+     if ($( window ).width() > mediasize) {
+       cssmenu.find('ul').show();
+     }
+     if ($(window).width() <= mediasize) {
+       cssmenu.find('ul').hide().removeClass('open');
+     }
+   };
+   resizeFix();
+   return $(window).on('resize', resizeFix);
+ });
+  };
+})(jQuery);
+
+(function($){
+$(document).ready(function(){
+$("#cssmenu").menumaker({
+   format: "multitoggle"
+});
+});
+})(jQuery);
+$( "li.item-161" ).find( "span" ).css('display', 'none');
+$( "li.item-162" ).find( "span" ).css('display', 'none');
+</script>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+	
+</body>
+	
+	
+	
+</html>
+
+
+
+		
+

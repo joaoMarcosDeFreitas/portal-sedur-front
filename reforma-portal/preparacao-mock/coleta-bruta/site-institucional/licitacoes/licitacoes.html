@@ -1,0 +1,936 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+	<!--ATIVAÇÃO DE COMPATIBILIDADE E PROTEÇÃO CONTRA ATAQUES DO TIPO XSS-->
+	<!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+	<!--meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1,maximum-scale=1,user-scalable=no"-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-XSS-Protection" content="1">
+	<meta http-equiv="x-dns-prefetch-control" content="off">
+	<!--ATIVAÇÃO DE COMPATIBILIDADE E PROTEÇÃO CONTRA ATAQUES DO TIPO XSS-->
+	
+	
+			
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="/var/www/html/sedur/favicon.ico"> -->
+
+	
+	
+	
+	<meta name="google-site-verification" content="3XxLThCC-_tkg2qtziw_KG01DRXRqWTMM91thC8V6RM" />
+	<!--OBS: ENCONTRAM-SE NO TYPE HEAD AS META TAGS DESCRIPTION E KEYWORDS-->
+	<meta charset="utf-8" />
+	<base href="http://sedur.salvador.ba.gov.br/licitacoes" />
+	<meta name="author" content="Super User" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>SEDUR - Secretaria Municipal de Desenvolvimento Urbano</title>
+	<link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://sedur.salvador.ba.gov.br/templates/sedur/assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="http://sedur.salvador.ba.gov.br/templates/sedur/assets/css/template.css" rel="stylesheet" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"56a195e75f92113cde9b62c77289f247","system.paths":{"root":"","base":""}}</script>
+
+</head>
+
+	
+<body>
+	
+    <!-- Pop-up de Aviso -->
+          <!-- <div id="dialog-message" style="position: fixed; z-index: 4000; margin-left: 30px; margin-top: 100px; right: 30px;">
+          <div class="d-flex flex-row-reverse">
+        	<button style="margin-bottom: 10px" type="button" class="btn-close btn-lg" aria-label="Close" onclick="popUp()" id="botaoFechar">X</button>
+          </div>
+    		
+          <a href="#">
+            <p>
+              <img src="http://sedur.salvador.ba.gov.br//images/avisoLicenciamento31012025.jpeg" style="width: 600px;">
+			</p>
+          </a>
+		</div> -->
+        <!-- Fim -->
+      
+    
+	<div id="header-section1-internas" class="navbar-fixed-top not-print" style="display:none;">
+        
+  		<div class="wrapper">
+            
+  			<a id="logo-internas" href="http://www.salvador.ba.gov.br" target="_parent" title="Ir para o Portal Salvador">Prefeitura Municipal de Salvador</a>    
+
+            <div class="float-right"> 
+
+                <div class="social-links float-left font-bold">
+                    <ul class="float-left">
+                        <li class="facebook"><a href="https://www.facebook.com/pages/Prefeitura-de-Salvador/472097156139269" target="_blank">Facebook</a></li>
+                        <li class="youtube"><a href="http://www.youtube.com/prefeituradosalvador" target="_blank">YouTube</a></li>
+                        <li class="flickr"><a href="http://www.flickr.com/photos/prefeituradesalvador" target="_blank">Flickr</a></li>
+                        <li class="twitter"><a href="https://twitter.com/prefsalvador" target="_blank">Twitter</a></li>
+                    </ul>
+                </div>  
+
+            </div> 
+  
+        </div>
+</div>
+
+<style type="text/css">
+	#header-section1-internas {
+	    background-color: #34558c;
+	    height: 48px;
+	    border-top: 1px solid #3e66a3;
+	}
+	.wrapper {
+	    width: 100%;
+	    margin: 0 auto;
+	}
+	#logo-internas {
+		display: block;
+		float: left;
+		background: transparent url(http://sedur.salvador.ba.gov.br//images/logo/logo-internas.png) left center no-repeat;
+		/* Mp2 background: transparent url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/logo-internas.png) left center no-repeat;*/
+        width: 284px;
+		height: 43px;
+		text-indent: -5000em;
+		margin-left:10px;
+	}
+	.float-right {
+	    float: right;
+	}
+	.social-links {
+	    /* padding-top: 35px; */
+	    width: 100%;
+	}
+	.float-left {
+	    float: left;
+	}
+	.social-links ul {
+	    list-style: none;
+	    padding: 0;
+	    margin: 5px 0 0 0;
+	}
+	.social-links .facebook {
+    	background-image: url(http://sedur.salvador.ba.gov.br//images/logo/facebook-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/facebook-icon.png); */                    
+	}
+	.social-links .youtube {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/youtube-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/youtube-icon.png); */                       
+	}
+	.social-links .flickr {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/flickr-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/flickr-icon.png); */ 
+	}
+	.social-links .twitter {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/twitter-icon.png);
+        /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/twitter-icon.png); */                       
+	}
+	.social-links ul li {
+	    float: left;
+	    margin-right: 7px;
+	}
+	.social-links ul li a {
+	    width: 35px;
+	    height: 35px;
+	    text-indent: -5000em;
+	    display: block;
+	}
+                        
+                              
+</style>
+	<!-- Começo Navbar -->
+
+	<div class="container-fluid" style="padding-right: 0px; padding-left: 0px; border:0px solid #000">
+		<header>
+			<div class="row" style="margin: 0%; background-color: white; padding: 2% 0; border:0px solid #008000">
+					<div class="col-md-3 offset-1 col-sm-0" style="border:0px solid #000"> 
+						<a href="/index.php">
+							<img id = "img_marca_old" src="http://sedur.salvador.ba.gov.br//images/logo/logo-black.png" class="img-responsive" alt="logo">
+						</a>
+      			    </div>
+					
+                    <div class="barramenu col-md-8 col-sm-12" style="border:0px solid #000">
+                        <nav id='cssmenu'  style="margin-left: 0px;">
+                            <div id="head-mobile" style="border:0px solid #f00"></div>
+                            <div class="button" style="border:0px solid #ff0"></div>
+                            <ul class="nav menu" style="float: right;">
+<li class="item-102 deeper parent menu-style"><a href="#" >INSTITUCIONAL</a><ul class="dropdown-menu"><li class="item-156 menu-style"><a href="/institucional/dirigentes" >Dirigentes</a></li><li class="item-157 menu-style"><a href="/institucional/estrutura-organizacional" >Estrutura Organizacional</a></li><li class="item-149 menu-style"><a href="/institucional/area-de-atuacao" >Área de Atuação</a></li></ul></li><li class="item-106 menu-style"><a href="https://servicos.sedur.salvador.ba.gov.br/#/portal/home" >SERVIÇOS</a></li><li class="item-154 menu-style"><a href="/noticias" >NOTÍCIAS</a></li><li class="item-151 menu-style"><a href="/legislacao" >LEGISLAÇÃO</a></li><li class="item-155 current active menu-style"><a href="/licitacoes" >LICITAÇÕES</a></li><li class="item-171 menu-style"><a href="/transparencia" >TRANSPARÊNCIA</a></li></ul>
+
+
+
+<!-- <style>
+
+	.item-161{
+		margin-left: 18%;
+	}
+
+
+	@media (min-width: 320px) and (max-width:767px) {
+		.item-161{
+		margin-left: 0%;
+		}
+
+	}
+
+	
+	@media (min-width: 767px) and (max-width:999px) {
+		.item-161{
+			margin-left: 0%;
+		}
+	}
+
+
+</style> -->
+
+
+
+
+                        </nav>	
+                    </div>
+ 			</div>
+				
+		</header>
+	</div>
+
+
+	
+	<!-- Fim Navbar -->
+		
+	
+	              <div class="no-home">
+                  <div class="container-fluid">
+                      <div class="row">
+                         <div class="col-9 offset-2">
+                              
+                              <div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+		
+	
+	     
+            
+      <div class="page-header">
+		
+			<h2 class="artigos_internos" itemprop="headline" style="width: 208px;">Licitações</h2>
+									
+   
+          
+          <!-- Mp2 - Vou inserir 1 div botão voltar linha 301 a 303-->
+     <div class="voltarBTN" style="text-align: right;"><a href="JavaScript: window.history.back();"><button class="btn btn-warning" style="font-size: 15px; font-family: 'Roboto'; color: white; background-color: #006CB5; border-color: #006CB5; font-weight: bold; margin-right: 18px;" type="button">Voltar</button></a>
+     </div>   
+  	<br><br>
+<!-- Mp2 div botao voltar -->          
+      
+          
+          </div>
+         
+  
+          
+					
+		
+	
+	
+		
+							
+<!-- Mp2 Retirei a inclusão de imagem automaticamente das noticias
+      
+<img class="img-responsive" title="" src="/" alt=""/>
+
+fim retirar imagem -->    
+      
+	<div itemprop="articleBody">
+		<div class="col-md-12 col-12 table-responsive" style="text-align: justify; float: center;"><br /><br /><br />
+<table class="table table-striped table-sm" style="width: 1716px; height: 716px;">
+<tbody>
+<tr>
+<td style="width: 157px;"><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">10/04/2025</span></td>
+<td style="width: 175px; text-align: left;"><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">EDITAL CONCORRÊNCIA 01/2025</span></td>
+<td style="width: 1271.78px;">
+<p align="justify"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span style="font-size: small;">CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM SERVIÇO DE DEMOLIÇÃO, REMOÇÃO E TRANSPORTE DE MATERIAL E DE ENGENHOS PUBLICITÁRIOS, EXISTENTES NO LOCAL DA DEMOLIÇÃO, DE DEMANDAS RESULTANTES DOS PROCESSOS ADMINISTRATIVOS ADVINDOS DA APLICAÇÃO DE AUTOS DE INFRAÇÃO, VERIFICADAS PELOS SETORES COMPETENTES DA ADMINISTRAÇÃO MUNICIPAL. CONFORME DISPOSTO PROJETO BÁSICO E ANEXOS OS QUAIS INTEGRAM O PRESENTE EDITAL, ANEXO II DESTE EDITAL, LOTE ÚNICO.</span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a href="/images/pdf/EDITAL_comp.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" width="29" height="30" /></a> </td>
+</tr>
+<tr>
+<td style="width: 157px;"><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">19/02/24</span></td>
+<td style="width: 175px; text-align: left;"><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">EDITAL PE Nº 01/2024</span></td>
+<td style="width: 1271.78px;">
+<p style="line-height: 100%; orphans: 2; widows: 2; margin: 0.46cm 0.5cm 0.3cm 1.2cm;" align="justify"><span style="font-size: small;"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span lang="pt-BR"><span style="font-weight: normal;"><span style="background: transparent;">CONTRATAÇÃO</span></span></span></span></span><span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span style="font-weight: normal;"><span style="background: transparent;"> DE PESSOA JURÍDICA ESPECIALIZADA </span></span></span></span><span style="color: #000000;"><span style="text-decoration: none;"><span style="font-family: Arial, sans-serif;"><span style="font-weight: normal;"><span style="background: transparent;">PARA A PRESTAÇÃO DE SERVIÇOS </span></span></span></span></span> <span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span lang="pt-BR"><span style="font-weight: normal;"><span style="background: transparent;">EM</span></span></span></span></span><span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span style="font-weight: normal;"><span style="background: transparent;"> SOLUÇÃO DE MONITORAMENTO DE CAMINHÕES E CAÇAMBAS ESTACIONÁRIAS DAS EMPRESAS GERADORAS, TRANSPORTADORAS E TRATADORAS DE RESÍDUOS SÓLIDOS DA CONSTRUÇÃO CIVIL (RSCC), PARA APOIAR ESTA </span></span></span></span><span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span lang="pt-BR"><span style="font-weight: normal;"><span style="background: transparent;">SEDUR</span></span></span></span></span><span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span style="font-weight: normal;"><span style="background: transparent;"> NO GERENCIAMENTO E SUPERVISÃO DAS ATIVIDADES LOGÍSTICAS DO TRANSPORTE DE RESÍDUOS DA CONSTRUÇÃO CIVIL NA CIDADE DE SALVADOR/BA, </span></span></span></span><span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span lang="pt-BR"><span style="font-weight: normal;"><span style="background: transparent;">INCLUINDO, O</span></span></span></span></span><span style="color: #000000;"><span style="text-decoration: none;"><span style="font-family: Arial, sans-serif;"><span lang="pt-BR"><span style="font-weight: normal;"><span style="background: transparent;"> APOIO TECNOLÓGICO COM A</span></span></span></span></span></span> <span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span style="font-weight: normal;"><span style="background: transparent;">DISPONIBILIZAÇÃO DE SOFTWARE (SAAS) E A INSTALAÇÃO , A OPERAÇÃO E MANUTENÇÃO DE </span></span></span></span><span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span lang="pt-BR"><span style="font-weight: normal;"><span style="background: transparent;">TAG’S</span></span></span></span></span><span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span style="font-weight: normal;"><span style="background: transparent;"> E EQUIPAMENTOS NOS VEÍCULOS, VISANDO O APRIMORAMENTO DA FISCALIZAÇÃO REALIZADA POR ESTE ÓRGÃO. C</span></span></span></span><span style="color: #000000;"><span style="text-decoration: none;"><span style="font-family: Arial, sans-serif;"><span style="font-weight: normal;"><span style="background: transparent;">ONFORME CONDIÇÕES, QUANTIDADES E EXIGÊNCIAS ESTABELECIDAS NO </span></span></span></span></span><span style="color: #000000;"><span style="text-decoration: none;"><span style="font-family: Arial, sans-serif;"><b><span style="background: transparent;">TERMO DE REFERÊNCIA</span></b></span></span></span><span style="color: #000000;"><span style="text-decoration: none;"><span style="font-family: Arial, sans-serif;"><span style="font-weight: normal;"><span style="background: transparent;">, (</span></span></span></span></span><span style="color: #000000;"><span style="text-decoration: none;"><span style="font-family: Arial, sans-serif;"><b><span style="background: transparent;">ANEXO I</span></b></span></span></span><span style="color: #000000;"><span style="text-decoration: none;"><span style="font-family: Arial, sans-serif;"><span style="font-weight: normal;"><span style="background: transparent;">).</span></span></span></span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a href="/images/pdf/EDITAL_PE01_2024.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" width="29" height="30" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;"><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">11/10/2023</span></td>
+<td style="width: 175px; text-align: left;"><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">EDITAL DE CONCORRÊNCIA nº 02/2023</span></td>
+<td style="width: 1271.78px;">
+<p style="line-height: 100%; margin-bottom: 0cm;" align="justify"><span style="font-family: ArialMT, sans-serif;"><span style="font-size: medium;">C</span></span><span style="font-family: ArialMT, sans-serif;"><span style="font-size: medium;">ontratação de empresa especializada para elaboração de projeto e execução de obra de conservação, recuperação ou restauração de fachada do imóvel, numa ordem de </span></span><span style="font-family: Arial-BoldMT, sans-serif;"><span style="font-size: medium;"><b>30.000,00 m² (trinta mil metros quadrados)</b></span></span><span style="font-family: ArialMT, sans-serif;"><span style="font-size: medium;">, conforme verificado após levantamento das fachadas deterioradas com necessi</span></span><span style="font-family: ArialMT, sans-serif;"><span style="font-size: medium;">dade</span></span><span style="font-family: ArialMT, sans-serif;"><span style="font-size: medium;"> de intervenção para serem recuperadas, nos diversos logradouros do </span></span><span style="font-family: ArialMT, sans-serif;"><span style="font-size: medium;">M</span></span><span style="font-family: ArialMT, sans-serif;"><span style="font-size: medium;">unicípio de </span></span><span style="font-family: ArialMT, sans-serif;"><span style="font-size: medium;">S</span></span><span style="font-family: ArialMT, sans-serif;"><span style="font-size: medium;">alvador - </span></span><span style="font-family: ArialMT, sans-serif;"><span style="font-size: medium;">BA</span></span><span style="font-family: ArialMT, sans-serif;"><span style="font-size: medium;">, em lote único.</span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a href="/images/pdf/EDITAL_-_CONCORRNCIA_N_02_-2023_-_FACHADA.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" width="29" height="30" /></a> </td>
+</tr>
+<tr>
+<td style="width: 157px;"><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"> 09/10/2023</span></td>
+<td style="width: 175px; text-align: left;"><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"> Mapa de Georreferenciamento</span></td>
+<td style="width: 1271.78px;"><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"> Anexo VII do Edital 01/2023 – Mapa de Georreferenciamento com a indicação dos locais de instalação dos totens.</span></td>
+<td style="text-align: center; width: 84.2167px;"><a href="/images/pdf/Mapa_georreferenciamento.pdf"><img src="/images/icon/pdf.png" alt="Edital" width="29" height="30" /></a> </td>
+</tr>
+<tr>
+<td style="width: 157px;"><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">09/10/2023</span></td>
+<td style="width: 175px; text-align: left;"><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;">Edital Credenciamento 01/2023</span></td>
+<td style="width: 1271.78px;">
+<p class="western" lang="pt-PT" align="justify"><span style="font-size: 12pt; font-family: arial, helvetica, sans-serif;"><span style="color: #000000;">Edital do Credenciamento SEDUR Nº 01/2023 “Instalação e Manutenção de Totem de Utilidade Pública”</span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a href="/images/pdf/Edital_Credenciamento_01_2023.pdf"><img src="/images/icon/pdf.png" alt="Edital" width="29" height="30" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">05/10/2023</td>
+<td style="width: 175px; text-align: left;">DISPENSA 19</td>
+<td style="width: 1271.78px;">
+<p class="western" lang="pt-PT" align="justify"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA A PRESTAÇÃO DE SERVIÇOS DE MANUTENÇÃO CORRETIVA EM CATRACAS ELETRÔNICAS.</span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a href="/images/pdf/DISPENSA_19.pdf"><img src="/images/icon/pdf.png" alt="Edital" width="29" height="30" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">31/07/2023</td>
+<td style="width: 175px; text-align: left;">AVISO DE DISPENSA DE LICITAÇÃO 16/2023</td>
+<td style="width: 1271.78px;">
+<p class="western" lang="pt-PT" align="justify"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">OBJETO: </span></span><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA PARA </span></span><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><u><b>AQUISIÇÃO DE MATERIAL DE ESCRITÓRIO – ETIQUETA PARA PROCESSO</b></u></span></span><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span lang="pt-BR">,</span></span></span> <span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">EM CONFORMIDADE COM AS CARACTERÍSTICAS E DEMAIS INFORMAÇÕES DESCRITAS NO TERMO DE </span></span><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span lang="pt-PT">R</span></span></span><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">EFERÊNCIA, ANEXO </span></span><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">I</span></span><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"> DO EDITAL.</span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/EDITAL_DA_DISPENSA_16-2023-ETIQUETAS.pdf" href="/images/pdf/EDITAL_DA_DISPENSA_16-2023-ETIQUETAS.pdf"><img src="/images/icon/pdf.png" alt="Edital" width="29" height="30" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">18/07/2023</td>
+<td style="width: 175px; text-align: left;">RETIFICAÇÃO DA CONCORRENCIA 001/2023</td>
+<td style="width: 1271.78px;">PUBLICAÇÃO JORNAL O ESTADO DE SÃO PAULO</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/retificacao_concorrncia_n_001-2023_Estadao_18-07.pdf" href="/images/pdf/retificacao_concorrncia_n_001-2023_Estadao_18-07.pdf"><img src="/images/icon/pdf.png" alt="Edital" width="29" height="30" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">18/07/2023</td>
+<td style="width: 175px; text-align: left;">RETIFICAÇÃO DA CONCORRENCIA 001/2023</td>
+<td style="width: 1271.78px;">PUBLICAÇÃO JORNAL CORREIOS</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/retificacao_concorrncia_n_001-2023_Correio_18-07.pdf" href="/images/pdf/retificacao_concorrncia_n_001-2023_Correio_18-07.pdf"><img src="/images/icon/pdf.png" alt="Edital" width="29" height="30" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">10/07/2023</td>
+<td style="width: 175px; text-align: left;"> AVISO DE CONVOCAÇÃO DA CONCORRENCIA 001/2023</td>
+<td style="width: 1271.78px;">PUBLICAÇÃO JORNAL O ESTADO DE SÃO PAULO</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/PRINT_SEDUR_-Concorrncia_n_01-2023_Estado_10-07.pdf " href="/images/pdf/PRINT_SEDUR_-Concorrncia_n_01-2023_Estado_10-07.pdf"><img src="/images/icon/pdf.png" alt="Edital" width="29" height="30" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">10/07/2023</td>
+<td style="width: 175px; text-align: left;"> AVISO DE CONVOCAÇÃO DA CONCORRENCIA 001/2023</td>
+<td style="width: 1271.78px;">PUBLICAÇÃO JORNAL CORREIOS</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/aviso_publicao__DOM.pdf " href="/images/pdf/aviso_publicao__DOM.pdf"><img src="/images/icon/pdf.png" alt="Edital" width="29" height="30" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">15/07/2023</td>
+<td style="width: 175px; text-align: left;">
+<p>SEGUNDA RETIFICAÇÃO DA CONCORRENCIA 001/2023</p>
+</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify">DIÁRIO OFICIAL DO MUNICÍPIO DE SALVADOR</p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/Aviso_publicao_DOM-__02-RETIFICA.pdf  " href="/images/pdf/Aviso_publicao_DOM-__02-RETIFICA.pdf"><img src="/images/icon/pdf.png" alt="Edital" width="29" height="30" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">08/07/2023</td>
+<td style="width: 175px; text-align: left;">
+<p>RETIFICAÇÃO DA CONCORRENCIA 001/2023</p>
+</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify">DIÁRIO OFICIAL DO MUNICÍPIO DE SALVADOR</p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/Aviso_Publicao-_DOM-_01-RETIFICAO.pdf " href="/images/pdf/Aviso_Publicao-_DOM-_01-RETIFICAO.pdf"><img src="/images/icon/pdf.png" alt="Edital" width="29" height="30" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">07/072023</td>
+<td style="width: 175px; text-align: left;">
+<p> AVISO DE CONVOCAÇÃO DA CONCORRENCIA 001/2023</p>
+</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify"><span style="color: #000000;"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="font-family: Arial, sans-serif;">DIÁRIO OFICIAL DO MUNICÍPIO DE SALVADOR</span></span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/aviso_publicao__DOM.pdf " href="/images/pdf/aviso_publicao__DOM.pdf"><img src="/images/icon/pdf.png" alt="Edital" width="29" height="30" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">28/08/2023</td>
+<td style="width: 175px; text-align: left;">
+<p>EDITAL DE CONCORRENCIA 001/2023</p>
+</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify"><span style="color: #000000;"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="font-family: Arial, sans-serif;">A presente licitação tem por finalidade a seleção da melhor proposta que possibilite a contratação de Empresa especializada, ou consórcio de Empresas especializadas, para a Concessão, com outorga onerosa, de serviço Público, pelo prazo de </span></span></span></span><span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><b>20 (vinte) anos</b></span></span></span><span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">, com o uso de bem público, compreendendo projeto, confecção, fornecimento, instalação e manutenção de itens de Mobiliário Urbano do Município d</span></span></span><span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><b>e Salvador/BA, com exploração publicitária, estes constantes de</b></span></span></span> <span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><b>L</b></span></span></span><span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span lang="pt-BR"><b>OTE </b></span></span></span></span><span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span lang="pt-BR"><b>ÚNICO</b></span></span></span></span><span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">, conforme abaixo dispostos, dentro das condições e especificações estabelecidas neste </span></span></span><span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><u>Projeto Básico no Edital e seus Anexos</u></span></span></span><span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">.</span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/EDITAL-Mob_Urbano-Concorrencia_012023.pdf " href="/images/pdf/EDITAL-Mob_Urbano-Concorrencia_012023.pdf"><img src="/images/icon/pdf.png" alt="Edital" width="29" height="30" /></a> </td>
+</tr>
+<tr>
+<td style="width: 157px;">03/07/2023</td>
+<td style="width: 175px; text-align: left;">
+<p>AVISO DE DISPENSA DE LICITAÇÃO 15/2023</p>
+</td>
+<td style="width: 1271.78px;">
+<p class="western" lang="pt-PT" align="justify"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">OBJETO CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA PARA<span lang="pt-BR"><b> aquisição de formulários específicos sendo:</b></span></span></span></p>
+<ol>
+<li>
+<p lang="pt-PT" align="justify"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">50 blocos de Notificação CFA</span></span></p>
+</li>
+<li>
+<p lang="pt-PT" align="justify"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">150 blocos de Notificação CFS</span></span></p>
+</li>
+<li>
+<p lang="pt-PT" align="justify"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">100 blocos de Embargo CFS</span></span></p>
+</li>
+<li>
+<p lang="pt-PT" align="justify"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">50 blocos de Interdição CFS</span></span></p>
+</li>
+<li>
+<p lang="pt-PT" align="justify"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">30 blocos de Auto de Infração Publicidade</span></span></p>
+</li>
+<li>
+<p lang="pt-PT" align="justify"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">150 blocos Auto de Infração Veículo</span></span></p>
+</li>
+<li>
+<p lang="pt-PT" align="justify"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">50 blocos de Auto de Infração CFA</span></span></p>
+</li>
+<li>
+<p lang="pt-PT" align="justify"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">50 blocos de Termo de Apreensão de Bens - TAB</span></span></p>
+</li>
+</ol>
+<p class="western" lang="pt-PT" align="justify"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span lang="pt-BR"><b>50 </b></span></span></span><span lang="pt-BR"><b>blocos de Termo Complementar de Auto de Infração.</b></span></p>
+<p class="western" lang="pt-PT" align="justify"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">EM CONFORMIDADE COM AS CARACTERÍSTICAS E DEMAIS INFORMAÇÕES DESCRITAS NO TERMO DE <span lang="pt-PT">R</span>EFERÊNCIA, ANEXO I DO EDITAL.</span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/EDITAL_N_15_DEFINITIVO.pdf " href="/images/pdf/EDITAL_N_15_DEFINITIVO.pdf"><img src="/images/icon/pdf.png" alt="Edital" width="29" height="30" /></a> </td>
+</tr>
+<tr>
+<td style="width: 157px;">02/06/2023</td>
+<td style="width: 175px; text-align: left;">
+<p>AVISO DE DISPENSA DE LICITAÇÃO 14/2023</p>
+</td>
+<td style="width: 1271.78px;">
+<p class="western" lang="pt-PT" align="justify"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><b>CONTRATAÇÃO DE </b><b> EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS DE BOLETINS DE LICITAÇÃO E CONTRATOS PELO PERÍODO DE 12 (DOZE) MESES,</b> EM CONFORMIDADE COM AS CARACTERÍSTICAS E DEMAIS INFORMAÇÕES DESCRITAS NO TERMO DE <span lang="pt-PT">R</span>EFERÊNCIA, ANEXO I DO EDITAL.</span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/EDITAL_DEFINITIVO.pdf " href="/images/pdf/EDITAL_DEFINITIVO.pdf"><img src="/images/icon/pdf.png" alt="Edital" width="29" height="30" /></a> </td>
+</tr>
+<tr>
+<td style="width: 157px;">13/04/2023</td>
+<td style="width: 175px; text-align: left;">
+<p>AVISO DE DISPENSA DE LICITAÇÃO 12/2023</p>
+</td>
+<td style="width: 1271.78px;"><br />
+<p class="western" lang="pt-PT" align="justify"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA PARA CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA PARA </span></span><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><u>FORNECIMENTO </u></span></span><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><u> E INSTALAÇÃO DE PORTA DE VIDRO E MOLAS DE PISO PARA PORTA DE VIDRO</u></span></span><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span lang="pt-BR">,</span></span></span> <span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">EM CONFORMIDADE COM AS CARACTERÍSTICAS E DEMAIS INFORMAÇÕES DESCRITAS NO TERMO DE </span></span><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span lang="pt-PT">R</span></span></span><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">EFERÊNCIA, ANEXO </span></span><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">I</span></span><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"> DO EDITAL.</span></span></span></p>
+<p class="western" lang="pt-PT" align="justify"> </p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/04-EDITAL_DEFINITIVO_-_DISPENSA_12_-_Porta_de_vidro_e_molas_-_2023.pdf" href="/images/pdf/04-EDITAL_DEFINITIVO_-_DISPENSA_12_-_Porta_de_vidro_e_molas_-_2023.pdf"><img src="/images/icon/pdf.png" alt="Edital" width="29" height="30" /></a><br />
+<p class="western" lang="pt-PT" align="justify"> </p>
+</td>
+</tr>
+<tr>
+<td style="width: 157px;">  31/03/2023</td>
+<td style="width: 175px; text-align: left;">
+<p>AVISO DE DISPENSA DE LICITAÇÃO 11/2023</p>
+</td>
+<td style="width: 1271.78px;">
+<p class="western" lang="pt-PT" align="justify"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA PARA AQUISIÇÃO DE MATERIAL DE MANUTENÇÃO PARA AR CONDICIONADA, EM CONFORMIDADE COM AS CARACTERÍSTICAS E DEMAIS INFORMAÇÕES DESCRITAS NO TERMO DE REFERÊNCIA, ANEXO I DO EDITAL.</span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"> <a title="images/pdf/EDITAL_DEFINITIVO_DISPENSA_N11.pdf" href="/images/pdf/EDITAL_DEFINITIVO_DISPENSA_N11.pdf"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">
+<p>28/03/2023</p>
+</td>
+<td style="width: 175px; text-align: left;">
+<p>AVISO DE DISPENSA DE LICITAÇÃO 10/2023</p>
+</td>
+<td style="width: 1271.78px;">
+<p class="western" lang="pt-PT" align="justify"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">AQUISIÇÃO DE </span></span><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><u>MATERIAL ELÉTRICO</u></span></span><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span lang="pt-BR">,</span></span></span> <span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">EM CONFORMIDADE COM AS CARACTERÍSTICAS E DEMAIS INFORMAÇÕES DESCRITAS NO TERMO DE </span></span><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span lang="pt-PT">R</span></span></span><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">EFERÊNCIA</span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/002-EDITAL_DEFINITIVO.pdf " href="/images/pdf/002-EDITAL_DEFINITIVO.pdf"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">28/02/2023</td>
+<td style="width: 175px; text-align: left;">
+<p>AVISO DE DISPENSA DE LICITAÇÃO 08/2023</p>
+</td>
+<td style="width: 1271.78px;"> 
+<p class="western" lang="pt-PT" align="justify"><span style="font-size: medium;"><span style="font-family: Arial, sans-serif;">CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA EM PRESTAÇÃO DE SERVIÇOS DE SEGURO,</span><span style="font-family: sans-serif;"> PARA COBERTURA DE SEGURO PARA 02 DRONES MAVIC AIR 2 FLY COM COBERTURA PARA DANOS PESSOAIS E/OU DANOS MATERIAIS, CAUSADOS A TERCEIROS</span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/08_-_EDITAL__seguro_para_drones_-_2023.pdf" href="/images/pdf/08_-_EDITAL__seguro_para_drones_-_2023.pdf"><img src="/images/icon/pdf.png" alt="Edital" width="24" height="25" /></a> </td>
+</tr>
+<tr>
+<td style="width: 157px;">28/02/2023</td>
+<td style="width: 175px; text-align: left;">
+<p>AVISO DE DISPENSA DE LICITAÇÃO 07/2023</p>
+</td>
+<td style="width: 1271.78px;">
+<p class="western" lang="pt-PT" align="justify"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">AQUISIÇÃO E SERVIÇOS DE INSTALAÇÃO, INFRAESTRUTURA DE</span></span><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"> SISTEMA DE CÂMERAS DE MONITORAMENTO DO TIPO VHD 1120 B G6</span></span><span style="font-family: DejaVuSansCondensed, sans-serif;"><span style="font-size: medium;">. </span></span><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span lang="pt-BR">COM GARANTIA E SUPORTE TÉCNICO DE 12 (DOZE) MESES</span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"> <a title="images/pdf/EDITAL_-__camaras_de_monitoramento.pdf" href="/images/pdf/EDITAL_-__camaras_de_monitoramento.pdf"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">09/02/2023</td>
+<td style="width: 175px; text-align: left;">
+<p>AVISO DISPENSA DE LICITAÇÃO 02/2023</p>
+</td>
+<td style="width: 1271.78px;">
+<p class="western" lang="pt-PT" align="justify"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">AVISO DE CANCELAMENTO DE AVISO DE DISPENSA DE LICITAÇÃO 02/2023</span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/DOM-CANCDISP02-23.pdf" href="/images/pdf/DOM-CANCDISP02-23.pdf"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">06/02/2023</td>
+<td style="width: 175px; text-align: left;">
+<p>EDITAL DE DISPENSA DE LICITAÇÃO 06/2023</p>
+</td>
+<td style="width: 1271.78px;">
+<p class="western" lang="pt-PT" align="justify"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">AQUISIÇÃO DE </span></span><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span lang="pt-BR"> FERRAMENTAS</span></span></span><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span lang="pt-BR"> DE OBRA/CONSTRUÇÃO,</span></span></span> <span style="font-family: Helvetica, sans-serif;"><span style="font-size: medium;"><span lang="pt-BR">QUE SERÃO UTILIZADOS PELOS AGENTES DE DEMOLIÇÃO E </span></span></span><span style="font-family: Helvetica, sans-serif;"><span style="font-size: medium;">APREENSÃO DURANTE O CARNAVAL E NAS AÇÕES DIÁRIAS DO SETOR DE APREENSÃO E DEMOLIÇÃO –</span></span> <span style="font-family: Helvetica, sans-serif;"><span style="font-size: medium;">SEDEB</span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/EDITAL_-_Aquisio__de_ferramenta_2_-_2023_-_Chamamento_pblico_-_06.pdf " href="/images/pdf/EDITAL_-_Aquisio__de_ferramenta_2_-_2023_-_Chamamento_pblico_-_06.pdf"><img src="/images/icon/pdf.png" alt="Edital" /></a> </td>
+</tr>
+<tr>
+<td style="width: 157px;">06/02/2023</td>
+<td style="width: 175px; text-align: left;">
+<p>EDITAL DISPENSA DE LICITAÇÃO 05/2023</p>
+</td>
+<td style="width: 1271.78px;">
+<p class="western" lang="pt-PT" align="justify"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">AQUISIÇÃO DE </span></span></span><span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span lang="pt-BR">ADESIVOS DE IDENTIFICAÇÃO DOS ESTABELECIMENTOS LICENCIADOS PARA EXPLORAREM A ATIVIDADE ECONÔMICA POLIGONAL DO CARNAVAL DE SALVADOR, NA</span></span></span></span><span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;"><span lang="pt-BR"> OPERAÇÃO CARNAVAL DE 2023/SEDUR</span></span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/EDITAL_DISPENSA_05_-_Adesivos_-_2023.pdf" href="/images/pdf/EDITAL_DISPENSA_05_-_Adesivos_-_2023.pdf"><img src="/images/icon/pdf.png" alt="Edital" /></a> </td>
+</tr>
+<tr>
+<td style="width: 157px;">03/02/2023</td>
+<td style="width: 175px; text-align: left;">
+<p>EDITAL DISPENSA DE LICITAÇÃO 04/2023</p>
+</td>
+<td style="width: 1271.78px;">
+<p class="western" lang="pt-PT" align="justify"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA PARA AQUISIÇÃO DE <span lang="pt-BR"> PROTETORES AURICULAR DESCARTÁVEL</span><span lang="pt-BR">,</span><span lang="pt-BR"> QUE SERÃO UTILIZADOS EM FESTAS POPULARES, OPERAÇÃO CARNAVAL DE 2023</span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"> <a title="images/pdf/EDITAL_DISPENSA_04_-Protetor_auricular_-_2023.pdf" href="/images/pdf/EDITAL_DISPENSA_04_-Protetor_auricular_-_2023.pdf"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">03/02/2023</td>
+<td style="width: 175px; text-align: left;">EDITAL DISPENSA DE LICITAÇÃO 03/2023</td>
+<td style="width: 1271.78px;">
+<p class="western" lang="pt-PT" align="justify"><span style="font-size: medium;"><span style="font-family: Arial, sans-serif;"><span lang="pt-BR">AQUISIÇÃO DE </span></span><span style="font-family: sans-serif, Arial;"><span lang="pt-BR"><u>PLACAS EM CHAPA DE ZINCO</u></span></span><span style="font-family: sans-serif, Arial;"><span lang="pt-BR">, NOS TAMANHOS </span></span><span style="font-family: sans-serif, Arial;"><span lang="pt-BR">1,5 M DE ALTURA POR 01 (UM) METRO DE LARGURA,</span></span><span style="font-family: Arial, sans-serif;"><span lang="pt-BR"><br /> </span></span><span style="font-family: sans-serif, Arial;"><span lang="pt-BR">COM</span></span> <span style="font-family: sans-serif, Arial;"><span lang="pt-BR">PLOTAGEM</span></span> <span style="font-family: sans-serif, Arial;"><span lang="pt-BR">DE</span></span> <span style="font-family: sans-serif, Arial;"><span lang="pt-BR">ADESIVO</span></span> <span style="font-family: sans-serif, Arial;"><span lang="pt-BR">EM</span></span> <span style="font-family: sans-serif, Arial;"><span lang="pt-BR">VINIL </span></span><span style="font-family: sans-serif, Arial;"><span lang="pt-BR">MULTICOLOR, IMPRESSO A 1440 DPIA’S</span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"> <a title="images/pdf/EDITAL_DISPENSA_03_-_Palacas_de_zinco_-_2023.pdf" href="/images/pdf/EDITAL_DISPENSA_03_-_Palacas_de_zinco_-_2023.pdf"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">20/01/2023</td>
+<td style="width: 175px; text-align: left;">EDITAL DISPENSA DE LICITAÇÃO 01/2023</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;">AQUISIÇÃO DE FERRAMENTAS EM CONFOMIDADE COM AS CARACTERÍSTICAS E DEMAIS INFORMAÇÕES DESCRITAS NO TERMO DE REFERÊNCIA, ANEXO I DO EDITAL</span></span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/EDITAL_DISPENSA_01_2023_SEDUR_.pdf" href="/images/pdf/EDITAL_DISPENSA_01_2023_SEDUR_.pdf"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">16/12/2022</td>
+<td style="width: 175px; text-align: left;">EDITAL DE DISPENSA DE LICITAÇÃO Nº13/2022</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;">AQUISIÇÃO DE COLETE DE PROTEÇÃO BALÍSTICA, CONFECCIONADO EM MATERIAL LEVE E FLEXÍVEL DE ARAMIDA MULTI AXIAL E UMA ESPUMA DE POLIETILENO, NÍVEL III-A, COM 10 CAMADAS DE ARAMIDA XP, TAMANHOS DIVERSOS</span></span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><img src="/images/icon/pdf.png" alt="Edital" /></td>
+</tr>
+<tr>
+<td style="width: 157px;">16/12/2022</td>
+<td style="width: 175px; text-align: left;">EDITAL DE DISPENSA DE LICITAÇÃO Nº 12/2022</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;">AQUISIÇÃO DE 02 (DOIS) NOTEBOOKS, COM GARANTIA E SUPORTE TÉCNICO DE 12 (DOZE) MESES</span></span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/EDITAL_DISPENSA_12_SEDUR-16-12-2022.pdf" href="/images/pdf/EDITAL_DISPENSA_12_SEDUR-16-12-2022.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">16/12/2022</td>
+<td style="width: 175px; text-align: left;">EDITAL DE DISPENSA DE LICITAÇÃO Nº 11/2022</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;">AQUISIÇÃO DE 03 (TRÊS) APARELHOS DE MEDIDOR DE NÍVEL SONORO CLASSE 1, DE ACORDO COM A NORMA IEC 61672</span></span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/EDITAL_DISPENSA__11-2022_SEDUR-16-12-2022.pdf" href="/images/pdf/EDITAL_DISPENSA__11-2022_SEDUR-16-12-2022.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">14/12/2022</td>
+<td style="width: 175px; text-align: left;">EDITAL DE DISPENSA DE LICITAÇÃO Nº 10/2022</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;">CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA PARA AQUISIÇÃO DE FERRAMENTAS</span></span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/EDITA_DISPENSA_10-2022_SEDUR-14-12-2022.pdf" href="/images/pdf/EDITA_DISPENSA_10-2022_SEDUR-14-12-2022.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">14/12/2022</td>
+<td style="width: 175px; text-align: left;">EDITAL DE DISPENSA DE LICITAÇÃO Nº 08/2022</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;">CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA PARA AQUISIÇÃO DE 14 (QUATORZE) APARELHOS DE AR CONDICIONADO</span></span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/EDITAL__DISPENSA_08_2022_SEDUR-14-12-2022.pdf" href="/images/pdf/EDITAL__DISPENSA_08_2022_SEDUR-14-12-2022.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">13/12/2022</td>
+<td style="width: 175px; text-align: left;">EDITAL DE DISPENSA DE LICITAÇÃO Nº 09/2022</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;">CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA PARA AQUISIÇÃO DE 06 (SEIS) LICENÇAS DO SOFTWARE DO TIPO MOVE CAD</span></span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/EDITAL_DISPENSA__09_2022-13-12-2022.pdf" href="/images/pdf/EDITAL_DISPENSA__09_2022-13-12-2022.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">13/12/2022</td>
+<td style="width: 175px; text-align: left;">EDITAL DE DISPENSA DE LICITAÇÃO Nº 06/2022</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;">CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA PARA AQUISIÇÃO DE 32 (TRINTA E DUAS) MEMÓRIAS HP DL385P G8 16GB OF DUAL RANK PC3L-10600R DDR3 SDRAM DIMM</span></span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/-_EDITAL_DISPENSA__06_2022-13-12-2022.pdf" href="/images/pdf/-_EDITAL_DISPENSA__06_2022-13-12-2022.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">25/11/2022</td>
+<td style="width: 175px; text-align: left;">EDITAL DE DISPENSA 07</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;">EDITAL DE DISPENSA DE LICITAÇÃO Nº 007/2022</span></span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/EDITAL_DE_DISPENSA__07_2022_SEDUR.pdf" href="/images/pdf/EDITAL_DE_DISPENSA__07_2022_SEDUR.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">25/11/2022</td>
+<td style="width: 175px; text-align: left;">EDITAL DE DISPENSA 06</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;">EDITAL DE DISPENSA DE LICITAÇÃO Nº 06/2022</span></span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/EDITAL_DE_DISPENSA__06_2022_SEDUR.pdf" href="/images/pdf/EDITAL_DE_DISPENSA__06_2022_SEDUR.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">04/11/2022</td>
+<td style="width: 175px; text-align: left;">EDITAL DE PREGÃO ELETRÔNICO – SEDUR Nº 02/2022</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;">Contratação de Pessoa Jurídica<br />especializada para Prestação de Serviço de fornecimento, mediante LOCAÇÃO DE<br />PRATICÁVEIS, MOBILIÁRIOS E EQUIPAMENTOS, INCLUINDO MONTAGEM E<br />DESMONTAGEM, PARA SEREM UTILIZADOS COMO BASES OPERACIONAIS DA<br />SEDUR, DURANTE O CARNAVAL DE SALVADOR/Ba</span></span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/EDITAL_PE_002_2022_11_04.pdf" href="/images/pdf/EDITAL_PE_002_2022_11_04.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">01/11/2022</td>
+<td style="width: 175px; text-align: left;">EDITAL DE PREGÃO ELETRÔNICO – SEDUR Nº 02/2022</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;">LICITAÇÃO Nº 04/2022</span></span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/EDITAL_PE_002_2022_01_11.pdf" href="/images/pdf/EDITAL_PE_002_2022_01_11.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">26/09/2022</td>
+<td style="width: 175px; text-align: left;">EDITAL DE DISPENSA DE LICITAÇÃO N° 05/2022</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;">Contratação de Pessoa Jurídica Especializada</span></span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/Aquis_e_inst_de_porta_de_vidro.pdf" href="/images/pdf/Aquis_e_inst_de_porta_de_vidro.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">06/05/2022</td>
+<td style="width: 175px; text-align: left;">ATUALIZAÇÃO DOS ESTUDOS DE VIABILIDADE ECONÔMICA -  MOBILIÁRIOS URBANOS</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;">Atualização dos Estudos Mobiliários Urbanos</span></span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/1-Atualizacao_dos_Estudos_de_Viabilidade_Mobiliario_Urbano.pdf" href="/images/pdf/1-Atualizacao_dos_Estudos_de_Viabilidade_Mobiliario_Urbano.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">04/05/2022</td>
+<td style="width: 175px; text-align: left;">ANEXO 4 - ESTUDO MOBILIÁRIO URBANO</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;">Estudo de Viabilidade Econômica - Anexo 4</span></span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/4Estudo_Viabilidade_Mobiliario_Urbano_Anexo4.pdf" href="/images/pdf/4Estudo_Viabilidade_Mobiliario_Urbano_Anexo4.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">04/05/2022</td>
+<td style="width: 175px; text-align: left;">ANEXO 3 - ESTUDO MOBILIÁRIO URBANO</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;">Estudo de Viabilidade Econômica - Anexo 3</span></span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/4Estudo_Viabilidade_Mobiliario_Urbano_Anexo3.pdf" href="/images/pdf/4Estudo_Viabilidade_Mobiliario_Urbano_Anexo3.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">04/05/2022</td>
+<td style="width: 175px; text-align: left;">ANEXO 2 - ESTUDO MOBILIÁRIO URBANO</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;">Estudo de Viabilidade Econômica - Anexo 2</span></span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/4Estudo_Viabilidade_Mobiliario_Urbano_Anexo2.pdf" href="/images/pdf/4Estudo_Viabilidade_Mobiliario_Urbano_Anexo2.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">04/05/2022</td>
+<td style="width: 175px; text-align: left;">ANEXO 1 - ESTUDO MOBILIÁRIO URBANO</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;">Estudo de Viabilidade Econômica - Anexo 1</span></span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/4Estudo_Viabilidade_Mobiliario__Urbano_Anexo1.pdf" href="/images/pdf/4Estudo_Viabilidade_Mobiliario__Urbano_Anexo1.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">04/05/2022</td>
+<td style="width: 175px; text-align: left;">ANÁLISE DE MERCADO PUBLICITÁRIO MOBILIÁRIO URBANO</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;">Análise de Mercado Publicitário Mobiliário Urbano</span></span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/3Analise_Mercado_Publicitario.pdf" href="/images/pdf/3Analise_Mercado_Publicitario.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">04/05/2022</td>
+<td style="width: 175px; text-align: left;">CARACTERIZAÇÃO MOBILIÁRIO URBANO</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;">Caracterização Mobiliário Urbano.</span></span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="images/pdf/2Caracterizacao_Mobiliarios_Urbanos.pdf" href="/images/pdf/2Caracterizacao_Mobiliarios_Urbanos.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;"> 02/05/2022</td>
+<td style="width: 175px; text-align: left;">EDITAL DE CONCORRENCIA Nº02/2022</td>
+<td style="width: 1271.78px;">
+<p class="western" align="justify"><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, sans-serif;">C</span></span><span style="color: #000000;"><span style="font-family: Arial, sans-serif;">ontratação de empresa especializada ou consórcio de empresas especializadas para a concessão com outorga onerosa de serviço público, pelo prazo de 20 (vinte) anos, com o uso de bem público, compreendendo projeto, confecção, fornecimento, instalação e manutenção de itens de mobiliário urbano, englobando os equipamentos já instalados, que serão recepcionados pela concessionaria, do Município de Salvador/BA, para exploração publicitária, estes constantes dos 04 (quatro) lotes, dispostos no item 04 (quatro) do Projeto Básico, conforme condições e especificações estabelecidas </span></span><span style="color: #000000;"><span style="font-family: Arial, sans-serif;">n</span></span><span style="color: #000000;"><span style="font-family: Arial, sans-serif;"><span lang="pt-BR">o Edital </span></span></span><span style="color: #000000;"><span style="font-family: Arial, sans-serif;">e seus Anexos.</span></span></span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a title="/images/pdf/EDITAL_CONCORRENCIA_N02_2022.pdf" href="/images/pdf/EDITAL_CONCORRENCIA_N02_2022.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;">19/04/2022</td>
+<td style="width: 175px; text-align: left;">EDITAL DE DISPENSA DE LICITAÇÃO Nº 003/2022</td>
+<td style="width: 1271.78px;">
+<p class="western" lang="pt-PT" align="justify"><span style="font-family: Arial, sans-serif;"><span style="font-size: medium;">CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA PARA AQUISIÇÃO E INSTALAÇÃO DE 20,50m2 DE PELÍCULA JATEADA LEITOSA BRANCA, PARA DIVISÓRIAS DE VIDROS DA SEDUR, EM CONFORMIDADE COM AS CARACTERÍSTICAS E DEMAIS INFORMAÇÕES DESCRITAS NO TERMO DE <span lang="pt-PT">R</span>EFERÊNCIA, ANEXO I DO EDITAL.</span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a href="/images/pdf/EDITAL_DISPENSA_LICITACAO_003_2022_SEDUR.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;"><span style="font-size: 10pt; font-family: verdana, geneva, sans-serif;">09/03/2022</span></td>
+<td style="width: 175px;">
+<p class="western" lang="pt-PT" style="text-align: left;" align="center"><span style="font-size: 10pt; font-family: verdana, geneva, sans-serif;"><span style="color: #000000;"><span lang="pt-PT">EDITAL DE CONCORRENCIA Nº01/2022</span></span></span></p>
+</td>
+<td style="width: 1271.78px;">
+<p align="justify"><span style="font-size: 10pt; font-family: verdana, geneva, sans-serif;"><span style="color: #000000;">Contratação de empresa especializada para execução de obra, construção, recuperação e manutenção de passeios e pavimentos rígidos e semi-rígidos nos diversos</span><span style="color: #000000;"> Logradouros do Município de Salvador - Ba nas áreas correspondentes as respectivas Prefeituras-Bairro I, II, III, IV, V, VI, VII, VIII, IX e X, em LOTE ÚNICO.</span></span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a href="/images/pdf/EDITAL_CONCORRENCIA_01_2022_SEDUR.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a> </td>
+</tr>
+<tr>
+<td style="width: 157px;"><span style="font-size: 10pt; font-family: verdana, geneva, sans-serif;">18/02/2022</span></td>
+<td style="width: 175px;">
+<p class="western" lang="pt-PT" style="text-align: left;" align="center"><span style="font-size: 10pt; font-family: verdana, geneva, sans-serif;"><span style="color: #000000;"><span lang="pt-PT">EDITAL DE DISPENSA DE LICITAÇÃO Nº 01/2022</span></span></span></p>
+</td>
+<td style="width: 1271.78px;">
+<p class="western" lang="pt-PT" align="justify"><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">AQUISIÇÃO DE 600 (SEISCENTAS) UNIDADES DE CAFÉ TORRADO MOÍDO A VÁCUO, COM EMBALAGEM À VACUO DE 250G - CAFÉ, TORRADO E MOIDO, EM PÓ, DE PRIMEIRA QUALIDADE E 200 (DUZENTAS) UNIDADES AÇÚCAR CRISTAL - AÇÚCAR CRISTAL OBTIDA DA CANADE- AÇÚCAR POR PROCESSO TECNOLÓGICO ADEQUADO. DEVE APRESENTAR-SE SOB A FORMA DE CRISTAIS COM TAMANHO E COLORAÇÃO UNIFORME. ISENTO DE PARASITOS, MATÉRIA TERROSA, DETRITO ANIMAL OU VEGETAL E QUALQUER SUBSTÂNCIA CONTAMINANTE QUE POSSA ALTERAR OU ENCOBRIR QUALQUER ALTERAÇÃO DE PRODUTO, COM EMBALAGEM DE 01 (UM) KG.</span></p>
+</td>
+<td style="text-align: center; width: 84.2167px;"><a href="/images/pdf/EDITAL_DISPENSA_LICITACAO__001_2022_SEDUR.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;"><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">20/09/2021</span></td>
+<td style="width: 175px;"><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">EDITAL DE AUDIÊNCIA PÚBLICA PRESENCIAL Nº 02/2021</span></td>
+<td style="width: 1271.78px;"><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">A SECRETARIA MUNICIPAL DE DESENVOLVIMENTO URBANO – SEDUR informa que será realizada Audiência Pública presencial na data de 18 de outubro de 2021, às 15:00 horas, no auditório do Novotel Salvador Hangar Aeroporto, situado na Av. Luís Viana Filho, 13 223 – São Cristóvão, Salvador – BA, 41500-300, com o objetivo de apresentar e discutir o Estudo de Impacto de Vizinhança-EIV e o Relatório de Impacto de Vizinhança – RIV, elaborados pela empresa MRV Engenharia e Participações S/A, para a instalação do Projeto de Urbanização Integrada Colina Imperial, Rua Professor Plínio Garcez de Sena, bairro de Mussurunga, no município de Salvador. O aviso da audiência pública presencial foi publicado no Diário Oficial do Município nº 8.114 de 18 a 20 de setembro de 2021. As informações relativas ao evento e o link do EIV/RIV encontram-se disponíveis no edital em anexo.</span></td>
+<td style="text-align: center; width: 84.2167px;"><a href="/images/arquivos_processos/2021/07/EDITAL_02_2021_Audiencia_Publica_Presencial_MRV.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;"><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">26/07/2021</span></td>
+<td style="width: 175px;"><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">EDITAL DE AUDIÊNCIA PÚBLICA VIRTUAL Nº 01/2001</span></td>
+<td style="width: 1271.78px;"><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">Audiência pública virtual suspensa por determinação judicial. Objeto: Apresentação do estudo de Impacto de Vizinhança e do Relatório de Impacto de Vizinhança. Projeto: Urbanização integrada Colina Imperial Empreendedor: MRV engenharia e participações S/A.</span></td>
+<td style="text-align: center; width: 84.2167px;"><img src="/images/icon/pdf.png" alt="Edital" /></td>
+</tr>
+<tr>
+<td style="width: 157px;"><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">27/10/2020</span></td>
+<td style="width: 175px;"><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">EDITAL DE LICITAÇÃO - 005/2020</span></td>
+<td style="width: 1271.78px;"><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">Oferta Pela Outorga tendo como finalidade a concessão da Atividade de Fomento daEconomia Criativa na Municipalidade de Salvador, mediante implantação dos serviços decoworking, capacitação e eventos, por meio do uso e exploração de bem imóvel, quedeve ser operado, gerido e mantido, inclusive através da promoção e exploração dereceitas acessórias do POLO DE ECONOMIA CRIATIVA De Salvador – Doca1</span></td>
+<td style="text-align: center; width: 84.2167px;"><a href="/images/arquivos_processos/2020/10/Edital-da-Concorrência-Pública-nº-02-2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;"><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">07/01/2020</span></td>
+<td style="width: 175px;"><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">CHAMAMENTO PÚBLICO Nº 001/2020</span></td>
+<td style="width: 1271.78px;"><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">Constitui objeto deste EDITAL DE CHAMAMENTO PÚBLICO a contratação, por DISPENSA DE CHAMAMENTO PUBLICO EMERGENCIAL, com cláusula resolutiva, de pessoa jurídica especializada na prestação contínua de serviço especializado de empresa de engenharia para a demolição de edificações com remoção de material, remoção e transporte de engenhos publicitários</span></td>
+<td style="text-align: center; width: 84.2167px;"><a href="/images/arquivos_processos/2020/01/Edital-de-Chamamento-Público-001-2020-SEDUR.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;"><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">27/12/2019</span></td>
+<td style="width: 175px;"><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">Edital Nº 01-2020</span></td>
+<td style="width: 1271.78px;"><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">CONSTITUI OBJETO DA LICITAÇÃO A CONTRATAÇÃO DE SERVIÇO ESPECIALIZADO DE EMPRESA DE ENGENHARIA PARA A DEMOLIÇÃO DE EDIFICAÇÕES COM REMOÇÃO DE MATERIAL, REMOÇÃO E TRANSPORTE DE ENGENHOS PUBLICITÁRIOS…</span></td>
+<td style="text-align: center; width: 84.2167px;"><a href="/images/arquivos_processos/2019/12/EDITAL-DA-CONCORRÊNCIA-Nº-01-2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 157px;"><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">05/04/2019</span></td>
+<td style="width: 175px;"><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">SEDUR - Concorrência Pública Nº 01/2019</span></td>
+<td style="width: 1271.78px;"><span style="font-family: verdana, geneva, sans-serif; font-size: 10pt;">A SECRETARIA MUNICIPAL DE DESENVOLVIMENTO E URBANISMO -SEDUR, através da Comissão Setorial Permanente deLicitação -COPEL, designada pela Portaria Nº 349/2018-SEDUR, torna público, para conhecimento dos interessados que realizará, licitação na Modalidade Concorrência Pública, tipo Menor Preço Global, sendo este certame para contratação de LOTE ÚNICO, REGIME DE EXECUÇÃO DE EMPREITADA POR PREÇO UNITÁRIO, licitação autorizada no Processo Administrativo Nº 54.530/2018-SEDUR, e de acordo com as condições estabelecidas neste edital, aprovado pelo Parecer da RPGMS/SEDURNº103/2019.</span></td>
+<td style="text-align: center; width: 84.2167px;"><a href="/images/arquivos_processos/2019/04/Concorrência-Pública-nº-01-2019-SEDUR.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+</tbody>
+</table>
+</div> 	</div>
+
+								</div>
+                          </div> 
+                      </div>
+                  </div>
+              </div>
+                            <!--VERIFICAÇÃO PARA INCLUSÃO DE PÁGINA-->
+	</main>
+	
+<footer>
+
+<!-- inicio Mp2 -->
+      
+        
+  	  <div class="container-fluid">
+              <div class="row justify-content-start text-center">
+                  <div class="col-12" style="padding-top:5px; padding-bottom: 1px;"></div>
+              </div>
+      </div>
+       
+      <div class="container-fluid">
+          <div class="row justify-content-start text-center sty">
+              <div class="col-12 endereco">
+                  <b>&copy; 2021 - Secretaria Municipal de Desenvolvimento Urbano. Todos os direitos reservados.</b>
+              </div>
+          </div>
+      </div>
+       
+  	  <div class="container-fluid">
+              <div class="row justify-content-start text-center">
+                  <div class="col-12" style="padding-top:1px; padding-bottom: 1px;"></div>
+              </div>
+      </div>
+       
+         
+    <div class="container-fluid bannerfoot">
+
+              <div class="row">
+
+                    <!-- inic coluna3 ACESSO RAPIDO-->
+                    <div class="bfooter1 col-xs-12 col-sm-6 col-md-3" style="padding-top:30px; padding-left:20px; border:0px solid #fff">
+                       <ul class="none">
+                         <h5><font size="2px" color="#FFD190"><B>ACESSO RÁPIDO</B></font></h5>
+                         <li><a href="https://sedur.salvador.ba.gov.br/acessoremoto/" target="_blank" alt="Acesso Interno SEDUR"><font color="white" style="font-family:'Roboto' sans-serif; font-size:12px">Acesso Interno</font></a></li>
+       					 <li><a href="https://agendamento.sedur.salvador.ba.gov.br/sas/#agendamento" target="_blank" alt="Agendamento"><font color="white" style="font-family:'Roboto', sans-serif;  font-size:12px">Agendamento</font></a></li>
+                    	 <!-- 4ls; Modificação da página Canais de Atendimento-->
+       					 <!-- <li><a href="/./canais-de-atendimento" target="_blanck" alt="Canais Atendimento"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px">Canais de Atendimento</font></a></li> -->
+                    	<li><a href="https://servicos.sedur.salvador.ba.gov.br/#/portal/contacts" target="_blanck" alt="Canais Atendimento"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px">Canais de Atendimento</font></a></li>
+                         <!-- Fim -->
+                         <li><a href="http://www.falasalvador.ba.gov.br/portal/portal/" target="_blank" alt="Portal Fala Salvador"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px"> Portal Fala Salvador</font></a></li>
+                           <!--<li>
+                           	Prefeitura Municipal de Salvador<br>
+                           	13.927.801/0029-40
+                           </li>-->
+                       </ul>
+                    </div>   
+
+
+                    <!-- inic coluna1 SEDUR -->
+                    <div class="bfooter2 col-xs-12 col-sm-6 col-md-4" style="text-align:left; padding-top:60px; border:0px solid #fff">
+                        <img class = "img-responsive" src="http://sedur.salvador.ba.gov.br//images/logo/logo-white.png" alt="logo SEDUR">
+                    </div>
+
+
+                    <!-- inic coluna2 PREFEITURA -->
+                    <!-- <div class="bfooter3 col-xs-12 col-sm-6 col-md-3" style="text-align:left; padding-top:50px; border:0px solid #fff">
+                        <img id = "img_sedur_branca" src="http://sedur.salvador.ba.gov.br//images/logo/PREFEITURA_RET_COMPL_Branc_Ftrans2.png" alt="logo Prefeitura" width="200px" hight="auto">
+                    </div> -->
+
+
+
+                    <!-- inic coluna4 GOOGLE-->             
+                    <div class="bfooter4 col-xs-12 col-sm-6 col-md-3 offset-2" style="padding-top:10px; font-family:'Roboto', sans-serif; font-size:12px; color:white;">
+                      <a href="https://www.google.com/maps/place/SEDUR+-+Secretaria+Municipal+de+Desenvolvimento+e+Urbanismo/@-12.9847353,-38.4661181,1236a,35y,90h/data=!3m1!1e3!4m5!3m4!1s0x7161b34826018a3:0x6f1379fe7b002977!8m2!3d-12.9876324!4d-38.4666753?hl=pt-BR" target="_blank" alt="Endereo Sedur"><img src="http://sedur.salvador.ba.gov.br//images/imagens/END_SEDUR.png" width="100%" height="auto" style="border:3px solid #ffffff;"></a> 
+       				  <p>Av.ACM, nº3224, Caminho das Árvores - Salvador/Ba. Edf.Empresarial Thomé de Souza / Térreo - CEP.: 41110-700 </p>
+                     </div>
+
+              </div>
+
+    </div>       
+         
+    
+          
+    
+ <!-- fim Mp2 -->  
+     
+                  
+                  
+</footer>
+
+    <script src="http://sedur.salvador.ba.gov.br/templates/sedur/assets/js/js.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<script src="http://sedur.salvador.ba.gov.br/templates/sedur/assets/js/imageMapResizer.min.js"></script>
+	<script type="text/javascript">
+		$('map').imageMapResize();
+	</script>
+
+
+	<script>
+  
+  
+  function popUp(){
+    document.getElementById("dialog-message").style.display = "none";
+};   
+  
+  (function($) {
+$.fn.menumaker = function(options) {  
+ var cssmenu = $(this), settings = $.extend({
+   format: "dropdown",
+   sticky: false
+ }, options);
+ return this.each(function() {
+   $(this).find(".button").on('click', function(){
+     $(this).toggleClass('menu-opened');
+     var mainmenu = $(this).next('ul');
+     if (mainmenu.hasClass('open')) { 
+       mainmenu.slideToggle().removeClass('open');
+     }
+     else {
+       mainmenu.slideToggle().addClass('open');
+       if (settings.format === "dropdown") {
+         mainmenu.find('ul').show();
+       }
+     }
+   });
+   cssmenu.find('li ul').parent().addClass('has-sub');
+multiTg = function() {
+     cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
+     cssmenu.find('.submenu-button').on('click', function() {
+       $(this).toggleClass('submenu-opened');
+       if ($(this).siblings('ul').hasClass('open')) {
+         $(this).siblings('ul').removeClass('open').slideToggle();
+       }
+       else {
+         $(this).siblings('ul').addClass('open').slideToggle();
+       }
+     });
+   };
+   if (settings.format === 'multitoggle') multiTg();
+   else cssmenu.addClass('dropdown');
+   if (settings.sticky === true) cssmenu.css('position', 'fixed');
+resizeFix = function() {
+  var mediasize = 1000;
+     if ($( window ).width() > mediasize) {
+       cssmenu.find('ul').show();
+     }
+     if ($(window).width() <= mediasize) {
+       cssmenu.find('ul').hide().removeClass('open');
+     }
+   };
+   resizeFix();
+   return $(window).on('resize', resizeFix);
+ });
+  };
+})(jQuery);
+
+(function($){
+$(document).ready(function(){
+$("#cssmenu").menumaker({
+   format: "multitoggle"
+});
+});
+})(jQuery);
+$( "li.item-161" ).find( "span" ).css('display', 'none');
+$( "li.item-162" ).find( "span" ).css('display', 'none');
+</script>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+	
+</body>
+	
+	
+	
+</html>
+
+
+
+		
+

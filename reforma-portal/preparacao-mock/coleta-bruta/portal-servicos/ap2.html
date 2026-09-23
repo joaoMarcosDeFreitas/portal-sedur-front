@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt" lang="pt">
+<head>
+	<title>:: SEDUR - Secretaria Municipal de Desenvolvimento Urbano ::</title>
+	<style type="text/css" media="screen">@import url("css/estilo.css");</style>
+	<style type="text/css" media="screen">@import url("lib/style.css");</style>
+	<!--<style type="text/css" media="screen">@import url("css/formNew.css");</style>-->
+	<style type="text/css" media="screen">@import url("css/modal.css");</style>
+
+	<link rel="stylesheet" href="css/grid.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="js/DataTables/media/css/demo_table.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="js/DataTables/media/css/demo_page.css" type="text/css" media="all" />
+
+
+	<script language="JavaScript" type="text/javascript" src="js/jquery/jquery.js"></script>
+	<script language="JavaScript" type="text/javascript" src="js/jquery/interface.js"></script>
+	<script language="JavaScript" type="text/javascript" src="js/jParams.js"></script>
+	<script language="JavaScript" type="text/javascript" src="js/util.js"></script>
+
+	<script language="JavaScript" type="text/javascript">
+
+		// JavaScript Document
+		function ajaxInit(){
+			var xmlhttp;
+			try {
+				xmlhttp = new XMLHttpRequest();
+			} catch (ee) {
+				try {
+					xmlhttp = new ActiveXObject("sxml2.XMLHTTP");
+				} catch (e) {
+					try {
+						xmlhttp = new ActiveXObject("Microsoft.XMLHTTP") ;
+					} catch(E){
+						xmlhttp = false;
+					}
+				}
+			}
+
+			return xmlhttp;
+		}
+
+
+		$(document).ready(function(){
+			$("#img_preload").hide();
+		});
+
+		function emitirTVL(){
+			//numeroAlvara = jQuery.trim($("#numeroAlvara").val());
+			//anoAlvara = jQuery.trim($("#anoAlvara").val());
+			//OrigemInf = jQuery.trim($("#OrigemInf").val());
+			//Ano_ExercicioInf = jQuery.trim($("#Ano_ExercicioInf").val());
+			//Numero_DAMInforma = jQuery.trim($("#Numero_DAMInforma").val());
+
+			cgaEmp  = jQuery.trim($("#cgaEmpresa").val());
+
+			if ( cgaEmp != "" ){ //informou tvl
+
+
+				parametro = "cgaEmpresa="+$("#cgaEmpresa").val()+"&acao=VERIFICARALVARAPUBLICIDADE";
+
+				$.ajax({
+					type: "POST",
+					url: "viabilidade_post.php",
+					data: parametro, //passagem dos parametros
+					dataType: "json",
+
+					beforeSend: function(){$("#img_preload").show("fast");}, // Exibe preload
+					complete: function(){$("#img_preload").hide("slow");},  // Oculta preload
+
+					success: function(json){
+
+						$('#DAMSABERTOS').html('');
+
+						if( json.mensagemPendenciaFlag == 1 ){
+							var mensagemPendencia = '';
+							var i = 1;
+
+							$.each( json.mensagemPendenciaText, function( key, value ) {
+									mensagemPendencia = mensagemPendencia + '\n' + i + '. ' + value;
+								i++;
+							});
+
+							alert(json.mensagemPendenciaText);
+
+						} else if( json.damEncontrado != 0 ){
+
+							alert('Foram encontrados DAMs em aberto para o CGA!');
+
+							$('#DAMSABERTOS').html( json.damsAbertos );
+
+						} else if( json.alvaraEncontrado == 0  ){
+
+							alert('Não foram encontrados Alvaras para o CGA!');
+							//alert(json.damsAbertos);
+
+
+						} else{
+
+							//alert('ok'+json.alvaraEncontrado);
+
+							document.tela.submit();
+
+						}
+
+					},
+					error: function(request, status, error){
+						alert( request.responseText );
+					}
+				});
+
+
+			}
+			else{ //informou o dam
+				if ( OrigemInf == "" ){
+					alert( 'Favor informar a Origem' );
+					$("#OrigemInf").focus();
+					return false;
+				}
+
+				if ( Ano_ExercicioInf == "" ){
+					alert( 'Favor informar o Ano' );
+					$("#Ano_ExercicioInf").focus();
+					return false;
+				}
+
+				if ( Numero_DAMInforma == "" ){
+					alert( 'Favor informar o N\u00famero do DAM' );
+					$("#Numero_DAMInforma").focus();
+					return false;
+				}
+
+				obterTVL();
+			}
+		};
+
+		function obterTVL(){
+			ajax = ajaxInit();
+			if (ajax){
+				ajax.onreadystatechange = resultado;
+
+				parametro = getParams("table");
+				parametro = parametro +'acao=OBTERNUMEROTVL'
+
+				url = 'viabilidade_post.php';
+				parametros = parametro;
+				ajax.open('POST', url, true);
+				ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				ajax.setRequestHeader("Content-length", parametros.length);
+				ajax.setRequestHeader('Content-Type', "application/x-www-form-urlencoded; charset=utf-8");
+				ajax.send(parametros);
+			}
+		}
+
+		function resultado(){
+			if (ajax.readyState == 4){
+
+				if (ajax.status == 200){
+					separando = (ajax.responseText);
+
+
+					//alert(separando);
+
+					if( isNaN(separando) ){
+						alert(separando);
+						//alert('aqui');
+					}else{
+						$("#numeroTvl").val( separando );
+						verificarTVL();
+					}
+
+
+				}else{
+					alert('Não foi possivel carregar!');
+				}
+
+
+			}
+		}
+
+
+		function verificarTVL(){
+			ajax = ajaxInit();
+			if (ajax){
+				ajax.onreadystatechange = resultadoTVL;
+
+				parametro = getParams("table");
+				//parametro = parametro +'acao=CONSULTARTVL'
+				parametro = parametro +'acao=CONSULTARTVLIMPRESSAO';
+
+				url = 'viabilidade_post.php';
+				parametros = parametro;
+				ajax.open('POST', url, true);
+				ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				ajax.setRequestHeader("Content-length", parametros.length);
+				ajax.setRequestHeader('Content-Type', "application/x-www-form-urlencoded; charset=utf-8");
+				ajax.send(parametros);
+
+			}
+		}
+
+		function resultadoTVL(){
+			if (ajax.readyState == 4){
+				if (ajax.status == 200){
+					separando = (ajax.responseText);
+
+					//alert(separando);
+
+
+					if( isNaN(separando) ){
+						alert(separando);
+					}else{
+						document.tela.submit();
+					}
+
+				}else{
+					alert( ajax.responseText );
+				}
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<!-- <form action="emissaoAlvaraPublicidadeView.php" name="tela" id="tela" method="post" title="consulta"> --> <!--emissaotvlView.php -->
+	<form action="emissaoAlvaraPublicidadeLista.php" name="tela" id="tela" method="post" title="consulta">
+		<input type="hidden" name="emissaoTvl" id="emissaoTvl" value="1" />
+		<table border="0" cellpadding="2" cellspacing="2" align="center">
+			<tr>
+				<td colspan="2" height="23"><img id="img_preload" src="images/loading_animation.gif" alt="" width="23" height="23" border="0" /></td>
+			</tr>
+			<tr>
+				<td align="center"><font face="tahoma, verdana, arial" size="2"><b>CGA:&nbsp;&nbsp;</b></font></td>
+				<td><input type="text" name="cgaEmpresa" id="cgaEmpresa" value="" size="15" maxlength="14" onKeyUp="javascript:somente_numero(this);" /></td>
+			</tr>
+
+
+		</table>
+
+        <table border="0" id="resultDAM">
+            <tr>
+                <TD align="center">
+                    <div id="DAMSABERTOS">
+                    </div>
+                </TD>
+            </tr>
+        </table>
+
+
+		<table>
+            <tr>
+                <td></td>
+            </tr>
+		</table>
+
+		<table border="0" align="center">
+			<tr>
+				<td>
+					<input type="button" onclick="javascript:emitirTVL();" class="button" name="Consultar" value="Consultar" />
+				</td>
+				<td>
+					<input type="reset" class="button" value="Limpar" />
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
+

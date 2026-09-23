@@ -1,0 +1,1931 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+	<!--ATIVAÇÃO DE COMPATIBILIDADE E PROTEÇÃO CONTRA ATAQUES DO TIPO XSS-->
+	<!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+	<!--meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1,maximum-scale=1,user-scalable=no"-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-XSS-Protection" content="1">
+	<meta http-equiv="x-dns-prefetch-control" content="off">
+	<!--ATIVAÇÃO DE COMPATIBILIDADE E PROTEÇÃO CONTRA ATAQUES DO TIPO XSS-->
+	
+	
+			
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="/var/www/html/sedur/favicon.ico"> -->
+
+	
+	
+	
+	<meta name="google-site-verification" content="3XxLThCC-_tkg2qtziw_KG01DRXRqWTMM91thC8V6RM" />
+	<!--OBS: ENCONTRAM-SE NO TYPE HEAD AS META TAGS DESCRIPTION E KEYWORDS-->
+	<meta charset="utf-8" />
+	<base href="http://sedur.salvador.ba.gov.br/decretos" />
+	<meta name="author" content="Super User" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>SEDUR - Secretaria Municipal de Desenvolvimento Urbano</title>
+	<link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://sedur.salvador.ba.gov.br/templates/sedur/assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="http://sedur.salvador.ba.gov.br/templates/sedur/assets/css/template.css" rel="stylesheet" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"d51a9a54afbd8aa16872c3807f5eeba6","system.paths":{"root":"","base":""}}</script>
+
+</head>
+
+	
+<body>
+	
+    <!-- Pop-up de Aviso -->
+          <!-- <div id="dialog-message" style="position: fixed; z-index: 4000; margin-left: 30px; margin-top: 100px; right: 30px;">
+          <div class="d-flex flex-row-reverse">
+        	<button style="margin-bottom: 10px" type="button" class="btn-close btn-lg" aria-label="Close" onclick="popUp()" id="botaoFechar">X</button>
+          </div>
+    		
+          <a href="#">
+            <p>
+              <img src="http://sedur.salvador.ba.gov.br//images/avisoLicenciamento31012025.jpeg" style="width: 600px;">
+			</p>
+          </a>
+		</div> -->
+        <!-- Fim -->
+      
+    
+	<div id="header-section1-internas" class="navbar-fixed-top not-print" style="display:none;">
+        
+  		<div class="wrapper">
+            
+  			<a id="logo-internas" href="http://www.salvador.ba.gov.br" target="_parent" title="Ir para o Portal Salvador">Prefeitura Municipal de Salvador</a>    
+
+            <div class="float-right"> 
+
+                <div class="social-links float-left font-bold">
+                    <ul class="float-left">
+                        <li class="facebook"><a href="https://www.facebook.com/pages/Prefeitura-de-Salvador/472097156139269" target="_blank">Facebook</a></li>
+                        <li class="youtube"><a href="http://www.youtube.com/prefeituradosalvador" target="_blank">YouTube</a></li>
+                        <li class="flickr"><a href="http://www.flickr.com/photos/prefeituradesalvador" target="_blank">Flickr</a></li>
+                        <li class="twitter"><a href="https://twitter.com/prefsalvador" target="_blank">Twitter</a></li>
+                    </ul>
+                </div>  
+
+            </div> 
+  
+        </div>
+</div>
+
+<style type="text/css">
+	#header-section1-internas {
+	    background-color: #34558c;
+	    height: 48px;
+	    border-top: 1px solid #3e66a3;
+	}
+	.wrapper {
+	    width: 100%;
+	    margin: 0 auto;
+	}
+	#logo-internas {
+		display: block;
+		float: left;
+		background: transparent url(http://sedur.salvador.ba.gov.br//images/logo/logo-internas.png) left center no-repeat;
+		/* Mp2 background: transparent url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/logo-internas.png) left center no-repeat;*/
+        width: 284px;
+		height: 43px;
+		text-indent: -5000em;
+		margin-left:10px;
+	}
+	.float-right {
+	    float: right;
+	}
+	.social-links {
+	    /* padding-top: 35px; */
+	    width: 100%;
+	}
+	.float-left {
+	    float: left;
+	}
+	.social-links ul {
+	    list-style: none;
+	    padding: 0;
+	    margin: 5px 0 0 0;
+	}
+	.social-links .facebook {
+    	background-image: url(http://sedur.salvador.ba.gov.br//images/logo/facebook-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/facebook-icon.png); */                    
+	}
+	.social-links .youtube {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/youtube-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/youtube-icon.png); */                       
+	}
+	.social-links .flickr {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/flickr-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/flickr-icon.png); */ 
+	}
+	.social-links .twitter {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/twitter-icon.png);
+        /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/twitter-icon.png); */                       
+	}
+	.social-links ul li {
+	    float: left;
+	    margin-right: 7px;
+	}
+	.social-links ul li a {
+	    width: 35px;
+	    height: 35px;
+	    text-indent: -5000em;
+	    display: block;
+	}
+                        
+                              
+</style>
+	<!-- Começo Navbar -->
+
+	<div class="container-fluid" style="padding-right: 0px; padding-left: 0px; border:0px solid #000">
+		<header>
+			<div class="row" style="margin: 0%; background-color: white; padding: 2% 0; border:0px solid #008000">
+					<div class="col-md-3 offset-1 col-sm-0" style="border:0px solid #000"> 
+						<a href="/index.php">
+							<img id = "img_marca_old" src="http://sedur.salvador.ba.gov.br//images/logo/logo-black.png" class="img-responsive" alt="logo">
+						</a>
+      			    </div>
+					
+                    <div class="barramenu col-md-8 col-sm-12" style="border:0px solid #000">
+                        <nav id='cssmenu'  style="margin-left: 0px;">
+                            <div id="head-mobile" style="border:0px solid #f00"></div>
+                            <div class="button" style="border:0px solid #ff0"></div>
+                            <ul class="nav menu" style="float: right;">
+<li class="item-102 deeper parent menu-style"><a href="#" >INSTITUCIONAL</a><ul class="dropdown-menu"><li class="item-156 menu-style"><a href="/institucional/dirigentes" >Dirigentes</a></li><li class="item-157 menu-style"><a href="/institucional/estrutura-organizacional" >Estrutura Organizacional</a></li><li class="item-149 menu-style"><a href="/institucional/area-de-atuacao" >Área de Atuação</a></li></ul></li><li class="item-106 menu-style"><a href="https://servicos.sedur.salvador.ba.gov.br/#/portal/home" >SERVIÇOS</a></li><li class="item-154 menu-style"><a href="/noticias" >NOTÍCIAS</a></li><li class="item-151 menu-style"><a href="/legislacao" >LEGISLAÇÃO</a></li><li class="item-155 menu-style"><a href="/licitacoes" >LICITAÇÕES</a></li><li class="item-171 menu-style"><a href="/transparencia" >TRANSPARÊNCIA</a></li></ul>
+
+
+
+<!-- <style>
+
+	.item-161{
+		margin-left: 18%;
+	}
+
+
+	@media (min-width: 320px) and (max-width:767px) {
+		.item-161{
+		margin-left: 0%;
+		}
+
+	}
+
+	
+	@media (min-width: 767px) and (max-width:999px) {
+		.item-161{
+			margin-left: 0%;
+		}
+	}
+
+
+</style> -->
+
+
+
+
+                        </nav>	
+                    </div>
+ 			</div>
+				
+		</header>
+	</div>
+
+
+	
+	<!-- Fim Navbar -->
+		
+	
+	              <div class="no-home">
+                  <div class="container-fluid">
+                      <div class="row">
+                         <div class="col-9 offset-2">
+                              
+                              <div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+		
+	
+	     
+            
+      <div class="page-header">
+		
+			<h2 class="artigos_internos" itemprop="headline" style="width: 181px;">Decretos</h2>
+									
+   
+          
+          <!-- Mp2 - Vou inserir 1 div botão voltar linha 301 a 303-->
+     <div class="voltarBTN" style="text-align: right;"><a href="JavaScript: window.history.back();"><button class="btn btn-warning" style="font-size: 15px; font-family: 'Roboto'; color: white; background-color: #006CB5; border-color: #006CB5; font-weight: bold; margin-right: 18px;" type="button">Voltar</button></a>
+     </div>   
+  	<br><br>
+<!-- Mp2 div botao voltar -->          
+      
+          
+          </div>
+         
+  
+          
+					
+		
+	
+	
+		
+							
+<!-- Mp2 Retirei a inclusão de imagem automaticamente das noticias
+      
+<img class="img-responsive" title="" src="/" alt=""/>
+
+fim retirar imagem -->    
+      
+	<div itemprop="articleBody">
+		<div class="col-md-12 col-12 table-responsive" style="text-align: justify; float: center;"> 
+<table class="table table-striped table-sm" style="width: 100%; height: 87px;">
+<thead>
+<tr>
+<th style="text-align: center; width: 6%;" scope="col">Data</th>
+<th style="text-align: center; width: 13.259%;" scope="col">Nº Legislação</th>
+<th style="text-align: center; width: 71.741%;" scope="col">Descrição</th>
+<th style="text-align: center; width: 4%;" scope="col">Arquivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center; width: 6%;">
+<p>03/06/2026</p>
+</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 41.818/2026</td>
+<td style="width: 71.741%;">Institui o Programa Municipal de Coleta de Óleos e Gorduras Residuais - OGR, no âmbito do Município do Salvador, cria o Selo de Destinação Adequada de OGR e estabelece as diretrizes para adesão dos geradores, na forma que indica</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_41818_2026.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">
+<p>10/04/2025</p>
+</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 40.025/2025</td>
+<td style="width: 71.741%;">Regulamenta a Lei nº 8.553 de 28 de janeiro de 2014, que dispõe sobre a arrecadação e a encampação de imóveis urbanos abandonados no município de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_40025_2025.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">
+<p>13/03/2025</p>
+</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 39.927/2025</td>
+<td style="width: 71.741%;">Regulamenta dispositivos da Lei Municipal nº 8.165/2012 referente às APCP’S de Ponta de Nossa Senhora de Guadalupe e Nossa Senhora<br />do Loreto na Ilha dos Frades, e dispõe sobre penalidades relativas às infrações cometidas nestas localidades.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_39927_2025.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">
+<p>21/02/2025</p>
+</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 39.878/2025</td>
+<td style="width: 71.741%;">Dispõe sobre o ordenamento e a liberação para a colocação de mesas e cadeiras em logradouros públicos e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_39878_2025.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">
+<p>19/02/2025</p>
+</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 39.863/2025</td>
+<td style="width: 71.741%;">Restabelece o uso do Instrumento da Transferência do Direito de Construir – TRANSCON originário da área denominada Praia Grande e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_39863_2025.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">
+<p>18/02/2025</p>
+</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 39.853/2025</td>
+<td style="width: 71.741%;">Regulamenta o art. 18-B da Lei nº 8.164, de 16 de janeiro de 2012 e as multas e penalidades relativas as infrações cometidas na Área de Proteção de Recursos Naturais APRN do Entorno Marítimo da Ilha dos Frades, Itapipuca, Coqueiros, Santo Antônio, Língua da Baleia e Bom Jesus dos Passos, na forma que indica.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_39853_2025.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">
+<p>06/02/2025</p>
+</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 39.805/2025</td>
+<td style="width: 71.741%;">Disciplina as obrigações dos titulares de Alvará de Autorização Especial e de Alvará de Autorização para a exploração de atividades, em caráter eventual, durante Pré Carnaval, Carnaval e Festas Populares no Bairro Santo Antônio Além do Carmo.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_39805_2025.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">
+<p>25/02/2024</p>
+</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 39.485/2024</td>
+<td style="width: 71.741%;">Cria Grupo de Trabalho da SEDUR para revisão da Lei nº 9.069/2016, que dispõe sobre o Plano Diretor de Desenvolvimento Urbano do Município de Salvador - PDDU/2016, da Lei nº 9.148/2016, que dispõe sobre o Ordenamento do Uso e da Ocupação do Solo do Município de Salvador - LOUOS/2016 e da Lei nº 9.281/2027, que institui as normas relativas à execução de obras e serviços no Município do Salvador</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_39485_2024.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">
+<p>05/08/2024</p>
+</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 38.893/2024</td>
+<td style="width: 71.741%;">Dispõe sobre a solicitação de filmagens e gravações em áreas públicas, do Município do Salvador e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_38893_2024.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">
+<p>01/08/2024</p>
+</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 38.884/2024</td>
+<td style="width: 71.741%;">Altera dispositivos do Decreto nº 36.288, de 17 de novembro de 2022, que regulamenta o Aart. 5º da Lei nº 8.474, de 02 de outubro de 2013, e institui o Programa de Certificação Sustentável IPTU VERDE em edificações no Município de Salvador, na forma que indica</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_38884_2024.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">
+<p>09/05/2024</p>
+</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 38.540/2024</td>
+<td style="width: 71.741%;">Institui o Programa de Regularização Fundiária para os Povos de Terreiro no âmbito do Poder Executivo Municipal.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_38540_2024.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">
+<p>12/03/2024</p>
+</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 38.305/2024</td>
+<td style="width: 71.741%;">Regulamenta dispositivos da Lei nº 9.767, de 30 de novembro de 2023, que instituiu o Programa de Incentivo a Empreendimentos e Moradias -RENOVA CENTRO, na forma que indica.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_38305_2024.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">26/01/2024</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 38.141/2024</td>
+<td style="width: 71.741%;">Disciplina as obrigações dos titulares de Alvará de Autorização Especial e de Alvará de Autorização para a exploração de atividades, em caráter eventual, durante Carnaval e Festas Populares de 2024 no Bairro Santo Antônio Além do Carmo.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_38141_2024.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">26/01/2024</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 38.140/2024</td>
+<td style="width: 71.741%;">Disciplina as obrigações dos titulares de Alvará de Autorização Especial e de Alvará de Autorização para a exploração de atividades, em caráter eventual, durante a festa de Yemanjá e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_38140_2024.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">27/10/2023</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 38.090/2023</td>
+<td style="width: 71.741%;">Regulamenta o funcionamento do Fundo Municipal de Saneamento, na forma que indica, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_38090_2023.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">19/10/2023</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 37.627/2023</td>
+<td style="width: 71.741%;">Regulamenta a Lei Municipal nº 9.732/23, que dispõe sobre o procedimento para a instalação de Infraestrutura de Suporte para Estação Transmissora de Radiocomunicação – ETR, autorizada pela Agência Nacional de Telecomunicações – ANATEL, nos termos da legislação federal vigente, na forma que indica.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_37627_2023.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">05/10/2023</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 37.571/2023</td>
+<td style="width: 71.741%;">Regulamenta o Termo de Viabilidade de Localização – TVL, de que trata o art. 6º da Lei nº 5.503, de 26 de fevereiro de 1999 (Código de Polícia Administrativa do Município do Salvador), na forma que indica.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_37571_2023.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">05/10/2023</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 37.569/2023</td>
+<td style="width: 71.741%;">Altera dispositivos do Decreto nº 34.257, de 10 de agosto de 2021, que dispõe sobre a obrigatoriedade de previsão de compartimento próprio para Central de Gás Liquefeito de Petróleo (GLP) nos projetos submetidos ao licenciamento no Município de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_37569_2023.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">06/09/2023</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 37.407/2023</td>
+<td style="width: 71.741%;">Altera o Decreto nº 32.636, de 30 de julho de 2020 que estabelece a classificação de risco de atividades econômicas no Município do Salvador, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_37407_2023.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">17/07/2023</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 37.190/2023</td>
+<td style="width: 71.741%;">Altera o Decreto nº 32.636, de 30 de julho de 2020 que estabelece a classificação de risco de atividades econômicas no Município do Salvador, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_37190_2023.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">14/02/2023</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 36.644/2023</td>
+<td style="width: 71.741%;">Disciplina as obrigações dos titulares de Alvará de Autorização para exercício de comércio informal em logradouro público, de Alvará de Autorização Especial e de Alvará de Autorização para a exploração de atividades, em caráter eventual, durante o Carnaval de 2023 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_36644_2023.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">17/11/2022</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 36.288/2022</td>
+<td style="width: 71.741%;">Regulamenta o art. 5º da Lei nº 8.474, de 02 de outubro de 2013, e institui o Programa de Certificação Sustentável IPTU VERDE em edificações no Município de Salvador, que estabelece benefícios fiscais aos participantes do programa, assim como os arts. 5º e 5º-A da Lei<br />nº 8.723 de 22 de dezembro de 2014, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_36288_2022.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">28/07/2022</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 35.773/2022</td>
+<td style="width: 71.741%;">Altera o Decreto nº 32.636, de 30 de julho de 2020, que estabelece a classificação de risco de atividades econômicas no Município do Salvador, na forma que indica.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_35773_2022.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">14/06/2022</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 35.586/2022</td>
+<td style="width: 71.741%;">Dispõe sobre a instalação de mobiliário urbano no Município e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_35586_2022.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">07/02/2022</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 35.126/2022</td>
+<td style="width: 71.741%;">Regulamenta o Termo de Viabilidade de Localização – TVL, de que trata o art. 6º da Lei nº 5.503, de 26 de fevereiro de 1999 (Código de Polícia Administrativa do Município do Salvador), na forma que indica.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_35126_2022.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">30/12/2021</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 35.062/2021</td>
+<td style="width: 71.741%;">Estabelece diretrizes para VIABILIDADE LOCACIONAL para Sede de Escritório Virtual e Coworking e dá outras providências</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_35062_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">07/10/2021</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 34.566/2021</td>
+<td style="width: 71.741%;">Altera a estrutura regimental da Secretaria Municipal de Desenvolvimento Urbano – SEDUR, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/dec_34566_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">31/08/2021</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 34.374/2021</td>
+<td style="width: 71.741%;">Decreto nº 34.374/2021 Acrescenta o § 4º ao art. 14 do Decreto Municipal nº 18.147, de 30 de janeiro de 2008, na forma que indica.</td>
+<td style="text-align: center; width: 4%;"><a href="/arquivos/2021/09/dec_34374_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">10/08/2021</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 34.258/2021</td>
+<td style="width: 71.741%;">Decreto nº 34.258/2021 Cria Grupo de Trabalho para revisão da Classificação Viária em atendimento §2º do art. 147, da Lei nº 9.148/2016 que dispõe sobre o Ordenamento do Uso e da Ocupação do Solo do Município de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/arquivos/2021/08/dec_34258_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">10/08/2021</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 34.257/2021</td>
+<td style="width: 71.741%;">Decreto nº 34.257/2021 Dispõe sobre a obrigatoriedade de previsão de compartimento próprio para Central Gás Liquefeito de Petróleo (GLP) nos projetos de construção submetidos ao licenciamento no Município de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/arquivos/2021/08/dec_34257_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">06/08/2021</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 34.248/2021</td>
+<td style="width: 71.741%;">Decreto nº 34.248/2021 Cria Grupo de Trabalho para revisão do Programa De Certificação Sustentável IPTU Verde, regulamentado e instituído pelo Decreto nº 29.100, de 06 de novembro de 2017, na forma que indica.</td>
+<td style="text-align: center; width: 4%;"><a href="http://arquivos//2021/08/dec_34248_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">18/06/2021</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 34.058/2021</td>
+<td style="width: 71.741%;">Altera o Anexo I do Decreto nº 32.636, de 30 de julho de 2020 que estabelece a classificação de risco de atividades econômicas no Município do Salvador, na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2021/06/dec_34058_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">04/06/2021</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 33.985/2021</td>
+<td style="width: 71.741%;">Altera dispositivos do Decreto nº 17.671, de 11 de setembro de 2007, que estabelece o Calendário Fiscal de Tributos do Município do Salvador, na forma que indica.</td>
+<td style="text-align: center; width: 4%;"><a target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">17/05/2021</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 33.916/2021</td>
+<td style="width: 71.741%;">Cria Comissão de Regularização Fundiária Urbana do Município objetivando a orientação, avaliação, acompanhamento e validação dos expedientes referentes aos processos administrativos da REURB.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2021/05/dec_33916_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">02/03/2021</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 33.599/2021</td>
+<td style="width: 71.741%;">Cria o Comitê Municipal de Tecnologia da Informação e Comunicação e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2021/03/dec_33599_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">01/03/2021</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 33.598/2021</td>
+<td style="width: 71.741%;">Estabelece normas para aquisições de bens e contratações de serviços na área de Tecnologia da Informação e Comunicação – TIC a serem adotadas no âmbito da Administração Municipal e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2021/03/dec_33598_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">29/01/2021</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 33.479/2021</td>
+<td style="width: 71.741%;">Altera dispositivos do Decreto nº 26.021, de 08 de maio de 2015, que “Dispõe sobre o licenciamento de eventos realizados no Município de Salvador, cria a Central Integrada de Licenciamento de Eventos e dá outras providências”</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2021/02/dec_33479_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">22/12/2020</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 33.421/2020</td>
+<td style="width: 71.741%;">Institui as normas gerais e os procedimentos aplicáveis à Regularização Fundiária Urbana no âmbito do Município de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2021/01/DEC_33421_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">01/09/2020</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 32.791/2020</td>
+<td style="width: 71.741%;">Dispõe sobre a criação e delimitação de bairros no Município Salvador, na forma do art. 7º da Lei nº 9.278, de 2017.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2020/09/Dec_32791_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">31/07/2020</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 32.644/2020</td>
+<td style="width: 71.741%;">Altera dispositivos do Decreto nº 24.535 de 05 de dezembro de 2013 que regulamenta o Termo de Viabilidade de Localização – TVL, de que trata o art. 6º da Lei nº 5.503/1999 - <strong>REVOGADO</strong></td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2020/08/dec_32644_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">30/07/2020</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 32.636/2020</td>
+<td style="width: 71.741%;">Estabelece a classificação de risco das atividades econômicas no Município de Salvador</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2020/08/dec-32636-2020-salvador-ba.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">06/05/2020</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 32.388/2020</td>
+<td style="width: 71.741%;">Institui o Comitê Gestor do Sistema de Processo Eletrônico E-Salvador com o objetivo de realizar o planejamento, a gestão e o acompanhamento das ações para sua implantação, no âmbito da Prefeitura Municipal do Salvador – PMS – republicado</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2020/05/dec_32388_2020_republicado.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">06/05/2020</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 32.387/2020</td>
+<td style="width: 71.741%;">Dispõe sobre o uso do meio eletrônico para a realização do processo administrativo no âmbito da Prefeitura Municipal do Salvador – PMS.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2020/05/dec_32387_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">18/02/2020</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 32.176/2020</td>
+<td style="width: 71.741%;">Altera dispositivos do Decreto nº 20.505/2009 (Carnaval)</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2020/02/dec_32176_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">12/02/2020</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 32.155/2020</td>
+<td style="width: 71.741%;">Estabelece as regras e critérios para o licenciamento através do Portal Eletrônico de Licenciamento do Município de Salvador</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2020/02/dec_32155_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">03/12/2019</td>
+<td style="width: 13.259%; text-align: left;"> Decreto nº 31.874/2019</td>
+<td style="width: 71.741%;">Altera dispositivos do Decreto nº 30.095/2018 (Institui normas relativas à exibição de publicidade no Município do Salvador )</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/12/dec_31874_2019.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">20/11/2019</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 31.796/2019</td>
+<td style="width: 71.741%;">Aprova o Regimento do Conselho Municipal de Salvador</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/11/decreto_31796_2019.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">02/08/2019</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 31.299/2019</td>
+<td style="width: 71.741%;">Atualiza a composição do Conselho Municipal do Meio Ambiente – COMAM para o biênio 2019/2021</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/08/Decreto_31299_2019.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">16/07/2019</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 31.230/2019</td>
+<td style="width: 71.741%;">Institui o Grupo de Acompanhamento do Plano Salvador 500 – GAPLAN</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/07/dec_31230_2019.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">16/07/2019</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 31.229/2019</td>
+<td style="width: 71.741%;">Altera dispositivos do Decreto que regulamenta o Plano de Incentivos Fiscais no âmbito do PROGRAMA SALVADOR 360, com relação a TRANSCON</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/07/dec_31229_2019.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">27/06/2019</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 31.168/2019</td>
+<td style="width: 71.741%;">Estabelece critérios para Licenciamento nos TRECHOS 5 e 6 da Área de Borda Marítima (ABM) em consonância com a Lei nº 9.069/2016 (PDDU) e a Lei nº 9.148/2016 (LOUOS),</td>
+<td style="text-align: center; width: 4%;"><a target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">27/06/2019</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 31.167/2019</td>
+<td style="width: 71.741%;">Altera dispositivo do Decreto nº 29.758, de 21 de maio de 2018 e prorroga o prazo para a conclusão dos trabalhos do Grupo de Trabalho criado para disciplinar a Regularização Fundiária no Município de Salvador</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/07/Dec_31167_2019.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">27/06/2019</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 31.166/2019</td>
+<td style="width: 71.741%;">Atualiza a composição do Conselho Municipal de Salvador, na forma que indica</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/07/Dec_31166_2019.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">02/05/2019</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 30.995/2019</td>
+<td style="width: 71.741%;">Institui a Política de Proteção aos Casarões do Centro Histórico, cria Grupo de Trabalho para sua implementação e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2021/03/dec_30995_2019.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">28/03/2019</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 30.896/2019</td>
+<td style="width: 71.741%;">Regulamenta o art. 15-A da Lei nº 9.285, de 27 de outubro de 2017, com redação dada pela Lei nº 9.434, de 27 de dezembro de 2018, que institui o Plano de Incentivos Fiscais do Programa 360</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/Decreto_30896_2019.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">14/02/2019</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 30.799/2019</td>
+<td style="width: 71.741%;">Decreto nº 30.799 de 14 de fevereiro de 2019 Institui a Comissão de Política Urbana do Município e estabelece o procedimento para a instituição de Transformação Urbana Localizada no Município.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/02/dec_30799_2019-1.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">16/01/2019</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 30.755/2019</td>
+<td style="width: 71.741%;">Altera e acrescenta dispositivos ao Decreto nº 29.547, de 12 de março de 2018, que regulamenta a Lei nº 9.285/2017, Programa Salvador 360</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/01/Dec_30755_2019.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">21/12/2018</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 30.738/2018</td>
+<td style="width: 71.741%;">Regulamenta o art. 5º da Lei nº 8.474, de 02 de outubro de 2013, e institui o Programa de Certificação Sustentável “IPTU AMARELO” em unidades imobiliárias residenciais no Município de Salvador</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2020/09/dec_30738_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">30/08/2018</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 30.123/2018</td>
+<td style="width: 71.741%;">Estabelece as regras e critérios para o licenciamento através do Portal Eletrônico de Licenciamento Simplificado do Município de Salvador e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2018/09/Decreto_30123_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">23/08/2018</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 30.095/2018</td>
+<td style="width: 71.741%;">Institui normas relativas à exibição de publicidade no Município do Salvador e dá outras providências. (republicado no DOM de 28/08/2018)</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2018/09/decreto_30095_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">24/07/2018</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 29.987/2018</td>
+<td style="width: 71.741%;">Dispõe sobre funcionamento de Microempreendedor Individual, Microempresas e Empresas de Pequeno porte em residências</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2018/07/DECRETO_29987_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">05/07/2018</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 29.921/2018</td>
+<td style="width: 71.741%;">Regulamenta os dispositivos da Lei Municipal nº 8.915/2015, que dispõe sobre a Política Municipal de Meio Ambiente e Desenvolvimento Sustentável e institui o Cadastro Municipal de Atividades Potencialmente Degradadoras e Utilizadoras de Recursos Naturais – CMAPD, no Município de Salvador</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2018/07/dec_29921_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">29/06/2018</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 29.900/2018</td>
+<td style="width: 71.741%;">Altera dispositivos do Decreto nº 29.100, de 06 de novembro de 2017, que regulamenta o art. 5º da Lei nº 8.723, de 22 de dezembro de 2014, que dispõe sobre a redução de 80% (oitenta por cento) no Valor Venal do Imposto sobre a Propriedade Predial e Territorial Urbana – IPTU</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/07/dec_29900_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">28/03/2018</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 29.592/2018</td>
+<td style="width: 71.741%;">Dispõe sobre a organização e gestão do Salvador Dados, nova denominação do Sistema de Informação Municipal previsto no PDDU</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2018/04/Decreto_29592_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">22/03/2018</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 29.581/2018</td>
+<td style="width: 71.741%;">Regulamenta o art. 345 da Lei 9.069/2016, Plano Diretor de Desenvolvimento Urbano do Município do Salvador – PDDU, que dispõe sobre utilização de gabarito de altura mais permissivo e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2018/03/Decreto_-29.581_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">12/03/2018</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 29.547/2018</td>
+<td style="width: 71.741%;">Regulamenta a Lei nº 9.285, de 27 de outubro de 2017, que instituiu o PLANO DE INCENTIVOS FISCAIS no âmbito do PROGRAMA SALVADOR 360</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2018/03/Dec_29547_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">08/02/2018</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 29.490/2018</td>
+<td style="width: 71.741%;">Altera dispositivo do Decreto nº 20.505, de 28 de dezembro de 2009 (Carnaval), com redação dada pelo Decreto nº 28.276, de 21 de fevereiro de 2017 que fixa valores para Taxas de Licenciamento SEDUR para o Carnaval 2018</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2018/02/dec_29490_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">05/02/2018</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 29.485/2018</td>
+<td style="width: 71.741%;">Disciplina as obrigações dos titulares de Alvará de Autorização para exercício de comércio informal em logradouro público, de Alvará de Autorização Especial e de Alvará de Autorização para a exploração de atividades, em caráter eventual, durante o Carnaval de 2018 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2018/02/Dec_29.485_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">02/02/2018</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 29.476/2018</td>
+<td style="width: 71.741%;">Altera dispositivo do Decreto nº 20.505, de 28 de dezembro de 2009 (Carnaval), com redação dada pelo Decreto nº 28.276, de 21 de fevereiro de 2017 que fixa o valor da taxa de licenciamento para camarotes, arquibancadas, praticáveis e estruturas similares para o Carnaval 2018.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2018/02/dec_29476_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">24/01/2018</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 29.452/2018</td>
+<td style="width: 71.741%;">Regulamenta a emissão do Cupom Fiscal de Eventos – Bilhete/Ingresso Eletrônico – BE, estabelece critérios para sua utilização, e dá outras providências</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2018/02/dec_29452_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">08/01/2018</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 29.437/2018</td>
+<td style="width: 71.741%;">Acrescenta dispositivo ao Decreto nº 20.588, de 19 de fevereiro de 2010, que regulamenta o Cadastro de Atividades dos Estabelecimentos em Geral</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2018/01/dec_29437_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">27/12/2017</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 29.428/2017</td>
+<td style="width: 71.741%;">Institui o Modelo Integrado de Relacionamento com o Cidadão – Fala Salvador e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/12/Dec_29428_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">11/12/2017</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 29.318/2017</td>
+<td style="width: 71.741%;">Institui normas relativas à exibição de publicidade no Município do Salvador e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/12/Dec_29318_Publicidade_completo.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">11/12/2017</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 29.317/2017</td>
+<td style="width: 71.741%;">Estabelece critérios para o licenciamento de Moradias e Melhorias Habitacionais dos cidadãos no âmbito do município de Salvador e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/12/Dec_29.317_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">01/12/2017</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 29.259/2017</td>
+<td style="width: 71.741%;">Regulamenta o art. 64 da Lei nº 9.281/2017 que dispõe sobre obras e serviços realizados de forma irregular no Município do Salvado</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/12/Dec_29259_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">30/11/2017</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 29.223/2017</td>
+<td style="width: 71.741%;">Cria Comissão Técnica para análise e acompanhamento dos projetos do Centro de Convenções e designa seus representantes.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/12/dec_29223_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">06/11/2017</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 29.100/2017</td>
+<td style="width: 71.741%;">Regulamenta o art. 5º da Lei nº 8.474, de 02 de outubro de 2013, e institui o Programa de Certificação Sustentável “IPTU VERDE” em edificações no Município de Salvador, que estabelece benefícios fiscais aos participantes do programa, assim como o art. 5º da Lei 8.723 de 22 de dezembro de 2014 e dá outras providências</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/11/dec_29100_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">06/11/2017</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 29.099/2017</td>
+<td style="width: 71.741%;">Dispõe sobre o Manual Técnico de Arborização Urbana de Salvador com espécies nativas da Mata Atlântica</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/11/dec_29099_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">23/08/2017</td>
+<td style="width: 13.259%; text-align: left;"> Decreto nº 30.094/2018</td>
+<td style="width: 71.741%;">Altera e acrescenta dispositivos ao Decreto nº 29.100, de 06 de novembro de 2017, que regulamenta o art. 5º da Lei nº 8.474, de 02 de outubro de 2013, e institui o Programa de Certificação Sustentável “IPTU VERDE”</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2020/09/dec_30094_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">22/08/2017</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 28.775/2017</td>
+<td style="width: 71.741%;">Regulamenta a Lei nº 9.215, de 19 de maio de 2017, que instituiu o Programa de Incentivo à Restauração e Recuperação de Imóveis do Centro Antigo de Salvador – PROGRAMA REVITALIZAR, e dá outras providências</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/08/decre_28775_2017-1.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">13/06/2017</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 28.560/2017</td>
+<td style="width: 71.741%;">Dispõe sobre a Comissão Normativa da Legislação Urbanística – CNLU.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/06/Decreto_28560_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">15/05/2017</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 28464/2017</td>
+<td style="width: 71.741%;">Altera e acrescenta dispositivos ao Decreto nº 26.021 de 08 de maio de 2015, que “Dispõe sobre o licenciamento de eventos realizados no Município de Salvador, cria a Central Integrada de Licenciamento de Eventos e dá outras providências”.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/06/Dec_28464_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">30/03/2017</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 28.337/2017</td>
+<td style="width: 71.741%;">Regulamenta o uso das vagas preferenciais para gestantes e pessoas com crianças de colo nos estacionamentos de shopping centers, centros comerciais e hipermercados, no Município de Salvador e dá outras providências</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/03/dec_28337_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">30/03/2017</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 28.336/2017</td>
+<td style="width: 71.741%;">Regulamenta o Conselho Gestor de Parcerias – CGP, criado pela Lei 9.092/2016 e dá outras providencias,</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/03/dec_28336_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">29/03/2017</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 28.333/2017</td>
+<td style="width: 71.741%;">Aprova o Tombamento da Estátua de Jesus – O Salvador, e do Morro que lhe serve de suporte, sito à Avenida Oceânica, na Barra</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/11/Dec_28333_2017_tombamento_cristo.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">28/03/2017</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 28.329/2017</td>
+<td style="width: 71.741%;">Cria a Coordenação Geral para gestão e acompanhamento da execução dos serviços técnicos de elaboração do Plano de Mobilidade Urbana do Município de Salvador e dá outras providências</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/03/Dec_28329_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">20/03/2017</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 28.299/2017</td>
+<td style="width: 71.741%;">Cria o Grupo Permanente de Ações Preventivas de Defesa Civil e dá outras providências</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/03/dec28299_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">21/02/2017</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 28.276/2017</td>
+<td style="width: 71.741%;">Altera e revoga dispositivos do Decreto nº 20.505/2009, com redação dada pelo Decreto nº 27.028/2016, (Licenciamento Carnaval)</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/02/Decreto_28276_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">20/02/2017</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 28.271/2017</td>
+<td style="width: 71.741%;">Altera, acrescenta e revoga os dispositivos do Decreto nº 27.255 que regulamenta a instalação e o uso de extensão temporária de passeio público, denominada Parklet.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/02/Decreto_28271_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">16/02/2017</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 28.266/2017</td>
+<td style="width: 71.741%;">Disciplina as obrigações dos titulares de Alvará de Autorização para exercício de comércio informal em logradouro público, de Alvará de Autorização Especial e de Alvará de Autorização para a exploração de atividades, em caráter eventual, durante o Carnaval de 2017 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/02/decreto_28266_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">13/12/2016</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 28.078/2016</td>
+<td style="width: 71.741%;">Dispõe sobre as providências para a anulação das desapropriações e dos créditos para compensação com tributos municipais que indica e dá outras providências</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/12/Decreto-28.078-16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">01/12/2016</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 28.000/2016</td>
+<td style="width: 71.741%;">Restabelece o uso do Instrumento da Transferência do Direito de Construir – TRANSCON originário da área denominada Fazenda São Francisco, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/12/Decreto-28.000-16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">21/11/2016</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 27.946/2016.</td>
+<td style="width: 71.741%; text-align: left;">Revoga os Decretos nºs 25.316, de 12 de setembro de 2014 e 26.916 de 16 de dezembro de 2015, na forma que indica.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/11/decreto-27.946_16-1.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">18/11/2016</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 27.946/2016</td>
+<td style="width: 71.741%;">Revoga os Decretos nºs 25.316, de 12 de setembro de 2014 e 26.916 de 16 de dezembro de 2015, referentes à obrigatoriedade de coleta, transporte, tratamento e destinação dos resíduos sólidos e disposição final dos rejeitos provenientes dos Grandes Geradores.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/11/Decreto_27946_2016.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">16/08/2016</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 27.571/2016</td>
+<td style="width: 71.741%; text-align: left;">Nomeia os membros da Comissão de Comida de Rua, dispõe sobre a comercialização de alimentos em logradouro, áreas e vias públicas e revoga dispositivos do Decreto nº 26.849/2015.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Decreto-n°-27.571-2016.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">09/08/2016</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 27.543/2016</td>
+<td style="width: 71.741%; text-align: left;">Regulamenta o inciso XXXI do art. 99 da Lei nº 7.186, de 27 de dezembro de 2006, que dispõe sobre a retenção e o recolhimento do Imposto Sobre Serviços de Qualquer Natureza – ISS pelas produtoras de eventos, espetáculos, shows, festivais e congêneres, na forma que indica.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Decreto-n°-27.543-16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">03/08/2016</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 27.524/2016</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta a Lei nº 7.720/2009, que dispõe sobre medidas relativas aos Jogos Olímpicos e Paraolímpicos 2016, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Decreto-27.524-16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">26/07/2016</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 27.492/2016</td>
+<td style="width: 71.741%; text-align: justify;">Fica alterado o Plano de Aplicação da Outorga Onerosa do Direito de Construir, aprovado pela Lei nº 9.068, de 10 de junho de 2016.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/07/Decreto-27.492_16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">24/05/2016</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 27.255/2016</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta a instalação e o uso de extensão temporária de passeio público, denominada parklet.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/05/Decreto-nº-27.255-16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">09/05/2016</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 27.209/2016</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta o Fundo Municipal de Desenvolvimento Urbano de Salvador – FUNDURBS, criado pelo artigo 320 e 321 da Lei 7.400 de 2008.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/05/Decreto-27.209-16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">02/05/2016</td>
+<td style="width: 13.259%; text-align: left;">Decreto 27.179/2016</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta a Lei nº 8.550, de 28 de Janeiro de 2014, que instituiu normas de proteção e estímulo à preservação do patrimônio cultural do Município de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/05/Decreto-27.179-16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">07/04/2016</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 27.131/2016</td>
+<td style="width: 71.741%; text-align: justify;">Estabelece as condições de parcelamento dos débitos existentes perante a Secretaria Municipal de Urbanismo – SUCOM, na forma que indica.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/04/Decreto-27.131-16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">23/03/2016</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 27.111/2016</td>
+<td style="width: 71.741%; text-align: justify;">Considerando que as diretrizes da Política Nacional de Recursos Hídricos, instituída pela Lei Federal nº 9.433/97, as disposições do Plano Diretor de Desenvolvimento Urbano – PDDU, instituído pela Lei Municipal nº 7.400/08, determinam que o Sistema Municipal de Meio Ambiente – SISMUMA adote as bacias hidrográficas como unidades espaciais de referência para o planejamento, monitoramento e controle ambiental no território do Município.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/03/Decreto-27.111-16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">16/03/2016</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 27.100/2016</td>
+<td style="width: 71.741%; text-align: justify;">Institui “Operação Especial de Fiscalização Urbanística e Ambiental 2016” da Secretaria Municipal de Urbanismo – SUCOM, em Operações Especiais de Ordenamento das Atividades em Logradouros Públicos.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/03/decreto-27.100-161.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">02/03/2016</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 27.075/2016</td>
+<td style="width: 71.741%; text-align: justify;">Revoga o 3º, do art. 7º, do Decreto nº 24.730, de 15 de janeiro de 2014.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/03/Decreto-27.075-2016.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">04/02/2016</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 27.029/2016</td>
+<td style="width: 71.741%; text-align: justify;">Decreto nº 27.029/2016 – Altera as tabelas do Carnaval para 2016</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/02/decreto_27029_2016.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">03/02/2016</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 27.028/2016</td>
+<td style="width: 71.741%; text-align: justify;">Decreto nº 27.028/2016 – Altera as tabelas do Carnaval para 2016</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/02/decreto_27028_2016.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">16/12/2015</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 26.916/2015</td>
+<td style="width: 71.741%; text-align: justify;">Altera e acrescenta dispositivos ao Decreto nº 25.316, de 12 de setembro de 2014, que regulamenta a obrigatoriedade de coleta, transporte, tratamento e destinação dos resíduos sólidos e disposição final dos rejeitos provenientes dos Grandes Geradores, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/12/dec_26916_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">02/12/2015</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 26.804/2015</td>
+<td style="width: 71.741%; text-align: justify;">Dispõe sobre a localização e funcionamento do comércio exercido pelas baianas e baianos do acarajé e do mingau em logradouros públicos e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/12/Decreto-26.804_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">06/10/2015</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 26.529/2015</td>
+<td style="width: 71.741%; text-align: justify;">Altera dispositivos do Decreto n° 24.919/2015, de 16 de abril de 2014 e dá outras providências. O Prefeito Municipal de Salvador, no uso das atribuições, e tendo em vista as Disposições do Art. 75 da Lei Orgânica do Município e do Estatuto da Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/10/Decreto-26.529_2015_Salvador-500..pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">28/08/2015</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 26.396/2015</td>
+<td style="width: 71.741%; text-align: justify;">Institui Comissão de Análise de Interferência para estudar os impactos de Engenhos Extraordinários a terceiros, ao meio antrópicos natural e urbanizado e à circulação, conforme Decreto n° 12.642/2000, alterado pelo Decreto n°23.907/2013 e considerando a Lei 8.725/2014 que cria a Secretaria Municipal de Urbanismo.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/08/Decreto-26.396_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">27/08/2015</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 16.302/2015</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta a Lei nº 12.929, de 27 de dezembro de 2013, que dispõe sobre a Segurança contra Incêndio e Pânico e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/10/DECRETO16302_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">08/07/2015</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 26.216/2015</td>
+<td style="width: 71.741%; text-align: justify;">Prorroga a vigência da Operação Chuva, instituída Decreto n° 25.942/2015.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/07/Decreto-26.216_20152.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">01/07/2015</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 26.189/2015</td>
+<td style="width: 71.741%; text-align: justify;">Prorroga o Prazo de duração fixado para a Operação Especial de apoio a serviço Municipal e proteção aos Espaços Públicos instituída pelo Decreto n° 25.788/2014.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/07/Decreto-26.189_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">11/05/2015</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 26.021/2015</td>
+<td style="width: 71.741%; text-align: justify;">Dispões sobre o Licenciamento de Eventos realizados no Município de Salvador, cria a Central Integrada de Licenciamento de Eventos e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/05/Decreto-26.021_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">30/03/2015</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 25.915/2015</td>
+<td style="width: 71.741%; text-align: justify;">Institui o Comitê Gestor dos Jogos Olímpicos e Paraolímpicos – Rio 2016, e dá outras Providências. –</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/03/Decreto-25.915_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">30/03/2015</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 25.913/2015</td>
+<td style="width: 71.741%; text-align: justify;">Restabelece o Uso do Instrumento da Transferência do Direito de Construir- Transcon- Originário das áreas denominadas Sítio Catu e Sítio Catu Novo, e dá outras Providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/03/Decreto-25.913_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">25/03/2015</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 25.901/2015</td>
+<td style="width: 71.741%; text-align: justify;">Aprova o Regimento da Fundação Mário Leal Ferreira – FMLF.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/03/Regimento-FMLF_20151.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">25/03/2015</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 25.899/2015</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta o art. 5º da Lei nº 8.474, de 02 de outubro de 2013, e institui o Programa de Certificação Sustentável “IPTU VERDE” em edificações no Município de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/03/DECRETO-25899_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">13/03/2015</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 25.875/2015</td>
+<td style="width: 71.741%; text-align: justify;">Altera o Decreto nº 25.317, de 15 de setembro de 2014 que Nomeia os novos membros do Conselho Municipal de Salvador e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/03/Decreto-25875_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">10/03/2015</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 25.860/2015</td>
+<td style="width: 71.741%; text-align: justify;">Aprova o Regimento da Secretaria Municipal de Urbanismo – SUCOM.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/06/decreto-25.860_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">09/03/2015</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 25.853/2015</td>
+<td style="width: 71.741%; text-align: justify;">Atualiza o Código Geral de Atividades Econômicas do Município, de acordo com a Classificação Nacional de Atividades Econômicas – CNAE, versão 2.2, aprovada pela Comissão Nacional de Classificação – CONCLA, mediante Resolução nº 01/2013, na forma que indica.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/03/Decreto-25853_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">09/03/2015</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 25.852/2015</td>
+<td style="width: 71.741%; text-align: justify;">Dispõe sobre os critérios que definem terreno com construção em andamento para fins de redução da alíquota do Imposto sobre a Propriedade Predial e Territorial Urbana – IPTU, previsto no art. 2º da Lei nº 8.723, de 22 de dezembro de 2014, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/03/Decreto-25852_20151.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">09/03/2015</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 25.851/2015</td>
+<td style="width: 71.741%; text-align: justify;">Altera dispositivo do Decreto nº 25.747, de 22 de dezembro de 2014, que regulamenta o sistema de preços públicos do Município do Salvador, na forma que indica.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/03/Decreto-25851_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">11/02/2015</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 25.820/2015</td>
+<td style="width: 71.741%; text-align: justify;">Disciplina as obrigações dos titulares de Alvará de Autorização para exercício de comércio informal de logradouros públicos, Alvará de Autorização Especial e Alvará de Autorização para Exploração de Atividade, em caráter eventual durante o Carnaval 2015 e dà outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/02/DECRETO-25.819_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">26/01/2015</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 25.793/2015</td>
+<td style="width: 71.741%; text-align: justify;">Altera dispositivos dos Decretos 17.120/07 e 20.505/09 e Códigos da Tabela 08, anexa ao Decreto n° 25.747/2014 que trata de Preços Públicos e Licenciamentos referentes ao Carnaval.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/02/DECRETO-25793_20151.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">21/01/2015</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 25.796/2015</td>
+<td style="width: 71.741%; text-align: justify;">Concede Remissão da Taxa de Coleta, Remoção e Destinação de Resíduos Sólidos e Domiciliares – TRSD, na forma que indica.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/01/DECRETO-25796_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">20/01/2015</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 25.795/2015</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta a Isenção do Imposto sobre Serviços de qualquer Natureza – ISS e da Taxa de Licençiamento para exploração de Atividade em Logradouro Publico, para Clubes e Eventos Culturais.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/01/DECRETO-25795_20152.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">15/09/2014</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 25.317/2014</td>
+<td style="width: 71.741%; text-align: justify;">Nomeia os novos membros do Conselho Municipal de Salvador, revoga o Decreto nº 23.411 de 31 de outubro de 2012 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/03/dec_25317_2014.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">12/09/2014</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 25.316/2014</td>
+<td style="width: 71.741%; text-align: justify;">Referente à obrigatoriedade de coleta, transporte, tratamento e destinação dos resíduos sólidos e disposição final dos rejeitos provenientes dos Grandes Geradores.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/11/Decreto_25316_2014.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">29/08/2014</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 25.285/2014</td>
+<td style="width: 71.741%; text-align: justify;">Dispõe sobre os critérios que definem terreno com construção em andamento para fins de desconto no Imposto sobre a Propriedade Predial e Territorial Urbana – IPTU, previsto no art. 6º da Lei nº 8.474, de 02 de outubro de 2013, na forma que indica.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/decreto_25285_2014.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">14/08/2014</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 24058/2013</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta dispositivos da Lei nº 7.186, de 27 de dezembro de 2006 – Código Tributário e de Rendas do Município do Salvador, e suas alterações, na parte que dispõe sobre o Imposto sobre a Transmissão Inter Vivos – ITIV, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/08/decreto_24058_20131.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">11/07/2014</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° s/n/2014</td>
+<td style="width: 71.741%; text-align: justify;">Composição da Central Integrada de Licenciamento de Eventos na Superintendência de Controle e Ordenamento do Uso do Solo do Município – SUCOM</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/decreto_CLE.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">03/07/2014</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 25.109/2014</td>
+<td style="width: 71.741%; text-align: justify;">Altera dispositivos do Decreto nº 12642 de 28 de abril de 2000, modificado pelos Decretos nº 15.305, de 11 de novembro de 2004, nº 23.734, de 27 de dezembro de 2012, e nº 23.907, de 29 de abril de 2013 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/decreto_25109_2014.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">04/06/2014</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 25.051/2014</td>
+<td style="width: 71.741%; text-align: justify;">Altera o Decreto nº 24.012/2013, que regulamenta a Lei nº 8.414/2013, a qual dispõe sobre medidas relativas à Copa do Mundo da FIFA Brasil 2014, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Decreto_25051_2014.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">16/04/2014</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 24.919/2014</td>
+<td style="width: 71.741%; text-align: justify;">Cria a Coordenação Geral para o Plano Salvador 500 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/decreto_24919_2014.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">16/04/2014</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 24.916/2014</td>
+<td style="width: 71.741%; text-align: justify;">Prorroga a vigência do Decreto nº 24.704/2013, que Incluiu a Superintendência de Controle e Ordenamento do Uso do Solo do Município – SUCOM na Operação Especial de Ordenamento das Atividades em Logradouros Públicos, criada pelo Decreto 24.349/2013.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/decreto_24916_2014.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">01/04/2014</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 24.879/2014</td>
+<td style="width: 71.741%; text-align: justify;">Enquadra logradouros da rede viária do Município do Salvador e dá outras providências</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/dec_24879_2014.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">25/02/2014</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 24.811/2014</td>
+<td style="width: 71.741%; text-align: justify;">Disciplina as obrigações dos titulares de Alvará de Autorização para exercício de comércio informal em logradouro público, de Alvará de Autorização Especial e de Alvará de Autorização para a exploração de atividades, em caráter eventual, durante o Carnaval de 2014 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/decreto_24811_2014.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">26/12/2013</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 24.704/2013</td>
+<td style="width: 71.741%; text-align: justify;">Inclui a Superintendência de Controle e Ordenamento do Uso do Solo do Município – SUCOM na Operação Especial de Ordenamento das Atividades em Logradouros Públicos, criada pelo Decreto 24.349/2013, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/decreto_24704_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">20/12/2013</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 24.674/2013</td>
+<td style="width: 71.741%; text-align: justify;">Aprova o Anexo XVI, Tabela XVI – Enquadramento dos Padrões de Construção, para efeito da apuração da base de cálculo do Imposto sobre a Propriedade Predial e Territorial Urbana – IPTU,na forma que indica.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/decreto_24674_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">09/12/2013</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 24.544/2013</td>
+<td style="width: 71.741%; text-align: justify;">Dispõe sobre o nível de emissão sonora, relativo aos eventos realizados na Arena Fonte Nova.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Decreto_24544_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">05/12/2013</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 24.535/2013</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta o Termo de Viabilidade de Localização – TVL, de que trata o art. 6º da Lei n.º 5.503/99 e dá outras providências -<strong> REVOGADO</strong></td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Dec_24535_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">29/11/2013</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 24.511/2013</td>
+<td style="width: 71.741%; text-align: justify;">Dispõe sobre o licenciamento de eventos realizados no Município de Salvador, cria a Central Integrada de Licenciamento de Eventos e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/decreto_24511_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">05/11/2013</td>
+<td style="width: 13.259%; text-align: left;">Decreto n°24.419/2013</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta os art. 32 a 46 da Lei Municipal nº 8.421, de 15 de Julho de 2013, referentes ao Cadastro Informativo Municipal – CADIN Municipal</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Decreto-nº-24419_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">05/11/2013</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 24.422/2013</td>
+<td style="width: 71.741%; text-align: justify;">Dispõe sobre a exploração de atividades econômicas na faixa de areia da orla marítima do Município de Salvador, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Decreto-nº-24422-2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">29/10/2013</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 24.392/2013</td>
+<td style="width: 71.741%; text-align: justify;">Cria a Comissão Técnica para a Revisão do Plano Diretor de Desenvolvimento Urbano – PDDU e da Lei de Ordenamento do Uso e Ocupação do Solo – LOUOS, do Município do Salvador, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Decreto_24392_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">11/10/2013</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 24.352/2013</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta a publicidade e afixação de placas nos espaços de quadras esportivas, quando adotadas em conformidade com o programa relativas ao programa “SALVADOR EM CAMPO”, instituído pelo Decreto nº. 24.067, de 19 de julho de 2013.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/dec_24352_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">10/10/2013</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 24.350/2013</td>
+<td style="width: 71.741%; text-align: justify;">Estabelece regras para a utilização do instrumento da Transferência do Direito de Construir – TRANSCON no Município, com base nos resultados apresentados pela Superintendência de Controle e Ordenamento do Uso do Solo do Município – SUCOM.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/dec_24350_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">09/10/2013</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 24.348/2013</td>
+<td style="width: 71.741%; text-align: justify;">Institui os Grupos de Trabalho alusivos à COPA do Mundo FIFA Brasil 2014, Cidade-Sede Salvador e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/DECRETO_24348_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">09/10/2013</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 24.349/2013</td>
+<td style="width: 71.741%; text-align: justify;">Cria a Operação Especial de Ordenamento das Atividades em Logradouros Públicos, no âmbito da Secretaria Municipal de Ordem Pública – SEMOP, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/DECRETO_24349_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">09/10/2013</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 24.349/2013</td>
+<td style="width: 71.741%; text-align: justify;">Cria a Operação Especial de Ordenamento das Atividades em Logradouros Públicos, no âmbito da Secretaria Municipal de Ordem Pública – SEMOP, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/decreto_24.349_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">02/10/2013</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 24.325/2013</td>
+<td style="width: 71.741%; text-align: justify;">Cria a Comissão Permanente de Controle da Aplicação das Normas de Segurança Contra Incêndio e Pânico.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/dec_24325_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">01/10/2013</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 24.323/2013</td>
+<td style="width: 71.741%; text-align: justify;">Cria Comissão Executiva para Elaboração de proposta do Plano Diretor de Arborização Urbana, Áreas Verdes, Paisagismo e Mata Atlântica do Município de Salvador e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/dec24323_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">11/09/2013</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 24.236/2013</td>
+<td style="width: 71.741%; text-align: justify;">Estabelece regras para a utilização do instrumento da Transferência do Direito de Construir – TRANSCON no Município, com base nos resultados apresentados pelo Grupo de Trabalho, instituído pela Portaria nº 022/2013-SUCOM, conforme o Decreto nº 23.760, de 02 de janeiro de 2013.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Decreto_24_236_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">16/07/2013</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 24.058/2013</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta dispositivos da Lei nº 7.186, de 27 de dezembro de 2006 – Código Tributário e de Rendas do Município do Salvador, e suas alterações, na parte que dispõe sobre o Imposto sobre a Transmissão Inter Vivos – ITIV, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/decreto_24058_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">19/06/2013</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 24.012/2013</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta a Lei nº 8.414/2013, que dispõe sobre medidas relativas à Copa das Confederações FIFA de 2013 e Copa do Mundo FIFA Brasil de 2014, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/dec_24012_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">19/06/2013</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 24.011/2013</td>
+<td style="width: 71.741%; text-align: justify;">Cria a Central de Operações Integradas para a Copa das Confederações FIFA 2013 – COCF 2013 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/dec_24011_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">05/06/2013</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 23.981/2013</td>
+<td style="width: 71.741%; text-align: justify;">Dá nova redação ao inciso III, do Art. 38, do Decreto n° 12.642, de 28 de abril de 2000, que regulamenta a publicidade em logradouros públicos e em locais expostos ao publico.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Decreto_23981_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">29/04/2013</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 23.907/2013</td>
+<td style="width: 71.741%; text-align: justify;">Altera dispositivos do Decreto nº 12.642 de 28 de abril de 2000, modificado pelos Decretos nº 14.973, de 07 de junho de 2004, nº 15.305, de 11 de novembro de 2004, e nº 23.734, de 27 de dezembro de 2012, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Decreto_23907_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">21/03/2013</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 23.820/2013</td>
+<td style="width: 71.741%; text-align: justify;">Institui o PROGAMA VERDE PERTO e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Decreto_23820_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">07/03/2013</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 23.809/2013</td>
+<td style="width: 71.741%; text-align: justify;">Suspende, temporariamente, a utilização do instrumento da Transferência do Direito de Construir – TRANSCON no Município de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/05/dec23809_2013.compressed.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">27/12/2012</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 23.734/2012</td>
+<td style="width: 71.741%; text-align: justify;">Altera os dispositivos do Decreto Municipal n° 12.642/2000 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/diario_oficial_23.734.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">26/12/2012</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 23.728/2012</td>
+<td style="width: 71.741%; text-align: justify;">Enquadra logradouros da rede viária do Município do Salvador dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/diario_oficial-23.728.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">26/12/2012</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 23.729/2012</td>
+<td style="width: 71.741%; text-align: justify;">Delimita e quantifica a área passível para o exercício de atividades de carcinocultura nas ilhas que indica,nos termos da Lei Federal 12.651/2012, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/diario_oficial-23.729.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">26/12/2012</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 23.730/2012</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta A Zona de Proteção Ambiental de Ipitanga, integrantes do Sistema de Áreas de Valor Ambiental e Cultural – SAVAM da Lei 7.400/2008 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/diario_oficial23.730.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">26/12/2012</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 23.732/2012</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta o disposto no § 3° do artigo 278 da Lei 7.400/2008 – PDDU e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/diario_oficial_23732_20121.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">21/12/2012</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 23.719/2012</td>
+<td style="width: 71.741%; text-align: justify;">Altera os Decretos 21.676, de 12 de abril de 2011 e 23.509, de novembro de 2012, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/05/Decreto-23719_2012.compressed.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">21/12/2012</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 23.709/2012</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta a Zona de Proteção Ambiental – ZPAM das Ilhas de Bom Jesus dos Passos, Língua de Baleia, Santo Antonio, Coqueiros e Itapipuca e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/05/Decreto-23.709_2012.compressed.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">06/12/2012</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 23.583/2012</td>
+<td style="width: 71.741%; text-align: justify;">Altera as coordenadas cartesianas constantes do art. 1°do Decreto n° 19.270, de 05 de fevereiro de 2009, publicado no D.O.M. de 06 de fevereiro de 2009, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/diario_oficial_23583.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">23/11/2012</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 23.509/2012</td>
+<td style="width: 71.741%; text-align: justify;">Altera, na forma que indica, a planta do Plano de Manejo da Ilha dos Frades constante do Decreto n° 20.179/2009, que regulamenta a Zona de Proteção Ambiental – ZPAM da Ilha dos Frades.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/05/diario_oficial-23.509.compressed.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">18/09/2012</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 23.252/2012</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta disposições da Lei nº 3.077, de 05 de dezembro de 1979, que estabelece normas de segurança contra incêndio e pânico.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Dec_23252_2012.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">06/06/2012</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 14.024/2012</td>
+<td style="width: 71.741%; text-align: justify;">Decreto Estadual nº 14.024/2012 – Aprova o Regulamento da Lei nº 10.431, de 20 de dezembro de 2006, que instituiu a Política de Meio Ambiente e de Proteção à Biodiversidade do Estado da Bahia, e da Lei nº 11.612, de 08 de outubro de 2009, que dispõe sobre a Política Estadual de Recursos Hídricos e o Sistema Estadual de Gerenciamento de Recursos Hídricos.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/04/Dec_Estadual_14024_2012.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">07/12/2011</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 22.451/201</td>
+<td style="width: 71.741%; text-align: justify;">Estabelece prazos para a execução de Vias Marginais das Avenidas que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/22451_2011.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">23/11/2011</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 22.384/2011</td>
+<td style="width: 71.741%; text-align: justify;">Estabelece normas para operação de Carga e Descarga no Município do Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/22384_2011.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">23/11/2011</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 22.383/2011</td>
+<td style="width: 71.741%; text-align: justify;">Estabelece normas para circulação de caminhões e tratores no Município do Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/22383_2011.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">12/04/2011</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 21.676/2011</td>
+<td style="width: 71.741%; text-align: justify;">Estabelece nova Regulamentação para a Zona de Proteção Ambiental – ZPAM da Ilha dos Frades, institucionalizada pelo decreto 20.179, de 29 de outubro de 2009, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/21676_2011.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">03/02/2011</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 21.571/2011</td>
+<td style="width: 71.741%; text-align: justify;">Altera dispositivos dos Decretos n°s 13.305/2004 e 12.642/2000 e dá outras providências. Dispõe sobre a instalação de engenhos e outros meios publicitários em imóveis.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/21571_2011.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">18/01/2011</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 21.543/2011</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta a aplicação do disposto no § 2° do Artigo 238 da Lei 7.400/2008 (PDDU) e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/21543_2011.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">07/12/2010</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 21.434/2010</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta a Zona de Proteção Ambiental de Aratu integrante do Sistema de Área de Valor Ambiental e Cultural – SAVAM e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/21434_2010.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">20/08/2010</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 21.082/2010</td>
+<td style="width: 71.741%; text-align: justify;">Suspende a utilização da Transferência do Direito de Construir – TRANSCON em receptores situados nas áreas de Borda Marítima de Salvador e determina a apuração de supostas irregularidades denunciadas na Câmara de Vereadores do Município.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/21082_2010.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">29/07/2010</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 21.017/2010</td>
+<td style="width: 71.741%; text-align: justify;">Estabelece procedimentos e disciplina as operações de intervenções em vias e logradouros públicos e obras de artes especiais no Município de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/dec_21017_2010.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">12/07/2010</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 20.948/2010</td>
+<td style="width: 71.741%; text-align: justify;">Estabelece normas relativas à veiculação de propaganda eleitoral no Município do Salvador e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/20948_2010.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">13/04/2010</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 20.714/2010</td>
+<td style="width: 71.741%; text-align: justify;">Estabelece normas para operações de carga e descarga no Município do Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/20714_2010.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">19/02/2010</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 20.588/2010</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta o Cadastro de Atividades dos Estabelecimentos em Geral, previsto na alínea “a”, inciso II do art. 211, da Lei n° 7.186, de 27 de dezembro de 2006 – Código Tributário e de Rendas do Município do Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/20588_2009.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">28/12/2009</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 20.505/2009</td>
+<td style="width: 71.741%; text-align: justify;">Disciplina o licenciamento e a fiscalização para o desfile de entidades carnavalescas ou folclóricas, trios elétricos e congêneres, a instalação e exploração de serviço especial, de camarote, praticável, arquibancada, palcos e similares, o nível de emissão sonora, a exibição de publicidade em geral, o disciplinamento do comércio informal,</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/20505_2009.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">18/12/2009</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 20462/2009</td>
+<td style="width: 71.741%; text-align: justify;">Dispõe sobre a realização de processo licitatório com vistas à cessão de uso de espaço público destinado à instalação de camarote, praticável, arquibancada, palcos e similares, praticáveis para emissoras de televisão, de rádio, jornais, portais e outros órgãos de imprensa em espaço público.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/20462_2009.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">03/11/2009</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 20.188/2009</td>
+<td style="width: 71.741%; text-align: justify;">Altera dispositivos e o Anexo Único do Decreto n° 16.302/06 (que Regulamenta a Lei nº 6779, de 28 de julho de 2005, que concede isenção e remissão de tributos e incentivos que indica e dá outras providências) e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/20188_2009.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">29/09/2009</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 20.023/2009</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta dispositivo da Lei 7.400/2008 – PDDU, quanto a utilização do Instrumento da transferência do direito de construir na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/20023_2009.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">14/07/2009</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 19.757/2009</td>
+<td style="width: 71.741%; text-align: justify;">Dispõe sobre ajuste no valor da contraprestação calculada na forma do Decreto n° 18.571, de 17 de julho de 2008 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/19757_2009.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">13/07/2009</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 19.752/2009</td>
+<td style="width: 71.741%; text-align: justify;">Cria o Parque Municipal do Manguezal do Rio Passa Vaca e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/19752_2009.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">13/07/2009</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 19.753/2009</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta dispositivos constantes da Lei n° 7.400/2008 – PDDU e dá outras providencias.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/05/19753_20092.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">23/04/2009</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 19.508/2009</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta a aplicação da quota de conforto na utilização dos instrumentos da outorga onerosa do direito de construir e da transferência do direito de construir, estabelecidos nos artigos 256 e 264 da Lei 7.400/08 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/19508_2009.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">14/01/2009</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 19.228/2009</td>
+<td style="width: 71.741%; text-align: justify;">Disciplina o licenciamento e a fiscalização para o desfile de entidades carnavalescas ou folclóricas, trios elétricos e congêneres, a instalação e exploração do serviço de camarote, praticável, arquibancada e similares, o nível de emissão sonora, a exibição de publicidade em geral, durante o período de Carnaval e de Festas Populares incluídas no Calendário Oficial da Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/19228_2009.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">17/07/2008</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 18.571/2008</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta os artigos 85, 86 e 87 da Lei Orgânica do Município, que dispõe sobre o procedimento para o cálculo de contraprestação pela utilização de índices ou parâmetros urbanísticos mais permissivos, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/18571_2008.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">05/06/2008</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 18.440/2008</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta disposições da Lei n°5.176/96 que dispõe sobre a regularização de edificações, parcelamentos do solo, arruamento, atividades e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/18440_2008.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">11/01/2008</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 18.119/2008</td>
+<td style="width: 71.741%; text-align: justify;">Dispõe sobre a instalação e funcionamento de elevadores de passageiros, escadas rolantes e teleféricos no Município do Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/dec_18119_2008.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">04/12/2007</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 18.034/2007</td>
+<td style="width: 71.741%; text-align: justify;">Disciplina o licenciamento e a fiscalização para desfile de entidade carnavalesca ou folclórica, trio elétrico e congêneres, a instalação e exploração do serviço de camarote, praticável, arquibancada e similares, o nível de emissão sonora, a exibição de publicidade em geral, durante o período de Carnaval e de Festas Populares incluídas no Calendário Oficial da Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/18034_2007.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">15/01/2007</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 17.120/2007</td>
+<td style="width: 71.741%; text-align: justify;">Disciplina o licenciamento para desfile de entidade carnavalesca ou folclórica, trio elétrico e congêneres, a instalação e exploração do serviço de camarote, praticável, arquibancada e similares,o regime de estimativa da base de cálculo para o recolhimento do Imposto sobre Serviços de Qualquer Natureza – ISS, o nível de emissão sonora, a exibição de publicidade em geral,</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/17120_2007.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">08/01/2007</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 17.113/2007</td>
+<td style="width: 71.741%; text-align: justify;">Revoga o Decreto nº. 13.408, de 10 de dezembro de 2001, que regulamenta dispositivos da Lei nº 3.077, de 05 de dezembro de 1979, que estabelece normas de proteção contra incêndio e pânico, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/17113_2007.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">27/11/2006</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 16.986/2006</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta a LEI nº 7.107/2006, que estabelece penalidades aos estabelecimentos comerciais que venderem, servirem ou fornecerem bebidas alcoólicas, independente de sua concentração, a crianças e adolescentes e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/16986_2006.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">06/10/2006</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 16.845/2006</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta a Lei nº 5.494/99, que disciplina, controla e fiscaliza o comércio de tinta em recipiente de “spray”, o art. 52, inciso II, da Lei nº 5.503/99, que proíbe pichações em equipamentos urbanos, bens públicos e particulares em geral, normaliza a grafitagem e pintura artística na cidade do Salvador e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/16845_2006.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">02/08/2006</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 16.659/2006</td>
+<td style="width: 71.741%; text-align: justify;">Decreto nº 16.659/2006 – Regulamenta o procedimento para o cálculo de contraprestação prevista nos artigos 85, 86 e 87 da Lei Orgânica do Município e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/16659_2006.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">20/01/2006</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 16.295/2006</td>
+<td style="width: 71.741%; text-align: justify;">Altera e revoga dispositivos do Decreto nº 16.292/2006, que disciplina o licenciamento para desfile de entidade carnavalesca ou folclórica, trio elétrico e congêneres, a instalação e exploração do serviço de camarote, praticável, arquibancada e similares,</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/16295_2006.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">18/01/2006</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 16.292/2006</td>
+<td style="width: 71.741%; text-align: justify;">Disciplina o licenciamento para desfile de entidade carnavalesca ou folclórica, trio elétrico e congêneres,a instalação e exploração do serviço de camarote,praticável, arquibancada e similares, o regime de estimativa da base de cálculo para o recolhimento do Imposto sobre Serviços de Qualquer Natureza – ISS,</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/16292_2006.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">02/05/2005</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 15.629/2005</td>
+<td style="width: 71.741%; text-align: justify;"> Cria o “Programa Nossa Praça” e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/15629_2005.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">01/02/2005</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 15.498/2005</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta os dispositivos da Lei º 6.651/2005 que trata sobre medidas de combate às atividades que façam apologia, incentivo, prática ou intermediação de prostituição infanto-juvenil e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/15498_2005.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">03/01/2005</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 15.462/2005</td>
+<td style="width: 71.741%; text-align: justify;">Dispõe sobre o licenciamento para instalação de camarotes e outras estruturas em áreas públicas e privadas, em caráter provisório, no Carnaval 2005 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/15462_2005.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">03/01/2005</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 15.461/2005</td>
+<td style="width: 71.741%; text-align: justify;">Dispõe sobre a exibição de publicidade e exploração de atividades em logradouros públicos e em áreas particulares, em caráter eventual, no Carnaval 2005 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/15461_2005.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">03/01/2005</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 15.460/200</td>
+<td style="width: 71.741%; text-align: justify;">Dispõe sobre os níveis máximos de emissão sonora no Carnaval/2005, Farol Folia e Festas Populares do Calendário Oficial da Cidade e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/15460_2005.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">12/11/2004</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 15.305/2004</td>
+<td style="width: 71.741%; text-align: justify;"> Altera dispositivos dos Decretos nºs 13.142/2001 e 12.642/2000 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/15305_2004.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">23/09/2004</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 15.167/2004</td>
+<td style="width: 71.741%; text-align: justify;">Altera dispositivos do Decreto Nº 13.142/2001 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/15167_2004.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">04/06/2004</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 14.973/2004</td>
+<td style="width: 71.741%; text-align: justify;"> Altera dispositivos do Decreto Nº 12.642 de 28 de abril de 2000.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/14973_2004.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">23/07/2003</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 14.383/2003</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta a Lei nº 4.489/92 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/14383_2003.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">03/07/2003</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 14.340/2003</td>
+<td style="width: 71.741%; text-align: justify;">Altera dispositivos do Decreto nº 14.181/2003 (que suspende construção uni-residenciais em área que indica) e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/14340_2003.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">15/05/2003</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 14.258/2003</td>
+<td style="width: 71.741%; text-align: justify;">Institui o Plano Funcional da Avenida Pinto de Aguiar, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/05/14258_2003.compressed.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">13/03/2003</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 14.181/2003</td>
+<td style="width: 71.741%; text-align: justify;">Suspende a concessão de licença de localização e funcionamento, assim como de licenças de construção de empreendimentos que não sejam uni-residenciais, na área que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/14181_2003.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">21/11/2002</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 14.014/2002</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta o art. 8º da Lei n. 6.064, de 27 de dezembro de 2001 ( Altera, acrescenta e revoga dispositivos da Lei n° 4.279, de 28 de dezembro de 1990 (Código Tributário e de Rendas do Município do Salvador) e alterações posteriores, e dá outras providências).</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/14014_2002.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">16/07/2002</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 13.723/2002</td>
+<td style="width: 71.741%; text-align: justify;">Dispõe sobre a proibição de comercialização de bebídas alcoólicas em Postos de Serviços e de Abastecimentos de Combustíveis e em Lojas de Conveniências neles instaladas e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/13723_2002.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">05/04/2002</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 13.559/2002</td>
+<td style="width: 71.741%; text-align: justify;">Declara de utilidade pública para fins de desapropriação área de terreno,com acessões e benefícios, localizada à Rua do Breijal, atual Luis de Vasconcelos, subdistrito de São Caetano, Zona Urbana do Município do Salvador e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/13559_2002.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">02/04/2002</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 13.551/2002 </td>
+<td style="width: 71.741%; text-align: justify;">Declara de utilidade pública para fins de desapropriação as benfeitorias e acessões, implantadas em terreno de propriedade da Prefeitura Municipal do Salvador, sito à Avenida Otávio Mangabeira, s/nº</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/13551_2002.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">22/03/2002</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 13.546/2002</td>
+<td style="width: 71.741%; text-align: justify;">Cria o Jardim Botânico de Salvador na Mata dos Oitis.</td>
+<td style="text-align: center; width: 4%;"><a target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">01/02/2002</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 13.482/2002</td>
+<td style="width: 71.741%; text-align: justify;">Institui o Plano Funcional da Avenida Afrânio Peixoto, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/13482_2002.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">10/12/2001</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 13.408/2001</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta dispositivos da Lei nº 3.077, de 05 de dezembro de 1979, que estabelece normas de proteção contra incêndio e pânico.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/dec13408_2001.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">27/09/2001</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 13.251/2001</td>
+<td style="width: 71.741%; text-align: justify;">Dispõe sobre a regulamentação da Lei 5.907 (Manutenção das edificações e equipamentos no Município do Salvador) de 23 de janeiro de 2001 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/13251_2001.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">09/07/2001</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 13.168/2001</td>
+<td style="width: 71.741%; text-align: justify;">Altera o Decreto n° 12.893 de 10 de novembro de 2000 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/13168_2001.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">26/06/2001</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 13.143/2001</td>
+<td style="width: 71.741%; text-align: justify;">Altera o Decreto nº 12.479/99 que Institui o Plano Funcional da Avenida Luiz Viana Filho, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/13143_2001.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">25/06/2001</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 13.142/2001</td>
+<td style="width: 71.741%; text-align: justify;">Suspende a concessão de alvará de autorização para engenhos tipo outdoor e painel.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/13142_2001.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">06/06/2001</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 13.131/2001</td>
+<td style="width: 71.741%; text-align: justify;">Complementa as disposições da legislação de uso e ocupação do solo e do Código de Obras para implantação de postos de abastecimentos de veículos das categorias CS-10 e CS-19.3 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/13131_20011.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">10/11/2000</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 12.893/2000</td>
+<td style="width: 71.741%; text-align: justify;">Dispõe sobre a permissão de uso dos logradouros públicos e obras de arte especiais do Município.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/12893_2000.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">31/07/2000</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 12.758/2000</td>
+<td style="width: 71.741%; text-align: justify;"> Institui o Plano Funcional do Corredor Viário compreendido entre o Acesso Norte e a Avenida Luiz Viana Filho, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/12758_2000.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">27/07/2000</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 12.756/2000</td>
+<td style="width: 71.741%; text-align: justify;">Institui o Plano Funcional da Avenida Jorge Amado, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/12756_2000.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">26/07/2000</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 12.749/2000</td>
+<td style="width: 71.741%; text-align: justify;">Suspende a concessão de licença de localização e funcionamento de atividades de comércio e serviços e institucionais, assim como de licenças de construção de empreendimentos na área que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/12749_2000.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">28/04/2000</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 12.642/2000</td>
+<td style="width: 71.741%; text-align: justify;">Altera o Decreto nº 12.392/99 e dá outras providências (Publicidade</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/04/12642_decreto.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">07/04/2000</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 12.626/2000</td>
+<td style="width: 71.741%; text-align: justify;">Acrescenta documento para pedidos de Licença Construção.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/12626_20001.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">26/11/1999</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 12.479/1999</td>
+<td style="width: 71.741%; text-align: justify;">Institui o Plano Funcional da Avenida Luiz Viana Filho, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/12479_19991.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">10/02/1999</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 12.242/1999</td>
+<td style="width: 71.741%; text-align: justify;">Enquadra logradouro na categoria de Via Arterial II e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/12242_19991.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">08/10/1998</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 12.133/1998</td>
+<td style="width: 71.741%; text-align: justify;">Dispõe sobre manejo, acondicionamento, coleta, transporte, tratamento e destino final dos resíduos sólidos resultantes das obras de construção civil e dos em empreendimentos com movimento de terra – ENTULHO – e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/12133_1998.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">26/12/1996</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 11.514/1996</td>
+<td style="width: 71.741%; text-align: justify;">Altera e acrescenta dispositivos que indica ao Decreto nº 10.870/94</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/04/dec_11514_1996.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">14/11/1994</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 10.870/1994</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta o disposto na Lei nº 4.907/94</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/04/dec_10870_1994.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">15/05/1990</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 8.613/1990</td>
+<td style="width: 71.741%; text-align: justify;">Estabelece a obrigatoriedade de laudo geotécnico e hidrológico prévio nos casos de licenciamento de obras em áreas públicas e particulares do Município de Salvador, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Decreto_-8613_1990.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">15/05/1990</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 8613/1990</td>
+<td style="width: 71.741%; text-align: justify;">Estabelece a obrigatoriedade de laudo geotécnico e hidrológico prévio nos casos de licenciamento de obras em áreas públicas e particulares</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Decreto-nº-8613.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">22/03/1988</td>
+<td style="width: 13.259%; text-align: left;">Decreto nº 8.023/1988</td>
+<td style="width: 71.741%; text-align: justify;">Regulamenta a Lei nº 3.805, de 04 de novembro de 1987, que dispõe sobre a criação da transferência do direito de construir e da outras providencias.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Decreto_8023_1988.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="text-align: center; width: 6%;">19/03/1980</td>
+<td style="width: 13.259%; text-align: left;">Decreto n° 5.876/1980</td>
+<td style="width: 71.741%; text-align: justify;"> Regulamenta dispositivos da Lei nº 3.077, de 5 de dezembro de 1979, que estabelece normas de proteção contra incêndio e pânico.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/dec_5876_1980.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+</tbody>
+</table>
+</div> 	</div>
+
+								</div>
+                          </div> 
+                      </div>
+                  </div>
+              </div>
+                            <!--VERIFICAÇÃO PARA INCLUSÃO DE PÁGINA-->
+	</main>
+	
+<footer>
+
+<!-- inicio Mp2 -->
+      
+        
+  	  <div class="container-fluid">
+              <div class="row justify-content-start text-center">
+                  <div class="col-12" style="padding-top:5px; padding-bottom: 1px;"></div>
+              </div>
+      </div>
+       
+      <div class="container-fluid">
+          <div class="row justify-content-start text-center sty">
+              <div class="col-12 endereco">
+                  <b>&copy; 2021 - Secretaria Municipal de Desenvolvimento Urbano. Todos os direitos reservados.</b>
+              </div>
+          </div>
+      </div>
+       
+  	  <div class="container-fluid">
+              <div class="row justify-content-start text-center">
+                  <div class="col-12" style="padding-top:1px; padding-bottom: 1px;"></div>
+              </div>
+      </div>
+       
+         
+    <div class="container-fluid bannerfoot">
+
+              <div class="row">
+
+                    <!-- inic coluna3 ACESSO RAPIDO-->
+                    <div class="bfooter1 col-xs-12 col-sm-6 col-md-3" style="padding-top:30px; padding-left:20px; border:0px solid #fff">
+                       <ul class="none">
+                         <h5><font size="2px" color="#FFD190"><B>ACESSO RÁPIDO</B></font></h5>
+                         <li><a href="https://sedur.salvador.ba.gov.br/acessoremoto/" target="_blank" alt="Acesso Interno SEDUR"><font color="white" style="font-family:'Roboto' sans-serif; font-size:12px">Acesso Interno</font></a></li>
+       					 <li><a href="https://agendamento.sedur.salvador.ba.gov.br/sas/#agendamento" target="_blank" alt="Agendamento"><font color="white" style="font-family:'Roboto', sans-serif;  font-size:12px">Agendamento</font></a></li>
+                    	 <!-- 4ls; Modificação da página Canais de Atendimento-->
+       					 <!-- <li><a href="/./canais-de-atendimento" target="_blanck" alt="Canais Atendimento"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px">Canais de Atendimento</font></a></li> -->
+                    	<li><a href="https://servicos.sedur.salvador.ba.gov.br/#/portal/contacts" target="_blanck" alt="Canais Atendimento"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px">Canais de Atendimento</font></a></li>
+                         <!-- Fim -->
+                         <li><a href="http://www.falasalvador.ba.gov.br/portal/portal/" target="_blank" alt="Portal Fala Salvador"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px"> Portal Fala Salvador</font></a></li>
+                           <!--<li>
+                           	Prefeitura Municipal de Salvador<br>
+                           	13.927.801/0029-40
+                           </li>-->
+                       </ul>
+                    </div>   
+
+
+                    <!-- inic coluna1 SEDUR -->
+                    <div class="bfooter2 col-xs-12 col-sm-6 col-md-4" style="text-align:left; padding-top:60px; border:0px solid #fff">
+                        <img class = "img-responsive" src="http://sedur.salvador.ba.gov.br//images/logo/logo-white.png" alt="logo SEDUR">
+                    </div>
+
+
+                    <!-- inic coluna2 PREFEITURA -->
+                    <!-- <div class="bfooter3 col-xs-12 col-sm-6 col-md-3" style="text-align:left; padding-top:50px; border:0px solid #fff">
+                        <img id = "img_sedur_branca" src="http://sedur.salvador.ba.gov.br//images/logo/PREFEITURA_RET_COMPL_Branc_Ftrans2.png" alt="logo Prefeitura" width="200px" hight="auto">
+                    </div> -->
+
+
+
+                    <!-- inic coluna4 GOOGLE-->             
+                    <div class="bfooter4 col-xs-12 col-sm-6 col-md-3 offset-2" style="padding-top:10px; font-family:'Roboto', sans-serif; font-size:12px; color:white;">
+                      <a href="https://www.google.com/maps/place/SEDUR+-+Secretaria+Municipal+de+Desenvolvimento+e+Urbanismo/@-12.9847353,-38.4661181,1236a,35y,90h/data=!3m1!1e3!4m5!3m4!1s0x7161b34826018a3:0x6f1379fe7b002977!8m2!3d-12.9876324!4d-38.4666753?hl=pt-BR" target="_blank" alt="Endereo Sedur"><img src="http://sedur.salvador.ba.gov.br//images/imagens/END_SEDUR.png" width="100%" height="auto" style="border:3px solid #ffffff;"></a> 
+       				  <p>Av.ACM, nº3224, Caminho das Árvores - Salvador/Ba. Edf.Empresarial Thomé de Souza / Térreo - CEP.: 41110-700 </p>
+                     </div>
+
+              </div>
+
+    </div>       
+         
+    
+          
+    
+ <!-- fim Mp2 -->  
+     
+                  
+                  
+</footer>
+
+    <script src="http://sedur.salvador.ba.gov.br/templates/sedur/assets/js/js.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<script src="http://sedur.salvador.ba.gov.br/templates/sedur/assets/js/imageMapResizer.min.js"></script>
+	<script type="text/javascript">
+		$('map').imageMapResize();
+	</script>
+
+
+	<script>
+  
+  
+  function popUp(){
+    document.getElementById("dialog-message").style.display = "none";
+};   
+  
+  (function($) {
+$.fn.menumaker = function(options) {  
+ var cssmenu = $(this), settings = $.extend({
+   format: "dropdown",
+   sticky: false
+ }, options);
+ return this.each(function() {
+   $(this).find(".button").on('click', function(){
+     $(this).toggleClass('menu-opened');
+     var mainmenu = $(this).next('ul');
+     if (mainmenu.hasClass('open')) { 
+       mainmenu.slideToggle().removeClass('open');
+     }
+     else {
+       mainmenu.slideToggle().addClass('open');
+       if (settings.format === "dropdown") {
+         mainmenu.find('ul').show();
+       }
+     }
+   });
+   cssmenu.find('li ul').parent().addClass('has-sub');
+multiTg = function() {
+     cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
+     cssmenu.find('.submenu-button').on('click', function() {
+       $(this).toggleClass('submenu-opened');
+       if ($(this).siblings('ul').hasClass('open')) {
+         $(this).siblings('ul').removeClass('open').slideToggle();
+       }
+       else {
+         $(this).siblings('ul').addClass('open').slideToggle();
+       }
+     });
+   };
+   if (settings.format === 'multitoggle') multiTg();
+   else cssmenu.addClass('dropdown');
+   if (settings.sticky === true) cssmenu.css('position', 'fixed');
+resizeFix = function() {
+  var mediasize = 1000;
+     if ($( window ).width() > mediasize) {
+       cssmenu.find('ul').show();
+     }
+     if ($(window).width() <= mediasize) {
+       cssmenu.find('ul').hide().removeClass('open');
+     }
+   };
+   resizeFix();
+   return $(window).on('resize', resizeFix);
+ });
+  };
+})(jQuery);
+
+(function($){
+$(document).ready(function(){
+$("#cssmenu").menumaker({
+   format: "multitoggle"
+});
+});
+})(jQuery);
+$( "li.item-161" ).find( "span" ).css('display', 'none');
+$( "li.item-162" ).find( "span" ).css('display', 'none');
+</script>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+	
+</body>
+	
+	
+	
+</html>
+
+
+
+		
+

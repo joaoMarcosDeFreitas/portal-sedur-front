@@ -1,0 +1,474 @@
+<html>
+<head>
+	<title>:: SEDUR - Secretaria Municipal de Desenvolvimento Urbano ::</title>
+	<style type="text/css" media="screen">@import url("lib/style.css");</style>
+	<style type="text/css" media="screen">@import url("css/estilo.css");</style>
+	
+	<script language="JavaScript" type="text/javascript" src="js/jquery/jquery.js"></script>
+	<script language="JavaScript" type="text/javascript" src="js/jquery/interface.js"></script>
+	<script language="JavaScript" type="text/javascript" src="js/jParams.js"></script>
+	<script language="JavaScript" type="text/javascript" src="js/util.js"></script>
+
+	<script language="JavaScript" type="text/javascript">
+
+		$(document).ready(function(){
+			$("#img_preload").hide();
+			$("#resultPesquisa").hide();
+			$("#Numero_DAMInforma").focus();
+		});
+
+
+		function opcaoItensProcesso( opcao ){
+			$("#OrigemInf").attr({disabled: opcao});
+			$("#Numero_DAMInforma").attr({disabled: opcao});
+			$("#Ano_ExercicioInf").attr({disabled: opcao});
+			$("#Digito_DamInf").attr({disabled: opcao});
+			$("#Chave_Seguranca").attr({disabled: opcao});
+		}
+		
+		function pontosDAM(valorPago, vencDam){
+		    parametro = "ValorPago="+valorPago+"&VencDam="+vencDam;
+			parametro = parametro + "&acao=OBTERPONTOSDAMPUBLICIDADE";
+			//alert(parametro);
+		
+			$.ajax({
+					type: "POST",
+					url: "publicidade_post.php",
+					data: parametro, //passagem dos parametros
+					dataType: "json",					
+
+					beforeSend: function(){$("#img_preload").show("fast");}, // Exibe preload
+					complete: function(){$("#img_preload").hide("slow");},  // Oculta preload
+
+					success: function(json){
+						//alert(json.QtdPontos);
+						$("#qtdPontos").val(json.QtdPontos);
+						document.tela.submit();
+						return true;
+					},
+					error: function(request, status, error){
+						alert(request.responseText);	
+						return false;
+					}
+				});
+		}		
+
+
+		function verificarDam(){
+			$("#damsEmAberto").html("");
+			$("#Numero_Processo").val("");
+			
+			//cga = replicate('0',14-$("#cga").val().length) + $("#cga").val();
+			//cga = '%'+$("#cga").val();
+			cga = $("#cga").val();
+			
+			$("#cga").val(cga);
+			
+			parametro = "cga="+cga ;
+			parametro = parametro + "&acao=CONSULTA_DAMS_CGA";
+			
+			$("#resultPesquisa").hide();
+			
+			$.ajax({
+				type: "POST",
+				url: "viabilidade_post.php",
+				data: parametro, //passagem dos parametros
+				dataType: "json",
+
+				beforeSend: function(){$("#img_preload").show("fast");}, // Exibe preload
+				complete: function(){$("#img_preload").hide("slow");},  // Oculta preload
+
+				success: function(json){				
+					
+					if( json.encontrados == 0 ){
+						
+						alert('Não foi encontrado DAM em aberto para o CGA informado! ');
+						
+					}else{
+						$("#resultPesquisa").show();
+						$('#resultTVL').show();
+						$('#DAMSABERTOS').html( json.damsAbertos );
+
+					}
+						
+						
+					
+				},
+				error: function(request, status, error){
+					alert( request.responseText );
+					$("#Chave_Seguranca").val("");
+					$("#Digito_DamInf").val("");
+					$("#Numero_DAMInforma").val("").focus();
+				}
+			});
+		}
+
+
+		function validarProcesso(){
+			OrDoc   = trim( $("#OrigemProcesso").val() );
+			AnoDoc  = trim( $("#Ano_Processo").val() );
+			NumDoc  = trim( $("#Numero_Processo").val() );
+
+			if ( (OrDoc == "") || (AnoDoc == "") || (NumDoc == "") ){
+				if(OrDoc == ""){
+					alert($("#OrigemProcesso").val());
+					$("#OrigemProcesso").focus();
+				}else if(AnoDoc == ""){
+					alert("Informe o Ano do Processo");
+					$("#Ano_Processo").focus();
+				}else if(NumDoc == "")
+					alert("Informe o Numero do Processo");
+					$("#Numero_Processo").focus();
+			   }else{
+				   parametro = "OrigemProcesso="+OrDoc+"&AnoProcesso="+AnoDoc+"&NumeroProc="+NumDoc+"&acao=VERIFICARPROCESSOTVL";
+				   parametro = parametro+"&acao=CONSULTATVLCANCELADO";
+
+				   //alert(parametro);
+
+					$.ajax({
+						type: "POST",
+						url: "viabilidade_post.php",
+						data: parametro, //passagem dos parametros
+						dataType: "json",
+
+						beforeSend: function(){$("#img_preload").show("fast");}, // Exibe preload
+						complete: function(){$("#img_preload").hide("slow");},  // Oculta preload
+
+						success: function(json){
+							//alert(json.tvl);
+
+							//alert(json.idDocumento);
+
+							$("#servicoId").val('946');
+							$("#NumeroTVL").val(json.tvl)
+
+
+							verificaDamAbertoProcesso(json.idDocumento);
+	                        /*
+							if (confirm( "Confirma o Serviço Selecionado?" )){
+								$("#servicoId").val('946');
+								$("#NumeroTVL").val(json.tvl)
+								opcaoItensProcesso( false );
+								document.tela.submit();
+							}
+
+							*/
+
+						},
+						error: function(request, status, error){
+							alert( request.responseText );
+							$("#NumeroTVL").val("").focus();
+						}
+					});
+
+			   }
+		}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+		function verificaDamAbertoProcesso(idProcesso){
+
+		   parametro = "idProcesso="+idProcesso;
+		   parametro = parametro+"&acao=OBTERDAMSABERTOSPROCESSO";
+
+		   //alert(parametro);
+
+			$.ajax({
+				type: "POST",
+				url: "viabilidade_post.php",
+				data: parametro, //passagem dos parametros
+				dataType: "json",
+
+				beforeSend: function(){$("#img_preload").show("fast");}, // Exibe preload
+				complete: function(){$("#img_preload").hide("slow");},  // Oculta preload
+
+				success: function(json){
+
+					//alert( request.responseText );
+					if(json.existencia > 0){
+
+					   $("#damsEmAberto").html( json.damsAbertos );
+
+					}else{
+
+						if (confirm( "Confirma o Serviço Selecionado?" )){
+							opcaoItensProcesso( false );
+							document.tela.submit();
+						}
+
+					}
+
+
+				},
+				error: function(request, status, error){
+					alert( request.responseText );
+				    //alert('ok');
+					$("#NumeroTVL").val("").focus();
+				}
+			});
+
+
+
+
+		}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+		function validarTvl(){
+			NumeroTvl = trim( $("#NumeroTVL").val() );
+			if ( NumeroTvl == "" ){
+				alert("Informe o TVL");
+				$("#NumeroTVL").focus();
+			}else{
+				parametro = "NumeroTvl="+NumeroTvl+"&isRenovacao="+$("#isRenovacao").val()+"&servicoId="+$("#comboOutroServico").val()+"&acao=VERIFICARVALIDADETVL";
+				$("#isRenovacaoAutomatica").val("");
+
+				$.ajax({
+					type: "POST",
+					url: "viabilidade_post.php",
+					data: parametro, //passagem dos parametros
+					dataType: "json",
+
+					beforeSend: function(){$("#img_preload").show("fast");}, // Exibe preload
+					complete: function(){$("#img_preload").hide("slow");},  // Oculta preload
+
+					success: function(json){
+						   document.tela.submit();
+
+					},
+					error: function(request, status, error){
+						alert( request.responseText );
+						$("#NumeroTVL").val("").focus();
+					}
+				});
+			}
+		}
+
+
+		function limpar(){
+			opcaoItensProcesso( false );
+			
+			$("#cga").val("");
+			$("#resultPesquisa").hide();
+			$("#Numero_DAMInforma").val("").focus();
+			$("#Digito_DamInf").val("");
+			$("#NumeroTVL").val("");
+			$("#Chave_Seguranca").val("");
+			$("#Numero_Processo").val("");
+			$("#damsEmAberto").html("");
+		}
+
+
+		function mudarActionOutroServico(valor){
+			//direcionando para o formulário correspondente
+			if ( valor == 385 ) {
+				$('#tela').attr('action', 'cad_proc_srv_revisaotvl.php');
+				$('#resultTVL').show();
+				$('#resultProcesso').hide();
+			}else if ( valor == 345 ){
+				$("#isRenovacao").val("1");
+				$('#tela').attr('action', 'cad_proc_srv_renovacaotvl.php');
+				$('#resultTVL').show();
+				$('#resultProcesso').hide();
+			}else if ( valor == 722 ){
+				$('#tela').attr('action', 'cad_proc_srv_incatividade.php');
+				$('#resultTVL').show();
+				$('#resultProcesso').hide();
+			}else if ( valor == 946 ){
+				$('#tela').attr('action', 'cad_proc_srv_tvlcancelado.php');
+				$('#resultTVL').hide();
+				$("#resultServico").html( "Dam referente ao serviço Emissão de TVL Cancelado<br/> Informe o número do processo" );
+				$('#resultProcesso').show();
+			}else if ( valor == 408 ){
+				$('#tela').attr('action', 'cad_proc_srv_recondespacho.php');
+				$('#resultTVL').hide();
+				$("#resultServico").html( "Dam referente ao serviço Reconsideração de Despacho<br />Informe o número do processo" );
+				$('#resultProcesso').show();
+			}else if ( valor == 6771 ) {
+				$('#tela').attr('action', 'cad_proc_srv_exclusaoatividadetvl.php');
+				$('#resultTVL').show();
+				$('#resultProcesso').hide();
+			}else if ( valor == 6766 ) {
+				$('#tela').attr('action', 'cad_proc_srv_alteracaorazaosocialtvl.php');
+				$('#resultTVL').show();
+				$('#resultProcesso').hide();
+			}
+			
+		}
+		
+
+	</script>
+
+</head>
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+		<td align="center">
+			<table border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tr>
+					<td height="23"><img id="img_preload" src="images/loading_animation.gif" alt="" width="23" height="23" border="0" /></td>
+				</tr>
+				<tr>
+					<td align="middle" valign="top">
+
+						<TABLE width="100%" border="0" height="600">
+							<TR>
+								<TD align="right" valign="top">
+									<p class="fonte-h2" align="left">Consulta de DAM'S Em Aberto por CGA</p>
+									<TABLE width="100%" border="0" cellpadding="0" cellspacing="0">
+										<TR>
+											<TD>&nbsp;</TD>
+											<TD align="center" id="principalProc"><!-- Inicio Area de entrada de dados do processo solicitado -->
+
+
+											<FORM action="" name="tela" id="tela" method="post" title="consulta">
+												<!-- variaveis auxiliares -->
+												<input type="hidden" name="v_servicoId" id="v_servicoId" />
+												<input type="hidden" name="v_damId" id="v_damId" />
+												<input type="hidden" name="v_cgccpf" id="v_cgccpf" />
+												<input type="hidden" name="v_nome" id="v_nome" />
+												<input type="hidden" name="v_mail" id="v_mail" />
+												<input type="hidden" name="v_telefone" id="v_telefone" />
+												<input type="hidden" name="v_celular" id="v_celular" />
+												<input type="hidden" name="v_fax" id="v_fax" />
+												<input type="hidden" name="v_cepreq" id="v_cepreq" />
+												<input type="hidden" name="v_imovel" id="v_imovel" />
+												<input type="hidden" name="v_referenciareq" id="v_referenciareq" />
+												<input type="hidden" name="v_nometvlreq" id="v_nometvlreq" />
+												<input type="hidden" name="v_complementoreq" id="v_complementoreq" />
+												<input type="hidden" name="v_porta" id="v_porta" />
+												<input type="hidden" name="v_TipoImov" id="v_TipoImov" />
+												<input type="hidden" name="v_vagest" id="v_vagest" />
+												<input type="hidden" name="v_areaterr" id="v_areaterr" />
+												<input type="hidden" name="v_areautil" id="v_areautil" />
+												<input type="hidden" name="v_habitese" id="v_habitese" />
+												<input type="hidden" name="v_inscimob" id="v_inscimob" />
+												<input type="hidden" name="v_porte" id="v_porte" />
+												<input type="hidden" name="servicoId" id="servicoId" />
+												<input type="hidden" name="isRenovacao" id="isRenovacao" />
+												<input type="hidden" name="renovacaoValor" id="renovacaoValor" />
+												<input type="hidden" name="qtdPontos" id="qtdPontos" />
+												<input type="hidden" name="isRenovacaoAutomatica" id="isRenovacaoAutomatica" />
+
+
+												<table border="0">
+													<tr>
+														<td class="fonte-h2">
+															CGA
+														</td>
+														<td>&nbsp;&nbsp;&nbsp;</td>
+														<td class="fonte-h2">
+															
+														</td>
+													</tr>
+													<tr>
+														<td colspan="">
+                                                        
+                                                            <input type="text" name="cga" id="cga">
+                                                            
+														</td>
+														<td>&nbsp;&nbsp;&nbsp;</td>
+														
+                                                        <!--
+                                                        <td>
+															<INPUT type="text" name="Chave_Seguranca" class="caixabusca" id="Chave_Seguranca" size="16" maxlength="7" value="" />
+														</td>
+                                                        -->
+                                                        
+													</tr>
+													<tr>
+														<td>&nbsp;
+															
+														</td>
+													</tr>
+													<tr>
+														<td align="center" colspan="3">
+															<INPUT type="button" class="botao" onClick="javascript:verificarDam();" name="Consultar" value="Consultar" />
+															<INPUT type="button" class="botao" value="Limpar" onClick="javascript:limpar();"  />
+														</td>
+													</tr>
+												</table>
+
+
+												<div id="resultPesquisa" name="resultPesquisa">
+													<br />
+													<strong><label id="resultServico"></label></strong><br />
+
+													<table border="0" id="resultTVL">
+														<tr>
+															<TD align="center">
+																<div id="DAMSABERTOS">
+																</div>
+                                                            </TD>
+														</tr>
+													</table>
+
+													<!--<table border="0" id="TituloResultProcesso">
+														<TR>
+                                                            <TD align="left"><FONT face="tahoma, verdana, arial" size="2"><B>Informe o n&uacute;mero do processo do seu TVL</B></FONT></TD>
+														</TR>
+													</table>
+
+
+													<table border="0" id="resultProcesso">
+														<TR>
+															<TD align="left"><FONT face="tahoma, verdana, arial" size="2"><B></B></FONT></TD>
+															<TD>&nbsp;</TD>
+															<TD align="left"></TD>
+															<TD>&nbsp;</TD>
+															<TD align="left"><FONT face="tahoma, verdana, arial" size="2"><B></B></FONT></TD>
+															<TD>&nbsp;</TD>
+														</TR>
+
+														<TR>
+															<TD align="left"><FONT face="tahoma, verdana, arial" size="2"><B>Origem</B></FONT></TD>
+															<TD>&nbsp;</TD>
+															<TD align="left"><FONT face="tahoma, verdana, arial" size="2"><B>Ano</B></FONT></TD>
+															<TD>&nbsp;</TD>
+															<TD align="left"><FONT face="tahoma, verdana, arial" size="2"><B>Número</B></FONT></TD>
+															<TD>&nbsp;</TD>
+														</TR>
+														<TR>
+															<TD valign="top"><INPUT type="text" class="table" name="OrigemProcesso" id="OrigemProcesso" class="borda" value="_SUCOM_CEIN_NUMERO_" size="10" maxlength="10" onKeyUp="javascript:somente_numero(this);" onBlur="javascript:ajustarOrigem(this);" /></TD>
+															<TD valign="top">&nbsp;<FONT size="4"><B>/</B></FONT>&nbsp;</TD>
+															<TD valign="top" align="left"><INPUT type="text" class="table" name="Ano_Processo" id="Ano_Processo" class="borda" style="HEIGHT: 22px; WIDTH: 40px" size="5" maxlength="4" value="2026" onKeyUp="javascript:somente_numero(this);" /></TD>
+															<TD valign="top">&nbsp;/&nbsp;</TD>
+															<TD valign="top"><INPUT type="text" class="table" name="Numero_Processo" id="Numero_Processo" class="borda" style="HEIGHT: 22px; WIDTH: 50px" size="7" maxlength="5" value="" onKeyUp="javascript:somente_numero(this);" /></TD>
+															<TD valign="top"></TD>
+														</TR>
+														<TR>
+															<TD align="center" colspan="6"><input type="button" id="consultarProcesso" name="consultarProcesso" value="CONFIRMAR" onClick="javascript:validarProcesso();" /></TD>
+														</TR>
+													</table>
+													-->
+
+												</div>
+                                                <br>
+                                                <div id="damsEmAberto" name="damsEmAberto"></div>
+
+
+											</FORM>
+
+											<!-- Fim da Area de entrada de dados do processo solicitado -->
+											</TD>
+											<TD>&nbsp;
+
+                                            </TD>
+
+										</TR>
+									</TABLE>
+
+
+								</TD>
+							</TR>
+						</TABLE>
+
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>

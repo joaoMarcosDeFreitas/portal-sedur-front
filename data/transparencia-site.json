@@ -1,0 +1,162 @@
+{
+ "fonte": "https://sedur.salvador.ba.gov.br/transparencia",
+ "coletado_em": "2026-09-21",
+ "itens_do_menu": [
+  {
+   "nome": "Audiências Públicas",
+   "url": "https://sedur.salvador.ba.gov.br/transparencia/19-transpar/788-audienciapublicas",
+   "colunas": [
+    "Data",
+    "Modalidade / Número",
+    "Descrição",
+    "Arquivo"
+   ],
+   "itens": [
+    {
+     "arquivo_bytes": 656924,
+     "data": "20/09/2021",
+     "numero": "EDITAL DE AUDIÊNCIA PÚBLICA PRESENCIAL Nº 02/2021",
+     "descricao": "A SECRETARIA MUNICIPAL DE DESENVOLVIMENTO URBANO – SEDUR informa que será realizada Audiência Pública presencial na data de 18 de outubro de 2021, às 15:00 horas, no auditório do Novotel Salvador Hangar Aeroporto, situado na Av. Luís Viana Filho, 13 223 - São Cristóvão, Salvador - BA, 41500-300, com o objetivo de apresentar e discutir o Estudo de Impacto de Vizinhança-EIV e o Relatório de Impacto de Vizinhança – RIV, elaborados pela empresa MRV Engenharia e Participações S/A, para a instalação do Projeto de Urbanização Integrada Colina Imperial, Rua Professor Plínio Garcez de Sena, bairro de Mussurunga, no município de Salvador. O aviso da audiência pública presencial foi publicado no Diário Oficial do Município nº 8.114 de 18 a 20 de setembro de 2021. As informações relativas ao evento e o link do EIV/RIV encontram-se disponíveis no edital em anexo.",
+     "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/09/EDITAL_02_2021_Audiencia_Publica_Presencial_MRV.pdf",
+     "arquivo_status_http": 200,
+     "problemas": []
+    }
+   ]
+  },
+  {
+   "nome": "Impacto Vizinhança - EIV/RIV",
+   "url": "https://sedur.salvador.ba.gov.br/transparencia/19-transpar/59-transparencia-sedur-processos",
+   "observacao": "Lista por ano. Em 2021 há 1 processo; cada processo abre uma página com os arquivos.",
+   "processos": [
+    {
+     "ano": 2021,
+     "texto_do_link": "Processo: 5911000000-34928/2019 (Licenciamento Ambiental) Nome do empreendimento: Colina Imperial Localização: Rua Professor Plínio Garcez de Sena, Mussurunga, Salvador-BA Empreendedor: MRV Engenharia e Participações S/A",
+     "url": "https://sedur.salvador.ba.gov.br/pagina/60-transparencia-sedur-arquivos-do-processo-5911000000-34928-2019",
+     "titulo_da_pagina": "Transparência SEDUR/ Arquivos do Processo: 5911000000-34928/2019",
+     "arquivos": [
+      {
+       "nome": "EIV_parte1",
+       "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/04/EIV_parte1.pdf",
+       "arquivo_status_http": 200
+      },
+      {
+       "nome": "EIV_parte2",
+       "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/04/EIV_parte2.pdf",
+       "arquivo_status_http": 200
+      },
+      {
+       "nome": "EIV_parte3",
+       "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/04/EIV_parte3.pdf",
+       "arquivo_status_http": 200
+      },
+      {
+       "nome": "EIV_parte4",
+       "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/04/EIV_parte4.pdf",
+       "arquivo_status_http": 200
+      },
+      {
+       "nome": "EIV_parte5",
+       "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/04/EIV_parte5.pdf",
+       "arquivo_status_http": 200
+      },
+      {
+       "nome": "EIV_parte6",
+       "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/04/EIV_parte6.pdf",
+       "arquivo_status_http": 200
+      },
+      {
+       "nome": "EIV_parte7",
+       "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/04/EIV_parte7.pdf",
+       "arquivo_status_http": 200
+      },
+      {
+       "nome": "EIV_parte8",
+       "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/04/EIV_parte8.pdf",
+       "arquivo_status_http": 200
+      },
+      {
+       "nome": "EIV_parte9",
+       "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/04/EIV_parte9.pdf",
+       "arquivo_status_http": 200
+      },
+      {
+       "nome": "EIV_parte10",
+       "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/04/EIV_parte10.pdf",
+       "arquivo_status_http": 200
+      },
+      {
+       "nome": "EIV_parte11",
+       "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/04/EIV_parte11.pdf",
+       "arquivo_status_http": 200
+      },
+      {
+       "nome": "EIV_parte12",
+       "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/04/EIV_parte12.pdf",
+       "arquivo_status_http": 200
+      },
+      {
+       "nome": "EIV_parte13",
+       "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/04/EIV_parte13.pdf",
+       "arquivo_status_http": 200
+      },
+      {
+       "nome": "EIV_parte14",
+       "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/04/EIV_parte14.pdf",
+       "arquivo_status_http": 200
+      },
+      {
+       "nome": "EIV_parte15",
+       "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/04/EIV_parte15.pdf",
+       "arquivo_status_http": 200
+      },
+      {
+       "nome": "EIV_parte16",
+       "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/04/EIV_parte16.pdf",
+       "arquivo_status_http": 200
+      },
+      {
+       "nome": "RIV",
+       "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/04/RIV-1.pdf",
+       "arquivo_status_http": 200
+      },
+      {
+       "nome": "Anexo1_Art_crbio",
+       "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/04/Anexo1_Art_crbio.pdf",
+       "arquivo_status_http": 200
+      },
+      {
+       "nome": "Anexo1_ART_crea",
+       "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/04/Anexo1_ART_crea.pdf",
+       "arquivo_status_http": 200
+      },
+      {
+       "nome": "Anexo2_Mapa de Localização",
+       "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/04/Anexo2_Mapa-de-Localizacao.pdf",
+       "arquivo_status_http": 200
+      },
+      {
+       "nome": "Anexo3_Mapa de Restrição",
+       "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/04/Anexo3_Mapa-de-Restricao.pdf",
+       "arquivo_status_http": 200
+      },
+      {
+       "nome": "Anexo4_Mapa de Situação",
+       "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/04/Anexo4_Mapa-de-Situacao.pdf",
+       "arquivo_status_http": 200
+      },
+      {
+       "nome": "Anexo5_Cronograma Geral",
+       "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/04/Anexo5_Cronograma-Geral.pdf",
+       "arquivo_status_http": 200
+      },
+      {
+       "nome": "Ata da Audiência Pública – Colina Imperial MRV (Mussurunga)",
+       "arquivo": "https://sedur.salvador.ba.gov.br/arquivos/2021/10/ATA_DE_AUDIENCIA_DIGITALIZADA.pdf",
+       "arquivo_status_http": 200
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

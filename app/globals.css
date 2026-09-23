@@ -1,26 +1,130 @@
 @import "tailwindcss";
 
+/*
+ * Identidade visual do Portal SEDUR (mock).
+ * Petróleo como cor de marca, neutros claros (tema padrão é claro) com contraste
+ * suficiente para leitura sem ficar pesado, e um acento terracota usado com moderação.
+ * Tema escuro disponível via [data-theme="dark"] na tag <html> (alternado pelo usuário).
+ */
 :root {
+  --color-primary-50: #eef5f4;
+  --color-primary-100: #d7e7e5;
+  --color-primary-200: #b0cfcc;
+  --color-primary-300: #85b5b1;
+  --color-primary-400: #5a9a95;
+  --color-primary-500: #3b7f79;
+  --color-primary-600: #2a655f;
+  --color-primary-700: #204f4b;
+  --color-primary-800: #163b38;
+  --color-primary-900: #0f2c2a;
+
+  --color-accent-50: #fbf1ea;
+  --color-accent-100: #f5dfcd;
+  --color-accent-200: #ebbfa0;
+  --color-accent-300: #e09e72;
+  --color-accent-400: #d18a5c;
+  --color-accent-500: #c97b4a;
+  --color-accent-600: #b06438;
+  --color-accent-700: #8f4f2c;
+
+  --color-neutral-50: #fbfaf8;
+  --color-neutral-100: #f3f1ec;
+  --color-neutral-200: #e6e3db;
+  --color-neutral-300: #d1cdc2;
+  --color-neutral-400: #aaa598;
+  --color-neutral-500: #85806f;
+  --color-neutral-600: #635f52;
+  --color-neutral-700: #4a4739;
+  --color-neutral-800: #322f26;
+  --color-neutral-900: #211f19;
+
+  --color-success: #2f7d52;
+  --color-warning: #a3721a;
+  --color-danger: #b23b3b;
+
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: var(--color-neutral-900);
+  --foreground-muted: var(--color-neutral-600);
+  --surface: #ffffff;
+  --surface-muted: var(--color-neutral-100);
+  --border: var(--color-neutral-200);
+  --border-strong: var(--color-neutral-300);
+
+  /* Cor de marca para TEXTO (não para fundos sólidos de botão): muda de tom entre os
+     temas pra continuar legível — petróleo escuro no tema claro, petróleo claro no
+     escuro. Sempre usar --brand e --accent-text em texto sobre fundo adaptável
+     (surface, background); as escalas numeradas (primary-100, accent-600 etc.)
+     continuam fixas e servem pra fundos sólidos (botões, chips), onde o tom não
+     precisa mudar com o tema. */
+  --brand: var(--color-primary-700);
+  --accent-text: var(--color-accent-600);
+}
+
+:root[data-theme="dark"] {
+  --background: var(--color-neutral-900);
+  --foreground: var(--color-neutral-50);
+  --foreground-muted: var(--color-neutral-300);
+  --surface: #2a2822;
+  --surface-muted: #322f27;
+  --border: var(--color-neutral-700);
+  --border-strong: var(--color-neutral-600);
+
+  --brand: var(--color-primary-300);
+  --accent-text: var(--color-accent-400);
 }
 
 @theme inline {
+  --color-primary-50: var(--color-primary-50);
+  --color-primary-100: var(--color-primary-100);
+  --color-primary-200: var(--color-primary-200);
+  --color-primary-300: var(--color-primary-300);
+  --color-primary-400: var(--color-primary-400);
+  --color-primary-500: var(--color-primary-500);
+  --color-primary-600: var(--color-primary-600);
+  --color-primary-700: var(--color-primary-700);
+  --color-primary-800: var(--color-primary-800);
+  --color-primary-900: var(--color-primary-900);
+
+  --color-accent-50: var(--color-accent-50);
+  --color-accent-100: var(--color-accent-100);
+  --color-accent-200: var(--color-accent-200);
+  --color-accent-300: var(--color-accent-300);
+  --color-accent-400: var(--color-accent-400);
+  --color-accent-500: var(--color-accent-500);
+  --color-accent-600: var(--color-accent-600);
+  --color-accent-700: var(--color-accent-700);
+
+  --color-neutral-50: var(--color-neutral-50);
+  --color-neutral-100: var(--color-neutral-100);
+  --color-neutral-200: var(--color-neutral-200);
+  --color-neutral-300: var(--color-neutral-300);
+  --color-neutral-400: var(--color-neutral-400);
+  --color-neutral-500: var(--color-neutral-500);
+  --color-neutral-600: var(--color-neutral-600);
+  --color-neutral-700: var(--color-neutral-700);
+  --color-neutral-800: var(--color-neutral-800);
+  --color-neutral-900: var(--color-neutral-900);
+
+  --color-success: var(--color-success);
+  --color-warning: var(--color-warning);
+  --color-danger: var(--color-danger);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-foreground-muted: var(--foreground-muted);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-brand: var(--brand);
+  --color-accent-text: var(--accent-text);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-montserrat);
+  --font-heading: var(--font-poppins);
+  --font-display: var(--font-valley-sans);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
 }

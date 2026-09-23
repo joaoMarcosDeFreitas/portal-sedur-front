@@ -1,0 +1,740 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+	<!--ATIVAÇÃO DE COMPATIBILIDADE E PROTEÇÃO CONTRA ATAQUES DO TIPO XSS-->
+	<!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+	<!--meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1,maximum-scale=1,user-scalable=no"-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-XSS-Protection" content="1">
+	<meta http-equiv="x-dns-prefetch-control" content="off">
+	<!--ATIVAÇÃO DE COMPATIBILIDADE E PROTEÇÃO CONTRA ATAQUES DO TIPO XSS-->
+	
+	
+			
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="/var/www/html/sedur/favicon.ico"> -->
+
+	
+	
+	
+	<meta name="google-site-verification" content="3XxLThCC-_tkg2qtziw_KG01DRXRqWTMM91thC8V6RM" />
+	<!--OBS: ENCONTRAM-SE NO TYPE HEAD AS META TAGS DESCRIPTION E KEYWORDS-->
+	<meta charset="utf-8" />
+	<base href="http://sedur.salvador.ba.gov.br/" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>SEDUR - Secretaria Municipal de Desenvolvimento Urbano</title>
+	<link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://sedur.salvador.ba.gov.br/templates/sedur/assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="http://sedur.salvador.ba.gov.br/templates/sedur/assets/css/template.css" rel="stylesheet" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"e77068ebe5834b27fab4c10a7f6515ea","system.paths":{"root":"","base":""}}</script>
+
+</head>
+
+	
+<body>
+	
+    <!-- Pop-up de Aviso -->
+          <!-- <div id="dialog-message" style="position: fixed; z-index: 4000; margin-left: 30px; margin-top: 100px; right: 30px;">
+          <div class="d-flex flex-row-reverse">
+        	<button style="margin-bottom: 10px" type="button" class="btn-close btn-lg" aria-label="Close" onclick="popUp()" id="botaoFechar">X</button>
+          </div>
+    		
+          <a href="#">
+            <p>
+              <img src="http://sedur.salvador.ba.gov.br//images/avisoLicenciamento31012025.jpeg" style="width: 600px;">
+			</p>
+          </a>
+		</div> -->
+        <!-- Fim -->
+      
+    
+	<div id="header-section1-internas" class="navbar-fixed-top not-print" style="display:none;">
+        
+  		<div class="wrapper">
+            
+  			<a id="logo-internas" href="http://www.salvador.ba.gov.br" target="_parent" title="Ir para o Portal Salvador">Prefeitura Municipal de Salvador</a>    
+
+            <div class="float-right"> 
+
+                <div class="social-links float-left font-bold">
+                    <ul class="float-left">
+                        <li class="facebook"><a href="https://www.facebook.com/pages/Prefeitura-de-Salvador/472097156139269" target="_blank">Facebook</a></li>
+                        <li class="youtube"><a href="http://www.youtube.com/prefeituradosalvador" target="_blank">YouTube</a></li>
+                        <li class="flickr"><a href="http://www.flickr.com/photos/prefeituradesalvador" target="_blank">Flickr</a></li>
+                        <li class="twitter"><a href="https://twitter.com/prefsalvador" target="_blank">Twitter</a></li>
+                    </ul>
+                </div>  
+
+            </div> 
+  
+        </div>
+</div>
+
+<style type="text/css">
+	#header-section1-internas {
+	    background-color: #34558c;
+	    height: 48px;
+	    border-top: 1px solid #3e66a3;
+	}
+	.wrapper {
+	    width: 100%;
+	    margin: 0 auto;
+	}
+	#logo-internas {
+		display: block;
+		float: left;
+		background: transparent url(http://sedur.salvador.ba.gov.br//images/logo/logo-internas.png) left center no-repeat;
+		/* Mp2 background: transparent url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/logo-internas.png) left center no-repeat;*/
+        width: 284px;
+		height: 43px;
+		text-indent: -5000em;
+		margin-left:10px;
+	}
+	.float-right {
+	    float: right;
+	}
+	.social-links {
+	    /* padding-top: 35px; */
+	    width: 100%;
+	}
+	.float-left {
+	    float: left;
+	}
+	.social-links ul {
+	    list-style: none;
+	    padding: 0;
+	    margin: 5px 0 0 0;
+	}
+	.social-links .facebook {
+    	background-image: url(http://sedur.salvador.ba.gov.br//images/logo/facebook-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/facebook-icon.png); */                    
+	}
+	.social-links .youtube {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/youtube-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/youtube-icon.png); */                       
+	}
+	.social-links .flickr {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/flickr-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/flickr-icon.png); */ 
+	}
+	.social-links .twitter {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/twitter-icon.png);
+        /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/twitter-icon.png); */                       
+	}
+	.social-links ul li {
+	    float: left;
+	    margin-right: 7px;
+	}
+	.social-links ul li a {
+	    width: 35px;
+	    height: 35px;
+	    text-indent: -5000em;
+	    display: block;
+	}
+                        
+                              
+</style>
+	<!-- Começo Navbar -->
+
+	<div class="container-fluid" style="padding-right: 0px; padding-left: 0px; border:0px solid #000">
+		<header>
+			<div class="row" style="margin: 0%; background-color: white; padding: 2% 0; border:0px solid #008000">
+					<div class="col-md-3 offset-1 col-sm-0" style="border:0px solid #000"> 
+						<a href="/index.php">
+							<img id = "img_marca_old" src="http://sedur.salvador.ba.gov.br//images/logo/logo-black.png" class="img-responsive" alt="logo">
+						</a>
+      			    </div>
+					
+                    <div class="barramenu col-md-8 col-sm-12" style="border:0px solid #000">
+                        <nav id='cssmenu'  style="margin-left: 0px;">
+                            <div id="head-mobile" style="border:0px solid #f00"></div>
+                            <div class="button" style="border:0px solid #ff0"></div>
+                            <ul class="nav menu" style="float: right;">
+<li class="item-102 deeper parent menu-style"><a href="#" >INSTITUCIONAL</a><ul class="dropdown-menu"><li class="item-156 menu-style"><a href="/institucional/dirigentes" >Dirigentes</a></li><li class="item-157 menu-style"><a href="/institucional/estrutura-organizacional" >Estrutura Organizacional</a></li><li class="item-149 menu-style"><a href="/institucional/area-de-atuacao" >Área de Atuação</a></li></ul></li><li class="item-106 menu-style"><a href="https://servicos.sedur.salvador.ba.gov.br/#/portal/home" >SERVIÇOS</a></li><li class="item-154 menu-style"><a href="/noticias" >NOTÍCIAS</a></li><li class="item-151 menu-style"><a href="/legislacao" >LEGISLAÇÃO</a></li><li class="item-155 menu-style"><a href="/licitacoes" >LICITAÇÕES</a></li><li class="item-171 menu-style"><a href="/transparencia" >TRANSPARÊNCIA</a></li></ul>
+
+
+
+<!-- <style>
+
+	.item-161{
+		margin-left: 18%;
+	}
+
+
+	@media (min-width: 320px) and (max-width:767px) {
+		.item-161{
+		margin-left: 0%;
+		}
+
+	}
+
+	
+	@media (min-width: 767px) and (max-width:999px) {
+		.item-161{
+			margin-left: 0%;
+		}
+	}
+
+
+</style> -->
+
+
+
+
+                        </nav>	
+                    </div>
+ 			</div>
+				
+		</header>
+	</div>
+
+
+	
+	<!-- Fim Navbar -->
+		
+	
+				
+	<!-- CARROUSEL -->
+	<div class="container-fluid">
+		<section>
+			<div class="row">
+				<div class="col-md-12" id="carousel">
+					<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+							<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+							<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      						<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<a href="https://servicos.sedur.salvador.ba.gov.br/#/portal/home">
+									<img src="/images/banners/Banners-Sedur-1.jpg" class="d-block w-100 img_slide img-responsive" alt="..." >
+								</a>
+							</div>
+      						<div class="carousel-item">
+								<a href="https://agendamento.sedur.salvador.ba.gov.br/sas/#agendamento">
+									<img src="/images/banners/Banner_Sedur-2.jpg" class="d-block w-100 img_slide img-responsive" alt="..." >
+								</a>
+							</div>
+							<div class="carousel-item">
+								<a href="https://pddu.salvador.ba.gov.br">
+									<img src="/images/banners/revisao-pddu-2026-new.jpeg" class="d-block w-100 img_slide img-responsive" alt="..." >
+								</a>
+							</div>
+							<div class="carousel-item">
+								<a href="https://servicos.sedur.salvador.ba.gov.br/#/portal/contacts">
+									<img src="/images/banners/Banners-Sedur-4.jpg" class="d-block w-100 img_slide img-responsive" alt="..." >
+								</a>
+							</div>
+						</div>
+						<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<!-- fim CARROUSEL -->
+					
+					
+					
+	
+	<!-- SEÇÃO - NOSSOS PROJETOS -->
+    <section class="nossos-projetos" id="programas">
+		<div class="container-fluid">
+			<div class="row" style="padding-top:40px; padding-bottom: 8px;">
+				<div class="col-9 offset-2">
+					<header>
+						<h1 class="titulo" title="Nossos Projetos">Nossos Projetos</h1>
+					</header>
+				</div>
+			</div>
+		</div>
+		<div style="background-color: white; padding-top: 19px;">
+			<div class="container-fluid">
+				<div class="col-9 offset-2">
+					<div class="row respon-projetos" >
+						<div class="text-center col-6 col-lg-2">
+							<a href="/plano-de-incentivos-fiscais">
+								<div>
+									<img class="img-icon" src="http://sedur.salvador.ba.gov.br//images/icon/leis-incentivos-fiscais.jpg">
+								</div>
+								<div>
+									<p>PLANO DE INCENTIVO<br>FISCAIS</p>
+								</div>
+							</a>
+						</div>
+						<div class="text-center col-6 col-lg-2 ">
+							<a href="/eu-curto-meu-passeio">
+								<div>
+									<img class="img-icon" src="http://sedur.salvador.ba.gov.br//images/icon/eu-curto-meu-passeio.jpg">
+								</div>
+								<div>
+									<p>EU CURTO MEU<br>PASSEIO</p>
+								</div>
+							</a>
+						</div>
+						<div class="text-center col-6 col-lg-2 ">
+							<a href="/conselho-municipal-salvador">
+								<div>
+									<img class="img-icon" src="http://sedur.salvador.ba.gov.br//images/icon/conselho-municipal-salvador.jpg">
+								</div>
+								<div>
+									<p>CONSELHO MUNICIPAL<br>SALVADOR</p>
+								</div>
+							</a>
+						</div>
+						<div class="text-center col-6 col-lg-2 ">
+							<a href="/tul">
+								<div>
+									<img class="img-icon" src="http://sedur.salvador.ba.gov.br//images/icon/TUL.jpg">
+								</div>
+								<div>
+									<p>TUL</p>
+								</div>
+							</a>
+						</div>
+						<div class="text-center col-6 col-lg-2 ">
+							<a href="/revitalizar">
+								<div>
+									<img class="img-icon" src="http://sedur.salvador.ba.gov.br//images/icon/revitalizar.jpg">
+								</div>
+								<div>
+									<p>REVITALIZAR</p>
+								</div>
+							</a>
+						</div>
+						<div class="text-center col-6 col-lg-2 ">
+							<a href="/pidi">
+								<div>
+									<img class="img-icon" src="http://sedur.salvador.ba.gov.br//images/icon/PIDI.jpg">
+								</div>
+								<div>
+									<p>PIDI</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</section>
+
+
+
+
+	<!--section class="nossos-projetos" id="programas">
+		<div class="container-fluid">
+			<div class="row" style="padding-top:40px; padding-bottom: 8px;">
+				<div class="col-9 offset-2">
+					<header>
+						<h2 class="titulo" title="Nossos Projetos">Nossos Projetos</h2>
+					</header>
+				</div>
+			</div>
+		</div>
+		<div style="background-color: white; padding-top: 19px;">
+			<div class="container-fluid">
+				<div class="col-9 offset-2">
+					<div class="row respon-projetos" >
+						<div class="col-6 col-lg-2">
+							<a href="/plano-de-incentivos-fiscais">
+								<div class="row">
+									<img class="img-icon" src="http://sedur.salvador.ba.gov.br//images/icon/leis-incentivos-fiscais.jpg">
+								</div>
+								<div class="row">
+									<p style="margin-left: 3%;">PLANO DE INCENTIVO<br>FISCAIS</p>
+								</div>
+							</a>
+						</div>
+						<div class="col-6 col-lg-2 ">
+							<a href="/eu-curto-meu-passeio">
+								<div class="row">
+									<img class="img-icon" src="http://sedur.salvador.ba.gov.br//images/icon/eu-curto-meu-passeio.jpg">
+								</div>
+								<div class="row">
+									<p style="margin-left: 8%;">EU CURTO MEU<br>PASSEIO</p>
+								</div>
+							</a>
+						</div>
+						<div class="col-6 col-lg-2 ">
+							<a href="/conselho-municipal-salvador">
+								<div class="row">
+									<img class="img-icon" src="http://sedur.salvador.ba.gov.br//images/icon/conselho-municipal-salvador.jpg">
+								</div>
+								<div class="row">
+									<p style="margin-left: 0%;">CONSELHO MUNICIPAL<br>SALVADOR</p>
+								</div>
+							</a>
+						</div>
+						<div class="col-6 col-lg-2 ">
+							<a href="/tul">
+								<div class="row">
+									<img class="img-icon" src="http://sedur.salvador.ba.gov.br//images/icon/TUL.jpg">
+								</div>
+								<div class="row">
+									<p style="margin-left: 23%;">TUL</p>
+								</div>
+							</a>
+						</div>
+						<div class="col-6 col-lg-2 ">
+							<a href="/revitalizar">
+								<div class="row">
+									<img class="img-icon" src="http://sedur.salvador.ba.gov.br//images/icon/revitalizar.jpg">
+								</div>
+								<div class="row">
+									<p style="margin-left: 12%;">REVITALIZAR</p>
+								</div>
+							</a>
+						</div>
+						<div class="col-6 col-lg-2 ">
+							<a href="/pidi">
+								<div class="row">
+									<img class="img-icon" src="http://sedur.salvador.ba.gov.br//images/icon/PIDI.jpg">
+								</div>
+								<div class="row">
+									<p style="margin-left: 23%;">PIDI</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</section-->
+	<!-- FIM NOSSOS PROJETOS -->
+
+
+	<!-- SEÇÃO - NOTÍCIAS -->
+          <section class="cursos" id="cursos">
+              
+      		<div class="container-fluid">
+                  
+      			<div class="col-9 offset-2">
+                      
+                            <div class="row" style="padding-top:40px; padding-bottom: 26px;">
+
+                                <div class="col-auto mr-auto">
+                                    <header>
+                                        <h1 class="titulo" title="Noticias">Notícias</h1>
+                                    </header>
+                                </div>
+
+                                <div class="center veja-todas col-auto" style="float:right;">
+                                    <a href="http://sedur.salvador.ba.gov.br/index.php/noticias">VEJA TODAS</a>
+                                </div>
+
+                            </div>
+
+                            <div class="row" style="padding-bottom: 6%;">
+
+                                <div class="col-12 justify-content-center py-3">
+
+                                        <div>
+                                          <div class="newsflash">
+			
+<div class="row">
+
+
+	<div class="col-lg-12 col-xs-12" style="margin-bottom: 10px;">
+		<div class="noticia-home-principal">
+						
+			  <div class="row">
+						<div class="col-md-6 col-4">
+																<img src="/images/noticias/10_09_2026-Reunio_Do_Conselho_Municipal_Do_PDDU-Fotos_Otvio_Santos_SECOM_PMS_22.jpg" alt=""/>
+													</div>
+						<div class="col-md-6 col-8">
+							
+							<div class="col-12" style="padding-top: 5%;">
+								<a  href="/noticias/910-conselho-municipal-avanca-nas-discussoes-para-revisao-do-pddu-de-salvador"><h1>Conselho municipal avança nas discussões para revisão do PDDU de Salvador</h1></a>
+							</div>
+							
+							<div class="col-12 item_linha2">
+								<p>
+									<small class="text-muted" style="font-size: 100%;">11 de Setembro, 2026</small>
+									<a  href="/noticias/910-conselho-municipal-avanca-nas-discussoes-para-revisao-do-pddu-de-salvador" style="float:right; color:#1f5da6; text-decoration: underline;"><b>+ Veja Mais</b></a>
+								</p>
+							</div>
+
+						</div>
+
+				</div>			
+				
+		</div>
+	</div>
+</div>
+
+<div class="row">							
+
+		
+	
+		<div class="col-lg-6 col-12">
+			<div class="noticia-home-subprincipal">
+				
+					<div class="row">
+						<div class="col-md-5 col-4">
+																<img src="/images/noticias/Conecta_PDDU_-_Fotos_-_Ascom_Sedur_1.jpeg" alt=""/>
+													</div>
+						<div class="col-md-7 col-8" style="padding-left: 5%; padding-right: 43px;">
+							
+							<div class="col-12" style="padding-top: 6%;">
+								<a style="color:black;"  href="/noticias/909-conecta-pddu-reune-setor-produtivo-e-sociedade-civil-para-discutir-desenvolvimento-da-peninsula-de-itapagipe"><h1>Conecta PDDU reúne setor produtivo e sociedade civil para discutir desenvolvimento da Península de Itapagipe</h1></a>
+							</div>
+							
+							
+							<div class="col-12 item_linha2">
+								<p>
+									<small class="text-muted" style="font-size: 100%;">08 de Setembro, 2026</small>
+									<a  href="/noticias/909-conecta-pddu-reune-setor-produtivo-e-sociedade-civil-para-discutir-desenvolvimento-da-peninsula-de-itapagipe" style="float:right; color:#1f5da6; text-decoration: underline; font-size:11px;"><b>+ Veja Mais</b></a>
+							
+								</p>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+
+		
+		
+	
+		<div class="col-lg-6 col-12">
+			<div class="noticia-home-subprincipal">
+				
+					<div class="row">
+						<div class="col-md-5 col-4">
+																<img src="/images/noticias/Renova_Baixa_dos_Sapateiros_-_Fotos_-_Igor_Santos_-_Secom_PMS_5.jpeg" alt=""/>
+													</div>
+						<div class="col-md-7 col-8" style="padding-left: 5%; padding-right: 43px;">
+							
+							<div class="col-12" style="padding-top: 6%;">
+								<a style="color:black;"  href="/noticias/908-prefeitura-lanca-programa-para-recuperar-fachadas-e-estimular-retomada-economica-da-baixa-dos-sapateiros-e-barroquinha"><h1>Prefeitura lança programa para recuperar fachadas e estimular retomada econômica da Baixa dos Sapateiros e Barroquinha</h1></a>
+							</div>
+							
+							
+							<div class="col-12 item_linha2">
+								<p>
+									<small class="text-muted" style="font-size: 100%;">31 de Agosto, 2026</small>
+									<a  href="/noticias/908-prefeitura-lanca-programa-para-recuperar-fachadas-e-estimular-retomada-economica-da-baixa-dos-sapateiros-e-barroquinha" style="float:right; color:#1f5da6; text-decoration: underline; font-size:11px;"><b>+ Veja Mais</b></a>
+							
+								</p>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+
+		
+</div>
+
+                                        </div>
+
+                                 </div>
+
+                            </div>
+
+                </div>
+
+                <div class="clearfix">
+                </div>
+                                        
+            </div>
+                                        
+    <!-- Mp2 retirei  </div> -->
+                                        
+          </section>
+	<!-- FIM NOTICIAS -->
+	
+                        <!--VERIFICAÇÃO PARA INCLUSÃO DE PÁGINA-->
+	</main>
+	
+<footer>
+
+<!-- inicio Mp2 -->
+      
+        
+  	  <div class="container-fluid">
+              <div class="row justify-content-start text-center">
+                  <div class="col-12" style="padding-top:5px; padding-bottom: 1px;"></div>
+              </div>
+      </div>
+       
+      <div class="container-fluid">
+          <div class="row justify-content-start text-center sty">
+              <div class="col-12 endereco">
+                  <b>&copy; 2021 - Secretaria Municipal de Desenvolvimento Urbano. Todos os direitos reservados.</b>
+              </div>
+          </div>
+      </div>
+       
+  	  <div class="container-fluid">
+              <div class="row justify-content-start text-center">
+                  <div class="col-12" style="padding-top:1px; padding-bottom: 1px;"></div>
+              </div>
+      </div>
+       
+         
+    <div class="container-fluid bannerfoot">
+
+              <div class="row">
+
+                    <!-- inic coluna3 ACESSO RAPIDO-->
+                    <div class="bfooter1 col-xs-12 col-sm-6 col-md-3" style="padding-top:30px; padding-left:20px; border:0px solid #fff">
+                       <ul class="none">
+                         <h5><font size="2px" color="#FFD190"><B>ACESSO RÁPIDO</B></font></h5>
+                         <li><a href="https://sedur.salvador.ba.gov.br/acessoremoto/" target="_blank" alt="Acesso Interno SEDUR"><font color="white" style="font-family:'Roboto' sans-serif; font-size:12px">Acesso Interno</font></a></li>
+       					 <li><a href="https://agendamento.sedur.salvador.ba.gov.br/sas/#agendamento" target="_blank" alt="Agendamento"><font color="white" style="font-family:'Roboto', sans-serif;  font-size:12px">Agendamento</font></a></li>
+                    	 <!-- 4ls; Modificação da página Canais de Atendimento-->
+       					 <!-- <li><a href="/./canais-de-atendimento" target="_blanck" alt="Canais Atendimento"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px">Canais de Atendimento</font></a></li> -->
+                    	<li><a href="https://servicos.sedur.salvador.ba.gov.br/#/portal/contacts" target="_blanck" alt="Canais Atendimento"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px">Canais de Atendimento</font></a></li>
+                         <!-- Fim -->
+                         <li><a href="http://www.falasalvador.ba.gov.br/portal/portal/" target="_blank" alt="Portal Fala Salvador"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px"> Portal Fala Salvador</font></a></li>
+                           <!--<li>
+                           	Prefeitura Municipal de Salvador<br>
+                           	13.927.801/0029-40
+                           </li>-->
+                       </ul>
+                    </div>   
+
+
+                    <!-- inic coluna1 SEDUR -->
+                    <div class="bfooter2 col-xs-12 col-sm-6 col-md-4" style="text-align:left; padding-top:60px; border:0px solid #fff">
+                        <img class = "img-responsive" src="http://sedur.salvador.ba.gov.br//images/logo/logo-white.png" alt="logo SEDUR">
+                    </div>
+
+
+                    <!-- inic coluna2 PREFEITURA -->
+                    <!-- <div class="bfooter3 col-xs-12 col-sm-6 col-md-3" style="text-align:left; padding-top:50px; border:0px solid #fff">
+                        <img id = "img_sedur_branca" src="http://sedur.salvador.ba.gov.br//images/logo/PREFEITURA_RET_COMPL_Branc_Ftrans2.png" alt="logo Prefeitura" width="200px" hight="auto">
+                    </div> -->
+
+
+
+                    <!-- inic coluna4 GOOGLE-->             
+                    <div class="bfooter4 col-xs-12 col-sm-6 col-md-3 offset-2" style="padding-top:10px; font-family:'Roboto', sans-serif; font-size:12px; color:white;">
+                      <a href="https://www.google.com/maps/place/SEDUR+-+Secretaria+Municipal+de+Desenvolvimento+e+Urbanismo/@-12.9847353,-38.4661181,1236a,35y,90h/data=!3m1!1e3!4m5!3m4!1s0x7161b34826018a3:0x6f1379fe7b002977!8m2!3d-12.9876324!4d-38.4666753?hl=pt-BR" target="_blank" alt="Endereo Sedur"><img src="http://sedur.salvador.ba.gov.br//images/imagens/END_SEDUR.png" width="100%" height="auto" style="border:3px solid #ffffff;"></a> 
+       				  <p>Av.ACM, nº3224, Caminho das Árvores - Salvador/Ba. Edf.Empresarial Thomé de Souza / Térreo - CEP.: 41110-700 </p>
+                     </div>
+
+              </div>
+
+    </div>       
+         
+    
+          
+    
+ <!-- fim Mp2 -->  
+     
+                  
+                  
+</footer>
+
+    <script src="http://sedur.salvador.ba.gov.br/templates/sedur/assets/js/js.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<script src="http://sedur.salvador.ba.gov.br/templates/sedur/assets/js/imageMapResizer.min.js"></script>
+	<script type="text/javascript">
+		$('map').imageMapResize();
+	</script>
+
+
+	<script>
+  
+  
+  function popUp(){
+    document.getElementById("dialog-message").style.display = "none";
+};   
+  
+  (function($) {
+$.fn.menumaker = function(options) {  
+ var cssmenu = $(this), settings = $.extend({
+   format: "dropdown",
+   sticky: false
+ }, options);
+ return this.each(function() {
+   $(this).find(".button").on('click', function(){
+     $(this).toggleClass('menu-opened');
+     var mainmenu = $(this).next('ul');
+     if (mainmenu.hasClass('open')) { 
+       mainmenu.slideToggle().removeClass('open');
+     }
+     else {
+       mainmenu.slideToggle().addClass('open');
+       if (settings.format === "dropdown") {
+         mainmenu.find('ul').show();
+       }
+     }
+   });
+   cssmenu.find('li ul').parent().addClass('has-sub');
+multiTg = function() {
+     cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
+     cssmenu.find('.submenu-button').on('click', function() {
+       $(this).toggleClass('submenu-opened');
+       if ($(this).siblings('ul').hasClass('open')) {
+         $(this).siblings('ul').removeClass('open').slideToggle();
+       }
+       else {
+         $(this).siblings('ul').addClass('open').slideToggle();
+       }
+     });
+   };
+   if (settings.format === 'multitoggle') multiTg();
+   else cssmenu.addClass('dropdown');
+   if (settings.sticky === true) cssmenu.css('position', 'fixed');
+resizeFix = function() {
+  var mediasize = 1000;
+     if ($( window ).width() > mediasize) {
+       cssmenu.find('ul').show();
+     }
+     if ($(window).width() <= mediasize) {
+       cssmenu.find('ul').hide().removeClass('open');
+     }
+   };
+   resizeFix();
+   return $(window).on('resize', resizeFix);
+ });
+  };
+})(jQuery);
+
+(function($){
+$(document).ready(function(){
+$("#cssmenu").menumaker({
+   format: "multitoggle"
+});
+});
+})(jQuery);
+$( "li.item-161" ).find( "span" ).css('display', 'none');
+$( "li.item-162" ).find( "span" ).css('display', 'none');
+</script>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+	
+</body>
+	
+	
+	
+</html>
+
+
+
+		
+

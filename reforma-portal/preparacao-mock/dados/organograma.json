@@ -1,0 +1,103 @@
+{
+  "fonte": "sedur.salvador.ba.gov.br/institucional/estrutura-organizacional (imagem /images/imagens/SEDUROrganograma_g.png, 900x1274 px, 942 KB, sem texto alternativo)",
+  "titulo_na_imagem": "Anexo III — Organograma — Estrutura Organizacional — Secretaria Municipal de Desenvolvimento Urbano — SEDUR",
+  "base_legal_na_imagem": "Leis nº 9.186/2016 e Leis Complementares nº 076/2020 e nº 077/2021",
+  "coletado_em": "2026-09-21",
+  "aviso": "Transcrição feita por Claude lendo a imagem (o portal só oferece a figura, sem texto). Os nomes das caixas foram copiados como aparecem; a posição de cada caixa na hierarquia pode ter pequenos erros. [a confirmar com a SEDUR]. Vale para alimentar o sistema de teste, não como documento oficial.",
+  "legenda_da_imagem": ["Colegiado de Deliberação Superior", "Administração Indireta", "Assessoria", "Subordinação Administrativa"],
+  "gabinete_do_secretario": {
+    "colegiados_de_deliberacao_superior": [
+      "Conselho Municipal de Salvador",
+      "Conselho Municipal de Desenvolvimento Urbano – CONDURB",
+      "Conselho Gestor do Salvador Dados – CGSD"
+    ],
+    "administracao_indireta": ["Fundação Mário Leal Ferreira – FMLF"],
+    "assessorias": ["Assessoria de Urbanismo e Gestão"],
+    "subordinadas": [
+      {"nome": "Subsecretaria", "filhos": [{"nome": "Núcleo de Execução Orçamentária e Financeira"}]},
+      {"nome": "Ouvidoria"},
+      {"nome": "Coordenadoria de Tecnologia e Informações", "filhos": [{"nome": "Subcoordenadoria de Sistemas"}]},
+      {
+        "nome": "Diretoria de Desenvolvimento Urbano",
+        "filhos": [
+          {"nome": "Gerência de Planejamento Urbano"},
+          {"nome": "Gerência de Gestão de Projetos Urbanos", "setores": ["Setor de Projetos Urbanos"]}
+        ]
+      },
+      {
+        "nome": "Diretoria de Licenciamentos",
+        "filhos": [
+          {"nome": "Gerência de Cadastro Técnico"},
+          {
+            "nome": "Gerência de Licenciamentos Urbanos",
+            "filhos": [
+              {
+                "nome": "Coordenadoria de Empreendimentos",
+                "setores": ["Setor de Emissão de Alvarás"],
+                "filhos": [
+                  {"nome": "Subcoordenadoria de Empreendimentos de Pequeno e Médio Porte", "setores": ["Setor de Processos Simplificados", "Setor de Análise de Empreendimentos de Pequeno Porte", "Setor de Análise de Empreendimentos de Médio Porte"]},
+                  {"nome": "Subcoordenadoria de Empreendimentos de Grande Porte", "setores": ["Setor de Análise de Empreendimentos de Grande Porte", "Setor de Análise de Empreendimentos Especiais"]}
+                ]
+              },
+              {
+                "nome": "Coordenadoria de Atividade e Publicidade",
+                "setores": ["Setor de Vistoria Técnica"],
+                "filhos": [
+                  {"nome": "Subcoordenadoria de Atividade", "setores": ["Setor Triagem e Distribuição de Processos", "Setor de Análise de Atividade I", "Setor de Análise de Atividade II", "Setor de Emissão de Alvarás"]},
+                  {"nome": "Subcoordenadoria de Publicidade", "setores": ["Setor de Análise de Publicidade", "Setor de Emissão de Alvarás"]}
+                ]
+              },
+              {
+                "nome": "Coordenadoria de Processos Especiais",
+                "setores": ["Setor de Emissão de Alvarás e Certidões"],
+                "filhos": [
+                  {"nome": "Subcoordenadoria de Análise e Licenciamento de Serviços de Engenharia e de Obras em Logradouros Públicos", "setores": ["Setor de Análise e Licenciamento de Serviços de Engenharia", "Setor de Análise e Licenciamento de Obras em Logradouros Públicos"]},
+                  {"nome": "Subcoordenadoria de Análise de Empreendimentos de Projetos Públicos, Especiais e de Proteção Passiva", "setores": ["Setor de Análise para Licenciamento de Projetos Especiais", "Setor de Análise para Licenciamento de Proteção Passiva"]},
+                  {"nome": "Subcoordenadoria de Análise e Licenciamento de Eventos, Atividades Temporárias e Estruturas Provisórias", "setores": ["Setor de Vistoria Técnica"]}
+                ]
+              }
+            ]
+          },
+          {
+            "nome": "Gerência de Licenciamento Ambiental",
+            "filhos": [
+              {
+                "nome": "Coordenadoria de Licenciamento Ambiental",
+                "filhos": [
+                  {"nome": "Subcoordenadoria de Avaliação de Impacto Ambiental", "setores": ["Setor de Avaliação de Impacto Ambiental"]},
+                  {"nome": "Subcoordenadoria de Vistoria e Análise para o Licenciamento Ambiental", "setores": ["Setor de Vistoria para Licenciamento Ambiental", "Setor de Análise para Licenciamento Ambiental", "Setor de Emissão de Alvarás"]}
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nome": "Diretoria de Fiscalização",
+        "setores": ["Setor de Apreensão e Demolição de Bens"],
+        "filhos": [
+          {
+            "nome": "Coordenadoria de Fiscalização Urbanística e Segurança",
+            "filhos": [
+              {"nome": "Subcoordenadoria de Fiscalização Urbanística de Atividade e Publicidade", "setores": ["Setor de Fiscalização Urbanística de Atividade e Publicidade I", "Setor de Fiscalização Urbanística de Atividade e Publicidade II", "Setor de Fiscalização Urbanística de Atividade e Publicidade III", "Setor de Fiscalização Urbanística de Atividade e Publicidade IV"]},
+              {"nome": "Subcoordenadoria de Fiscalização Urbanística de Empreendimentos", "setores": ["Setor de Fiscalização Urbanística de Empreendimentos I", "Setor de Fiscalização Urbanística de Empreendimentos II", "Setor de Fiscalização Urbanística de Empreendimentos III", "Setor de Fiscalização Urbanística de Empreendimentos IV"]},
+              {"nome": "Subcoordenadoria de Acompanhamento de Empreendimento Licenciado e Manutenção Preventiva", "setores": ["Setor de Acompanhamento de Empreendimento Licenciado I", "Setor de Acompanhamento de Empreendimento Licenciado II", "Setor de Manutenção Preventiva", "Setor de Licenciamento de Obra Concluída"]}
+            ]
+          },
+          {
+            "nome": "Coordenadoria de Fiscalização Ambiental",
+            "filhos": [
+              {"nome": "Subcoordenadoria de Monitoramento e Fiscalização Ambiental", "setores": ["Setor de Monitoramento Ambiental", "Setor de Fiscalização Ambiental"]}
+            ]
+          },
+          {"nome": "Subcoordenadoria de Combate à Poluição Sonora", "setores": ["Setor de Combate à Poluição Sonora", "Setor de Fiscalização de Eventos"]}
+        ]
+      },
+      {
+        "nome": "Coordenadoria Administrativa",
+        "setores": ["Setor de Gestão de Materiais e Patrimônio", "Setor de Gestão de Serviços", "Setor da Guarda de Bens Apreendidos", "Setor de Cobrança de Autos de Infração", "Setor de Gestão de Contratos e Convênios"],
+        "filhos": [{"nome": "Subcoordenadoria de Pessoal", "setores": ["Setor de Gestão de Pessoas"]}]
+      }
+    ]
+  }
+}

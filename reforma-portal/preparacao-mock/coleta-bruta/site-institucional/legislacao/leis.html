@@ -1,0 +1,1409 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+	<!--ATIVAÇÃO DE COMPATIBILIDADE E PROTEÇÃO CONTRA ATAQUES DO TIPO XSS-->
+	<!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+	<!--meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1,maximum-scale=1,user-scalable=no"-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-XSS-Protection" content="1">
+	<meta http-equiv="x-dns-prefetch-control" content="off">
+	<!--ATIVAÇÃO DE COMPATIBILIDADE E PROTEÇÃO CONTRA ATAQUES DO TIPO XSS-->
+	
+	
+			
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="/var/www/html/sedur/favicon.ico"> -->
+
+	
+	
+	
+	<meta name="google-site-verification" content="3XxLThCC-_tkg2qtziw_KG01DRXRqWTMM91thC8V6RM" />
+	<!--OBS: ENCONTRAM-SE NO TYPE HEAD AS META TAGS DESCRIPTION E KEYWORDS-->
+	<meta charset="utf-8" />
+	<base href="http://sedur.salvador.ba.gov.br/leis" />
+	<meta name="author" content="Super User" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>SEDUR - Secretaria Municipal de Desenvolvimento Urbano</title>
+	<link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://sedur.salvador.ba.gov.br/templates/sedur/assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="http://sedur.salvador.ba.gov.br/templates/sedur/assets/css/template.css" rel="stylesheet" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"0de728cb85ac39a14028fdd8208cc35a","system.paths":{"root":"","base":""}}</script>
+
+</head>
+
+	
+<body>
+	
+    <!-- Pop-up de Aviso -->
+          <!-- <div id="dialog-message" style="position: fixed; z-index: 4000; margin-left: 30px; margin-top: 100px; right: 30px;">
+          <div class="d-flex flex-row-reverse">
+        	<button style="margin-bottom: 10px" type="button" class="btn-close btn-lg" aria-label="Close" onclick="popUp()" id="botaoFechar">X</button>
+          </div>
+    		
+          <a href="#">
+            <p>
+              <img src="http://sedur.salvador.ba.gov.br//images/avisoLicenciamento31012025.jpeg" style="width: 600px;">
+			</p>
+          </a>
+		</div> -->
+        <!-- Fim -->
+      
+    
+	<div id="header-section1-internas" class="navbar-fixed-top not-print" style="display:none;">
+        
+  		<div class="wrapper">
+            
+  			<a id="logo-internas" href="http://www.salvador.ba.gov.br" target="_parent" title="Ir para o Portal Salvador">Prefeitura Municipal de Salvador</a>    
+
+            <div class="float-right"> 
+
+                <div class="social-links float-left font-bold">
+                    <ul class="float-left">
+                        <li class="facebook"><a href="https://www.facebook.com/pages/Prefeitura-de-Salvador/472097156139269" target="_blank">Facebook</a></li>
+                        <li class="youtube"><a href="http://www.youtube.com/prefeituradosalvador" target="_blank">YouTube</a></li>
+                        <li class="flickr"><a href="http://www.flickr.com/photos/prefeituradesalvador" target="_blank">Flickr</a></li>
+                        <li class="twitter"><a href="https://twitter.com/prefsalvador" target="_blank">Twitter</a></li>
+                    </ul>
+                </div>  
+
+            </div> 
+  
+        </div>
+</div>
+
+<style type="text/css">
+	#header-section1-internas {
+	    background-color: #34558c;
+	    height: 48px;
+	    border-top: 1px solid #3e66a3;
+	}
+	.wrapper {
+	    width: 100%;
+	    margin: 0 auto;
+	}
+	#logo-internas {
+		display: block;
+		float: left;
+		background: transparent url(http://sedur.salvador.ba.gov.br//images/logo/logo-internas.png) left center no-repeat;
+		/* Mp2 background: transparent url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/logo-internas.png) left center no-repeat;*/
+        width: 284px;
+		height: 43px;
+		text-indent: -5000em;
+		margin-left:10px;
+	}
+	.float-right {
+	    float: right;
+	}
+	.social-links {
+	    /* padding-top: 35px; */
+	    width: 100%;
+	}
+	.float-left {
+	    float: left;
+	}
+	.social-links ul {
+	    list-style: none;
+	    padding: 0;
+	    margin: 5px 0 0 0;
+	}
+	.social-links .facebook {
+    	background-image: url(http://sedur.salvador.ba.gov.br//images/logo/facebook-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/facebook-icon.png); */                    
+	}
+	.social-links .youtube {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/youtube-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/youtube-icon.png); */                       
+	}
+	.social-links .flickr {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/flickr-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/flickr-icon.png); */ 
+	}
+	.social-links .twitter {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/twitter-icon.png);
+        /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/twitter-icon.png); */                       
+	}
+	.social-links ul li {
+	    float: left;
+	    margin-right: 7px;
+	}
+	.social-links ul li a {
+	    width: 35px;
+	    height: 35px;
+	    text-indent: -5000em;
+	    display: block;
+	}
+                        
+                              
+</style>
+	<!-- Começo Navbar -->
+
+	<div class="container-fluid" style="padding-right: 0px; padding-left: 0px; border:0px solid #000">
+		<header>
+			<div class="row" style="margin: 0%; background-color: white; padding: 2% 0; border:0px solid #008000">
+					<div class="col-md-3 offset-1 col-sm-0" style="border:0px solid #000"> 
+						<a href="/index.php">
+							<img id = "img_marca_old" src="http://sedur.salvador.ba.gov.br//images/logo/logo-black.png" class="img-responsive" alt="logo">
+						</a>
+      			    </div>
+					
+                    <div class="barramenu col-md-8 col-sm-12" style="border:0px solid #000">
+                        <nav id='cssmenu'  style="margin-left: 0px;">
+                            <div id="head-mobile" style="border:0px solid #f00"></div>
+                            <div class="button" style="border:0px solid #ff0"></div>
+                            <ul class="nav menu" style="float: right;">
+<li class="item-102 deeper parent menu-style"><a href="#" >INSTITUCIONAL</a><ul class="dropdown-menu"><li class="item-156 menu-style"><a href="/institucional/dirigentes" >Dirigentes</a></li><li class="item-157 menu-style"><a href="/institucional/estrutura-organizacional" >Estrutura Organizacional</a></li><li class="item-149 menu-style"><a href="/institucional/area-de-atuacao" >Área de Atuação</a></li></ul></li><li class="item-106 menu-style"><a href="https://servicos.sedur.salvador.ba.gov.br/#/portal/home" >SERVIÇOS</a></li><li class="item-154 menu-style"><a href="/noticias" >NOTÍCIAS</a></li><li class="item-151 menu-style"><a href="/legislacao" >LEGISLAÇÃO</a></li><li class="item-155 menu-style"><a href="/licitacoes" >LICITAÇÕES</a></li><li class="item-171 menu-style"><a href="/transparencia" >TRANSPARÊNCIA</a></li></ul>
+
+
+
+<!-- <style>
+
+	.item-161{
+		margin-left: 18%;
+	}
+
+
+	@media (min-width: 320px) and (max-width:767px) {
+		.item-161{
+		margin-left: 0%;
+		}
+
+	}
+
+	
+	@media (min-width: 767px) and (max-width:999px) {
+		.item-161{
+			margin-left: 0%;
+		}
+	}
+
+
+</style> -->
+
+
+
+
+                        </nav>	
+                    </div>
+ 			</div>
+				
+		</header>
+	</div>
+
+
+	
+	<!-- Fim Navbar -->
+		
+	
+	              <div class="no-home">
+                  <div class="container-fluid">
+                      <div class="row">
+                         <div class="col-9 offset-2">
+                              
+                              <div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+		
+	
+	     
+            
+      <div class="page-header">
+		
+			<h2 class="artigos_internos" itemprop="headline" style="width: 100px;">Leis</h2>
+									
+   
+          
+          <!-- Mp2 - Vou inserir 1 div botão voltar linha 301 a 303-->
+     <div class="voltarBTN" style="text-align: right;"><a href="JavaScript: window.history.back();"><button class="btn btn-warning" style="font-size: 15px; font-family: 'Roboto'; color: white; background-color: #006CB5; border-color: #006CB5; font-weight: bold; margin-right: 18px;" type="button">Voltar</button></a>
+     </div>   
+  	<br><br>
+<!-- Mp2 div botao voltar -->          
+      
+          
+          </div>
+         
+  
+          
+					
+		
+	
+	
+		
+							
+<!-- Mp2 Retirei a inclusão de imagem automaticamente das noticias
+      
+<img class="img-responsive" title="" src="/" alt=""/>
+
+fim retirar imagem -->    
+      
+	<div itemprop="articleBody">
+		<div class="col-md-12 col-12 table-responsive" style="text-align: justify; float: center;">
+<table class="table table-striped table-sm" style="width: 100%; height: 87px;">
+<thead>
+<tr>
+<th style="text-align: center; width: 6%;" scope="col">Data</th>
+<th style="text-align: center; width: 12.0393%;" scope="col">Nº Legislação</th>
+<th style="text-align: center; width: 69.9607%;" scope="col">Descrição</th>
+<th style="text-align: center; width: 4%;" scope="col">Arquivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 6%;">26/03/2026</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.958/2026</td>
+<td style="width: 69.9607%;">Dispõe sobre a implantação, operação, fiscalização e tributação de estações de recarga para veículos elétricos no Município de Salvador, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/Lei_9958_2026.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">26/12/2023</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.774/2023</td>
+<td style="width: 69.9607%;">Altera a Lei nº 9.148, de 8 de setembro de 2016 - Lei do Ordenamento do Uso e da Ocupação do Solo do Município de Salvador - LOUOS, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/Lei_9958_2026.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a> </td>
+</tr>
+<tr>
+<td style="width: 6%;">30/11/2023</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.767/2023</td>
+<td style="width: 69.9607%;">Institui o Programa de Incentivo a Empreendimentos e Moradias - RENOVA CENTRO, o Programa de Incentivos Fiscais e Econômicos para desenvolvimento de novos Polos Logísticos, o Programa de Pagamento Incentivado - PPI, o Programa de Incentivo à Atividade Imobiliária, o Programa de Incentivo à Cooperativa de Trabalhadores de Materiais Recicláveis; altera e acrescenta dispositivos à Lei nº 7.186, de 27 de dezembro de 2006 - Código Tributário e de Rendas do Município de Salvador, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/lei_9767_2023_renova_centro.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">20/11/2023</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.765/2023</td>
+<td style="width: 69.9607%;">Altera dispositivo da Lei nº 4.907 (Atividade em Residência), de 3 de junho de 1994, na forma que indica.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/lei_9765_2023.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">29/06/2023</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.732/2023</td>
+<td style="width: 69.9607%;">Dispõe sobre o procedimento para a instalação de Infraestrutura de Suporte para Estação Transmissora de Radiocomunicação (ETR), autorizada pela Agência Nacional de Telecomunicações (ANATEL), nos termos da legislação federal vigente.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/Lei_9732_2023.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">21/12/2022</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.655/2022</td>
+<td style="width: 69.9607%;">Dispõe sobre a atualização dos limites do Imposto sobre a Propriedade Predial e Territorial Urbana – IPTU, previstos no art. 4º da Lei nº 8.473, de 27 de setembro de 2013, com base na variação anual do Índice de Preços ao Consumidor Amplo – IPCA, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/LEI_9655_2022.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">01/02/2022</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.620/2022</td>
+<td style="width: 69.9607%;">Institui a Política Municipal de Incentivo à Energia Solar Fotovoltaica, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/lei_9620_2022.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">11/11/2021</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.604/2021</td>
+<td style="width: 69.9607%;">Estabelece o Plano Integrado de Concessões e Parcerias de Salvador – PICS, altera a Lei Municipal no 8.421, de 15 de julho de 2013, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/arquivos/2021/11/lei_9604_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">05/11/2021</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.603/2021</td>
+<td style="width: 69.9607%;">Lei nº 9.603/2021 Retifica as poligonais das áreas dos Parques Urbanos da Ilha de Bom Jesus dos Passos dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/arquivos/2021/11/lei_9603_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">25/03/2021</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.562/2021</td>
+<td style="width: 69.9607%;">Altera dispositivos da Lei nº 7.719/2009, que autoriza o Poder Executivo a adotar medidas visando à participação do Município de Salvador no PROGRAMA MINHA CASA MINHA VIDA, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2021/03/lei_9562_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">09/10/2020</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.552/2020</td>
+<td style="width: 69.9607%;">Altera o §1º do art. 6º da Lei nº 9.285, de 27 de outubro de 2017, que institui o Plano de Incentivos Fiscais no âmbito do Programa Salvador 360, para estímulo ao desenvolvimento econômico e à geração de empregos, e dá outras providências, na forma que indica.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2020/10/Lei_9552_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">06/10/2020</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.550/2020</td>
+<td style="width: 69.9607%;">Dispõe sobre a criação do “Selo Ecologicamente Correto”, a ser concedido aos bares, restaurantes, hotéis e congêneres, no Município de Salvador, que conferirem a destinação adequada ao óleo vegetal descartável, na forma que indica.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2020/10/Lei_9550_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">18/09/2020</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.540/2020</td>
+<td style="width: 69.9607%;">Cria o Fundo Municipal do Trabalho, altera o Conselho Municipal do Trabalho, Emprego e Geração de Renda na forma que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2020/09/lei_9540_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">11/08/2020</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.534/2020</td>
+<td style="width: 69.9607%;">Dispõe sobre a Política Municipal de Inovação e institui mecanismos, sistemas e incentivos à inovação no ambiente produtivo e social, no Município de Salvador</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2020/08/Lei_9534_2020_compacto.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">07/04/2020</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.523 /2020</td>
+<td style="width: 69.9607%;">Dispõe sobre a afixação de placas ou cartazes, em locais visíveis e de fácil acesso, em todos os órgãos públicos do Município de Salvador, para divulgar o direito à não obrigatoriedade de reconhecimento de firma e autenticação de cópias em cartório, para utilização em atos e procedimentos administrativos, conforme Lei Federal nº 13.726, de 8 de outubro de 2018.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2020/04/lei_9523_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">01/04/2020</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.519 /2020</td>
+<td style="width: 69.9607%;">Altera dispositivos da Lei nº 9.285/2017 que Institui o PLANO DE INCENTIVOS FISCAIS no âmbito DO PROGRAMA SALVADOR 360</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2020/04/Lei_9519_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">04/03/2020</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.510 /2020</td>
+<td style="width: 69.9607%;">Dispõe sobre a criação e delimitação da Área de Proteção de Recursos Naturais APRN do Cidade Jardim/Santa Maria e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2020/03/Lei_9510_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">04/03/2020</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.509/2020</td>
+<td style="width: 69.9607%;">Institui o Condomínio de Lotes, altera e acrescenta artigos e quadros à Lei nº 9.148/2016 LOUOS; à Lei nº 8.165/2012; à Lei nº 3.289/1983, à Lei nº 9.069/2016, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2020/11/lei_9509_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">04/03/2020</td>
+<td style="text-align: left; width: 12.0393%;">Lei Complementar nº 074/2020</td>
+<td style="width: 69.9607%;">Institui o Programa de Regularização Fundiária Urbana e estabelece normas e procedimentos aplicáveis ao Procedimento Administrativo de Regularização Fundiária Urbana.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2020/03/lei_complementar_074_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">20/09/2019</td>
+<td style="text-align: left; width: 12.0393%;">Lei Federal nº 13.874/2019</td>
+<td style="width: 69.9607%;">Lei Federal nº 13.874, de 20 de setembro de 2019, Mensagem de Veto Institui a Declaração de Direitos de Liberdade Econômica; estabelece garantias de livre mercado; altera as Leis nos 10.406, de 10 de janeiro de 2002 (Código Civil), 6.404, de 15 de dezembro de 1976, 11.598, de 3 de dezembro de 2007, 12.682, de 9 de julho de 2012, 6.015, de 31 de dezembro de 1973, 10.522, de 19 de julho de 2002, 8.934, de 18 de novembro 1994, o Decreto-Lei nº 9.760, de 5 de setembro de 1946 e a Consolidação das Leis do Trabalho, aprovada pelo Decreto-Lei nº 5.452, de 1º de maio de 1943; revoga a Lei Delegada nº 4, de 26 de setembro de 1962, a Lei nº 11.887, de 24 de dezembro de 2008, e dispositivos do Decreto-Lei nº 73, de 21 de novembro de 1966;</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/09/Lei-Federal_13874_2019.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">28/12/2018</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.434/2018</td>
+<td style="width: 69.9607%;">Altera e acrescenta dispositivos à Lei nº 7.186, de 27 de dezembro de 2006 e à Lei nº 9.285, de 27 de outubro de 2017, que institui o Plano de Incentivos Fiscais do Programa Salvador 360</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/01/Lei_9434_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">17/12/2018</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9418/2018</td>
+<td style="width: 69.9607%;">Revogam-se as Leis nºs: 3.798/87; 4.083/90; 4.431/91; 5.088/95; 5.357/98; 5.534/99; 5.733/00; 5.735/00; 6.080/02; 6.092/02; 6.979/06; 7.863/10; 8.053/11; 8.296/12 e 8.546/14.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2018/12/Lei_9418_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">17/12/2018</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.417/2018</td>
+<td style="width: 69.9607%;">Altera e acrescenta dispositivos da Lei nº 7.186, de 27 de dezembro de 2006, Código Tributário e de Rendas do Município do Salvador</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/01/lei_9417_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">01/11/2017</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.285/2017</td>
+<td style="width: 69.9607%;">Institui o PLANO DE INCENTIVOS FISCAIS no âmbito DO PROGRAMA SALVADOR 360, para estímulo ao desenvolvimento econômico e à geração de empregos, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/11/Lei_9285_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">03/10/2017</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.281/2017</td>
+<td style="width: 69.9607%;">CÓDIGO DE OBRAS - Institui normas relativas à execução de obras e serviços do Município do Salvador, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/10/Lei_9281_2017_codigodeobras.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">20/09/2017</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.278 /2017</td>
+<td style="width: 69.9607%;">Dispõe sobre a delimitação e denominação dos bairros do Município de Salvador</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/02/Lei_9278_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">07/06/2017</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.223/2017</td>
+<td style="width: 69.9607%;">Dispõe sobre o cadastramento das câmeras de videomonitoramento no Município de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/06/Lei_9223_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">07/06/2017</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.222/2017</td>
+<td style="width: 69.9607%;">Dispõe sobre a obrigatoriedade da licença ambiental para os postos de combustíveis estabelecidos no Município de Salvador, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/06/lei_9222_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">02/06/2017</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.219/2017</td>
+<td style="width: 69.9607%;">Dispõe sobre a obrigatoriedade de remoção dos cabos e fiação aérea, excedentes e sem uso, instalados por concessionárias que operam ou utilizam rede aérea no Município de Salvador, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/06/LEI_9219_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">02/06/2017</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.018/2017</td>
+<td style="width: 69.9607%;">Dispõe sobre a obrigatoriedade de os estabelecimentos que tenham escada rolante fixarem informações de advertência quanto ao uso das mesmas, no Município de Salvador, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/06/lEI_9218_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">19/05/2017</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.215/2017</td>
+<td style="width: 69.9607%;">Institui o Programa de Incentivo à Restauração e Recuperação de Imóveis do Centro Antigo de Salvador – PROGRAMA REVITALIZAR, e dá outras providencias.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/05/LEI_9215_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">17/01/2017</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.187/2017</td>
+<td style="width: 69.9607%;">Dispõe sobre o Plano Diretor de Arborização Urbana do Município de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/01/Lei_9187_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">29/12/2016</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.186/2016</td>
+<td style="width: 69.9607%;">Modifica a estrutura organizacional da Prefeitura Municipal de Salvador e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/09/Lei_9186-_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">13/12/2016</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 9.183/2016</td>
+<td style="width: 69.9607%;">Altera dispositivos da Lei nº 9.149/2016 (Criação do Sistema de Prestação de Serviço de Transporte Individual de Passageiros com uso de Motocicletas “Mototáxi”)</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/12/Lei-9.183-16-1.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">30/11/2016</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 9.180/2016</td>
+<td style="width: 69.9607%;">Autoriza o parcelamento de débitos do Município de Salvador com seu Regime Próprio de Previdência Social – RPPS, na forma que indica.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/11/Lei-9.180-16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">01/11/2016</td>
+<td style="text-align: left; width: 12.0393%;">LEI Nº 9.179/2016</td>
+<td style="width: 69.9607%;">Dispõe sobre a obrigatoriedade da instalação de dispositivos de segurança que retardem ou dificultem uso de explosivos em terminais de autoatendimento de instituições financeiras</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/11/Lei-9.179-16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">18/08/2016</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 9.145/2016</td>
+<td style="width: 69.9607%;">Faço saber que a Câmara Municipal decreta e eu sanciono a seguinte Lei: A declaração de utilidade pública será feita por Ato do Presidente da Mesa Executiva da Câmara Municipal, assegurada a iniciativa legislativa do Chefe do Poder Executivo.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-n°-9.145-16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">17/08/2016</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 9.144/2016</td>
+<td style="width: 69.9607%;">Estabelece critérios para construção de postos de combustível na Cidade de Salvador, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-n°-9.144-2016.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">01/08/2016</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 9.104/2016</td>
+<td style="width: 69.9607%;">Dispõe sobre a exploração do serviço de Alto- Falante de Linha Modulada AFLM, transmitida via equipamentos sonoros, no Município de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-n°-9.104_16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/07/2016</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 9.103/2016</td>
+<td style="width: 69.9607%;">Autoriza o Poder Executivo a celebrar contrato de concessão de uso de bem público e a promover a sua doação, nas condições que indica.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/07/Lei-n°-9.103_-20163.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/07/2016</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 9.092/2016</td>
+<td style="width: 69.9607%;">Altera, revoga e acrescenta dispositivos da Lei nº 6.975, de 27 de janeiro de 2006, que institui o Programa de Parcerias Público-Privadas do Município de Salvador, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/07/Lei-n°-9.092_161.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/07/2016</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 9.091/2016</td>
+<td style="width: 69.9607%;">Esta Lei estabelece normas de segurança e de manutenção em brinquedos dos parques infantis (playgrounds) localizados em estabelecimentos de educação infantil, ensino fundamental e condomínios habitacionais, particulares, em Salvador, e determina sanções para o descumprimento de suas determinações.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/07/Lei-9.091-20161.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">16/07/2016</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 9.088/2016</td>
+<td style="width: 69.9607%;">É obrigatório aos estabelecimentos comerciais tipo Shoppings Centers disponibilizarem aos clientes e funcionários serviço de atendimento de primeiros socorros.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/07/Lei-9.088_20161.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">10/06/2016</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 9.068/2016</td>
+<td style="width: 69.9607%;">Altera o Plano de Aplicação da Outorga Onerosa do Direito de Construir, aprovado pela Lei nº 8.961, de 29 de dezembro de 2015, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/06/lei-9.068_161.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">26/01/2016</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 9.016/2016</td>
+<td style="width: 69.9607%;">Desafeta bem imóvel público e autoriza o Poder Executivo a realizar o pagamento, por permuta, da indenização devida, em razão da desapropriação do imóvel particular declarado de utilidade pública pelo Decreto Municipal nº 26.034/2015, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/01/Lei-9.016-2016.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">06/01/2016</td>
+<td style="text-align: left; width: 12.0393%;">lei nº 8.962/2015</td>
+<td style="width: 69.9607%;">Fica instituído o Programa de Incentivo ao Desenvolvimento Sustentável e Inovação PIDI para empreendimentos não residenciais e de uso misto, a serem implantados, reformados ou ampliados nos sítios compreendidos nos perímetros delimitados no Anexo Único desta Lei.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/01/Lei-8.962_15.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">02/12/2015</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 8.930/2015</td>
+<td style="width: 69.9607%;">Altera dispositivos da Lei nº 7.186, de 27 de dezembro de 2006, que instituiu o Código Tributário e de Rendas do Município de Salvador, e da Lei nº 8.798, de 26 de junho de 2015, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/12/Lei-n°-8.930_15.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">25/09/2015</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.915/2015</td>
+<td style="width: 69.9607%;">Dispõe sobre a Política Municipal de Meio Ambiente e Desenvolvimento Sustentável; institui o Cadastro Municipal de Atividades Potencialmente Degradadoras e Utilizadoras de Recursos Naturais CMAPD e a Taxa de Controle e Fiscalização Ambiental TCFA, no Município de Salvador, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/09/Lei_8915_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">17/09/2015</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 8.911/2015</td>
+<td style="width: 69.9607%;">Proíbe o uso do acessório denominado Bastão de Mão Monopod, conhecido como Pau de Selfie em espetáculos de grande aglomeração popular e estádio de futebol no Município de Salvador</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/09/Lei-8.911_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">17/09/2015</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 8.910/2015</td>
+<td style="width: 69.9607%;">Torna obrigatória a permanência de Ambulância de resgate e de profissionais da área de saúde em lugares com grande aglomeração de pessoas para a pratica esportiva.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/09/Lei-8.910_15.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">08/09/2015</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 8.902/2015</td>
+<td style="width: 69.9607%;">Dispõe sobre a obrigatoriedade de os postos de combustíveis, os Lava- Rápido, as transportadoras e afins instalarem equipamento e reutilização da água usada na Lavagem de veículos.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/09/Lei-8.902_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">08/09/2015</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.901/2015</td>
+<td style="width: 69.9607%;">Inclui dispositivo na Lei n° 8.091, de 06 de Outubro de 2011, para proibir o uso de aparelhos celulares e congêneres no interior dos templos religiosos, no Município de Salvador, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/09/Lei-8.901_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">04/09/2015</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 8.879/2015</td>
+<td style="width: 69.9607%;">Dispõe sobre a Instalação de cadeiras aos Usuários nas Agências Bancárias de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/09/Lei-8.879_20152.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">02/09/2015</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 8.882/2015</td>
+<td style="width: 69.9607%;">Dispõe sobre a obrigatoriedade de os supermercados, mercados e congêneres, divulgarem, nos anúncios de promoção, a data de vencimento do produto em posição de destaque.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/09/Lei-8.882_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">01/09/2015</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 8888/2015</td>
+<td style="width: 69.9607%;">Acrescenta dispositivo a Lei n° 8.648/2014, que institui normas sobre Publicidade referente aos Contratos e gastos realizados nas Obras Públicas ocorridas no Município de Salvador, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/09/Lei-8.888_20151.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">25/08/2015</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 8.854/2015</td>
+<td style="width: 69.9607%;">Denomina de Rua Álvaro Martins a um Logradouro desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/08/Lei-8.854_20151.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">01/07/2015</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 8.800/2015</td>
+<td style="width: 69.9607%;">Denomina de Rua Deoscóredes Maximiliano dos Santos Mestre Didi a um Logradouro Público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/07/Lei-8.800_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">30/06/2015</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 8.798/2015</td>
+<td style="width: 69.9607%;">Outorga-Onerosa Dispõe sobre a fórmula de calculo da contrapartida financeira da Outorga Onerosa do Direito de Construir e dá outras Providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/06/lei-8.798_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">29/12/2014</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 8.725/2014</td>
+<td style="width: 69.9607%;">Modifica a Estrutura Organizacional da Prefeitura Municipal de Salvador PMS e dá outras Providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/07/lei-8.725_2014.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">07/10/2014</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 8.675/2014</td>
+<td style="width: 69.9607%;">Estabelece as Zonas e os Eventos que, quanto ao Limite de Decibéis. Estabelece as zonas e os eventos que, quanto ao limite de decibéis previsto, estão excluídos do disposto no art. 3º da Lei nº. 5.354, de 28 de janeiro de 1998, no Município de Salvador, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei-8.675_2014.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">01/09/2014</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.459/2014</td>
+<td style="width: 69.9607%;">Destinação de bens e mercadorias alienáveis no âmbito da administração pública direta e indireta municipal e dá outras providências altera dispositivos das leis 5.503, de 1999 e 5.354, de 1998, que dispõem sobre a destinação de bens e mercadorias alienáveis no âmbito da administração pública direta e indireta municipal e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Lei-Ordinária-8459-destruicao-bens.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">01/09/2014</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.674/2014</td>
+<td style="width: 69.9607%;">Autoriza o Poder Executivo a doar áreas de terra do domínio Municipal, que indica, ao Fundo de Arrendamento Residencial – FAR, destinadas à implantação de unidades de habitação popular de interesse social, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Lei-8.674_14.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">25/08/2014</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.641/2014</td>
+<td style="width: 69.9607%;">Implantação de portões ou guaritas em vias públicas O poder Executivo Municipal fica autorizado a aceitar, a custo dos interessados, propostas para implantação de portões ou guaritas em vias públicas…</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/dom-6155-16-08-2014.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">15/08/2014</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.641/2014</td>
+<td style="width: 69.9607%;">Altera o caput do art. 8º da Lei 4.607, de 1992, alterado pela Lei 8.032, de 14 de julho de 2011, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei_8641_2014.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">15/08/2014</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.647/2014</td>
+<td style="width: 69.9607%;">Altera dispositivos da Lei n° 6.080, de 21 de janeiro de 2002, que “altera dispositivos das Leis nº 3.377/84, 5.502/99 e 5.669/99, e dá outras providências”.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Lei_8647_2014.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">15/08/2014</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.425/2013</td>
+<td style="width: 69.9607%;">Dispõe sobre a obrigatoriedade da instalação de sanitários infantis e dá outras providências</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/08/lei_8425_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">07/08/2014</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.636/2014</td>
+<td style="width: 69.9607%;">Veda a denominação de vias, logradouros e prédios públicos com o nome, sobrenome ou cognome de indivíduos que tenham cometido crime de lesa-humanidade, graves violações de direitos humanos ou apropriação ilícita do dinheiro público, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Lei_8636_2014.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">07/08/2014</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.637/2014</td>
+<td style="width: 69.9607%;">Dispõe sobre a obrigatoriedade de vagas para táxis comuns nos estabelecimentos reconhecidos como Polos Geradores de Tráfego – PGT, no Município de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Lei_8637_2014.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">03/07/2014</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.626/2014</td>
+<td style="width: 69.9607%;">Dispõe sobre a obrigatoriedade da reserva de mesas e cadeiras para idosos, deficientes físicos e gestantes nas praças de alimentação dos shoppings centers, centros comerciais e restaurantes do Município de Salvador, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Lei_8626_2014.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">28/01/2014</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.550/2014</td>
+<td style="width: 69.9607%;">Regulamenta a Lei nº 8.550, de 28 de Janeiro de 2014, que instituiu normas de proteção e estímulo à preservação do patrimônio cultural do Município de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/05/Lei-8.550-141.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/01/2014</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8546/2014</td>
+<td style="width: 69.9607%;">Lei nº 8.546/2014 Estabelece regras e critérios para a construção e manutenção de guaritas de segurança nas edificações residenciais e comerciais, no Município de Salvador, e dá outras providências</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/11/Lei_8546_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/12/2013</td>
+<td style="text-align: left; width: 12.0393%;">Lei Estadual nº 12.929</td>
+<td style="width: 69.9607%;">Dispõe sobre a Segurança Contra Incêndio e Pânico nas edificações e áreas de risco no Estado da Bahia, cria o Fundo Estadual do Corpo de Bombeiros Militar da Bahia FUNEBOM, altera a Lei nº 6.896, de 28 de julho de 1995, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/10/lei12929_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">13/12/2013</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.511/2013</td>
+<td style="width: 69.9607%;">Dispõe sobre a obrigatoriedade de afixar cartaz em postos revendedores de combustível, informando a razão entre o preço do etanol e o preço da gasolina.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Lei_8511_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">02/10/2013</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.474/2013</td>
+<td style="width: 69.9607%;">Altera dispositivos da Lei nº 7.186, de 27 de dezembro de 2006, relativos ao pagamento, à isenção do Imposto Sobre a Propriedade Predial e Territorial Urbana IPTU, concede incentivos fiscais, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/09/Lei_8474_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">19/07/2013</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.425/2013</td>
+<td style="width: 69.9607%;">Dispõe sobre a obrigatoriedade da instalação de sanitários infantis e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei_8425_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">15/07/2013</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.421/2013</td>
+<td style="width: 69.9607%;">Altera, acrescenta e revoga dispositivos da Lei nº 7.186, de 27 de dezembro de 2006, que instituiu o Código Tributário e de Rendas do Município de Salvador, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/05/Lei_8421_2013.compressed.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">18/06/2013</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.414/2013</td>
+<td style="width: 69.9607%;">Dispõe sobre medidas relativas à Copa das Confederações FIFA de 2013 e a Copa de Mundo FIFA de 2014, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Lei_8414_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">23/01/2013</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 8.407/2013</td>
+<td style="width: 69.9607%;">Denomina de Avenida Fernando Carneiro a um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Lei-8407_13.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">23/01/2013</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 8.408/2013</td>
+<td style="width: 69.9607%;">Denomina de Praça Miguel Argemiro Cerdeira Carballal a um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Lei-8408_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">22/12/2012</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 8.378/2012</td>
+<td style="width: 69.9607%;">Dispõe sobre alteração do Zoneamento previsto na Lei 7.400/2008 PDDU, promove incentivos à implantação de hotéis de turismo e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/05/Lei-n°-8.378_2012.compressed.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">23/11/2012</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.374/2012</td>
+<td style="width: 69.9607%;">Denomina de Rua José Alencar um logradouro desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Lei-8.374_2012.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">01/06/2012</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.296/2012</td>
+<td style="width: 69.9607%;">Altera a redação dos artigos 2°, 3° e acrescenta art. 10- A da Lei 8.053/2011, que dispõe sobre a regulamentação do engarrafamento, armazenamento, depósito, venda e distribuição de botijões de Gás Liquefeito de Petróleo GLP, no Município de Salvador e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei8296_2012.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">17/05/2012</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.294/2012</td>
+<td style="width: 69.9607%;">Dispõe sobre a obrigatoriedade dos Imóveis residenciais, comerciais e industriais que possuem centrais de gás em suas dependências, a afixarem, em seus quadros, aviso informando que atendem às legislações pertinentes e Normas Técnicas de Segurança.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei8294_2012.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">17/05/2012</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.293/2012</td>
+<td style="width: 69.9607%;">Proibe a utilização de aparelhos de som e similares nos veículos do sistema de transporte público municipal de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei8293_2012.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">17/05/2012</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.290/2012</td>
+<td style="width: 69.9607%;">Dispõe sobre o cadastro de torcedores no Município de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei8289_2012-1.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">17/05/2012</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.289/2012</td>
+<td style="width: 69.9607%;">Dispõe sobre o registro e licenciamento de ciclomotores no município.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei8289_2012.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">17/05/2012</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.288/2012</td>
+<td style="width: 69.9607%;">Dispõe sobre a obrigatoriedade de construção de quadra poliesportiva nas escolas da rede municipal.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/05/lei8288_2012.compressed.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">17/05/2012</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.287/2012</td>
+<td style="width: 69.9607%;">Dispõe sobre a assistência técnica pública e gratuita no âmbito da arquitetura, urbanismo e engenharia para habitação de interesse social voltada à população de baixa renda.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei8287_2012.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">16/05/2012</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.295/2012</td>
+<td style="width: 69.9607%;">Dispõe sobre a instalação e o funcionamento de lava-jatos.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei8295_2012.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">17/01/2012</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.165/2012</td>
+<td style="width: 69.9607%;">Regulamenta as Áreas de Proteção Cultural e Paisagística, integrantes do Sistema de Áreas de Valor Ambiental e Cultural SAVAM da Lei 7.400/2008 que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei8165_2012.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">17/01/2012</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.164/2012</td>
+<td style="width: 69.9607%;">Regulamenta as Áreas de Proteção de Recursos Naturais - APNR de Pituaçú, Mata dos Oitis e Manguezal do Rio Passo Vaca, integrantes do Sistema de Áreas de Valor Ambiental e Cultural SAVAM da Lei 7.400/2008 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/05/lei8164_2012.compressed.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">08/11/2011</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.140/2011</td>
+<td style="width: 69.9607%;">Dispõe sobre a padronização dos passeios públicos do Município de Salvador, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei8140_2011.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">06/10/2011</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.091/2011</td>
+<td style="width: 69.9607%;">Dispõe sobre a proibição do uso de telefone celular no interior das casas de eventos culturais e artísticos.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei8091_2011.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">01/08/2011</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.056/2011</td>
+<td style="width: 69.9607%;">Dispõe sobre as vagas de estacionamento e criação de credenciais destinadas, exclusivamente, a veículos que transportem idosos, pessoas com deficiência e/ou mobilidade reduzida no Município de Salvador e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei8056_2011.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">26/07/2011</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.053/2011</td>
+<td style="width: 69.9607%;">Dispõe sobre a regulamentação do engarrafamento, armazenamento, depósito, venda e distribuição de botijões de Gás Liquefeito de Petróleo GLP, no Municipio de Salvador e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei8053_2011.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">19/07/2011</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.042/2011</td>
+<td style="width: 69.9607%;">Dispõe sobre a instalação, por instituições bancárias e financeiras com agências e postos de atendimento no Município de Salvador, de sistema de segurança e monitoramento por câmara de vídeo, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei8042_2011.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">19/07/2011</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.043/2011</td>
+<td style="width: 69.9607%;">Estabelece a largura e altura livre mínimas das portas de edificações públicas e privadas destinadas ao uso coletivo para viabilizar a circulação de pessoas portadoras de deficiência ou com mobilidade reduzida no Município de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei8043_2011.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">14/07/2011</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.029/2011</td>
+<td style="width: 69.9607%;">Dispõe sobre ,a obrigatoriedade dos estabelecimentos financeiros, que possuírem porta de segurança com detector de metais a instalarem guardavolumes em suas entradas, para os usuários colocarem, temporariamente, seus pertences.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei8029_2011.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">14/07/2011</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.032/2011</td>
+<td style="width: 69.9607%;">Altera a redação do art 8º da Lei nº 4.607/1992, que incentiva a oferta de lotes populares, dispõe sobre condomínios fechados e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei8032_2011.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">08/07/2011</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 8.025/2011</td>
+<td style="width: 69.9607%;">Obriga as instistuições financeiras, no âmbito do Município de Salvador, a instalar divisórias opacas nos caixas de atendimento, em suas agências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/05/lei8025_2011.compressed.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">14/10/2010</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 7.899/2010</td>
+<td style="width: 69.9607%;">Dispõe sobre a obrigatoriedade do uso de limitadores de sons e ruídos, produzidos por automóveis ou imóveis de qualquer natureza.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei7899_2010.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">02/08/2010</td>
+<td style="text-align: left; width: 12.0393%;">Lei Federal nº 12.305/2010 </td>
+<td style="width: 69.9607%;">Institui a Política Nacional de Resíduos Sólidos; altera a Lei no 9.605, de 12 de fevereiro de 1998; e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/04/L12305.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">28/12/2009</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 7.783/2009</td>
+<td style="width: 69.9607%;">Altera dispositivos da Lei n° 7.610/2008(Estrutura Organizacional da Prefeitura Municipal de Salvador), na forma que indica e dá providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Lei-7783-2009.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">24/09/2009</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 7.719/2009</td>
+<td style="width: 69.9607%;">Autoriza o Poder Executivo a adotar medidas visando à participação do Município de Salvador no PROGRAMA MINHA CASA MINHA VIDA, instituído pela Lei Federal n° t1.977/2009 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei7719_2009.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">19/12/2008</td>
+<td style="text-align: left; width: 12.0393%;">Lei Federal nº 128/2008</td>
+<td style="width: 69.9607%;">Cria a figura do Microempreendedor Individual MEI e modifica partes da Lei Geral da Micro e Pequena Empresa (Lei Complementar 123/2006) Altera a Lei Complementar nº 123, de 14 de dezembro de 2006, altera as Leis nºs 8.212, de 24 de julho de 1991, 8.213, de 24 de julho de 1991, 10.406, de 10 de janeiro de 2002 – Código Civil, 8.029, de 12 de abril de 1990, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei128_2008.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">16/03/2006</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 6994/2006</td>
+<td style="width: 69.9607%;">Altera Legislação de Estacionamento Altera a redação da ementa e do art. 1° da Lei n° 6.511 de 03 de março de 2004.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei6994_2006.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/01/2006</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 6979/2006</td>
+<td style="width: 69.9607%;">Assegura reserva de vagas para idosos Assegura reserva de vagas para idosos, nos estacionamentos públicos e privados.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei6979_2006.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/01/2006</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 6978/2006</td>
+<td style="width: 69.9607%;">Instalação e funcionamento de elevadores de passageiros Dispõe sobre instalação e funcionamento de elevadores de passageiros, escadas rolantes e teleféricos no Município do Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei6978_2006.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">26/01/2006</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 6976/2006</td>
+<td style="width: 69.9607%;">Estação Rádio Base ERB e Estação de Telefonia Sem Fio ETSF Dispõe sobre o licenciamento para construção de Estação Rádio Base ERB e Estação de Telefonia Sem Fio ETSF no Município do Salvador</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/6976-2006.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">11/01/2006</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 6.940/2006</td>
+<td style="width: 69.9607%;">Dispõe sobre o funcionamento do comércio varejista aos domingos e feriados e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/6940-2006.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">25/01/2005</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 6.651/2005</td>
+<td style="width: 69.9607%;">Dispõe sobre cassação de Alvará de Funcionamento de casas de diversões, hotéis, bares e restaurantes que façam apologia, incentivo, prática ou intermediação de prostituição infantil</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei20_6651_2005.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">25/01/2005</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 6.650/2005</td>
+<td style="width: 69.9607%;">Dispõe sobre a obrigatoriedade de determinados estabelecimentos afixarem o número telefônico da 1ª Vara da Infância e da Juventude para denúncia de exploração, abuso e violências sexuais contra crianças e adolescentes e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/6650-2005.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">02/03/2004</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 6511/2004</td>
+<td style="width: 69.9607%;">Estacionamento Estacionamento / Vagas Excedentes Emp. Comerciais</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei6511_2004.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">05/09/2003</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 6.325/2003</td>
+<td style="width: 69.9607%;">Altera, acrescenta e revoga os dispositivos que indica, das Leis n° 4.279, de 28 de dezembro de 1990 (Código Tributário e de Rendas do Município do Salvador), n° 6.064, de 27 de dezembro de 2001 e 6.250, de 27 de dezembro de 2002, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/6325_2003.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">07/08/2003</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 6322/2003</td>
+<td style="width: 69.9607%;">Compatibilidade ocasional dos Usos CS 10 e.CS 19.3, previstos na Lei 3.377, de 23 Dispõe sobre a alteração dos Critérios de Compatibilidade ocasional dos Usos CS 10 e.CS 19.3, previstos na Lei 3.377, de 23 de julho de 1984, a permissão do Uso CS 19.3 e dá outras Providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/6322_2003.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">17/10/2002</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 6189/2002</td>
+<td style="width: 69.9607%;">Parque Metropolitano de Pituaçu Cria e altera delimitação de Zonas integrantes do Parque Metropolitano de Pituaçu e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei6189_2002.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">05/08/2002</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 6.117/2002</td>
+<td style="width: 69.9607%;">Publicada no DOL de 16/05/2002. Republicada por ter saído com incorreção.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei6117_2002.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">13/03/2002</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 6.103/2002</td>
+<td style="width: 69.9607%;">Institui procedimentos para a remoção de famílias pela municipalidade ou com sua participação, em áreas de ocupação regular ou consolidada, em função de obras, sinistros ou situações de risco e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei6103_2002.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">13/03/2002</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 6.102/2002</td>
+<td style="width: 69.9607%;">Dispõe sobre a instalação de cercas energizadas, destinadas à proteção de perímetros, no Município de Salvador e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/05/lei6102_2002_PS.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">07/02/2002</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 6092_2002</td>
+<td style="width: 69.9607%;">Altera dispositivos da Lei n° 3.377/84 Altera dispositivos da Lei nº 3.377/84 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei6092_2002.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">21/01/2002</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 6.080/2002</td>
+<td style="width: 69.9607%;">Altera dispositivos das Leis n° 3.377/1984, 5.502/1999 e 5.669/1999 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei6080_2002.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/12/2001</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 6.064/2001</td>
+<td style="width: 69.9607%;">Altera, acrescenta e revoga dispositivos da Lei n° 4.279, de 28 de dezembro de 1990 (Código Tributário e de Rendas do Município do Salvador) e alterações posteriores, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei6064_2001.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">15/08/2001</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5.978/2001</td>
+<td style="width: 69.9607%;">Dispõe sobre o atendimento de usuários nas agências bancárias do Município.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei_5978_2001.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">01/08/2001</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5971/2001</td>
+<td style="width: 69.9607%;">Empreendimentos Arquitetônicos e/ou Urbanísticos Dispõe sobre a divulgação de Empreendimentos Arquitetônicos e/ou Urbanísticos e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">26/01/2001</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5909/2001</td>
+<td style="width: 69.9607%;">Dispõe sobre sons urbanos e cria a licença para utilização sonora Modifica dispositivo da Lei n.º 5.354 de 28 de janeiro de 1998, que dispõe sobre sons urbanos, fixa níveis e horários em que será permitida sua emissão e cria a licença para utilização sonora.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei5909_2001.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">23/01/2001</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 13251/2001</td>
+<td style="width: 69.9607%;">Regulamentada pelo decreto 13251/2001 Manutenção preventiva e periódica das edificações e equipamentos públicos ou privados.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei5907_2001.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">23/01/2001</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5.907/2001</td>
+<td style="width: 69.9607%;">Regulamentada pelo decreto 13251/2001 Manutenção preventiva e periódica das edificações e equipamentos públicos ou privados.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/03/lei5907_2001.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">01/01/2001</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5860/2000</td>
+<td style="width: 69.9607%;">ASRE e APCP da Avenida Luiz Eduardo Magalhães Cria, delimita e institucionaliza como Área Sujeita a Regime Específico ASRE, na subcategoria Área de Proteção Cultural e Paisagística APCP uma área lindeira à Avenida Luiz Eduardo Magalhães e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/05/lei5860_2000.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">26/12/2000</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5.855/2000</td>
+<td style="width: 69.9607%;">Dispõe sobre a alteração da delimitação da Zona de Interesse Sócio-Cultural ZISC e da Zona de Proteção Visual 1 ZPV-1 definidas pela Lei 3.932/88 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/05/lei5855_2000.compressed.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">20/12/2000</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 10098/2000</td>
+<td style="width: 69.9607%;">Acessibilidade Estabelece normas gerais e critérios básicos para a promoção da acessibilidade das pessoas portadoras de deficiência ou com mobilidade reduzida, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei10098_2000.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">13/11/2000</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5804/2000</td>
+<td style="width: 69.9607%;">Autoriza a implantação de empreendimentos nas áreas que indica. Autoriza a implantação de empreendimentos nas áreas que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/01/lei5804_2000.compressed.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">23/08/2000</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5.773/2000</td>
+<td style="width: 69.9607%;">ASRE e APCP Terreiro Ilê Asipá Cria, delimita e institucionaliza como Área Sujeita a Regime Específico na subcategoria Área de Proteção Cultural e Paisagística a Área do Terreiro Ilê Asipá e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/03/lei5773_2000_lei.compressed.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">15/07/2000</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5735_2000</td>
+<td style="width: 69.9607%;">Divulgação condições de segurança em locais de reunião pública. Dispõe sobre a obrigatoriedade de divulgação das condições mínimas de segurança, oferecidas ao público presente em locais de reunião e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei5735_2000.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">12/05/2000</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5.733/2000</td>
+<td style="width: 69.9607%;">Dispõe sobre a proibição de se expor urnas mortuárias e adereços para velórios na frente das lojas funerárias e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei5733_2000.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">06/01/2000</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5.692/2000</td>
+<td style="width: 69.9607%;">Alteração das Leis 3.377, de 23 de julho de 1984 e 3.805, de 04 de novembro de 1987 Dispõe sobre a alteração das Leis 3.377, de 23 de julho de 1984 e 3.805, de 04 de novembro de 1987 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei5692_2000.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">06/01/2000</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5.696/2000</td>
+<td style="width: 69.9607%;">Altera delimitação de Zonas de Concentração de Usos Residenciais e Industriais que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/05/lei5696_2000.compressed.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">30/12/1999</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5.690/1999</td>
+<td style="width: 69.9607%;">Dispõe sobre os critérios para instalação de gás canalizado para gás liquefeito de petróleo (GLP) ou para gás natural (GN) nas edificações localizadas no Município de Salvador, acrescenta dispositivo à Lei nº 3.903/88, Código de Obras do Município de Salvador e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Lei_5690_1999.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">28/12/1999</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5.503/1999</td>
+<td style="width: 69.9607%;">Código de Polícia Administrativa do Município de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei5503_1999-1.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">17/12/1999</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5.669/1999</td>
+<td style="width: 69.9607%;">Altera a Base Cartográfica das Plantas 1 e 2 do Anexo 10 da Lei nº 3.377, de 23 de julho de 1984, Lei do Ordenamento do Uso e da Ocupação do Solo no Município da Cidade do Salvador e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/pdf/Lei_5669_1999.pdf"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/10/1999</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5.628/1999</td>
+<td style="width: 69.9607%;">Altera disposições da Lei nº 3.377, de 23 de julho de 1984, referentes à implantação de postos de revenda de Gás Liquefeito de Petróleo – GLP e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei5628_1999.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/09/1999</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5.604/1999</td>
+<td style="width: 69.9607%;">Desafeta bem público de uso especial que indica, para efeito de permuta, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei5604_1999.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">20/09/1999</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5.603/1999</td>
+<td style="width: 69.9607%;">Loteamento Vela Branca Desafeta áreas verdes do Loteamento Vela Branca que indica, autoriza o Chefe do Poder Executivo Municipal a alinear áreas desafetadas e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/05/lei5603_1999.compressed.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">22/06/1999</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5.553/1999</td>
+<td style="width: 69.9607%;">Altera a Lei nº 3.377 de 23 de julho de 1984, modificada pela Lei nº 3.853/88 Altera a Lei nº 3.377 de 23 de julho de 1984, modificada pela Lei nº 3.853/88 e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei5553_1999.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">26/04/1999</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5.534/1999</td>
+<td style="width: 69.9607%;">Altera a Lei nº 3.903/88 normas de execução de obras do Município de Salvador Altera dispositivo da Lei nº 3.903/88 que Institui normas relativas à execução de obras do Município de Salvador e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei5534_1999.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">08/02/1999</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5.502/1999</td>
+<td style="width: 69.9607%;">Estabelece restrições de uso e de ocupação para a área que indica e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/05/lei5502_1999.compressed.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">20/01/1999</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5.494/1999</td>
+<td style="width: 69.9607%;">Disciplina, controla e fiscaliza o comércio de tintas em recipiente de “spray”, no Município de Salvador, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei5494_1999.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">20/01/1999</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5.493/1999</td>
+<td style="width: 69.9607%;">Dispõe sobre a conservação, preservação, poda , agressão, erradicação e a reposição de árvores no Município e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/03/Lei_5493_19991.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">29/01/1998</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5.354/1998</td>
+<td style="width: 69.9607%;">Dispõe sobre sons urbanos e cria a licença para utilização sonora Dispõe sobre sons urbanos, fixa níveis e horários em que será permitida sua emissão, cria a licença para utilização sonora e dá outras providências (Poluição Sonora).</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei5354_1998.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/06/1996</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 5.176/1996</td>
+<td style="width: 69.9607%;">Regulamentada pelo decreto nº 18.440/2008 Regularização de edificações, parcelamentos do solo, arruamentos, atividades Dispõe sobre a regularização de edificações, parcelamentos do solo, arruamentos, atividades e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei5176_1996.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">03/06/1994</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 4.907/1994</td>
+<td style="width: 69.9607%;">Dispõe sobre a autorização para que Microempresas e Empresas de Pequeno Porte funcionem nas residências de seus titulares e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/04/leimun_4907_1994.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/10/1992</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 4607/1992</td>
+<td style="width: 69.9607%;">Lotes populares e condomínios fechados Incentiva a oferta de lotes populares, dispõe sobre condomínios fechados e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei4607_1992.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">30/01/1992</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 14.383/2003</td>
+<td style="width: 69.9607%;">Obra de Arte Regulamentada pelo decreto 14.383/2003 Estabelece a obrigatoriedade da colocação de obra de arte em empreendimento de urbanização, edificação e complexos urbanos e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei4489_1992.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">30/01/1992</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 4490/1992</td>
+<td style="width: 69.9607%;">Escoamento de águas provenientes de aparelhos condicionadores de ar Dispõe sobre o escoamento de águas provenientes de aparelhos condicionadores de ar e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei4490-1992.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">17/01/1990</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 4081/1990</td>
+<td style="width: 69.9607%;">Cria o Centro Administrativo Municipal CAM</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/09/Lei_4081_1990_CAM.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">29/06/1989</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 3.994/1989</td>
+<td style="width: 69.9607%;">Cria a Superintedência de Controle e Ordenamento do Uso do Solo do Município SUCOM</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Lei-3.994-89.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/07/1988</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 3.903/1988</td>
+<td style="width: 69.9607%;">Código de Obras</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei3903_1988.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">04/11/1987</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 3.805/1987</td>
+<td style="width: 69.9607%;">Cria a transferência do direito de construir e e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/11/lei3805_1987.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">29/10/1987</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 3.798/1987 </td>
+<td style="width: 69.9607%;">Dispõe sobre a concessão de licença de construção, reforma ou ampliação de edificações uniresidenciais do grupo de uso R1, REVOGADA PELA Lei nº 9.418/2018</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Lei_3798_1987.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">21/09/1983</td>
+<td style="text-align: left; width: 12.0393%;">Lei nº 3.289/1983</td>
+<td style="width: 69.9607%;">Altera e dá nova redação a dispositivos da Lei nº 2.403, de 23 de agosto de 1972 Acerca do Acervo Arquitetônico tombado pela SPHAN e das Áreas de Proteção Cultural e PaisagísticaÍSTICA</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei_3289_1983.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">05/12/1979</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 3.077/1979</td>
+<td style="width: 69.9607%;">Proteção Contra Incêndio e Pânico, Altera Dispositivos da Lei Nº 2403/72 Estabelece Normas de Proteção Contra Incêndio e Pânico, Altera Dispositivos da Lei Nº 2403/72 e dá Outras Providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/lei3077_1979.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">29/10/1979</td>
+<td style="text-align: left; width: 12.0393%;">Lei n° 3.073/1979</td>
+<td style="width: 69.9607%;">Estabelece a nomenclatura e codificação dos logradouros públicos do Município e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/06/gasup_20150629_1043393221.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+</tbody>
+</table>
+</div> 	</div>
+
+								</div>
+                          </div> 
+                      </div>
+                  </div>
+              </div>
+                            <!--VERIFICAÇÃO PARA INCLUSÃO DE PÁGINA-->
+	</main>
+	
+<footer>
+
+<!-- inicio Mp2 -->
+      
+        
+  	  <div class="container-fluid">
+              <div class="row justify-content-start text-center">
+                  <div class="col-12" style="padding-top:5px; padding-bottom: 1px;"></div>
+              </div>
+      </div>
+       
+      <div class="container-fluid">
+          <div class="row justify-content-start text-center sty">
+              <div class="col-12 endereco">
+                  <b>&copy; 2021 - Secretaria Municipal de Desenvolvimento Urbano. Todos os direitos reservados.</b>
+              </div>
+          </div>
+      </div>
+       
+  	  <div class="container-fluid">
+              <div class="row justify-content-start text-center">
+                  <div class="col-12" style="padding-top:1px; padding-bottom: 1px;"></div>
+              </div>
+      </div>
+       
+         
+    <div class="container-fluid bannerfoot">
+
+              <div class="row">
+
+                    <!-- inic coluna3 ACESSO RAPIDO-->
+                    <div class="bfooter1 col-xs-12 col-sm-6 col-md-3" style="padding-top:30px; padding-left:20px; border:0px solid #fff">
+                       <ul class="none">
+                         <h5><font size="2px" color="#FFD190"><B>ACESSO RÁPIDO</B></font></h5>
+                         <li><a href="https://sedur.salvador.ba.gov.br/acessoremoto/" target="_blank" alt="Acesso Interno SEDUR"><font color="white" style="font-family:'Roboto' sans-serif; font-size:12px">Acesso Interno</font></a></li>
+       					 <li><a href="https://agendamento.sedur.salvador.ba.gov.br/sas/#agendamento" target="_blank" alt="Agendamento"><font color="white" style="font-family:'Roboto', sans-serif;  font-size:12px">Agendamento</font></a></li>
+                    	 <!-- 4ls; Modificação da página Canais de Atendimento-->
+       					 <!-- <li><a href="/./canais-de-atendimento" target="_blanck" alt="Canais Atendimento"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px">Canais de Atendimento</font></a></li> -->
+                    	<li><a href="https://servicos.sedur.salvador.ba.gov.br/#/portal/contacts" target="_blanck" alt="Canais Atendimento"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px">Canais de Atendimento</font></a></li>
+                         <!-- Fim -->
+                         <li><a href="http://www.falasalvador.ba.gov.br/portal/portal/" target="_blank" alt="Portal Fala Salvador"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px"> Portal Fala Salvador</font></a></li>
+                           <!--<li>
+                           	Prefeitura Municipal de Salvador<br>
+                           	13.927.801/0029-40
+                           </li>-->
+                       </ul>
+                    </div>   
+
+
+                    <!-- inic coluna1 SEDUR -->
+                    <div class="bfooter2 col-xs-12 col-sm-6 col-md-4" style="text-align:left; padding-top:60px; border:0px solid #fff">
+                        <img class = "img-responsive" src="http://sedur.salvador.ba.gov.br//images/logo/logo-white.png" alt="logo SEDUR">
+                    </div>
+
+
+                    <!-- inic coluna2 PREFEITURA -->
+                    <!-- <div class="bfooter3 col-xs-12 col-sm-6 col-md-3" style="text-align:left; padding-top:50px; border:0px solid #fff">
+                        <img id = "img_sedur_branca" src="http://sedur.salvador.ba.gov.br//images/logo/PREFEITURA_RET_COMPL_Branc_Ftrans2.png" alt="logo Prefeitura" width="200px" hight="auto">
+                    </div> -->
+
+
+
+                    <!-- inic coluna4 GOOGLE-->             
+                    <div class="bfooter4 col-xs-12 col-sm-6 col-md-3 offset-2" style="padding-top:10px; font-family:'Roboto', sans-serif; font-size:12px; color:white;">
+                      <a href="https://www.google.com/maps/place/SEDUR+-+Secretaria+Municipal+de+Desenvolvimento+e+Urbanismo/@-12.9847353,-38.4661181,1236a,35y,90h/data=!3m1!1e3!4m5!3m4!1s0x7161b34826018a3:0x6f1379fe7b002977!8m2!3d-12.9876324!4d-38.4666753?hl=pt-BR" target="_blank" alt="Endereo Sedur"><img src="http://sedur.salvador.ba.gov.br//images/imagens/END_SEDUR.png" width="100%" height="auto" style="border:3px solid #ffffff;"></a> 
+       				  <p>Av.ACM, nº3224, Caminho das Árvores - Salvador/Ba. Edf.Empresarial Thomé de Souza / Térreo - CEP.: 41110-700 </p>
+                     </div>
+
+              </div>
+
+    </div>       
+         
+    
+          
+    
+ <!-- fim Mp2 -->  
+     
+                  
+                  
+</footer>
+
+    <script src="http://sedur.salvador.ba.gov.br/templates/sedur/assets/js/js.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<script src="http://sedur.salvador.ba.gov.br/templates/sedur/assets/js/imageMapResizer.min.js"></script>
+	<script type="text/javascript">
+		$('map').imageMapResize();
+	</script>
+
+
+	<script>
+  
+  
+  function popUp(){
+    document.getElementById("dialog-message").style.display = "none";
+};   
+  
+  (function($) {
+$.fn.menumaker = function(options) {  
+ var cssmenu = $(this), settings = $.extend({
+   format: "dropdown",
+   sticky: false
+ }, options);
+ return this.each(function() {
+   $(this).find(".button").on('click', function(){
+     $(this).toggleClass('menu-opened');
+     var mainmenu = $(this).next('ul');
+     if (mainmenu.hasClass('open')) { 
+       mainmenu.slideToggle().removeClass('open');
+     }
+     else {
+       mainmenu.slideToggle().addClass('open');
+       if (settings.format === "dropdown") {
+         mainmenu.find('ul').show();
+       }
+     }
+   });
+   cssmenu.find('li ul').parent().addClass('has-sub');
+multiTg = function() {
+     cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
+     cssmenu.find('.submenu-button').on('click', function() {
+       $(this).toggleClass('submenu-opened');
+       if ($(this).siblings('ul').hasClass('open')) {
+         $(this).siblings('ul').removeClass('open').slideToggle();
+       }
+       else {
+         $(this).siblings('ul').addClass('open').slideToggle();
+       }
+     });
+   };
+   if (settings.format === 'multitoggle') multiTg();
+   else cssmenu.addClass('dropdown');
+   if (settings.sticky === true) cssmenu.css('position', 'fixed');
+resizeFix = function() {
+  var mediasize = 1000;
+     if ($( window ).width() > mediasize) {
+       cssmenu.find('ul').show();
+     }
+     if ($(window).width() <= mediasize) {
+       cssmenu.find('ul').hide().removeClass('open');
+     }
+   };
+   resizeFix();
+   return $(window).on('resize', resizeFix);
+ });
+  };
+})(jQuery);
+
+(function($){
+$(document).ready(function(){
+$("#cssmenu").menumaker({
+   format: "multitoggle"
+});
+});
+})(jQuery);
+$( "li.item-161" ).find( "span" ).css('display', 'none');
+$( "li.item-162" ).find( "span" ).css('display', 'none');
+</script>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+	
+</body>
+	
+	
+	
+</html>
+
+
+
+		
+

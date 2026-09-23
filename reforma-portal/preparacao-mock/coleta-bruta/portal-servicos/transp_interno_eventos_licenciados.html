@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>:: SEDUR - Secretaria Municipal de Desenvolvimento Urbano ::</title>
+<link href="../css/estilo.css" rel="stylesheet" type="text/css" />
+<style>
+a:link {
+	font:11px "Trebuchet MS";
+	color:#1F1A17;
+	text-decoration: none;	
+}
+
+a:hover {
+	font:11px "Trebuchet MS";
+	color:#1F1A17;
+	text-decoration: underline;
+}
+
+a:visited {
+	font:11px "Trebuchet MS";
+	color:#1F1A17;
+	text-decoration: none;	
+}
+
+a:active {
+	font:11px "Trebuchet MS";
+	color:#1F1A17;
+	text-decoration: none;	
+}
+
+.fonte-h0{
+	font:11px "Trebuchet MS"; 
+	color:#1F1A17;
+	text-decoration: none;	
+	
+}	
+</style>
+<script language="javascript">
+function testaForm(n,o)
+{
+    if (n == 'Consultar')
+    {
+		  if (document.flocal.mes.value =="")
+		  {
+			  alert("O Mês é um campo obrigatório!");
+			  document.flocal.mes.focus();
+			  return false;
+		  }
+		  if (document.flocal.ano.value =="")
+		  {
+			  alert("O Ano é um campo obrigatório!");
+			  document.flocal.ano.focus();
+			  return false;
+		  }
+    }
+    document.flocal.acao.value = n;
+    document.flocal.submit();
+    return true;
+}
+</script>
+</head>
+<body>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td valign="top">
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" >
+    <tr>
+      <td width="550" valign="top">
+        <form method="post" name="flocal" action="consulta-eventos-licenciados.php" onSubmit="return testaForm();">
+           <input type="hidden" name="acao" size="1" value="">
+        <br>
+          <TABLE WIDTH="550" BORDER=0 CELLPADDING=0 CELLSPACING=1 ALIGN="CENTER">
+            <TR> 
+              <TD width="35" height="31"><font face="arial,tahoma" size="2">M&ecirc;s:</font></TD>
+              <TD width="133" height="31">
+				 
+                <select name= "mes" class="caixabusca" id="mes">
+                <option value="">Selecione</option>
+                	
+                <option value="01"> Janeiro</option>
+                	
+                <option value="02"> Fevereiro</option>
+                	
+                <option value="03"> Março</option>
+                	
+                <option value="04"> Abril</option>
+                	
+                <option value="05"> Maio</option>
+                	
+                <option value="06"> Junho</option>
+                	
+                <option value="07"> Julho</option>
+                	
+                <option value="08"> Agosto</option>
+                	
+                <option value="09"> Setembro</option>
+                	
+                <option value="10"> Outubro</option>
+                	
+                <option value="11"> Novembro</option>
+                	
+                <option value="12"> Dezembro</option>
+                                </select>
+              </TD>
+              <TD width="36"><font face="arial,tahoma" size="2">Ano:</font></TD>
+              <TD width="341"><input type="text" name="ano" id="ano" maxlength="4" size="4" value="" /></TD>
+            </TR>
+            <TR>
+              <TD height="31">&nbsp;</TD>
+              <TD height="31" colspan="3"><input type="button" value="Consultar" name="Consultar" onclick="return testaForm('Consultar');" /></TD>
+              </TR>
+          </TABLE>
+          <br>
+                
+            </form>           
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,5 @@
+# Melhorias
+
+- Passo importante escondido. A aba “Local e horário” é a única que diz o que fazer depois de pagar: “Após o pagamento do DAM de abertura de processo, faça seu agendamento para dar continuidade a sua solicitação de forma presencial no site: https://agendamento.sedur.salvador.ba.gov.br/sas/”. Esse passo (agendar o atendimento presencial) devia estar em destaque na ficha, com um botão para o Agendamento; o endereço aparece só como texto, sem link clicável, e a frase tem erro (“dar continuidade a sua solicitação” → “à sua solicitação”; “de forma presencial no site” confunde: o agendamento é no site, o atendimento é presencial).
+- Poluição visual. A aba “Informações” mostra só “N/A”. Quando alguma aba não há conteúdo para mostrar, o melhor a se fazer é retirar a mesma.
+- Erros de português no texto padrão da procuração (aba “Documentação Exigida”): “considerara” (sem acento; o certo é “considerará”), “1(um)” (o certo é “1 (um)”) e “Sedur” (no resto do portal é “SEDUR”). A frase também começa mal (“As procurações sem prazo de vigência, a Sedur…”). Corrigir uma vez no texto padrão e vale para todas as fichas.

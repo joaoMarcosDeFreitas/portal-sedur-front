@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>:: SEDUR - Secretaria Municipal de Desenvolvimento Urbano ::</title>
+<link href="css/estilo.css" rel="stylesheet" type="text/css" />
+</head>
+<script src="../js/jquery/jquery.js"></script>
+<script language="javascript">
+
+function solData(){
+
+ if( $("#meta").val() != 93 ){
+ 	$("#datas").show();
+ 	$("#tipoInd").show();
+ }else{
+ 	$("#datas").hide();
+ 	$("#tipoInd").hide();
+ }
+ 
+}
+
+function testaForm(n,o){
+
+	if ((document.flocal.mes.value =="") || (document.flocal.ano.value ==""))  
+	{
+		  
+		  alert("Informe o mês e ano para a consulta!");
+		  document.flocal.mes.focus();
+		  return false;
+	}else{
+	    document.flocal.submit();
+    	return true;
+	}	
+}
+
+</script>
+
+<body>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr> 
+    <td valign="top">
+    <P>
+    <form method="post" name="flocal" id="flocal" action="RelatorioAlvaras.php" onSubmit="return testaForm();">
+    <table width="520" cellspacing="0" cellpadding="0" align="center" class="borda">
+       <tr> 
+          <td width="520"> 
+<!--             <table width="520" align="right" class="borda" border="0">
+                <tr>
+                  <td>
+-->                  
+                    <table width="520" align="right" class="borda" border="0">
+                       <tr id="datas">
+                            <td align="center" width="51">
+                               <font class="fonte-h3">M&ecirc;s:</font>
+                            </td>
+                            <td width="145">
+							                            <select name= "mes" class="caixabusca" id="mes">
+                                <option value="">Selecione</option>
+                                													<option value="01"> Janeiro</option>
+																										<option value="02"> Fevereiro</option>
+																										<option value="03"> Mar&ccedil;o</option>
+																										<option value="04"> Abril</option>
+																										<option value="05"> Maio</option>
+																										<option value="06"> Junho</option>
+																										<option value="07"> Julho</option>
+																										<option value="08"> Agosto</option>
+																										<option value="09"> Setembro</option>
+																										<option value="10"> Outubro</option>
+																										<option value="11"> Novembro</option>
+																										<option value="12"> Dezembro</option>
+													                            </select>
+                            </td>
+                            <td width="35"><font class="fonte-h3">Ano:</font></td>
+                            <td width="271"><input type="text" name="ano" id="ano" maxlength="4" size="4" value="" /></td>
+                       </tr>
+                       <tr>
+                         <td align="center">&nbsp;</td>
+                         <td colspan="3"><input type="button" class="botao" value="Consultar" name="consultar" onclick="return testaForm('Consultar');" />
+                         <input type="button" class="botao" value="Limpar" name="limpar" onclick="return testaForm('Limpar');" /></td>
+                       </tr> 
+                    </table>               
+<!--                   </td> 
+                </tr>
+             </table> -->
+          </td>
+       </tr>
+     </table>
+     </form>
+	</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,588 @@
+{
+ "fonte": "https://sedur.salvador.ba.gov.br/licitacoes",
+ "coletado_em": "2026-09-21",
+ "observacao": "Tabela sem cabeçalho no portal. Colunas na ordem: data, título, descrição, arquivo. Uma única página, sem paginação. A ordem é a do portal (não é rigorosamente cronológica).",
+ "total": 57,
+ "itens": [
+  {
+   "arquivo_bytes": 835697,
+   "data": "2025-04-10",
+   "descricao": "CONTRATAÇÃO DE EMPRESA ESPECIALIZADA EM SERVIÇO DE DEMOLIÇÃO, REMOÇÃO E TRANSPORTE DE MATERIAL E DE ENGENHOS PUBLICITÁRIOS, EXISTENTES NO LOCAL DA DEMOLIÇÃO, DE DEMANDAS RESULTANTES DOS PROCESSOS ADMINISTRATIVOS ADVINDOS DA APLICAÇÃO DE AUTOS DE INFRAÇÃO, VERIFICADAS PELOS SETORES COMPETENTES DA ADMINISTRAÇÃO MUNICIPAL. CONFORME DISPOSTO PROJETO BÁSICO E ANEXOS OS QUAIS INTEGRAM O PRESENTE EDITAL, ANEXO II DESTE EDITAL, LOTE ÚNICO.",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL_comp.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "EDITAL CONCORRÊNCIA 01/2025",
+   "data_original": "10/04/2025"
+  },
+  {
+   "arquivo_bytes": 532934,
+   "data": "2024-02-19",
+   "descricao": "CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA PARA A PRESTAÇÃO DE SERVIÇOS EM SOLUÇÃO DE MONITORAMENTO DE CAMINHÕES E CAÇAMBAS ESTACIONÁRIAS DAS EMPRESAS GERADORAS, TRANSPORTADORAS E TRATADORAS DE RESÍDUOS SÓLIDOS DA CONSTRUÇÃO CIVIL (RSCC), PARA APOIAR ESTA SEDUR NO GERENCIAMENTO E SUPERVISÃO DAS ATIVIDADES LOGÍSTICAS DO TRANSPORTE DE RESÍDUOS DA CONSTRUÇÃO CIVIL NA CIDADE DE SALVADOR/BA, INCLUINDO, O APOIO TECNOLÓGICO COM A DISPONIBILIZAÇÃO DE SOFTWARE (SAAS) E A INSTALAÇÃO , A OPERAÇÃO E MANUTENÇÃO DE TAG’S E EQUIPAMENTOS NOS VEÍCULOS, VISANDO O APRIMORAMENTO DA FISCALIZAÇÃO REALIZADA POR ESTE ÓRGÃO. C ONFORME CONDIÇÕES, QUANTIDADES E EXIGÊNCIAS ESTABELECIDAS NO TERMO DE REFERÊNCIA , ( ANEXO I ).",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL_PE01_2024.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [
+    "data_fora_do_padrao"
+   ],
+   "titulo": "EDITAL PE Nº 01/2024",
+   "data_original": "19/02/24"
+  },
+  {
+   "arquivo_bytes": 1009743,
+   "data": "2023-10-11",
+   "descricao": "C ontratação de empresa especializada para elaboração de projeto e execução de obra de conservação, recuperação ou restauração de fachada do imóvel, numa ordem de 30.000,00 m² (trinta mil metros quadrados) , conforme verificado após levantamento das fachadas deterioradas com necessi dade de intervenção para serem recuperadas, nos diversos logradouros do M unicípio de S alvador - BA , em lote único.",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL_-_CONCORRNCIA_N_02_-2023_-_FACHADA.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "EDITAL DE CONCORRÊNCIA nº 02/2023",
+   "data_original": "11/10/2023"
+  },
+  {
+   "arquivo_bytes": 69051,
+   "data": "2023-10-09",
+   "descricao": "Anexo VII do Edital 01/2023 – Mapa de Georreferenciamento com a indicação dos locais de instalação dos totens.",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/Mapa_georreferenciamento.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "Mapa de Georreferenciamento",
+   "data_original": "09/10/2023"
+  },
+  {
+   "arquivo_bytes": 331799,
+   "data": "2023-10-09",
+   "descricao": "Edital do Credenciamento SEDUR Nº 01/2023 “Instalação e Manutenção de Totem de Utilidade Pública”",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/Edital_Credenciamento_01_2023.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "Edital Credenciamento 01/2023",
+   "data_original": "09/10/2023"
+  },
+  {
+   "arquivo_bytes": 315276,
+   "data": "2023-10-05",
+   "descricao": "CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA A PRESTAÇÃO DE SERVIÇOS DE MANUTENÇÃO CORRETIVA EM CATRACAS ELETRÔNICAS.",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/DISPENSA_19.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "DISPENSA 19",
+   "data_original": "05/10/2023"
+  },
+  {
+   "arquivo_bytes": 219583,
+   "data": "2023-07-31",
+   "descricao": "OBJETO: CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA PARA AQUISIÇÃO DE MATERIAL DE ESCRITÓRIO – ETIQUETA PARA PROCESSO , EM CONFORMIDADE COM AS CARACTERÍSTICAS E DEMAIS INFORMAÇÕES DESCRITAS NO TERMO DE R EFERÊNCIA, ANEXO I DO EDITAL.",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL_DA_DISPENSA_16-2023-ETIQUETAS.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "AVISO DE DISPENSA DE LICITAÇÃO 16/2023",
+   "data_original": "31/07/2023"
+  },
+  {
+   "arquivo_bytes": 1055284,
+   "data": "2023-07-18",
+   "descricao": "PUBLICAÇÃO JORNAL O ESTADO DE SÃO PAULO",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/retificacao_concorrncia_n_001-2023_Estadao_18-07.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "RETIFICAÇÃO DA CONCORRENCIA 001/2023",
+   "data_original": "18/07/2023"
+  },
+  {
+   "arquivo_bytes": 3418225,
+   "data": "2023-07-18",
+   "descricao": "PUBLICAÇÃO JORNAL CORREIOS",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/retificacao_concorrncia_n_001-2023_Correio_18-07.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "RETIFICAÇÃO DA CONCORRENCIA 001/2023",
+   "data_original": "18/07/2023"
+  },
+  {
+   "arquivo_bytes": 899522,
+   "data": "2023-07-10",
+   "descricao": "PUBLICAÇÃO JORNAL O ESTADO DE SÃO PAULO",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/PRINT_SEDUR_-Concorrncia_n_01-2023_Estado_10-07.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "AVISO DE CONVOCAÇÃO DA CONCORRENCIA 001/2023",
+   "data_original": "10/07/2023"
+  },
+  {
+   "arquivo_bytes": 110998,
+   "data": "2023-07-10",
+   "descricao": "PUBLICAÇÃO JORNAL CORREIOS",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/aviso_publicao__DOM.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "AVISO DE CONVOCAÇÃO DA CONCORRENCIA 001/2023",
+   "data_original": "10/07/2023"
+  },
+  {
+   "arquivo_bytes": 149510,
+   "data": "2023-07-15",
+   "descricao": "DIÁRIO OFICIAL DO MUNICÍPIO DE SALVADOR",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/Aviso_publicao_DOM-__02-RETIFICA.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "SEGUNDA RETIFICAÇÃO DA CONCORRENCIA 001/2023",
+   "data_original": "15/07/2023"
+  },
+  {
+   "arquivo_bytes": 77959,
+   "data": "2023-07-08",
+   "descricao": "DIÁRIO OFICIAL DO MUNICÍPIO DE SALVADOR",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/Aviso_Publicao-_DOM-_01-RETIFICAO.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "RETIFICAÇÃO DA CONCORRENCIA 001/2023",
+   "data_original": "08/07/2023"
+  },
+  {
+   "arquivo_bytes": 110998,
+   "data": "2023-07-07",
+   "descricao": "DIÁRIO OFICIAL DO MUNICÍPIO DE SALVADOR",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/aviso_publicao__DOM.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [
+    "data_fora_do_padrao"
+   ],
+   "titulo": "AVISO DE CONVOCAÇÃO DA CONCORRENCIA 001/2023",
+   "data_original": "07/072023"
+  },
+  {
+   "arquivo_bytes": 932517,
+   "data": "2023-08-28",
+   "descricao": "A presente licitação tem por finalidade a seleção da melhor proposta que possibilite a contratação de Empresa especializada, ou consórcio de Empresas especializadas, para a Concessão, com outorga onerosa, de serviço Público, pelo prazo de 20 (vinte) anos , com o uso de bem público, compreendendo projeto, confecção, fornecimento, instalação e manutenção de itens de Mobiliário Urbano do Município d e Salvador/BA, com exploração publicitária, estes constantes de L OTE ÚNICO , conforme abaixo dispostos, dentro das condições e especificações estabelecidas neste Projeto Básico no Edital e seus Anexos .",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL-Mob_Urbano-Concorrencia_012023.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "EDITAL DE CONCORRENCIA 001/2023",
+   "data_original": "28/08/2023"
+  },
+  {
+   "arquivo_bytes": 9291512,
+   "data": "2023-07-03",
+   "descricao": "OBJETO CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA PARA aquisição de formulários específicos sendo: 50 blocos de Notificação CFA 150 blocos de Notificação CFS 100 blocos de Embargo CFS 50 blocos de Interdição CFS 30 blocos de Auto de Infração Publicidade 150 blocos Auto de Infração Veículo 50 blocos de Auto de Infração CFA 50 blocos de Termo de Apreensão de Bens - TAB 50 blocos de Termo Complementar de Auto de Infração. EM CONFORMIDADE COM AS CARACTERÍSTICAS E DEMAIS INFORMAÇÕES DESCRITAS NO TERMO DE R EFERÊNCIA, ANEXO I DO EDITAL.",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL_N_15_DEFINITIVO.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "AVISO DE DISPENSA DE LICITAÇÃO 15/2023",
+   "data_original": "03/07/2023"
+  },
+  {
+   "arquivo_bytes": 181042,
+   "data": "2023-06-02",
+   "descricao": "CONTRATAÇÃO DE EMPRESA ESPECIALIZADA PARA PRESTAÇÃO DE SERVIÇOS DE BOLETINS DE LICITAÇÃO E CONTRATOS PELO PERÍODO DE 12 (DOZE) MESES, EM CONFORMIDADE COM AS CARACTERÍSTICAS E DEMAIS INFORMAÇÕES DESCRITAS NO TERMO DE R EFERÊNCIA, ANEXO I DO EDITAL.",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL_DEFINITIVO.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "AVISO DE DISPENSA DE LICITAÇÃO 14/2023",
+   "data_original": "02/06/2023"
+  },
+  {
+   "arquivo_bytes": 369446,
+   "data": "2023-04-13",
+   "descricao": "CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA PARA CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA PARA FORNECIMENTO E INSTALAÇÃO DE PORTA DE VIDRO E MOLAS DE PISO PARA PORTA DE VIDRO , EM CONFORMIDADE COM AS CARACTERÍSTICAS E DEMAIS INFORMAÇÕES DESCRITAS NO TERMO DE R EFERÊNCIA, ANEXO I DO EDITAL.",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/04-EDITAL_DEFINITIVO_-_DISPENSA_12_-_Porta_de_vidro_e_molas_-_2023.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "AVISO DE DISPENSA DE LICITAÇÃO 12/2023",
+   "data_original": "13/04/2023"
+  },
+  {
+   "arquivo_bytes": 371147,
+   "data": "2023-03-31",
+   "descricao": "CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA PARA AQUISIÇÃO DE MATERIAL DE MANUTENÇÃO PARA AR CONDICIONADA, EM CONFORMIDADE COM AS CARACTERÍSTICAS E DEMAIS INFORMAÇÕES DESCRITAS NO TERMO DE REFERÊNCIA, ANEXO I DO EDITAL.",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL_DEFINITIVO_DISPENSA_N11.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "AVISO DE DISPENSA DE LICITAÇÃO 11/2023",
+   "data_original": "31/03/2023"
+  },
+  {
+   "arquivo_bytes": 553079,
+   "data": "2023-03-28",
+   "descricao": "AQUISIÇÃO DE MATERIAL ELÉTRICO , EM CONFORMIDADE COM AS CARACTERÍSTICAS E DEMAIS INFORMAÇÕES DESCRITAS NO TERMO DE R EFERÊNCIA",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/002-EDITAL_DEFINITIVO.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "AVISO DE DISPENSA DE LICITAÇÃO 10/2023",
+   "data_original": "28/03/2023"
+  },
+  {
+   "arquivo_bytes": 249178,
+   "data": "2023-02-28",
+   "descricao": "CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA EM PRESTAÇÃO DE SERVIÇOS DE SEGURO, PARA COBERTURA DE SEGURO PARA 02 DRONES MAVIC AIR 2 FLY COM COBERTURA PARA DANOS PESSOAIS E/OU DANOS MATERIAIS, CAUSADOS A TERCEIROS",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/08_-_EDITAL__seguro_para_drones_-_2023.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "AVISO DE DISPENSA DE LICITAÇÃO 08/2023",
+   "data_original": "28/02/2023"
+  },
+  {
+   "arquivo_bytes": 268686,
+   "data": "2023-02-28",
+   "descricao": "AQUISIÇÃO E SERVIÇOS DE INSTALAÇÃO, INFRAESTRUTURA DE SISTEMA DE CÂMERAS DE MONITORAMENTO DO TIPO VHD 1120 B G6 . COM GARANTIA E SUPORTE TÉCNICO DE 12 (DOZE) MESES",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL_-__camaras_de_monitoramento.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "AVISO DE DISPENSA DE LICITAÇÃO 07/2023",
+   "data_original": "28/02/2023"
+  },
+  {
+   "arquivo_bytes": 118138,
+   "data": "2023-02-09",
+   "descricao": "AVISO DE CANCELAMENTO DE AVISO DE DISPENSA DE LICITAÇÃO 02/2023",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/DOM-CANCDISP02-23.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "AVISO DISPENSA DE LICITAÇÃO 02/2023",
+   "data_original": "09/02/2023"
+  },
+  {
+   "arquivo_bytes": 176347,
+   "data": "2023-02-06",
+   "descricao": "AQUISIÇÃO DE FERRAMENTAS DE OBRA/CONSTRUÇÃO, QUE SERÃO UTILIZADOS PELOS AGENTES DE DEMOLIÇÃO E APREENSÃO DURANTE O CARNAVAL E NAS AÇÕES DIÁRIAS DO SETOR DE APREENSÃO E DEMOLIÇÃO – SEDEB",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL_-_Aquisio__de_ferramenta_2_-_2023_-_Chamamento_pblico_-_06.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "EDITAL DE DISPENSA DE LICITAÇÃO 06/2023",
+   "data_original": "06/02/2023"
+  },
+  {
+   "arquivo_bytes": 145746,
+   "data": "2023-02-06",
+   "descricao": "AQUISIÇÃO DE ADESIVOS DE IDENTIFICAÇÃO DOS ESTABELECIMENTOS LICENCIADOS PARA EXPLORAREM A ATIVIDADE ECONÔMICA POLIGONAL DO CARNAVAL DE SALVADOR, NA OPERAÇÃO CARNAVAL DE 2023/SEDUR",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL_DISPENSA_05_-_Adesivos_-_2023.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "EDITAL DISPENSA DE LICITAÇÃO 05/2023",
+   "data_original": "06/02/2023"
+  },
+  {
+   "arquivo_bytes": 153654,
+   "data": "2023-02-03",
+   "descricao": "CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA PARA AQUISIÇÃO DE PROTETORES AURICULAR DESCARTÁVEL , QUE SERÃO UTILIZADOS EM FESTAS POPULARES, OPERAÇÃO CARNAVAL DE 2023",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL_DISPENSA_04_-Protetor_auricular_-_2023.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "EDITAL DISPENSA DE LICITAÇÃO 04/2023",
+   "data_original": "03/02/2023"
+  },
+  {
+   "arquivo_bytes": 153052,
+   "data": "2023-02-03",
+   "descricao": "AQUISIÇÃO DE PLACAS EM CHAPA DE ZINCO , NOS TAMANHOS 1,5 M DE ALTURA POR 01 (UM) METRO DE LARGURA, COM PLOTAGEM DE ADESIVO EM VINIL MULTICOLOR, IMPRESSO A 1440 DPIA’S",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL_DISPENSA_03_-_Palacas_de_zinco_-_2023.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "EDITAL DISPENSA DE LICITAÇÃO 03/2023",
+   "data_original": "03/02/2023"
+  },
+  {
+   "arquivo_bytes": 158730,
+   "data": "2023-01-20",
+   "descricao": "AQUISIÇÃO DE FERRAMENTAS EM CONFOMIDADE COM AS CARACTERÍSTICAS E DEMAIS INFORMAÇÕES DESCRITAS NO TERMO DE REFERÊNCIA, ANEXO I DO EDITAL",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL_DISPENSA_01_2023_SEDUR_.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "EDITAL DISPENSA DE LICITAÇÃO 01/2023",
+   "data_original": "20/01/2023"
+  },
+  {
+   "arquivo_bytes": null,
+   "data": "2022-12-16",
+   "descricao": "AQUISIÇÃO DE COLETE DE PROTEÇÃO BALÍSTICA, CONFECCIONADO EM MATERIAL LEVE E FLEXÍVEL DE ARAMIDA MULTI AXIAL E UMA ESPUMA DE POLIETILENO, NÍVEL III-A, COM 10 CAMADAS DE ARAMIDA XP, TAMANHOS DIVERSOS",
+   "arquivo": null,
+   "arquivo_status_http": null,
+   "problemas": [
+    "sem_link"
+   ],
+   "titulo": "EDITAL DE DISPENSA DE LICITAÇÃO Nº13/2022",
+   "data_original": "16/12/2022"
+  },
+  {
+   "arquivo_bytes": 257188,
+   "data": "2022-12-16",
+   "descricao": "AQUISIÇÃO DE 02 (DOIS) NOTEBOOKS, COM GARANTIA E SUPORTE TÉCNICO DE 12 (DOZE) MESES",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL_DISPENSA_12_SEDUR-16-12-2022.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "EDITAL DE DISPENSA DE LICITAÇÃO Nº 12/2022",
+   "data_original": "16/12/2022"
+  },
+  {
+   "arquivo_bytes": 233199,
+   "data": "2022-12-16",
+   "descricao": "AQUISIÇÃO DE 03 (TRÊS) APARELHOS DE MEDIDOR DE NÍVEL SONORO CLASSE 1, DE ACORDO COM A NORMA IEC 61672",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL_DISPENSA__11-2022_SEDUR-16-12-2022.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "EDITAL DE DISPENSA DE LICITAÇÃO Nº 11/2022",
+   "data_original": "16/12/2022"
+  },
+  {
+   "arquivo_bytes": 158306,
+   "data": "2022-12-14",
+   "descricao": "CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA PARA AQUISIÇÃO DE FERRAMENTAS",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITA_DISPENSA_10-2022_SEDUR-14-12-2022.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "EDITAL DE DISPENSA DE LICITAÇÃO Nº 10/2022",
+   "data_original": "14/12/2022"
+  },
+  {
+   "arquivo_bytes": 258065,
+   "data": "2022-12-14",
+   "descricao": "CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA PARA AQUISIÇÃO DE 14 (QUATORZE) APARELHOS DE AR CONDICIONADO",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL__DISPENSA_08_2022_SEDUR-14-12-2022.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "EDITAL DE DISPENSA DE LICITAÇÃO Nº 08/2022",
+   "data_original": "14/12/2022"
+  },
+  {
+   "arquivo_bytes": 257950,
+   "data": "2022-12-13",
+   "descricao": "CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA PARA AQUISIÇÃO DE 06 (SEIS) LICENÇAS DO SOFTWARE DO TIPO MOVE CAD",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL_DISPENSA__09_2022-13-12-2022.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "EDITAL DE DISPENSA DE LICITAÇÃO Nº 09/2022",
+   "data_original": "13/12/2022"
+  },
+  {
+   "arquivo_bytes": 239016,
+   "data": "2022-12-13",
+   "descricao": "CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA PARA AQUISIÇÃO DE 32 (TRINTA E DUAS) MEMÓRIAS HP DL385P G8 16GB OF DUAL RANK PC3L-10600R DDR3 SDRAM DIMM",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/-_EDITAL_DISPENSA__06_2022-13-12-2022.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "EDITAL DE DISPENSA DE LICITAÇÃO Nº 06/2022",
+   "data_original": "13/12/2022"
+  },
+  {
+   "arquivo_bytes": 257212,
+   "data": "2022-11-25",
+   "descricao": "EDITAL DE DISPENSA DE LICITAÇÃO Nº 007/2022",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL_DE_DISPENSA__07_2022_SEDUR.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "EDITAL DE DISPENSA 07",
+   "data_original": "25/11/2022"
+  },
+  {
+   "arquivo_bytes": 239794,
+   "data": "2022-11-25",
+   "descricao": "EDITAL DE DISPENSA DE LICITAÇÃO Nº 06/2022",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL_DE_DISPENSA__06_2022_SEDUR.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "EDITAL DE DISPENSA 06",
+   "data_original": "25/11/2022"
+  },
+  {
+   "arquivo_bytes": 572173,
+   "data": "2022-11-04",
+   "descricao": "Contratação de Pessoa Jurídica especializada para Prestação de Serviço de fornecimento, mediante LOCAÇÃO DE PRATICÁVEIS, MOBILIÁRIOS E EQUIPAMENTOS, INCLUINDO MONTAGEM E DESMONTAGEM, PARA SEREM UTILIZADOS COMO BASES OPERACIONAIS DA SEDUR, DURANTE O CARNAVAL DE SALVADOR/Ba",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL_PE_002_2022_11_04.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "EDITAL DE PREGÃO ELETRÔNICO – SEDUR Nº 02/2022",
+   "data_original": "04/11/2022"
+  },
+  {
+   "arquivo_bytes": 572173,
+   "data": "2022-11-01",
+   "descricao": "LICITAÇÃO Nº 04/2022",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL_PE_002_2022_01_11.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "EDITAL DE PREGÃO ELETRÔNICO – SEDUR Nº 02/2022",
+   "data_original": "01/11/2022"
+  },
+  {
+   "arquivo_bytes": 758788,
+   "data": "2022-09-26",
+   "descricao": "Contratação de Pessoa Jurídica Especializada",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/Aquis_e_inst_de_porta_de_vidro.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "EDITAL DE DISPENSA DE LICITAÇÃO N° 05/2022",
+   "data_original": "26/09/2022"
+  },
+  {
+   "arquivo_bytes": 4514329,
+   "data": "2022-05-06",
+   "descricao": "Atualização dos Estudos Mobiliários Urbanos",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/1-Atualizacao_dos_Estudos_de_Viabilidade_Mobiliario_Urbano.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "ATUALIZAÇÃO DOS ESTUDOS DE VIABILIDADE ECONÔMICA - MOBILIÁRIOS URBANOS",
+   "data_original": "06/05/2022"
+  },
+  {
+   "arquivo_bytes": 4271120,
+   "data": "2022-05-04",
+   "descricao": "Estudo de Viabilidade Econômica - Anexo 4",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/4Estudo_Viabilidade_Mobiliario_Urbano_Anexo4.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "ANEXO 4 - ESTUDO MOBILIÁRIO URBANO",
+   "data_original": "04/05/2022"
+  },
+  {
+   "arquivo_bytes": 4623331,
+   "data": "2022-05-04",
+   "descricao": "Estudo de Viabilidade Econômica - Anexo 3",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/4Estudo_Viabilidade_Mobiliario_Urbano_Anexo3.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "ANEXO 3 - ESTUDO MOBILIÁRIO URBANO",
+   "data_original": "04/05/2022"
+  },
+  {
+   "arquivo_bytes": 4070079,
+   "data": "2022-05-04",
+   "descricao": "Estudo de Viabilidade Econômica - Anexo 2",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/4Estudo_Viabilidade_Mobiliario_Urbano_Anexo2.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "ANEXO 2 - ESTUDO MOBILIÁRIO URBANO",
+   "data_original": "04/05/2022"
+  },
+  {
+   "arquivo_bytes": 4849394,
+   "data": "2022-05-04",
+   "descricao": "Estudo de Viabilidade Econômica - Anexo 1",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/4Estudo_Viabilidade_Mobiliario__Urbano_Anexo1.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "ANEXO 1 - ESTUDO MOBILIÁRIO URBANO",
+   "data_original": "04/05/2022"
+  },
+  {
+   "arquivo_bytes": 3669241,
+   "data": "2022-05-04",
+   "descricao": "Análise de Mercado Publicitário Mobiliário Urbano",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/3Analise_Mercado_Publicitario.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "ANÁLISE DE MERCADO PUBLICITÁRIO MOBILIÁRIO URBANO",
+   "data_original": "04/05/2022"
+  },
+  {
+   "arquivo_bytes": 3843566,
+   "data": "2022-05-04",
+   "descricao": "Caracterização Mobiliário Urbano.",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/2Caracterizacao_Mobiliarios_Urbanos.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "CARACTERIZAÇÃO MOBILIÁRIO URBANO",
+   "data_original": "04/05/2022"
+  },
+  {
+   "arquivo_bytes": 695964,
+   "data": "2022-05-02",
+   "descricao": "C ontratação de empresa especializada ou consórcio de empresas especializadas para a concessão com outorga onerosa de serviço público, pelo prazo de 20 (vinte) anos, com o uso de bem público, compreendendo projeto, confecção, fornecimento, instalação e manutenção de itens de mobiliário urbano, englobando os equipamentos já instalados, que serão recepcionados pela concessionaria, do Município de Salvador/BA, para exploração publicitária, estes constantes dos 04 (quatro) lotes, dispostos no item 04 (quatro) do Projeto Básico, conforme condições e especificações estabelecidas n o Edital e seus Anexos.",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL_CONCORRENCIA_N02_2022.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "EDITAL DE CONCORRENCIA Nº02/2022",
+   "data_original": "02/05/2022"
+  },
+  {
+   "arquivo_bytes": 156393,
+   "data": "2022-04-19",
+   "descricao": "CONTRATAÇÃO DE PESSOA JURÍDICA ESPECIALIZADA PARA AQUISIÇÃO E INSTALAÇÃO DE 20,50m2 DE PELÍCULA JATEADA LEITOSA BRANCA, PARA DIVISÓRIAS DE VIDROS DA SEDUR, EM CONFORMIDADE COM AS CARACTERÍSTICAS E DEMAIS INFORMAÇÕES DESCRITAS NO TERMO DE R EFERÊNCIA, ANEXO I DO EDITAL.",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL_DISPENSA_LICITACAO_003_2022_SEDUR.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "EDITAL DE DISPENSA DE LICITAÇÃO Nº 003/2022",
+   "data_original": "19/04/2022"
+  },
+  {
+   "arquivo_bytes": 8048052,
+   "data": "2022-03-09",
+   "descricao": "Contratação de empresa especializada para execução de obra, construção, recuperação e manutenção de passeios e pavimentos rígidos e semi-rígidos nos diversos Logradouros do Município de Salvador - Ba nas áreas correspondentes as respectivas Prefeituras-Bairro I, II, III, IV, V, VI, VII, VIII, IX e X, em LOTE ÚNICO.",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL_CONCORRENCIA_01_2022_SEDUR.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "EDITAL DE CONCORRENCIA Nº01/2022",
+   "data_original": "09/03/2022"
+  },
+  {
+   "arquivo_bytes": null,
+   "data": "2022-02-18",
+   "descricao": "AQUISIÇÃO DE 600 (SEISCENTAS) UNIDADES DE CAFÉ TORRADO MOÍDO A VÁCUO, COM EMBALAGEM À VACUO DE 250G - CAFÉ, TORRADO E MOIDO, EM PÓ, DE PRIMEIRA QUALIDADE E 200 (DUZENTAS) UNIDADES AÇÚCAR CRISTAL - AÇÚCAR CRISTAL OBTIDA DA CANADE- AÇÚCAR POR PROCESSO TECNOLÓGICO ADEQUADO. DEVE APRESENTAR-SE SOB A FORMA DE CRISTAIS COM TAMANHO E COLORAÇÃO UNIFORME. ISENTO DE PARASITOS, MATÉRIA TERROSA, DETRITO ANIMAL OU VEGETAL E QUALQUER SUBSTÂNCIA CONTAMINANTE QUE POSSA ALTERAR OU ENCOBRIR QUALQUER ALTERAÇÃO DE PRODUTO, COM EMBALAGEM DE 01 (UM) KG.",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/pdf/EDITAL_DISPENSA_LICITACAO__001_2022_SEDUR.pdf",
+   "arquivo_status_http": 404,
+   "problemas": [
+    "arquivo_nao_encontrado_404"
+   ],
+   "titulo": "EDITAL DE DISPENSA DE LICITAÇÃO Nº 01/2022",
+   "data_original": "18/02/2022"
+  },
+  {
+   "arquivo_bytes": 656924,
+   "data": "2021-09-20",
+   "descricao": "A SECRETARIA MUNICIPAL DE DESENVOLVIMENTO URBANO – SEDUR informa que será realizada Audiência Pública presencial na data de 18 de outubro de 2021, às 15:00 horas, no auditório do Novotel Salvador Hangar Aeroporto, situado na Av. Luís Viana Filho, 13 223 – São Cristóvão, Salvador – BA, 41500-300, com o objetivo de apresentar e discutir o Estudo de Impacto de Vizinhança-EIV e o Relatório de Impacto de Vizinhança – RIV, elaborados pela empresa MRV Engenharia e Participações S/A, para a instalação do Projeto de Urbanização Integrada Colina Imperial, Rua Professor Plínio Garcez de Sena, bairro de Mussurunga, no município de Salvador. O aviso da audiência pública presencial foi publicado no Diário Oficial do Município nº 8.114 de 18 a 20 de setembro de 2021. As informações relativas ao evento e o link do EIV/RIV encontram-se disponíveis no edital em anexo.",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2021/07/EDITAL_02_2021_Audiencia_Publica_Presencial_MRV.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "EDITAL DE AUDIÊNCIA PÚBLICA PRESENCIAL Nº 02/2021",
+   "data_original": "20/09/2021"
+  },
+  {
+   "arquivo_bytes": null,
+   "data": "2021-07-26",
+   "descricao": "Audiência pública virtual suspensa por determinação judicial. Objeto: Apresentação do estudo de Impacto de Vizinhança e do Relatório de Impacto de Vizinhança. Projeto: Urbanização integrada Colina Imperial Empreendedor: MRV engenharia e participações S/A.",
+   "arquivo": null,
+   "arquivo_status_http": null,
+   "problemas": [
+    "sem_link"
+   ],
+   "titulo": "EDITAL DE AUDIÊNCIA PÚBLICA VIRTUAL Nº 01/2001",
+   "data_original": "26/07/2021"
+  },
+  {
+   "arquivo_bytes": 2395486,
+   "data": "2020-10-27",
+   "descricao": "Oferta Pela Outorga tendo como finalidade a concessão da Atividade de Fomento daEconomia Criativa na Municipalidade de Salvador, mediante implantação dos serviços decoworking, capacitação e eventos, por meio do uso e exploração de bem imóvel, quedeve ser operado, gerido e mantido, inclusive através da promoção e exploração dereceitas acessórias do POLO DE ECONOMIA CRIATIVA De Salvador – Doca1",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2020/10/Edital-da-Concorrência-Pública-nº-02-2020.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "EDITAL DE LICITAÇÃO - 005/2020",
+   "data_original": "27/10/2020"
+  },
+  {
+   "arquivo_bytes": 328607,
+   "data": "2020-01-07",
+   "descricao": "Constitui objeto deste EDITAL DE CHAMAMENTO PÚBLICO a contratação, por DISPENSA DE CHAMAMENTO PUBLICO EMERGENCIAL, com cláusula resolutiva, de pessoa jurídica especializada na prestação contínua de serviço especializado de empresa de engenharia para a demolição de edificações com remoção de material, remoção e transporte de engenhos publicitários",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2020/01/Edital-de-Chamamento-Público-001-2020-SEDUR.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "CHAMAMENTO PÚBLICO Nº 001/2020",
+   "data_original": "07/01/2020"
+  },
+  {
+   "arquivo_bytes": 775845,
+   "data": "2019-12-27",
+   "descricao": "CONSTITUI OBJETO DA LICITAÇÃO A CONTRATAÇÃO DE SERVIÇO ESPECIALIZADO DE EMPRESA DE ENGENHARIA PARA A DEMOLIÇÃO DE EDIFICAÇÕES COM REMOÇÃO DE MATERIAL, REMOÇÃO E TRANSPORTE DE ENGENHOS PUBLICITÁRIOS…",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2019/12/EDITAL-DA-CONCORRÊNCIA-Nº-01-2020.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "Edital Nº 01-2020",
+   "data_original": "27/12/2019"
+  },
+  {
+   "arquivo_bytes": 3209914,
+   "data": "2019-04-05",
+   "descricao": "A SECRETARIA MUNICIPAL DE DESENVOLVIMENTO E URBANISMO -SEDUR, através da Comissão Setorial Permanente deLicitação -COPEL, designada pela Portaria Nº 349/2018-SEDUR, torna público, para conhecimento dos interessados que realizará, licitação na Modalidade Concorrência Pública, tipo Menor Preço Global, sendo este certame para contratação de LOTE ÚNICO, REGIME DE EXECUÇÃO DE EMPREITADA POR PREÇO UNITÁRIO, licitação autorizada no Processo Administrativo Nº 54.530/2018-SEDUR, e de acordo com as condições estabelecidas neste edital, aprovado pelo Parecer da RPGMS/SEDURNº103/2019.",
+   "arquivo": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2019/04/Concorrência-Pública-nº-01-2019-SEDUR.pdf",
+   "arquivo_status_http": 200,
+   "problemas": [],
+   "titulo": "SEDUR - Concorrência Pública Nº 01/2019",
+   "data_original": "05/04/2019"
+  }
+ ]
+}

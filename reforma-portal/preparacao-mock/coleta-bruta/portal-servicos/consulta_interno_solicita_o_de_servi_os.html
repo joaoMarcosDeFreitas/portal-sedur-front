@@ -1,0 +1,156 @@
+<html>
+<head>
+	<title>:: SEDUR - Secretaria Municipal de Desenvolvimento Urbano ::</title>
+	<style type="text/css" media="screen">@import url("lib/style.css");</style>
+
+	<script language="JavaScript" type="text/javascript" src="js/jquery/jquery.js"></script>
+	<script language="JavaScript" type="text/javascript" src="js/jquery/interface.js"></script>
+	<script language="JavaScript" type="text/javascript" src="js/jParams.js"></script>
+	<script language="JavaScript" type="text/javascript" src="js/util.js"></script>
+
+	<script language="JavaScript" type="text/javascript">
+
+		$(document).ready(function(){
+			$("#img_preload").hide();
+			$("#resultPesquisa").hide();
+			$("#OrigemInf").focus();
+		});
+
+
+		function consultarSE(){
+			//parametro = getParams("table");
+			parametro = "Numero_Documento="+document.getElementById("Numero_Documento").value;
+			parametro = parametro + "&OrigemInf="+document.getElementById("OrigemInf").value;
+			parametro = parametro + "&Ano_Documento="+document.getElementById("Ano_Documento").value;
+			
+			parametro = parametro + "&acao=VALIDARSE";
+			
+			//alert(parametro);			
+
+			$.ajax({
+				type: "POST",
+				url: "viabilidade_post.php",
+				data: parametro, //passagem dos parametros
+				dataType: "json",
+
+				beforeSend: function(){$("#img_preload").show("fast");}, // Exibe preload
+				complete: function(){$("#img_preload").hide("slow");},  // Oculta preload
+
+				success: function(json){
+				    
+					//alert("cod:"+json.documentoId);
+					
+					if ( json.documentoId != "" ){
+						$("#paramDocumentoId").val(json.documentoId);
+						document.tela.submit();
+					}
+				},
+				error: function(request, status, error){
+					alert( "SE não encontrada" );
+					limpar();
+				}
+			});
+		}
+
+
+		function limpar(){
+			$("#OrigemInf").val("").focus();
+			$("#Ano_Documento").val("");
+			$("#Numero_Documento").val("");
+			//$("#Digito_DamInf").val("");
+		}
+		
+	</script>
+
+</head>
+<body>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+		<td align="center">
+			<table border="0" cellpadding="0" cellspacing="0" width="100%">
+				<tr>
+					<td height="23"><img id="img_preload" src="images/loading_animation.gif" alt="" width="23" height="23" border="0" /></td>
+				</tr>
+				<tr>
+					<td align="middle" valign="top">
+
+						<table width="100%" border="0" height="600">
+							<TR>
+								<TD align="right" valign="top">
+									<table width="100%" border="0" cellpadding="0" cellspacing="0">
+										<TR>
+											<TD>&nbsp;</TD>
+											<TD align="center" id="principalProc"><!-- Inicio Area de entrada de dados do processo solicitado -->
+
+											<!--<table width="400">
+												<TR>
+													<TD><FONT face="tahoma, verdana, arial" size="2"><B>INSTRUÇÕES PARA PREENCHIMENTO:</B></FONT></TD>
+												</TR>
+											</table>
+
+											<table height="80">
+												<TR>
+													<TD align="left" valign="top" height="20"><FONT face="tahoma, verdana, arial" size="2"><B>Origem:&nbsp;&nbsp;</B></FONT></TD>
+													<TD align="left" valign="top" width="300"><FONT face="tahoma, verdana, arial" size="1">Neste campo informe a localidade onde o D.A.M. foi aberto</FONT></TD>
+												</TR>
+												<TR>
+													<TD align="left" valign="top" height="20"><FONT face="tahoma, verdana, arial" size="2"><B>Ano:&nbsp;&nbsp;</B></FONT></TD>
+													<TD align="left" valign="top" width="300"><FONT face="tahoma, verdana, arial" size="1">Este campo deve ser preenchido com o ano de abertura do D.A.M. utilizando quatro dígitos. Ex: 2010</FONT></TD>
+												</TR>
+												<TR align="left">
+													<TD align="left" valign="top" height="20"><FONT face="tahoma, verdana, arial" size="2"><B>Número:&nbsp;&nbsp;</B></FONT></TD>
+													<TD align="left" valign="top" width="300"><FONT face="tahoma, verdana, arial" size="1">Este campo deve ser preenchido com o número do D.A.M., formado por até no máximo 5 dígitos</FONT></TD>
+												</TR>
+											</table>--> 
+
+											<form action="SEView.php" name="tela" id="tela" method="post" title="consulta">
+												<input type="hidden" name="paramDocumentoId" id="paramDocumentoId" />
+											
+												<table border="0">
+													<TR>
+														<TD align="left"><FONT face="tahoma, verdana, arial" size="2"><B>Origem</B></FONT></TD>
+														<TD>&nbsp;</TD>
+														<TD align="left"><FONT face="tahoma, verdana, arial" size="2"><B>Ano</B></FONT></TD>
+														<TD>&nbsp;</TD>
+														<TD align="left"><FONT face="tahoma, verdana, arial" size="2"><B>Número</B></FONT></TD>
+														<!--<TD>&nbsp;</TD>
+														<TD align="left"><FONT face="tahoma, verdana, arial" size="2"><B>Digito</B></FONT></TD>-->
+													</TR>
+													<TR>
+														<TD valign="top"><input type="text" class="table" name="OrigemInf" id="OrigemInf" class="borda" value="" size="10" maxlength="10" onKeyUp="javascript:somente_numero(this);" onBlur="javascript:ajustarOrigem(this);"  /></TD>
+														<TD valign="top">&nbsp;<FONT size="4"><B>/</B></FONT>&nbsp;</TD>
+														<TD valign="top" align="left"><input type="text" class="table" name="Ano_Documento" id="Ano_Documento" class="borda" align="ABSMIDDLE" style="HEIGHT: 22px; WIDTH: 40px" size="5" maxlength="4" value="" onKeyUp="javascript:somente_numero(this);" /></TD>
+														<TD valign="top">&nbsp;/&nbsp;</TD>
+														<TD valign="top"><input type="text" class="table" name="Numero_Documento" id="Numero_Documento" class="borda" align="ABSMIDDLE" style="HEIGHT: 22px; WIDTH: 50px" size="7" maxlength="5" value="" onKeyUp="javascript:somente_numero(this);" /></TD>
+														<!--<TD valign="top">&nbsp;-&nbsp;</TD>
+														<TD valign="top"><INPUT type="text" class="table" name="Digito_DamInf" maxlength="1" id="Digito_DamInf" class="borda" align="ABSMIDDLE" style="HEIGHT: 22px; WIDTH: 40px" size="5" maxlength="4" onKeyUp="javascript:somente_numero(this);" /></TD>-->
+													</TR>
+												</table>
+
+												<table border="0">
+													<TR>
+														<TD align="right"><input type="button" onClick="javascript:consultarSE();" name="Consultar" value="Consultar" /></TD>
+														<TD width="60%" align="center"><input type="button" value="Limpar" onClick="javascript:limpar();"  /></TD>
+													</TR>
+												</table>
+											</form>
+
+											<!-- Fim da Area de entrada de dados do processo solicitado -->
+											</TD>
+											<TD>&nbsp;</TD>
+										</TR>
+									</table>
+								</TD>
+							</TR>
+						</table>
+
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>

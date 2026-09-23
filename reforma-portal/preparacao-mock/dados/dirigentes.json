@@ -1,0 +1,134 @@
+{
+ "fonte": "sedur.salvador.ba.gov.br/institucional/dirigentes",
+ "coletado_em": "2026-09-21",
+ "observacoes": "A página é texto livre (cargo em negrito, nome na linha de baixo) e uma foto do secretário embutida no próprio HTML. Não há data de atualização. Nomes copiados como estão na página pública.",
+ "foto_secretario": {
+  "tipo": "PNG embutido em base64 no HTML",
+  "dimensao": "614x614 px",
+  "peso_aprox": "911 KB",
+  "alt": null
+ },
+ "dirigentes": [
+  {
+   "cargo": "Secretário Municipal de Desenvolvimento Urbano",
+   "nomes": [
+    "Sosthenes Tavares de Macêdo Almeida"
+   ]
+  },
+  {
+   "cargo": "Subsecretário",
+   "nomes": [
+    "Marcus Vinícius Passos Raimundo"
+   ]
+  },
+  {
+   "cargo": "Diretora de Fiscalização",
+   "nomes": [
+    "Mateus de Oliveira Castro"
+   ]
+  },
+  {
+   "cargo": "Diretor de Licenciamentos",
+   "nomes": [
+    "Misael Aguilar Silva Neto"
+   ]
+  },
+  {
+   "cargo": "Diretora de Desenvolvimento Urbano",
+   "nomes": [
+    "Neilia Maria Fernandes Souza"
+   ]
+  },
+  {
+   "cargo": "Ouvidor Setorial",
+   "nomes": [
+    "Daniele Andrade de Jesus"
+   ]
+  },
+  {
+   "cargo": "Gerente de Cadastro Técnico",
+   "nomes": [
+    "Elba Guimarães Veiga"
+   ]
+  },
+  {
+   "cargo": "Gerente de Planejamento Urbanos",
+   "nomes": [
+    "Laís das Mercês Silva"
+   ]
+  },
+  {
+   "cargo": "Gerente de Gestão de Projetos Urbanos",
+   "nomes": [
+    "Murilo Estácio Miranda Mendes"
+   ]
+  },
+  {
+   "cargo": "Gerente de Licenciamentos Urbanos",
+   "nomes": [
+    "Ana Paula Vicente dos Anjos"
+   ]
+  },
+  {
+   "cargo": "Gerente de Licenciamento Ambiental",
+   "nomes": [
+    "Yuri Novais de Britto Cunha"
+   ]
+  },
+  {
+   "cargo": "Coordenadora de Empreendimentos",
+   "nomes": [
+    "Isaura Maria Carvalho de Andrade"
+   ]
+  },
+  {
+   "cargo": "Coordenadora de Atividade e Publicidade",
+   "nomes": [
+    "Maria Albertina Pacheco de Menezes"
+   ]
+  },
+  {
+   "cargo": "Coordenador de Processos Especiais",
+   "nomes": [
+    "Lygia Maria Burgos Menezes Baqueiro"
+   ]
+  },
+  {
+   "cargo": "Coordenadora de Licenciamento Ambiental",
+   "nomes": [
+    "Robert Silva Gomes"
+   ]
+  },
+  {
+   "cargo": "Coordenador de Fiscalização Urbanística e Segurança",
+   "nomes": [
+    "Everaldo Costa Freitas Junior"
+   ]
+  },
+  {
+   "cargo": "Coordenador de Fiscalização Ambiental",
+   "nomes": [
+    "Antônio Cesar Tobio Rodriguez"
+   ]
+  },
+  {
+   "cargo": "Coordenadora Administrativa",
+   "nomes": [
+    "Lígia Farias Nader"
+   ]
+  },
+  {
+   "cargo": "Coordenador de Tecnologia da Informação",
+   "nomes": [
+    "Anderson Cleber Magalhães Deiró"
+   ]
+  },
+  {
+   "cargo": "Assessoria de Comunicação",
+   "nomes": [
+    "Laís Buri",
+    "Bruno Velame"
+   ]
+  }
+ ]
+}

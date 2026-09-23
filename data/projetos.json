@@ -1,0 +1,243 @@
+{
+ "fonte": "https://sedur.salvador.ba.gov.br/ (bloco \"Nossos Projetos\" da home)",
+ "coletado_em": "2026-09-21",
+ "projetos": [
+  {
+   "slug": "plano-de-incentivos-fiscais",
+   "nome": "Plano de Incentivos Fiscais",
+   "rotulo_na_home": "PLANO DE INCENTIVO FISCAIS",
+   "url": "https://sedur.salvador.ba.gov.br/plano-de-incentivos-fiscais",
+   "titulo_na_pagina": "Plano de Incentivos Fiscais",
+   "texto": "Plano de Incentivos Fiscais\nVoltar\nImprimir\nO Plano de Incentivos Fiscais compõe o eixo Salvador Negócios do Programa Salvador 360, e tem como objetivo estimular a geração de emprego e renda e atrair investimentos privados, através de benefícios fiscais.\nO plano foi instituído pela\nLei nº 9.285 de 27 de outubro de 2017\n, modificada pela\nLei nº9434 de 27 de dezembro de 2018\n, pela\nLei nº 9.519/2020\ne\nLei nº 9.552/2020\ne regulamentado pelo\nDecreto nº 29.547 de 12 de março de 2018\n,\nDecreto nº 30.755 de 16 de janeiro de 2019\ne\nDecreto nº 31.229 de 16 de julho de 2019\n.\nAtravés do Plano de Incentivos Fiscais, é possível obter benefícios como redução de ISS, bem como desconto de 50% no valor a pagar da Outorga Onerosa do Direito de Construir.\nA\nadesão\nao\nPlano de Incentivos Fiscais\npode ser solicitada por pessoa jurídica através do\nlink abaixo do nosso Portal de Serviços SEDUR\n:\nAdesão ao Plano de Incentivos Fiscais",
+   "links": [
+    {
+     "texto": "Lei nº 9.285 de 27 de outubro de 2017",
+     "url": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2017/11/Lei_9285_2017.pdf",
+     "url_original": "/images/arquivos_processos/2017/11/Lei_9285_2017.pdf",
+     "arquivo_status_http": 200
+    },
+    {
+     "texto": "Lei nº9434 de 27 de dezembro de 2018",
+     "url": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2019/01/Lei_9434_2018.pdf",
+     "url_original": "/images/arquivos_processos/2019/01/Lei_9434_2018.pdf",
+     "arquivo_status_http": 200
+    },
+    {
+     "texto": "Lei nº 9.519/2020",
+     "url": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2020/04/Lei_9519_2020.pdf",
+     "url_original": "/images/arquivos_processos/2020/04/Lei_9519_2020.pdf",
+     "arquivo_status_http": 200
+    },
+    {
+     "texto": "Lei nº 9.552/2020",
+     "url": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2020/10/Lei_9552_2020.pdf",
+     "url_original": "/images/arquivos_processos/2020/10/Lei_9552_2020.pdf",
+     "arquivo_status_http": 200
+    },
+    {
+     "texto": "Decreto nº 29.547 de 12 de março de 2018",
+     "url": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2018/03/Dec_29547_2018.pdf",
+     "url_original": "/images/arquivos_processos/2018/03/Dec_29547_2018.pdf",
+     "arquivo_status_http": 200
+    },
+    {
+     "texto": "Decreto nº 30.755 de 16 de janeiro de 2019",
+     "url": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2019/01/Dec_30755_2019.pdf",
+     "url_original": "/images/arquivos_processos/2019/01/Dec_30755_2019.pdf",
+     "arquivo_status_http": 200
+    },
+    {
+     "texto": "Decreto nº 31.229 de 16 de julho de 2019",
+     "url": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2019/07/dec_31229_2019.pdf",
+     "url_original": "/images/arquivos_processos/2019/07/dec_31229_2019.pdf",
+     "arquivo_status_http": 200
+    },
+    {
+     "texto": "Adesão ao Plano de Incentivos Fiscais",
+     "url": "https://servicos.sedur.salvador.ba.gov.br/#/portal/carta-servicos/servico/6992",
+     "url_original": "https://servicos.sedur.salvador.ba.gov.br/#/portal/carta-servicos/servico/6992",
+     "arquivo_status_http": 200
+    }
+   ],
+   "imagens": []
+  },
+  {
+   "slug": "eu-curto-meu-passeio",
+   "nome": "Eu Curto Meu Passeio",
+   "rotulo_na_home": "EU CURTO MEU PASSEIO",
+   "url": "https://sedur.salvador.ba.gov.br/eu-curto-meu-passeio",
+   "titulo_na_pagina": "Eu Curto Meu Passeio",
+   "texto": "Eu Curto Meu Passeio\nVoltar\nImprimir",
+   "links": [
+    {
+     "texto": "",
+     "url": "http://sedur.salvador.ba.gov.br/arquivos/pdf/meupasseio2021.pdf",
+     "url_original": "http://sedur.salvador.ba.gov.br/arquivos/pdf/meupasseio2021.pdf",
+     "arquivo_status_http": 301
+    }
+   ],
+   "imagens": [
+    {
+     "src": "/images/arquivos_processos/2019/11/banner.png",
+     "alt": "banner"
+    }
+   ]
+  },
+  {
+   "slug": "conselho-municipal-salvador",
+   "nome": "Conselho Municipal Salvador",
+   "rotulo_na_home": "CONSELHO MUNICIPAL SALVADOR",
+   "url": "https://sedur.salvador.ba.gov.br/conselho-municipal-salvador",
+   "titulo_na_pagina": "Conselho Municipal Salvador",
+   "texto": "Conselho Municipal Salvador\nVoltar\nImprimir\nO CONSELHO MUNICIPAL DE SALVADOR, órgão colegiado criado pela Lei nº 7.400 de 2008, alterado pela Lei 9.069 de 30 de junho de 2016, formado por representantes do poder público e da sociedade civil. Com sua composição definidas pelo Decreto Municipal nº. 29.563.859/2018, alterado pelo Decreto Municipal n° 30.859 de 14/03/2019.\nO Conselho Municipal de Salvador – CMS, trata-se de um órgão colegiado permanente, de caráter consultivo que promove a participação organizada da sociedade no processo de planejamento do Município e na formulação de suas políticas de desenvolvimento, assegurando a adequação das diretrizes e normas orientadoras da ação Municipal às necessidades da coletividade, propiciando o respaldo político às decisões e diretrizes do planejamento e gestão municipal, garantindo assim a compatibilidade e a coerência entre as normas que regulam a atuação do Poder Público Municipal e as orientações do Plano Diretor, articulando as políticas específicas e setoriais na área do desenvolvimento urbano, particularmente as de planejamento do uso do solo, habitação, saneamento ambiental e mobilidade urbana e participando dos debates sobre o Orçamento Participativo.\nConfira as publicações do CMS e o cronograma de reuniões:\nCalendário das Reuniões –\n201\n9/2020;\nDecreto Municipal n° 29.563/2018 – Nomeia os novos membros do\nConselho;\nDecreto Municipal n° 30.859/2019\n– Atualiza a Composição do Conselho;\nAta da 1° Reunião Ordinária;\nAta da 1° Reunião Extraordinária e Ata da 2° Reunião Ordinária;\nResolução n°1 – Critérios para seleção dos beneficiários do Programa Minha Casa Minha Vida;\nAta da 3° Reunião Ordinária  e Ata da 2° Reunião Extraordinária.",
+   "links": [
+    {
+     "texto": "Calendário das Reuniões – 2019/2020;",
+     "url": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2019/10/Reunioes_calendario.pdf",
+     "url_original": "/images/arquivos_processos/2019/10/Reunioes_calendario.pdf",
+     "arquivo_status_http": 200
+    },
+    {
+     "texto": "Decreto Municipal n° 29.563/2018 – Nomeia os novos membros do Conselho;",
+     "url": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2019/10/Decreto-29563-2018-Salvador-BA.pdf",
+     "url_original": "/images/arquivos_processos/2019/10/Decreto-29563-2018-Salvador-BA.pdf",
+     "arquivo_status_http": 200
+    },
+    {
+     "texto": "Decreto Municipal n° 30.859/2019 – Atualiza a Composição do Conselho;",
+     "url": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2019/10/Decreto-30859-2019-Salvador-BA-1.pdf",
+     "url_original": "/images/arquivos_processos/2019/10/Decreto-30859-2019-Salvador-BA-1.pdf",
+     "arquivo_status_http": 200
+    },
+    {
+     "texto": "Ata da 1° Reunião Ordinária;",
+     "url": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2019/10/1_ata_ordinaria.pdf",
+     "url_original": "/images/arquivos_processos/2019/10/1_ata_ordinaria.pdf",
+     "arquivo_status_http": 200
+    },
+    {
+     "texto": "Ata da 1° Reunião Extraordinária e Ata da 2° Reunião Ordinária;",
+     "url": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2019/10/1_ata_extraordinaria_e_2_ata-ordinaria.pdf",
+     "url_original": "/images/arquivos_processos/2019/10/1_ata_extraordinaria_e_2_ata-ordinaria.pdf",
+     "arquivo_status_http": 200
+    },
+    {
+     "texto": "Resolução n°1 – Critérios para seleção dos beneficiários do Programa Minha Casa Minha Vida;",
+     "url": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2019/10/Resolucao_n_1.pdf",
+     "url_original": "/images/arquivos_processos/2019/10/Resolucao_n_1.pdf",
+     "arquivo_status_http": 200
+    },
+    {
+     "texto": "Ata da 3° Reunião Ordinária e Ata da 2° Reunião Extraordinária.",
+     "url": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2019/10/2_ata_extraordinaria_e_3_ata_ordinaria.pdf",
+     "url_original": "/images/arquivos_processos/2019/10/2_ata_extraordinaria_e_3_ata_ordinaria.pdf",
+     "arquivo_status_http": 200
+    }
+   ],
+   "imagens": []
+  },
+  {
+   "slug": "tul",
+   "nome": "TUL",
+   "rotulo_na_home": "TUL",
+   "url": "https://sedur.salvador.ba.gov.br/tul",
+   "titulo_na_pagina": "TUL",
+   "texto": "TUL\nVoltar\nImprimir\nTransformação Urbana Localizada – TUL é um instrumento de Politica Urbana previsto no Art. 333 do PDDU e regulamentada pelo Decreto nº 30.799/ 2019, relacionado à urbanização, reurbanização e requalificação de partes do território do Município, através de intervenções de área até 50.000m², objetivando viabilizar projetos urbanísticos especiais que poderão abranger áreas públicas ou privadas que estejam situadas num raio de 800m (oitocentos metros) das estações dos sistemas de transporte de alta e média capacidade.\nO instrumento possibilita a flexibilização de parâmetros urbanísticos mediante atendimento de contrapartida para atendimento dos objetivos, diretrizes e prioridades estabelecidas pelo PDDU, através de intervenções de menor porte, tais como:\nImplantação de equipamentos com finalidade de uso público;\nRequalificação do entorno de áreas privadas, podendo envolver construção de praças, implementação de projetos de mobilidade urbana como ciclovias, mobiliário urbano, parklets, melhoria das condições de habitabilidade, recuperação de áreas verdes e programas de proteção ambiental;\nIntervenções urbanas associadas a concessões ou parcerias público-privadas;\nImplantação de programas de HIS e HMP;\nValorização, requalificação e criação de patrimônio ambiental, histórico, arquitetônico, cultural e paisagístico;\nO protocolo de Proposta de TUL é feito através da SEDUR.\nClique aqui para acessar a carta de serviço e listagem de documentos para entrada no processo da TUL.\nClique aqui para acessar o decreto de Regulamentação da TUL;\nClique aqui para acessar o PDDU;\nClique aqui para acessar o Manual da TUL",
+   "links": [
+    {
+     "texto": "Clique aqui para acessar a carta de serviço e listagem de documentos para entrada no processo da TUL.",
+     "url": "https://servicos.sedur.salvador.ba.gov.br/#/portal/carta-servicos/categoria-atendimento/370",
+     "url_original": "https://servicos.sedur.salvador.ba.gov.br/#/portal/carta-servicos/categoria-atendimento/370",
+     "arquivo_status_http": 200
+    },
+    {
+     "texto": "Clique aqui para acessar o decreto de Regulamentação da TUL;",
+     "url": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2019/02/dec_30799_2019-1.pdf",
+     "url_original": "/images/arquivos_processos/2019/02/dec_30799_2019-1.pdf",
+     "arquivo_status_http": 200
+    },
+    {
+     "texto": "Clique aqui para acessar o PDDU;",
+     "url": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2016/07/LEI-n.-9.069-PDDU-2016.pdf",
+     "url_original": "/images/arquivos_processos/2016/07/LEI-n.-9.069-PDDU-2016.pdf",
+     "arquivo_status_http": 200
+    },
+    {
+     "texto": "Clique aqui para acessar o Manual da TUL",
+     "url": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2019/05/tul-compactado.pdf",
+     "url_original": "/images/arquivos_processos/2019/05/tul-compactado.pdf",
+     "arquivo_status_http": 200
+    }
+   ],
+   "imagens": [
+    {
+     "src": "/images/arquivos_processos/2019/05/tulManual.jpg",
+     "alt": "tulManual"
+    }
+   ]
+  },
+  {
+   "slug": "revitalizar",
+   "nome": "Revitalizar",
+   "rotulo_na_home": "REVITALIZAR",
+   "url": "https://sedur.salvador.ba.gov.br/revitalizar",
+   "titulo_na_pagina": "Revitalizar",
+   "texto": "Revitalizar\nVoltar\nImprimir\nO Programa de Incentivo à Restauração e Recuperação de Imóveis do Centro Antigo de Salvador (Revitalizar), tem como objetivo\nestimular a requalificação dos imóveis aí localizados\n, trazendo de volta a vida, o movimento e a circulação de pessoas.\nCom o Revitalizar, é possível obter os benefícios fiscais previstos na Lei n° 9.215/2017 ao reformar, recuperar ou edificar imóveis dentro da área que o programa abrange.\nRedução de 50% do IPTU futuro, perdão de dívidas, redução do ISS e isenção de ITIV\nsão exemplos dos benefícios fiscais possíveis.\nPara requerer os benefícios previstos no Programa Revitalizar, o imóvel deve estar localizado dentro da Área de Proteção Cultural e Paisagística do Centro Antigo e no Conjunto Urbano e Arquitetônico da Cidade Baixa de Salvador. Além disso, deverá sofrer\nreforma, ampliação, restauração, recuperação ou construção de nova edificação\n.\nA Área de Proteção Cultural e Paisagística do Centro Antigo e o Conjunto Urbano e Arquitetônico da Cidade Baixa de Salvador abrangem os seguintes bairros (importante ressaltar que alguns desses bairros não estão totalmente inseridos no programa, sendo beneficiadas apenas as áreas dos bairros contidos nas poligonais de abrangência da Lei):\nITEM\nBAIRRO\nCONDIÇÃO EM RELAÇÃO À POLIGONAL DE ABRANGÊNCIA\n1\nBarbalho\nTotalmente\n2\nCentro Histórico\nTotalmente\n3\nComércio\nTotalmente\n4\nLapinha\nTotalmente\n5\nSanto Antônio\nTotalmente\n6\nSaúde\nTotalmente\n7\nBarris\nParcialmente\n8\nCalçada\nParcialmente\n9\nCentro\nParcialmente\n10\nLiberdade\nParcialmente\n11\nMacaúbas\nParcialmente\n12\nNazaré\nParcialmente\n13\nTororó\nParcialmente\nPara requerer os benefícios previstos no Programa Revitalizar você deve abrir um processo (PR) por meio do serviço de “\nAdesão ao Programa Revitalizar\n”, seguindo os seguintes passos:\n1º passo:\nClique aqui para gerar o Documento de Arrecadação Municipal (DAM)\n. Imprima e pague o valor de R$16,71 referente a\nTaxa de Expediente\n. Aguarde até 72 horas para que o pagamento do DAM seja processado pelo banco.\n2º passo:\nApós a confirmação do pagamento,\nclique aqui para solicitar a abertura do Processo de Adesão ao Programa Revitalizar.\nDigite o número do\nDAM\n, o\nDigito Verificador\ne a\nChave de Segurança\n, localizados no canto superior direito do DAM.\nClique em consultar\n.\n3º passo:\nPreencha o formulário com os\ndados do imóvel\n, do\nresponsável pelo cadastro\ne revise todas as informações e\nclique em enviar\n. Irá aparecer na tela um formulário com todas as informações digitadas,\nconfira se estão corretas\n.\n4º passo:\nClique\nno “Navegador” e\nselecione o documento\n(imagem, foto ou PDF) especificado no formulário que cumpra as especificações descritas na tela. Confirme seus dados cadastrais.\n5º passo:\nImprima\no\nRequerimento Padrão\n, ele contém o\nnúmero do processo\ne o\ncódigo de acesso restrito\npara acompanhamento no site.\n6º passo:\nAcompanhe seu processo online através do\nPortal de Serviços da SEDUR\n:\nwww.servicos.sedur.salvador.ba.gov.br\n7º passo:\nCaso seja deferido o seu requerimento, seu\nTermo de Adesão ao Programa Revitalizar\nficará disponível para\ndownload\nno\nPortal de Serviços da SEDUR\n.\nPronto! Agora que você se certificou que o imóvel está dentro da área de abrangência do Programa Revitalizar, você pode requerer os benefícios ao solicitar sua licença para reformar, ampliar, restaurar, recuperar ou construir nova edificação*, de acordo com as regras e condições previstas na Lei n° 9.215/2017 e no Decreto nº 28.775/2017.\nO Termo de Adesão ao Programa Revitalizar não atesta propriedade do referido imóvel ao seu portador/requerente, nem garante a obtenção dos benefícios previstos na Lei do Revitalizar. Consulte o arcabouço legal abaixo e saiba as regras e condições para solicitação dos benefícios:\nDecreto nº 28.775/2017 – Regulamenta a Lei nº 9.215, de 19 de maio de 2017, que instituiu o Programa de Incentivo à Restauração e Recuperação de Imóveis do Centro Antigo de Salvador – PROGRAMA REVITALIZAR, e dá outras providências.\nLei nº 9.215/2017 – Institui o Programa de Incentivo à Restauração e Recuperação de Imóveis do Centro Antigo de Salvador – PROGRAMA REVITALIZAR, e dá outras providencias.\nLei nº 9.281/2017 – Institui normas relativas à execução de obras e serviços do Município do Salvador, e dá outras providências (novo Código de Obras do Município)\nPoligonal em arquivo PDF da Área de Proteção Cultural e Paisagística do Centro Antigo e Conjunto Urbano e Arquitetônico da Cidade Baixa de Salvador\nPoligonal em arquivo KMZ (extensão do Google Earth) da Área de Proteção Cultural e Paisagística do Centro Antigo e Conjunto Urbano e Arquitetônico da Cidade Baixa de Salvador\nPoligonal Revitalizar –\nClique para ampliar",
+   "links": [
+    {
+     "texto": "Clique aqui para gerar o Documento de Arrecadação Municipal (DAM)",
+     "url": "https://servicos.sedur.salvador.ba.gov.br/servicosonline/Web/emissaodam.php?idCategoria=387",
+     "url_original": "https://servicos.sedur.salvador.ba.gov.br/servicosonline/Web/emissaodam.php?idCategoria=387",
+     "arquivo_status_http": 404
+    },
+    {
+     "texto": "clique aqui para solicitar a abertura do Processo de Adesão ao Programa Revitalizar.",
+     "url": "https://servicos.sedur.salvador.ba.gov.br/servicosonline/Web/aberturaprocesso.php?servico_id=7000",
+     "url_original": "https://servicos.sedur.salvador.ba.gov.br/servicosonline/Web/aberturaprocesso.php?servico_id=7000",
+     "arquivo_status_http": 404
+    },
+    {
+     "texto": "www.servicos.sedur.salvador.ba.gov.br",
+     "url": "https://servicos.sedur.salvador.ba.gov.br",
+     "url_original": "https://servicos.sedur.salvador.ba.gov.br",
+     "arquivo_status_http": 200
+    },
+    {
+     "texto": "Clique para ampliar",
+     "url": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2017/09/Poligonal_Revitalizar-compressed.pdf",
+     "url_original": "/images/arquivos_processos/2017/09/Poligonal_Revitalizar-compressed.pdf",
+     "arquivo_status_http": 200
+    }
+   ],
+   "imagens": [
+    {
+     "src": "/images/arquivos_processos/2017/09/Poligonal_Revitalizar.jpg",
+     "alt": "Poligonal_Revitalizar"
+    }
+   ]
+  },
+  {
+   "slug": "pidi",
+   "nome": "PIDI",
+   "rotulo_na_home": "PIDI",
+   "url": "https://sedur.salvador.ba.gov.br/pidi",
+   "titulo_na_pagina": "PIDI",
+   "texto": "PIDI\nVoltar\nImprimir\nO MUNICÍPIO DO SALVADOR, por meio da Secretaria Municipal de Desenvolvimento e Urbanismo – SEDUR e do Conselho de Incentivo ao Desenvolvimento Econômico Sustentável e de Inovação – COPIDI, busca habilitar, selecionar e enquadrar empreendimentos para concessão de incentivos fiscais no âmbito do\nPROGRAMA DE INCENTIVO AO\nDESENVOLVIMENTO SUSTENTÁVEL E INOVAÇÃO – PIDI.\nO presente instrumento tem seu objeto, poligonal, características e demais elementos essenciais especificados por meio das regras a seguir estabelecidas:\nEDITAL – PIDI Nº 01/2016\nEDITAL – PIDI Nº 02/2016",
+   "links": [
+    {
+     "texto": "EDITAL – PIDI Nº 01/2016",
+     "url": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2017/04/Edita_01.pdf",
+     "url_original": "/images/arquivos_processos/2017/04/Edita_01.pdf",
+     "arquivo_status_http": 200
+    },
+    {
+     "texto": "EDITAL – PIDI Nº 02/2016",
+     "url": "https://sedur.salvador.ba.gov.br/images/arquivos_processos/2017/04/Edital_02.pdf",
+     "url_original": "/images/arquivos_processos/2017/04/Edital_02.pdf",
+     "arquivo_status_http": 200
+    }
+   ],
+   "imagens": []
+  }
+ ]
+}

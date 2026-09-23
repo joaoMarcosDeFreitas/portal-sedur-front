@@ -1,0 +1,668 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+	<!--ATIVAÇÃO DE COMPATIBILIDADE E PROTEÇÃO CONTRA ATAQUES DO TIPO XSS-->
+	<!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+	<!--meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1,maximum-scale=1,user-scalable=no"-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-XSS-Protection" content="1">
+	<meta http-equiv="x-dns-prefetch-control" content="off">
+	<!--ATIVAÇÃO DE COMPATIBILIDADE E PROTEÇÃO CONTRA ATAQUES DO TIPO XSS-->
+	
+	
+			
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="/var/www/html/sedur/favicon.ico"> -->
+
+	
+	
+	
+	<meta name="google-site-verification" content="3XxLThCC-_tkg2qtziw_KG01DRXRqWTMM91thC8V6RM" />
+	<!--OBS: ENCONTRAM-SE NO TYPE HEAD AS META TAGS DESCRIPTION E KEYWORDS-->
+	<meta charset="utf-8" />
+	<base href="http://sedur.salvador.ba.gov.br/component/finder/search" />
+	<meta name="keywords" content="alvará" />
+	<meta name="description" content="Assumindo que alvara é necessário, os seguintes resultados foram encontrados." />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>SEDUR - Secretaria Municipal de Desenvolvimento Urbano</title>
+	<link href="/component/finder/search?q=alvara&amp;format=feed&amp;type=rss" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
+	<link href="/component/finder/search?q=alvara&amp;format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
+	<link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/media/jui/css/chosen.css?679d790b1094210fb236c0ff53f74be4" rel="stylesheet" />
+	<link href="/media/com_finder/css/finder.css?679d790b1094210fb236c0ff53f74be4" rel="stylesheet" />
+	<link href="http://sedur.salvador.ba.gov.br/templates/sedur/assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="http://sedur.salvador.ba.gov.br/templates/sedur/assets/css/template.css" rel="stylesheet" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"d5c0e3a1351e3247a5712431987cf4e3","system.paths":{"root":"","base":""}}</script>
+
+</head>
+
+	
+<body>
+	
+    <!-- Pop-up de Aviso -->
+          <!-- <div id="dialog-message" style="position: fixed; z-index: 4000; margin-left: 30px; margin-top: 100px; right: 30px;">
+          <div class="d-flex flex-row-reverse">
+        	<button style="margin-bottom: 10px" type="button" class="btn-close btn-lg" aria-label="Close" onclick="popUp()" id="botaoFechar">X</button>
+          </div>
+    		
+          <a href="#">
+            <p>
+              <img src="http://sedur.salvador.ba.gov.br//images/avisoLicenciamento31012025.jpeg" style="width: 600px;">
+			</p>
+          </a>
+		</div> -->
+        <!-- Fim -->
+      
+    
+	<div id="header-section1-internas" class="navbar-fixed-top not-print" style="display:none;">
+        
+  		<div class="wrapper">
+            
+  			<a id="logo-internas" href="http://www.salvador.ba.gov.br" target="_parent" title="Ir para o Portal Salvador">Prefeitura Municipal de Salvador</a>    
+
+            <div class="float-right"> 
+
+                <div class="social-links float-left font-bold">
+                    <ul class="float-left">
+                        <li class="facebook"><a href="https://www.facebook.com/pages/Prefeitura-de-Salvador/472097156139269" target="_blank">Facebook</a></li>
+                        <li class="youtube"><a href="http://www.youtube.com/prefeituradosalvador" target="_blank">YouTube</a></li>
+                        <li class="flickr"><a href="http://www.flickr.com/photos/prefeituradesalvador" target="_blank">Flickr</a></li>
+                        <li class="twitter"><a href="https://twitter.com/prefsalvador" target="_blank">Twitter</a></li>
+                    </ul>
+                </div>  
+
+            </div> 
+  
+        </div>
+</div>
+
+<style type="text/css">
+	#header-section1-internas {
+	    background-color: #34558c;
+	    height: 48px;
+	    border-top: 1px solid #3e66a3;
+	}
+	.wrapper {
+	    width: 100%;
+	    margin: 0 auto;
+	}
+	#logo-internas {
+		display: block;
+		float: left;
+		background: transparent url(http://sedur.salvador.ba.gov.br//images/logo/logo-internas.png) left center no-repeat;
+		/* Mp2 background: transparent url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/logo-internas.png) left center no-repeat;*/
+        width: 284px;
+		height: 43px;
+		text-indent: -5000em;
+		margin-left:10px;
+	}
+	.float-right {
+	    float: right;
+	}
+	.social-links {
+	    /* padding-top: 35px; */
+	    width: 100%;
+	}
+	.float-left {
+	    float: left;
+	}
+	.social-links ul {
+	    list-style: none;
+	    padding: 0;
+	    margin: 5px 0 0 0;
+	}
+	.social-links .facebook {
+    	background-image: url(http://sedur.salvador.ba.gov.br//images/logo/facebook-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/facebook-icon.png); */                    
+	}
+	.social-links .youtube {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/youtube-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/youtube-icon.png); */                       
+	}
+	.social-links .flickr {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/flickr-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/flickr-icon.png); */ 
+	}
+	.social-links .twitter {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/twitter-icon.png);
+        /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/twitter-icon.png); */                       
+	}
+	.social-links ul li {
+	    float: left;
+	    margin-right: 7px;
+	}
+	.social-links ul li a {
+	    width: 35px;
+	    height: 35px;
+	    text-indent: -5000em;
+	    display: block;
+	}
+                        
+                              
+</style>
+	<!-- Começo Navbar -->
+
+	<div class="container-fluid" style="padding-right: 0px; padding-left: 0px; border:0px solid #000">
+		<header>
+			<div class="row" style="margin: 0%; background-color: white; padding: 2% 0; border:0px solid #008000">
+					<div class="col-md-3 offset-1 col-sm-0" style="border:0px solid #000"> 
+						<a href="/index.php">
+							<img id = "img_marca_old" src="http://sedur.salvador.ba.gov.br//images/logo/logo-black.png" class="img-responsive" alt="logo">
+						</a>
+      			    </div>
+					
+                    <div class="barramenu col-md-8 col-sm-12" style="border:0px solid #000">
+                        <nav id='cssmenu'  style="margin-left: 0px;">
+                            <div id="head-mobile" style="border:0px solid #f00"></div>
+                            <div class="button" style="border:0px solid #ff0"></div>
+                            <ul class="nav menu" style="float: right;">
+<li class="item-102 deeper parent menu-style"><a href="#" >INSTITUCIONAL</a><ul class="dropdown-menu"><li class="item-156 menu-style"><a href="/institucional/dirigentes" >Dirigentes</a></li><li class="item-157 menu-style"><a href="/institucional/estrutura-organizacional" >Estrutura Organizacional</a></li><li class="item-149 menu-style"><a href="/institucional/area-de-atuacao" >Área de Atuação</a></li></ul></li><li class="item-106 menu-style"><a href="https://servicos.sedur.salvador.ba.gov.br/#/portal/home" >SERVIÇOS</a></li><li class="item-154 menu-style"><a href="/noticias" >NOTÍCIAS</a></li><li class="item-151 menu-style"><a href="/legislacao" >LEGISLAÇÃO</a></li><li class="item-155 menu-style"><a href="/licitacoes" >LICITAÇÕES</a></li><li class="item-171 menu-style"><a href="/transparencia" >TRANSPARÊNCIA</a></li></ul>
+
+
+
+<!-- <style>
+
+	.item-161{
+		margin-left: 18%;
+	}
+
+
+	@media (min-width: 320px) and (max-width:767px) {
+		.item-161{
+		margin-left: 0%;
+		}
+
+	}
+
+	
+	@media (min-width: 767px) and (max-width:999px) {
+		.item-161{
+			margin-left: 0%;
+		}
+	}
+
+
+</style> -->
+
+
+
+
+                        </nav>	
+                    </div>
+ 			</div>
+				
+		</header>
+	</div>
+
+
+	
+	<!-- Fim Navbar -->
+		
+	
+	              <div class="no-home">
+                  <div class="container-fluid">
+                      <div class="row">
+                         <div class="col-9 offset-2">
+                              
+                              <div class="finder">
+				<div id="search-form">
+			<form id="finder-search" action="/component/finder/search?q=alvara" method="get" class="form-inline">
+				<fieldset class="word">
+		<label for="q">
+			Termos da Pesquisa:		</label>
+		<input type="text" name="q" id="q" size="30" value="alvara" class="inputbox" />
+					<button name="Search" type="submit" class="btn btn-primary">
+				<span class="icon-search icon-white"></span>
+				Pesquisa			</button>
+							<a href="#advancedSearch" data-toggle="collapse" class="btn">
+				<span class="icon-list" aria-hidden="true"></span>
+				Pesquisa Avançada			</a>
+			</fieldset>
+			<div id="advancedSearch" class="collapse">
+			<hr />
+							<div id="search-query-explained">
+					<div class="advanced-search-tip">
+						<p>Alguns exemplos de como usar a funcionalidade de busca:</p><p>Digitando <span class="term">termo1 and termo2</span> no formulário de busca retornará resultados contendo ambos "termo1" e "termo2".</p><p>Digitando <span class="term">termo1 not termo2 </span>no formulário de busca retornará resultados contendo "termo1" e não "termo2".</p><p>Digitando <span class="term">termo1 or termo2 </span> no formulário de busca retornará resultados contendo ou "termo1" ou "termo2".</p><p>Digitando <span class="term">"termo1 e termo2 "</span> (com aspas) no formulário de busca retornará resultados contendo a expressão exata "termo1 e termo2".</p><p>Resultados de busca também podem ser filtrados com o uso de uma variedade de critérios. Selecione um ou mais filtros abaixo para começar.</p>					</div>
+					<hr />
+				</div>
+						<div id="finder-filter-window">
+				<div class="filter-branch control-group clearfix"><div class="controls finder-selects"><label for="tax-author" class="control-label">Pesquisar por Autor</label><br /><select id="tax-author" name="t[]" class="inputbox advancedSelect">
+	<option value="" selected="selected">Pesquisar Tudo</option>
+	<option value="60">ASCOM</option>
+	<option value="63">COPEL</option>
+	<option value="61">MarlonPorto</option>
+	<option value="8">Super User</option>
+</select>
+</div><div class="controls finder-selects"><label for="tax-category" class="control-label">Pesquisar por Categoria</label><br /><select id="tax-category" name="t[]" class="inputbox advancedSelect">
+	<option value="" selected="selected">Pesquisar Tudo</option>
+	<option value="35">Legisla&ccedil;&atilde;o</option>
+	<option value="15">Noticias</option>
+	<option value="10">P&aacute;gina</option>
+	<option value="34">Projetos</option>
+	<option value="62">Transpar&ecirc;ncia</option>
+	<option value="66">Uncategorised</option>
+</select>
+</div><div class="controls finder-selects"><label for="tax-language" class="control-label">Pesquisar por Opções de Idioma</label><br /><select id="tax-language" name="t[]" class="inputbox advancedSelect">
+	<option value="" selected="selected">Pesquisar Tudo</option>
+	<option value="5">Tudo</option>
+</select>
+</div><div class="controls finder-selects"><label for="tax-type" class="control-label">Pesquisar por Tipo</label><br /><select id="tax-type" name="t[]" class="inputbox advancedSelect">
+	<option value="" selected="selected">Pesquisar Tudo</option>
+	<option value="6">Artigos</option>
+	<option value="3">Categorias</option>
+	<option value="65">Contatos</option>
+</select>
+</div></div>			</div>
+		</div>
+	</form>
+		</div>
+					<div id="search-results">
+				<div id="search-query-explained">
+										Assumindo que <span class="query-required"><span class="term">alvara</span> é necessário</span>, os seguintes resultados foram encontrados.			</div>
+	<br id="highlighter-start" />
+<ul class="search-results list-striped">
+								<li>
+	<h4 class="result-title ">
+		<a href="/decretos?highlight=WyJhbHZhclx1MDBlMSJd">
+			Decretos		</a>
+	</h4>
+			<p class="result-text">
+			Data Nº Legislação Descrição Arquivo 03/06/2026 Decreto nº 41.818/2026 Institui o Programa Municipal de Coleta de Óleos e Gorduras Residuais - OGR, no âmbito do Município do Salvador, cria o Selo de Destinação Adequada de OGR e estabelece as diretrizes...		</p>
+				<div class="small result-url">
+			http://sedur.salvador.ba.gov.br/decretos		</div>
+	</li>
+							<li>
+	<h4 class="result-title ">
+		<a href="/noticias/806-prefeitura-facilita-emissao-de-alvara-de-viabilidade-para-405-tipos-de-atividades-em-salvador?highlight=WyJhbHZhclx1MDBlMSJd">
+			 Prefeitura facilita emissão de alvará de viabilidade para 405 tipos de atividades em Salvador		</a>
+	</h4>
+			<p class="result-text">
+			A Prefeitura de Salvador, por meio das secretarias de Desenvolvimento Urbano (Sedur) e da Fazenda (Sefaz), revisou os critérios de classificação de risco de diversas atividades econômicas, com objetivo de facilitar a abertura de empresas na cidade....		</p>
+				<div class="small result-url">
+			http://sedur.salvador.ba.gov.br/noticias/806-prefeitura-facilita-emissao-de-alvara-de-viabilidade-para-405-tipos-de-atividades-em-salvador		</div>
+	</li>
+							<li>
+	<h4 class="result-title ">
+		<a href="/noticias/792-sedur-intensificara-fiscalizacao-de-publicidade-irregular-em-salvador?highlight=WyJhbHZhclx1MDBlMSJd">
+			 Sedur intensificará fiscalização de publicidade irregular em Salvador		</a>
+	</h4>
+			<p class="result-text">
+			A Secretaria Municipal de Desenvolvimento Urbano (Sedur) irá intensificar a fiscalização de publicidade irregular, com o objetivo de promover o ordenamento da cidade e combater a poluição visual em Salvador. As empresas e produtoras de eventos que...		</p>
+				<div class="small result-url">
+			http://sedur.salvador.ba.gov.br/noticias/792-sedur-intensificara-fiscalizacao-de-publicidade-irregular-em-salvador		</div>
+	</li>
+							<li>
+	<h4 class="result-title ">
+		<a href="/noticias/69-sedur-interdita-cinco-oficinas-irregulares-na-avenida-suburbana?highlight=WyJhbHZhclx1MDBlMSJd">
+			Sedur interdita cinco oficinas irregulares na Avenida Suburbana		</a>
+	</h4>
+			<p class="result-text">
+			Foto: Ascom Sedur A Secretaria Municipal de Desenvolvimento Urbano (Sedur) interditou cinco oficinas de vendas de peças usadas de veículos, na Avenida Suburbana, durante a Operação Inspicio, realizada nesta terça-feira (18). A ação conjunta com as...		</p>
+				<div class="small result-url">
+			http://sedur.salvador.ba.gov.br/noticias/69-sedur-interdita-cinco-oficinas-irregulares-na-avenida-suburbana		</div>
+	</li>
+							<li>
+	<h4 class="result-title ">
+		<a href="/noticias/856-mega-operacao-silere-realiza-496-vistorias-no-final-de-semana?highlight=WyJhbHZhclx1MDBlMSJd">
+			Mega Operação Sílere realiza 496 vistorias no final de semana		</a>
+	</h4>
+			<p class="result-text">
+			Com o total de 46 equipamentos sonoros apreendidos em 496 vistorias realizadas no último final de semana, a megaoperação Sílere, fruto de parceria entre a Secretaria Municipal de Desenvolvimento Urbano (Sedur) e a Secretaria da Segurança Pública da...		</p>
+				<div class="small result-url">
+			http://sedur.salvador.ba.gov.br/noticias/856-mega-operacao-silere-realiza-496-vistorias-no-final-de-semana		</div>
+	</li>
+							<li>
+	<h4 class="result-title ">
+		<a href="/noticias/825-camarote-irregular-e-interditado-na-barra?highlight=WyJhbHZhclx1MDBlMSJd">
+			Camarote irregular é interditado na Barra		</a>
+	</h4>
+			<p class="result-text">
+			A Secretaria Municipal de Desenvolvimento Urbano (Sedur) interditou, neste sábado (18), o Cristo da Barra Hostel, que funcionava como um camarote de forma irregular, sem autorização da Prefeitura. O estabelecimento foi autuado por desvio de atividade...		</p>
+				<div class="small result-url">
+			http://sedur.salvador.ba.gov.br/noticias/825-camarote-irregular-e-interditado-na-barra		</div>
+	</li>
+							<li>
+	<h4 class="result-title ">
+		<a href="/noticias/810-prefeitura-licencia-primeiro-empreendimento-em-formato-bim?highlight=WyJhbHZhclx1MDBlMSJd">
+			Prefeitura licencia primeiro empreendimento em formato BIM		</a>
+	</h4>
+			<p class="result-text">
+			A Secretaria Municipal de Desenvolvimento Urbano (Sedur) emitiu, na última terça-feira (20), o primeiro alvará de construção em formato BIM (Building Information Model – Modelagem da Informação da Construção) para um empreendimento na capital baiana. O...		</p>
+				<div class="small result-url">
+			http://sedur.salvador.ba.gov.br/noticias/810-prefeitura-licencia-primeiro-empreendimento-em-formato-bim		</div>
+	</li>
+							<li>
+	<h4 class="result-title ">
+		<a href="/noticias/102-teste?highlight=WyJhbHZhclx1MDBlMSJd">
+			Sucom remove publicidade irregular e multa estabelecimentos na Bonocô		</a>
+	</h4>
+			<p class="result-text">
+			Com o objetivo combater a poluição visual e a publicidade sem licença, a Superintendência de Controle e Ordenamento do Uso do Solo do Município (Sucom) vistoriou a avenida Mário Leal Ferreira (Bonocô) na última sexta-feira (06). Os fiscais do órgão...		</p>
+				<div class="small result-url">
+			http://sedur.salvador.ba.gov.br/noticias/102-teste		</div>
+	</li>
+							<li>
+	<h4 class="result-title ">
+		<a href="/leis?highlight=WyJhbHZhclx1MDBlMSJd">
+			Leis		</a>
+	</h4>
+			<p class="result-text">
+			Data Nº Legislação Descrição Arquivo 26/03/2026 Lei nº 9.958/2026 Dispõe sobre a implantação, operação, fiscalização e tributação de estações de recarga para veículos elétricos no Município de Salvador, e dá outras providências. 26/12/2023 Lei nº...		</p>
+				<div class="small result-url">
+			http://sedur.salvador.ba.gov.br/leis		</div>
+	</li>
+							<li>
+	<h4 class="result-title ">
+		<a href="/noticias/901-sedur-interdita-sete-ferros-velhos-irregulares-em-operacao-integrada-com-a-ssp?highlight=WyJhbHZhclx1MDBlMSJd">
+			Sedur interdita sete ferros-velhos irregulares em operação integrada com a SSP		</a>
+	</h4>
+			<p class="result-text">
+			A Secretaria Municipal de Desenvolvimento Urbano (Sedur) interditou sete ferros-velhos irregulares durante a Operação Ferro-Velho, realizada nesta quarta-feira (22), em uma ação integrada com a Secretaria da Segurança Pública (SSP), por meio da 2ª...		</p>
+				<div class="small result-url">
+			http://sedur.salvador.ba.gov.br/noticias/901-sedur-interdita-sete-ferros-velhos-irregulares-em-operacao-integrada-com-a-ssp		</div>
+	</li>
+							<li>
+	<h4 class="result-title ">
+		<a href="/noticias/893-operacao-integrada-interdita-seis-ferros-velhos-irregulares-em-salvador?highlight=WyJhbHZhclx1MDBlMSJd">
+			Operação integrada interdita seis ferros-velhos irregulares em Salvador		</a>
+	</h4>
+			<p class="result-text">
+			A Secretaria Municipal de Desenvolvimento Urbano (Sedur) realizou, nesta terça-feira (26), uma operação integrada que resultou na interdição de seis ferros-velhos que funcionavam de forma irregular em Salvador. Batizada de Operação Escudo Urbano, a...		</p>
+				<div class="small result-url">
+			http://sedur.salvador.ba.gov.br/noticias/893-operacao-integrada-interdita-seis-ferros-velhos-irregulares-em-salvador		</div>
+	</li>
+							<li>
+	<h4 class="result-title ">
+		<a href="/noticias/877-operacao-da-prefeitura-com-a-ssp-interdita-ferros-velhos-apreende-materiais-e-notifica-comercios-irregulares-na-gamboa?highlight=WyJhbHZhclx1MDBlMSJd">
+			Operação da Prefeitura com a SSP interdita ferros-velhos, apreende materiais e notifica comércios irregulares na Gamboa		</a>
+	</h4>
+			<p class="result-text">
+			A Prefeitura de Salvador, em parceria com a Secretaria de Segurança Pública da Bahia (SSP-BA), realizou, na manhã desta quarta-feira (21), uma ação de ordenamento e combate a atividades irregulares na Avenida Lafayete Coutinho (Contorno), na região da...		</p>
+				<div class="small result-url">
+			http://sedur.salvador.ba.gov.br/noticias/877-operacao-da-prefeitura-com-a-ssp-interdita-ferros-velhos-apreende-materiais-e-notifica-comercios-irregulares-na-gamboa		</div>
+	</li>
+							<li>
+	<h4 class="result-title ">
+		<a href="/noticias/867-sedur-remove-publicidade-irregular-na-regiao-da-cidade-baixa?highlight=WyJhbHZhclx1MDBlMSJd">
+			Sedur remove publicidade irregular na região da Cidade Baixa		</a>
+	</h4>
+			<p class="result-text">
+			A Secretaria Municipal de Desenvolvimento Urbano (Sedur) removeu peças publicitárias irregulares nos viadutos da Cidade Baixa, na segunda-feira (19). A medida visa combater a poluição visual em Salvador e coibir à propaganda sem a devida autorização do...		</p>
+				<div class="small result-url">
+			http://sedur.salvador.ba.gov.br/noticias/867-sedur-remove-publicidade-irregular-na-regiao-da-cidade-baixa		</div>
+	</li>
+							<li>
+	<h4 class="result-title ">
+		<a href="/noticias/866-prefeitura-reforca-combate-a-poluicao-sonora-em-dia-de-conscientizacao-sobre-o-tema?highlight=WyJhbHZhclx1MDBlMSJd">
+			Prefeitura reforça combate à poluição sonora em dia de conscientização sobre o tema		</a>
+	</h4>
+			<p class="result-text">
+			Nesta quarta-feira (7), Dia Municipal de Combate à Poluição Sonora instituído por lei, a Secretaria Municipal de Desenvolvimento Urbano (Sedur) reafirma o compromisso em combater a emissão sonora em níveis acima do permitido e reforça a importância de...		</p>
+				<div class="small result-url">
+			http://sedur.salvador.ba.gov.br/noticias/866-prefeitura-reforca-combate-a-poluicao-sonora-em-dia-de-conscientizacao-sobre-o-tema		</div>
+	</li>
+							<li>
+	<h4 class="result-title ">
+		<a href="/noticias/857-sedur-remove-construcoes-irregulares-em-area-de-protecao-ambiental-em-itapua?highlight=WyJhbHZhclx1MDBlMSJd">
+			Sedur remove construções irregulares em Área de Proteção Ambiental em Itapuã		</a>
+	</h4>
+			<p class="result-text">
+			A Secretaria Municipal de Desenvolvimento Urbano (Sedur) tem intensificado as ações de combate a construções irregulares em Salvador. Nesta quinta-feira (30), agentes do órgão demoliram inícios de obras em uma Área de Proteção Ambiental (APA), nas...		</p>
+				<div class="small result-url">
+			http://sedur.salvador.ba.gov.br/noticias/857-sedur-remove-construcoes-irregulares-em-area-de-protecao-ambiental-em-itapua		</div>
+	</li>
+							<li>
+	<h4 class="result-title ">
+		<a href="/noticias/852-iptu-verde-numero-de-beneficiados-pelo-incentivo-tributario-cresce-235-em-2024?highlight=WyJhbHZhclx1MDBlMSJd">
+			IPTU Verde: número de beneficiados pelo incentivo tributário cresce 235% em 2024		</a>
+	</h4>
+			<p class="result-text">
+			Importante ação promovida pela Prefeitura para estimular a adoção de práticas sustentáveis em Salvador, o IPTU Verde apresenta em 2024 um acréscimo significativo de beneficiados. O levantamento realizado pela Secretaria Municipal da Fazenda (Sefaz),...		</p>
+				<div class="small result-url">
+			http://sedur.salvador.ba.gov.br/noticias/852-iptu-verde-numero-de-beneficiados-pelo-incentivo-tributario-cresce-235-em-2024		</div>
+	</li>
+							<li>
+	<h4 class="result-title ">
+		<a href="/noticias/841-operacao-silere-tem-reducao-no-numero-de-reclamacoes-e-apreensoes-em-2023?highlight=WyJhbHZhclx1MDBlMSJd">
+			Operação Sílere tem redução no número de reclamações e apreensões em 2023 		</a>
+	</h4>
+			<p class="result-text">
+			Entre janeiro e setembro deste ano, a Operação Sílere apreendeu 856 equipamentos sonoros envolvidos em situações de poluição sonora na capital baiana. O número é a metade do que foi realizado no mesmo período de 2022, quando 1.606 objetos foram...		</p>
+				<div class="small result-url">
+			http://sedur.salvador.ba.gov.br/noticias/841-operacao-silere-tem-reducao-no-numero-de-reclamacoes-e-apreensoes-em-2023		</div>
+	</li>
+							<li>
+	<h4 class="result-title ">
+		<a href="/noticias/840-salvador-registra-novo-recorde-e-reduz-tempo-medio-de-abertura-de-empresas-para-4-horas?highlight=WyJhbHZhclx1MDBlMSJd">
+			Salvador registra novo recorde e reduz tempo médio de abertura de empresas para 4 horas		</a>
+	</h4>
+			<p class="result-text">
+			As medidas de desburocratização promovidas pela Prefeitura seguem impactando positivamente a economia e o ambiente de negócios local. De acordo com o Mapa Painel de Empresas, do Governo Federal, o tempo médio para obter o CNPJ na capital baiana foi...		</p>
+				<div class="small result-url">
+			http://sedur.salvador.ba.gov.br/noticias/840-salvador-registra-novo-recorde-e-reduz-tempo-medio-de-abertura-de-empresas-para-4-horas		</div>
+	</li>
+							<li>
+	<h4 class="result-title ">
+		<a href="/noticias/837-bim-salvador-e-destaque-durante-evento-do-sebrae-em-brasilia?highlight=WyJhbHZhclx1MDBlMSJd">
+			BIM Salvador é destaque durante evento do Sebrae em Brasília		</a>
+	</h4>
+			<p class="result-text">
+			A Secretaria Municipal de Desenvolvimento Urbano (Sedur) marcou presença, nesta quinta-feira (3), no evento Transformar Juntos, do Sebrae Nacional, em Brasília. Na ocasião, a diretora de desenvolvimento urbano do órgão, Neilia Fernandes, destacou o...		</p>
+				<div class="small result-url">
+			http://sedur.salvador.ba.gov.br/noticias/837-bim-salvador-e-destaque-durante-evento-do-sebrae-em-brasilia		</div>
+	</li>
+							<li>
+	<h4 class="result-title ">
+		<a href="/noticias/834-numero-de-beneficiados-pelo-programa-iptu-verde-cresce-80-em-2023?highlight=WyJhbHZhclx1MDBlMSJd">
+			Número de beneficiados pelo programa IPTU Verde cresce 80% em 2023		</a>
+	</h4>
+			<p class="result-text">
+			O número de imóveis que adotam práticas de preservação ao meio ambiente segue crescendo na capital baiana. A Prefeitura de Salvador, por meio das secretarias da Fazenda (Sefaz), Desenvolvimento Urbano (Sedur) e de Sustentabilidade, Resiliência,...		</p>
+				<div class="small result-url">
+			http://sedur.salvador.ba.gov.br/noticias/834-numero-de-beneficiados-pelo-programa-iptu-verde-cresce-80-em-2023		</div>
+	</li>
+	</ul>
+<br id="highlighter-end" />
+<div class="search-pagination">
+	<div class="pagination">
+		<ul>
+	<li class="pagination-start"><span class="pagenav">Início</span></li>
+	<li class="pagination-prev"><span class="pagenav">Anterior</span></li>
+			<li><span class="pagenav">1</span></li>			<li><a href="/component/finder/search?q=alvara&amp;start=20" class="pagenav">2</a></li>		<li class="pagination-next"><a title="Próximo" href="/component/finder/search?q=alvara&amp;start=20" class="hasTooltip pagenav">Próximo</a></li>
+	<li class="pagination-end"><a title="Fim" href="/component/finder/search?q=alvara&amp;start=20" class="hasTooltip pagenav">Fim</a></li>
+</ul>
+	</div>
+	<div class="search-pages-counter">
+												Resultados <strong>1</strong> - <strong>20</strong> de <strong>27</strong>	</div>
+</div>
+		</div>
+	</div>
+                          </div> 
+                      </div>
+                  </div>
+              </div>
+                            <!--VERIFICAÇÃO PARA INCLUSÃO DE PÁGINA-->
+	</main>
+	
+<footer>
+
+<!-- inicio Mp2 -->
+      
+        
+  	  <div class="container-fluid">
+              <div class="row justify-content-start text-center">
+                  <div class="col-12" style="padding-top:5px; padding-bottom: 1px;"></div>
+              </div>
+      </div>
+       
+      <div class="container-fluid">
+          <div class="row justify-content-start text-center sty">
+              <div class="col-12 endereco">
+                  <b>&copy; 2021 - Secretaria Municipal de Desenvolvimento Urbano. Todos os direitos reservados.</b>
+              </div>
+          </div>
+      </div>
+       
+  	  <div class="container-fluid">
+              <div class="row justify-content-start text-center">
+                  <div class="col-12" style="padding-top:1px; padding-bottom: 1px;"></div>
+              </div>
+      </div>
+       
+         
+    <div class="container-fluid bannerfoot">
+
+              <div class="row">
+
+                    <!-- inic coluna3 ACESSO RAPIDO-->
+                    <div class="bfooter1 col-xs-12 col-sm-6 col-md-3" style="padding-top:30px; padding-left:20px; border:0px solid #fff">
+                       <ul class="none">
+                         <h5><font size="2px" color="#FFD190"><B>ACESSO RÁPIDO</B></font></h5>
+                         <li><a href="https://sedur.salvador.ba.gov.br/acessoremoto/" target="_blank" alt="Acesso Interno SEDUR"><font color="white" style="font-family:'Roboto' sans-serif; font-size:12px">Acesso Interno</font></a></li>
+       					 <li><a href="https://agendamento.sedur.salvador.ba.gov.br/sas/#agendamento" target="_blank" alt="Agendamento"><font color="white" style="font-family:'Roboto', sans-serif;  font-size:12px">Agendamento</font></a></li>
+                    	 <!-- 4ls; Modificação da página Canais de Atendimento-->
+       					 <!-- <li><a href="/./canais-de-atendimento" target="_blanck" alt="Canais Atendimento"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px">Canais de Atendimento</font></a></li> -->
+                    	<li><a href="https://servicos.sedur.salvador.ba.gov.br/#/portal/contacts" target="_blanck" alt="Canais Atendimento"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px">Canais de Atendimento</font></a></li>
+                         <!-- Fim -->
+                         <li><a href="http://www.falasalvador.ba.gov.br/portal/portal/" target="_blank" alt="Portal Fala Salvador"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px"> Portal Fala Salvador</font></a></li>
+                           <!--<li>
+                           	Prefeitura Municipal de Salvador<br>
+                           	13.927.801/0029-40
+                           </li>-->
+                       </ul>
+                    </div>   
+
+
+                    <!-- inic coluna1 SEDUR -->
+                    <div class="bfooter2 col-xs-12 col-sm-6 col-md-4" style="text-align:left; padding-top:60px; border:0px solid #fff">
+                        <img class = "img-responsive" src="http://sedur.salvador.ba.gov.br//images/logo/logo-white.png" alt="logo SEDUR">
+                    </div>
+
+
+                    <!-- inic coluna2 PREFEITURA -->
+                    <!-- <div class="bfooter3 col-xs-12 col-sm-6 col-md-3" style="text-align:left; padding-top:50px; border:0px solid #fff">
+                        <img id = "img_sedur_branca" src="http://sedur.salvador.ba.gov.br//images/logo/PREFEITURA_RET_COMPL_Branc_Ftrans2.png" alt="logo Prefeitura" width="200px" hight="auto">
+                    </div> -->
+
+
+
+                    <!-- inic coluna4 GOOGLE-->             
+                    <div class="bfooter4 col-xs-12 col-sm-6 col-md-3 offset-2" style="padding-top:10px; font-family:'Roboto', sans-serif; font-size:12px; color:white;">
+                      <a href="https://www.google.com/maps/place/SEDUR+-+Secretaria+Municipal+de+Desenvolvimento+e+Urbanismo/@-12.9847353,-38.4661181,1236a,35y,90h/data=!3m1!1e3!4m5!3m4!1s0x7161b34826018a3:0x6f1379fe7b002977!8m2!3d-12.9876324!4d-38.4666753?hl=pt-BR" target="_blank" alt="Endereo Sedur"><img src="http://sedur.salvador.ba.gov.br//images/imagens/END_SEDUR.png" width="100%" height="auto" style="border:3px solid #ffffff;"></a> 
+       				  <p>Av.ACM, nº3224, Caminho das Árvores - Salvador/Ba. Edf.Empresarial Thomé de Souza / Térreo - CEP.: 41110-700 </p>
+                     </div>
+
+              </div>
+
+    </div>       
+         
+    
+          
+    
+ <!-- fim Mp2 -->  
+     
+                  
+                  
+</footer>
+
+    <script src="http://sedur.salvador.ba.gov.br/templates/sedur/assets/js/js.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<script src="http://sedur.salvador.ba.gov.br/templates/sedur/assets/js/imageMapResizer.min.js"></script>
+	<script type="text/javascript">
+		$('map').imageMapResize();
+	</script>
+
+
+	<script>
+  
+  
+  function popUp(){
+    document.getElementById("dialog-message").style.display = "none";
+};   
+  
+  (function($) {
+$.fn.menumaker = function(options) {  
+ var cssmenu = $(this), settings = $.extend({
+   format: "dropdown",
+   sticky: false
+ }, options);
+ return this.each(function() {
+   $(this).find(".button").on('click', function(){
+     $(this).toggleClass('menu-opened');
+     var mainmenu = $(this).next('ul');
+     if (mainmenu.hasClass('open')) { 
+       mainmenu.slideToggle().removeClass('open');
+     }
+     else {
+       mainmenu.slideToggle().addClass('open');
+       if (settings.format === "dropdown") {
+         mainmenu.find('ul').show();
+       }
+     }
+   });
+   cssmenu.find('li ul').parent().addClass('has-sub');
+multiTg = function() {
+     cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
+     cssmenu.find('.submenu-button').on('click', function() {
+       $(this).toggleClass('submenu-opened');
+       if ($(this).siblings('ul').hasClass('open')) {
+         $(this).siblings('ul').removeClass('open').slideToggle();
+       }
+       else {
+         $(this).siblings('ul').addClass('open').slideToggle();
+       }
+     });
+   };
+   if (settings.format === 'multitoggle') multiTg();
+   else cssmenu.addClass('dropdown');
+   if (settings.sticky === true) cssmenu.css('position', 'fixed');
+resizeFix = function() {
+  var mediasize = 1000;
+     if ($( window ).width() > mediasize) {
+       cssmenu.find('ul').show();
+     }
+     if ($(window).width() <= mediasize) {
+       cssmenu.find('ul').hide().removeClass('open');
+     }
+   };
+   resizeFix();
+   return $(window).on('resize', resizeFix);
+ });
+  };
+})(jQuery);
+
+(function($){
+$(document).ready(function(){
+$("#cssmenu").menumaker({
+   format: "multitoggle"
+});
+});
+})(jQuery);
+$( "li.item-161" ).find( "span" ).css('display', 'none');
+$( "li.item-162" ).find( "span" ).css('display', 'none');
+</script>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+	
+</body>
+	
+	
+	
+</html>
+
+
+
+		
+

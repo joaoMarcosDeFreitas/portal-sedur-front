@@ -1,0 +1,965 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+	<!--ATIVAÇÃO DE COMPATIBILIDADE E PROTEÇÃO CONTRA ATAQUES DO TIPO XSS-->
+	<!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+	<!--meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1,maximum-scale=1,user-scalable=no"-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-XSS-Protection" content="1">
+	<meta http-equiv="x-dns-prefetch-control" content="off">
+	<!--ATIVAÇÃO DE COMPATIBILIDADE E PROTEÇÃO CONTRA ATAQUES DO TIPO XSS-->
+	
+	
+			
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="/var/www/html/sedur/favicon.ico"> -->
+
+	
+	
+	
+	<meta name="google-site-verification" content="3XxLThCC-_tkg2qtziw_KG01DRXRqWTMM91thC8V6RM" />
+	<!--OBS: ENCONTRAM-SE NO TYPE HEAD AS META TAGS DESCRIPTION E KEYWORDS-->
+	<meta charset="utf-8" />
+	<base href="http://sedur.salvador.ba.gov.br/denominacao-de-logradouros" />
+	<meta name="author" content="Super User" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>SEDUR - Secretaria Municipal de Desenvolvimento Urbano</title>
+	<link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://sedur.salvador.ba.gov.br/templates/sedur/assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="http://sedur.salvador.ba.gov.br/templates/sedur/assets/css/template.css" rel="stylesheet" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"de3afc2ceddc3f6df8e5bbc0ffa66c1c","system.paths":{"root":"","base":""}}</script>
+
+</head>
+
+	
+<body>
+	
+    <!-- Pop-up de Aviso -->
+          <!-- <div id="dialog-message" style="position: fixed; z-index: 4000; margin-left: 30px; margin-top: 100px; right: 30px;">
+          <div class="d-flex flex-row-reverse">
+        	<button style="margin-bottom: 10px" type="button" class="btn-close btn-lg" aria-label="Close" onclick="popUp()" id="botaoFechar">X</button>
+          </div>
+    		
+          <a href="#">
+            <p>
+              <img src="http://sedur.salvador.ba.gov.br//images/avisoLicenciamento31012025.jpeg" style="width: 600px;">
+			</p>
+          </a>
+		</div> -->
+        <!-- Fim -->
+      
+    
+	<div id="header-section1-internas" class="navbar-fixed-top not-print" style="display:none;">
+        
+  		<div class="wrapper">
+            
+  			<a id="logo-internas" href="http://www.salvador.ba.gov.br" target="_parent" title="Ir para o Portal Salvador">Prefeitura Municipal de Salvador</a>    
+
+            <div class="float-right"> 
+
+                <div class="social-links float-left font-bold">
+                    <ul class="float-left">
+                        <li class="facebook"><a href="https://www.facebook.com/pages/Prefeitura-de-Salvador/472097156139269" target="_blank">Facebook</a></li>
+                        <li class="youtube"><a href="http://www.youtube.com/prefeituradosalvador" target="_blank">YouTube</a></li>
+                        <li class="flickr"><a href="http://www.flickr.com/photos/prefeituradesalvador" target="_blank">Flickr</a></li>
+                        <li class="twitter"><a href="https://twitter.com/prefsalvador" target="_blank">Twitter</a></li>
+                    </ul>
+                </div>  
+
+            </div> 
+  
+        </div>
+</div>
+
+<style type="text/css">
+	#header-section1-internas {
+	    background-color: #34558c;
+	    height: 48px;
+	    border-top: 1px solid #3e66a3;
+	}
+	.wrapper {
+	    width: 100%;
+	    margin: 0 auto;
+	}
+	#logo-internas {
+		display: block;
+		float: left;
+		background: transparent url(http://sedur.salvador.ba.gov.br//images/logo/logo-internas.png) left center no-repeat;
+		/* Mp2 background: transparent url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/logo-internas.png) left center no-repeat;*/
+        width: 284px;
+		height: 43px;
+		text-indent: -5000em;
+		margin-left:10px;
+	}
+	.float-right {
+	    float: right;
+	}
+	.social-links {
+	    /* padding-top: 35px; */
+	    width: 100%;
+	}
+	.float-left {
+	    float: left;
+	}
+	.social-links ul {
+	    list-style: none;
+	    padding: 0;
+	    margin: 5px 0 0 0;
+	}
+	.social-links .facebook {
+    	background-image: url(http://sedur.salvador.ba.gov.br//images/logo/facebook-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/facebook-icon.png); */                    
+	}
+	.social-links .youtube {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/youtube-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/youtube-icon.png); */                       
+	}
+	.social-links .flickr {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/flickr-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/flickr-icon.png); */ 
+	}
+	.social-links .twitter {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/twitter-icon.png);
+        /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/twitter-icon.png); */                       
+	}
+	.social-links ul li {
+	    float: left;
+	    margin-right: 7px;
+	}
+	.social-links ul li a {
+	    width: 35px;
+	    height: 35px;
+	    text-indent: -5000em;
+	    display: block;
+	}
+                        
+                              
+</style>
+	<!-- Começo Navbar -->
+
+	<div class="container-fluid" style="padding-right: 0px; padding-left: 0px; border:0px solid #000">
+		<header>
+			<div class="row" style="margin: 0%; background-color: white; padding: 2% 0; border:0px solid #008000">
+					<div class="col-md-3 offset-1 col-sm-0" style="border:0px solid #000"> 
+						<a href="/index.php">
+							<img id = "img_marca_old" src="http://sedur.salvador.ba.gov.br//images/logo/logo-black.png" class="img-responsive" alt="logo">
+						</a>
+      			    </div>
+					
+                    <div class="barramenu col-md-8 col-sm-12" style="border:0px solid #000">
+                        <nav id='cssmenu'  style="margin-left: 0px;">
+                            <div id="head-mobile" style="border:0px solid #f00"></div>
+                            <div class="button" style="border:0px solid #ff0"></div>
+                            <ul class="nav menu" style="float: right;">
+<li class="item-102 deeper parent menu-style"><a href="#" >INSTITUCIONAL</a><ul class="dropdown-menu"><li class="item-156 menu-style"><a href="/institucional/dirigentes" >Dirigentes</a></li><li class="item-157 menu-style"><a href="/institucional/estrutura-organizacional" >Estrutura Organizacional</a></li><li class="item-149 menu-style"><a href="/institucional/area-de-atuacao" >Área de Atuação</a></li></ul></li><li class="item-106 menu-style"><a href="https://servicos.sedur.salvador.ba.gov.br/#/portal/home" >SERVIÇOS</a></li><li class="item-154 menu-style"><a href="/noticias" >NOTÍCIAS</a></li><li class="item-151 menu-style"><a href="/legislacao" >LEGISLAÇÃO</a></li><li class="item-155 menu-style"><a href="/licitacoes" >LICITAÇÕES</a></li><li class="item-171 menu-style"><a href="/transparencia" >TRANSPARÊNCIA</a></li></ul>
+
+
+
+<!-- <style>
+
+	.item-161{
+		margin-left: 18%;
+	}
+
+
+	@media (min-width: 320px) and (max-width:767px) {
+		.item-161{
+		margin-left: 0%;
+		}
+
+	}
+
+	
+	@media (min-width: 767px) and (max-width:999px) {
+		.item-161{
+			margin-left: 0%;
+		}
+	}
+
+
+</style> -->
+
+
+
+
+                        </nav>	
+                    </div>
+ 			</div>
+				
+		</header>
+	</div>
+
+
+	
+	<!-- Fim Navbar -->
+		
+	
+	              <div class="no-home">
+                  <div class="container-fluid">
+                      <div class="row">
+                         <div class="col-9 offset-2">
+                              
+                              <div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+		
+	
+	     
+            
+      <div class="page-header">
+		
+			<h2 class="artigos_internos" itemprop="headline" style="width: 532px;">Denominação de Logradouros</h2>
+									
+   
+          
+          <!-- Mp2 - Vou inserir 1 div botão voltar linha 301 a 303-->
+     <div class="voltarBTN" style="text-align: right;"><a href="JavaScript: window.history.back();"><button class="btn btn-warning" style="font-size: 15px; font-family: 'Roboto'; color: white; background-color: #006CB5; border-color: #006CB5; font-weight: bold; margin-right: 18px;" type="button">Voltar</button></a>
+     </div>   
+  	<br><br>
+<!-- Mp2 div botao voltar -->          
+      
+          
+          </div>
+         
+  
+          
+					
+		
+	
+	
+		
+							
+<!-- Mp2 Retirei a inclusão de imagem automaticamente das noticias
+      
+<img class="img-responsive" title="" src="/" alt=""/>
+
+fim retirar imagem -->    
+      
+	<div itemprop="articleBody">
+		<div class="col-md-12 col-12 table-responsive" style="text-align: justify; float: center;">
+<table class="table table-striped table-sm" style="width: 100%; height: 87px;">
+<thead>
+<tr>
+<th style="text-align: center; width: 6%;" scope="col">Data</th>
+<th style="text-align: center; width: 10.6793%;" scope="col">Nº Legislação</th>
+<th style="text-align: center; width: 69.3207%;" scope="col">Descrição</th>
+<th style="text-align: center; width: 4%;" scope="col">Arquivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 6%;">21/02/2022</td>
+<td style="width: 10.6793%;">Lei nº 9.622/2022</td>
+<td style="width: 69.3207%;">Dispõe sobre a mudança de nome da Avenida Adhemar de Barros para Avenida Milton Santos.</td>
+<td style="text-align: center; width: 4%;"><a href="/arquivos/2021/08/lei_9622_2022.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">05/08/2021</td>
+<td style="width: 10.6793%;">Lei nº 9.595/2021</td>
+<td style="width: 69.3207%;">Denomina de Gilberto Teixeira de Araújo um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/arquivos/2021/08/lei_9595_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">05/08/2021</td>
+<td style="width: 10.6793%;">Lei nº 9.594/2021</td>
+<td style="width: 69.3207%;">Denomina de Índia da Lagoa um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/arquivos/2021/08/lei_9594_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">05/08/2021</td>
+<td style="width: 10.6793%;">Lei nº 9.593/2021</td>
+<td style="width: 69.3207%;">Denomina de Professor Jorge Portugal um logradouro público da cidade de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/arquivos/2021/08/lei_9591_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">05/08/2021</td>
+<td style="width: 10.6793%;">Lei nº 9.591/2021</td>
+<td style="width: 69.3207%;">Denomina Senador Roberto Campos um logradouro público na cidade de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/arquivos/2021/08/lei_9591_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">15/06/2021</td>
+<td style="width: 10.6793%;">Lei nº 9.575/2021</td>
+<td style="width: 69.3207%;">Denomina de Professor Rodolfo Teixeira um logradouro desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/arquivos/2021/08/lei_9575_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/04/2021</td>
+<td style="width: 10.6793%;">Lei nº 9.569/2021</td>
+<td style="width: 69.3207%;">Dispõe sobre a alteração nominal do logradouro Travessa Frederico Pontes, localizado no bairro do Comércio, para Rua dos Estivadores.</td>
+<td style="text-align: center; width: 4%;"><a href="/arquivos/2021/08/lei_9569_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/04/2021</td>
+<td style="width: 10.6793%;">Lei nº 9.568/2021</td>
+<td style="width: 69.3207%;">Denomina de Pedro Irujo um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/arquivos/2021/08/lei_9568_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/04/2021</td>
+<td style="width: 10.6793%;">Lei nº 9.567/2021</td>
+<td style="width: 69.3207%;">Denomina de Rua Gustavo Gonzaga a um logradouro desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/arquivos/2021/08/lei_9567_2021.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">18/09/2020</td>
+<td style="width: 10.6793%;">Lei nº 9.539/2020</td>
+<td style="width: 69.3207%;">Denomina de Ivone Pimentel Sobral um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2021/01/lei_9539_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">18/09/2020</td>
+<td style="width: 10.6793%;">Lei nº 9.538/2020</td>
+<td style="width: 69.3207%;">Denomina de Mário Ferreira dos Santos um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2021/01/lei_9538_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">18/09/2020</td>
+<td style="width: 10.6793%;">Lei nº 9.536/2020</td>
+<td style="width: 69.3207%;">Denomina de Doutor Paulo Damasceno um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2021/01/lei_9536_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">18/03/2020</td>
+<td style="width: 10.6793%;">Lei nº 9.514/2020</td>
+<td style="width: 69.3207%;">Denomina de Rua Deputado Florisvaldo Carneiro a um logradouro público na cidade do Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2021/01/lei_9514_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">18/03/2020</td>
+<td style="width: 10.6793%;">Lei nº 9.512/2020</td>
+<td style="width: 69.3207%;">Denomina de Makota Valdina um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2021/01/lei_9512_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">02/05/2019</td>
+<td style="width: 10.6793%;">Lei nº 9447/2019</td>
+<td style="width: 69.3207%;">Denomina de Regina Dourado um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2021/01/lei_9447_2019.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">02/05/2019</td>
+<td style="width: 10.6793%;">Lei nº 9.446/2019</td>
+<td style="width: 69.3207%;">Denomina de Maria Emília Gadelha Vianna um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2021/01/lei_9446_2019.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">02/05/2019</td>
+<td style="width: 10.6793%;">Lei nº 9.445/2019</td>
+<td style="width: 69.3207%;">Denomina de Maria Lúcia Santos Pereira da Silva um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2021/01/lei_9445_2019.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">21/02/2019</td>
+<td style="width: 10.6793%;">Lei nº 9.443/2019</td>
+<td style="width: 69.3207%;">Denomina de Wanderlino Nogueira Neto um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/LEI_9443_2019-1.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">21/02/2019</td>
+<td style="width: 10.6793%;">Lei nº 9.442/2019</td>
+<td style="width: 69.3207%;">Denomina de Edson Freire O´Dwyer um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/LEI_9442_2019.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">20/02/2019</td>
+<td style="width: 10.6793%;">Lei nº 9.441/2019</td>
+<td style="width: 69.3207%;">Denomina de “Largo Antônio Moreira da Silva” um logradouro público da Cidade de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/LEI_9441_2019.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">20/02/2019</td>
+<td style="width: 10.6793%;">Lei nº 9.440/2019</td>
+<td style="width: 69.3207%;">Denomina de “Praça Bloco Camaleão” um logradouro público da Cidade de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/LEI_9440_2019.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">06/12/2018</td>
+<td style="width: 10.6793%;">Lei nº 9.394/2018</td>
+<td style="width: 69.3207%;">Denomina de Mestre Valdemar um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/Lei_9394_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">06/12/2018</td>
+<td style="width: 10.6793%;">Lei nº 9.393/2018</td>
+<td style="width: 69.3207%;">Denomina de Professor Germano Dias Machado um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/Lei_9393_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">06/12/2018</td>
+<td style="width: 10.6793%;">Lei nº 9.391/2018</td>
+<td style="width: 69.3207%;">Denomina de Raimundo Bispo dos Santos (Mestre King) um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/Lei_9391_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">06/12/2018</td>
+<td style="width: 10.6793%;">Lei nº 9.390/2018</td>
+<td style="width: 69.3207%;">Denomina de Carlos Alberto Caó um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/Lei_9390_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">06/12/2018</td>
+<td style="width: 10.6793%;">Lei nº 9.389/2018</td>
+<td style="width: 69.3207%;">Denomina de Lucione da Silva Conceição um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/Lei_9389_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">06/12/2018</td>
+<td style="width: 10.6793%;">Lei nº 9.388/2018</td>
+<td style="width: 69.3207%;">Denomina de Valdir Macário um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/Lei_9388_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">06/12/2018</td>
+<td style="width: 10.6793%;">Lei nº 9.387/2018</td>
+<td style="width: 69.3207%;">Denomina de Hildete Lomanto Britto um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/Lei_9387_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">06/12/2018</td>
+<td style="width: 10.6793%;">Lei nº 9.386/2018</td>
+<td style="width: 69.3207%;">Denomina de Frans Krajcberg um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/Lei_9386_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">06/12/2018</td>
+<td style="width: 10.6793%;">Lei nº 9.385/2018</td>
+<td style="width: 69.3207%;">Denomina de Paulo Anunciação um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/Lei_9385_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">06/12/2018</td>
+<td style="width: 10.6793%;">Lei nº 9.384/2018</td>
+<td style="width: 69.3207%;">Denomina de Mãe Aíce de Oxóssi um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/Lei_9384_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">07/11/2018</td>
+<td style="width: 10.6793%;">Lei nº 9.382/2018</td>
+<td style="width: 69.3207%;">Denomina de Rua Edivaldo Machado Boaventura um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/Lei_9382_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">07/11/2018</td>
+<td style="width: 10.6793%;">Lei nº 9.381/2018</td>
+<td style="width: 69.3207%;">Denomina de Mario Cravo Júnior um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/Lei_9381_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">20/04/2018</td>
+<td style="width: 10.6793%;">Lei nº 9.367/2018</td>
+<td style="width: 69.3207%;">Denomina de Luiz Alberto Moniz Bandeira um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/Lei_9367_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">21/03/2018</td>
+<td style="width: 10.6793%;">Lei nº 9.364/2018</td>
+<td style="width: 69.3207%;">Denomina de Arlette Maron de Magalhães um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/Lei_9364_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">20/03/2018</td>
+<td style="width: 10.6793%;">Lei nº 9.363/2018</td>
+<td style="width: 69.3207%;">Denomina de Jornalista Antônio Jorge Moura um logradouro público desta Cidade</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/Lei_9363_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">20/03/2018</td>
+<td style="width: 10.6793%;">Lei nº 9.361/2018</td>
+<td style="width: 69.3207%;">Denomina de Desembargador Edmilson Jatahy Fonseca um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/Lei_9361_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">20/03/2018</td>
+<td style="width: 10.6793%;">Lei nº 9.360/2018</td>
+<td style="width: 69.3207%;">Denomina de Reinaldo Miranda Ferreira Silva um logradouro público desta Cidade</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/Lei_9360_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">20/03/2018</td>
+<td style="width: 10.6793%;">Lei nº 9.359/2018</td>
+<td style="width: 69.3207%;">Denomina de Clara Maria Viana Telles Velloso Barreto um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/Lei_9359_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">25/01/2018</td>
+<td style="width: 10.6793%;">Lei nº 9.325/2018</td>
+<td style="width: 69.3207%;">Fica denominada de Avenida “Luís Viana Filho” a avenida que liga o Vale do Camarogipe ao Aeroporto Deputado Luís Eduardo Magalhães e Juracy Magalhães à avenida entre o referido Vale e o Largo da Mariquita, no Rio Vermelho (Altera o Art. 1º da Lei 2247/1970)</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/Lei_9325_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">18/09/2017</td>
+<td style="width: 10.6793%;">Lei nº 9.277/2017</td>
+<td style="width: 69.3207%;">Denomina de João Agripino da Costa Doria Neto um logradouro público desta Cidade</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/09/Lei_9277_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">13/10/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.121/2016</td>
+<td style="width: 69.3207%;">Torna sem efeito a Retificação de 10/10/2016, publicada no DOM de 11/10/2016, referente a Lei nº 9.121/2016, de 11/08/2016, publicada no DOM de 12/08/2016.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/10/Lei-n°-9.121_2016.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">11/10/2016</td>
+<td style="width: 10.6793%;">Lei nº 9.121/2016</td>
+<td style="width: 69.3207%;">Retifica a Lei nº 9.121/2016, de 11/08/2016, publicada no DOM de 12/08/2016, referente ao logradouro público, Pastor Juvenal Bastos Ferreira,</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/10/Lei-n°-9.121_16-2.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/09/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.158/2016</td>
+<td style="width: 69.3207%;">Considera de Utilidade Pública Municipal a Associação Beneficente Sarom.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/09/Lei-n°-9.158_16-1.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/09/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.154/2016</td>
+<td style="width: 69.3207%;">Denomina de Manuel Baqueiro Abad um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/09/Lei-n°-9.158_16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/09/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.151/2016</td>
+<td style="width: 69.3207%;">Denomina de Província Autônoma de Trento um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/09/LEI-9.151-16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/09/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.150/2016</td>
+<td style="width: 69.3207%;">Denomina de Praça Tricolor Claudio Veiga um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/09/Lei-9.150-_16-2.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">19/08/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.146/2016</td>
+<td style="width: 69.3207%;">Denomina de Pastor Juvenal Bastos Ferreira um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-n°-9.146-2016.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">12/08/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.122/2016</td>
+<td style="width: 69.3207%;">Denomina de Pastor Samuel Oliveira Santos um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-nº-9.122-2016.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">12/08/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.120/2016</td>
+<td style="width: 69.3207%;">Denomina de Pastor Marivaldo Gomes Santana um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-n°-9.120-2016.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">12/08/2016</td>
+<td style="width: 10.6793%;">Lei nº 9.119/2016</td>
+<td style="width: 69.3207%;">Denomina de Pastor Rosivaldo de Araújo um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-nº-9.119-20161.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">12/08/2016</td>
+<td style="width: 10.6793%;">Lei n º 9.118/2016</td>
+<td style="width: 69.3207%;">Denomina de Apóstolo Samuel Vieira Souza um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-nº-9.118-2016.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">12/08/2016</td>
+<td style="width: 10.6793%;">Lei nº 9.117/2016</td>
+<td style="width: 69.3207%;">Denomina de Frederico Rodrigues da Costa Mendonça um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-nº-9.117-20161.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">12/08/2016</td>
+<td style="width: 10.6793%;">Lei nº 9.116/2016</td>
+<td style="width: 69.3207%;">Denomina de Fernando Carvalho a um logradouro público desta Cidade</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-n°-9.116-16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">12/08/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.114/2016</td>
+<td style="width: 69.3207%;">Denomina de Washington Luiz da Trindade a um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-n°-9.114-2016.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">12/08/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.111/2016</td>
+<td style="width: 69.3207%;">Denomina de Amélio Batista Filho um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/LEI-N°-9.111-20162.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">12/08/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.113/2016</td>
+<td style="width: 69.3207%;">Denomina de Roberto Albergaria de Oliveira um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-nº-9.113-2016.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/07/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.102/2016</td>
+<td style="width: 69.3207%;">Denomina-se de Nossa Senhora da Assunção a praça localizada na Rua Guillard Muniz Pituba.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/07/Lei-n°-9.102_2016.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/07/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.101/2016</td>
+<td style="width: 69.3207%;">Atribui a logradouro público deste Município a denominação Luís Carlos Ribeiro Couto.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/07/Lei-9.101-16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/07/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.100/2016</td>
+<td style="width: 69.3207%;">Atribui a logradouro público deste Município a denominação Marcelo Caribé de Carvalho</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/07/Lei-n°-9.100_161.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/07/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.099/2016</td>
+<td style="width: 69.3207%;">Denomina de Antônio Lima um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/07/Lei-9.099_16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/07/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.098/2016</td>
+<td style="width: 69.3207%;">Denomina de Antônio Barroco Short um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/07/Lei-n°-9.098_16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/07/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.097/2016</td>
+<td style="width: 69.3207%;">Denomina de Ebomi Cidália Soledade um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-n°-9.097_2016.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/07/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.096/2016</td>
+<td style="width: 69.3207%;">Denomina de Ana Alice Alcântara Costa um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-n°-9.096_2016.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/07/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.093/2016</td>
+<td style="width: 69.3207%;">Denomina de José Joaquim Calmon de Passos um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-n°-9.093_16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/07/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.094/2016</td>
+<td style="width: 69.3207%;">Denomina de Deputado Afrísio Vieira Lima um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-n°-9.094_16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">18/05/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.048/2016</td>
+<td style="width: 69.3207%;">Denomina de Praça Santa Tereza de Lisieux a um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-9.048-16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">17/05/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.055/2016</td>
+<td style="width: 69.3207%;">Denomina de Professor Marcus Matraga a um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-9.055-2016.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">17/05/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.054/2016</td>
+<td style="width: 69.3207%;">Denomina de Padre Alfonso Pacciani a um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-9.054-16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">17/05/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.053/2016</td>
+<td style="width: 69.3207%;">Denomina de Rua Myriam Fraga a um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-9.053-16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">17/05/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.052/2016</td>
+<td style="width: 69.3207%;">Denomina de Rua Wesley Rangel a um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-9.052-16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">26/04/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.043/2016</td>
+<td style="width: 69.3207%;">Denomina de Mestre Gildo Alfinete a um logradouro público desta Cidade</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-9.043-16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">26/04/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.042/2016</td>
+<td style="width: 69.3207%;">Denomina de Vereador Zezéu Ribeiro a um logradouro público nesta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-9.042-16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">25/04/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.044/2016</td>
+<td style="width: 69.3207%;">Denomina de Emmanuel Silva Maluf a um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-9.044-16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">25/04/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.045/2016</td>
+<td style="width: 69.3207%;">Denomina de Edgar Silva a um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-n°-9.045-16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">18/02/2016</td>
+<td style="width: 10.6793%;">Lei n° 9.018/2016</td>
+<td style="width: 69.3207%;">Denomina de Praça da Bíblia a um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-9.018-16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">13/01/2016</td>
+<td style="width: 10.6793%;">Lei n° 8.971/2016</td>
+<td style="width: 69.3207%;">Denomina de Praça Vereador Décio Santana a um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-8.971_16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">13/01/2016</td>
+<td style="width: 10.6793%;">Lei n° 8.970/2016</td>
+<td style="width: 69.3207%;">Denomina de “Praça da Paciência Menino Pimpão” a praça situada entre as ruas Nova do Camurugipe e Fonte da Bica de Baixo, na Baixa do Camurugipe.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-8.970_16.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">15/12/2015</td>
+<td style="width: 10.6793%;">Lei n° 8.931/2015</td>
+<td style="width: 69.3207%;">Denomina de Senador Rodolpho Tourinho Neto a um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-8.931_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">15/12/2015</td>
+<td style="width: 10.6793%;">Lei n° 8.933/2015</td>
+<td style="width: 69.3207%;">Denomina de Virgílio Pacheco de Araújo Neto a um logradouro público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-8.933_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">02/12/2015</td>
+<td style="width: 10.6793%;">Lei n° 8.929/2015</td>
+<td style="width: 69.3207%;">Fica denominada Praça Maria Luzia Costa dos Santos a praça localizada na Av. Glauber Rocha S/N, com codlog nº 24481, cujas coordenadas UTM, SAD 69 são: X= 555.005,830; Y= 8.566.920,070; e os confrontantes a Rua Quinta dos Lázaros, codlog nº 01281, e a Avenida Glauber Rocha, codlog nº 22295.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-8.929_15.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">03/09/2015</td>
+<td style="width: 10.6793%;">Lei n° 8.895/2015</td>
+<td style="width: 69.3207%;">Denomina de Avenida Jorge Calmon Moniz de Bittencourt a nova ligação Cajazeiras V à X.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-8.895_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">01/09/2015</td>
+<td style="width: 10.6793%;">Lei n° 8.886/2015</td>
+<td style="width: 69.3207%;">Denomina de Paulo Roberto Colombiano um Logradouro Público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-8.886_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">01/09/2015</td>
+<td style="width: 10.6793%;">Lei n° 8.878/2015</td>
+<td style="width: 69.3207%;">Denomina de Praça de Doutor Sosthenes Tavares de Macedo a Praça localizada na Rua Aristides Fraga Lima Pituba</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-8.878_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">25/08/2015</td>
+<td style="width: 10.6793%;">Lei n° 8.845/2015</td>
+<td style="width: 69.3207%;">Denomina de Maestro Reginaldo de Xangô a Logradouro Público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-8.845_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">25/08/2015</td>
+<td style="width: 10.6793%;">Lei n° 8.844/2015</td>
+<td style="width: 69.3207%;">Denomina de Augusto Omolu a um Logradouro Público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Lei-8.844_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">25/08/2015</td>
+<td style="width: 10.6793%;">Lei n° 8.840/2015</td>
+<td style="width: 69.3207%;">Denomina de Ildefonso de Souza Bittencourt a um Logradouro Público desta Cidade.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/08/Lei-8.840_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+</tbody>
+</table>
+</div> 	</div>
+
+								</div>
+                          </div> 
+                      </div>
+                  </div>
+              </div>
+                            <!--VERIFICAÇÃO PARA INCLUSÃO DE PÁGINA-->
+	</main>
+	
+<footer>
+
+<!-- inicio Mp2 -->
+      
+        
+  	  <div class="container-fluid">
+              <div class="row justify-content-start text-center">
+                  <div class="col-12" style="padding-top:5px; padding-bottom: 1px;"></div>
+              </div>
+      </div>
+       
+      <div class="container-fluid">
+          <div class="row justify-content-start text-center sty">
+              <div class="col-12 endereco">
+                  <b>&copy; 2021 - Secretaria Municipal de Desenvolvimento Urbano. Todos os direitos reservados.</b>
+              </div>
+          </div>
+      </div>
+       
+  	  <div class="container-fluid">
+              <div class="row justify-content-start text-center">
+                  <div class="col-12" style="padding-top:1px; padding-bottom: 1px;"></div>
+              </div>
+      </div>
+       
+         
+    <div class="container-fluid bannerfoot">
+
+              <div class="row">
+
+                    <!-- inic coluna3 ACESSO RAPIDO-->
+                    <div class="bfooter1 col-xs-12 col-sm-6 col-md-3" style="padding-top:30px; padding-left:20px; border:0px solid #fff">
+                       <ul class="none">
+                         <h5><font size="2px" color="#FFD190"><B>ACESSO RÁPIDO</B></font></h5>
+                         <li><a href="https://sedur.salvador.ba.gov.br/acessoremoto/" target="_blank" alt="Acesso Interno SEDUR"><font color="white" style="font-family:'Roboto' sans-serif; font-size:12px">Acesso Interno</font></a></li>
+       					 <li><a href="https://agendamento.sedur.salvador.ba.gov.br/sas/#agendamento" target="_blank" alt="Agendamento"><font color="white" style="font-family:'Roboto', sans-serif;  font-size:12px">Agendamento</font></a></li>
+                    	 <!-- 4ls; Modificação da página Canais de Atendimento-->
+       					 <!-- <li><a href="/./canais-de-atendimento" target="_blanck" alt="Canais Atendimento"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px">Canais de Atendimento</font></a></li> -->
+                    	<li><a href="https://servicos.sedur.salvador.ba.gov.br/#/portal/contacts" target="_blanck" alt="Canais Atendimento"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px">Canais de Atendimento</font></a></li>
+                         <!-- Fim -->
+                         <li><a href="http://www.falasalvador.ba.gov.br/portal/portal/" target="_blank" alt="Portal Fala Salvador"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px"> Portal Fala Salvador</font></a></li>
+                           <!--<li>
+                           	Prefeitura Municipal de Salvador<br>
+                           	13.927.801/0029-40
+                           </li>-->
+                       </ul>
+                    </div>   
+
+
+                    <!-- inic coluna1 SEDUR -->
+                    <div class="bfooter2 col-xs-12 col-sm-6 col-md-4" style="text-align:left; padding-top:60px; border:0px solid #fff">
+                        <img class = "img-responsive" src="http://sedur.salvador.ba.gov.br//images/logo/logo-white.png" alt="logo SEDUR">
+                    </div>
+
+
+                    <!-- inic coluna2 PREFEITURA -->
+                    <!-- <div class="bfooter3 col-xs-12 col-sm-6 col-md-3" style="text-align:left; padding-top:50px; border:0px solid #fff">
+                        <img id = "img_sedur_branca" src="http://sedur.salvador.ba.gov.br//images/logo/PREFEITURA_RET_COMPL_Branc_Ftrans2.png" alt="logo Prefeitura" width="200px" hight="auto">
+                    </div> -->
+
+
+
+                    <!-- inic coluna4 GOOGLE-->             
+                    <div class="bfooter4 col-xs-12 col-sm-6 col-md-3 offset-2" style="padding-top:10px; font-family:'Roboto', sans-serif; font-size:12px; color:white;">
+                      <a href="https://www.google.com/maps/place/SEDUR+-+Secretaria+Municipal+de+Desenvolvimento+e+Urbanismo/@-12.9847353,-38.4661181,1236a,35y,90h/data=!3m1!1e3!4m5!3m4!1s0x7161b34826018a3:0x6f1379fe7b002977!8m2!3d-12.9876324!4d-38.4666753?hl=pt-BR" target="_blank" alt="Endereo Sedur"><img src="http://sedur.salvador.ba.gov.br//images/imagens/END_SEDUR.png" width="100%" height="auto" style="border:3px solid #ffffff;"></a> 
+       				  <p>Av.ACM, nº3224, Caminho das Árvores - Salvador/Ba. Edf.Empresarial Thomé de Souza / Térreo - CEP.: 41110-700 </p>
+                     </div>
+
+              </div>
+
+    </div>       
+         
+    
+          
+    
+ <!-- fim Mp2 -->  
+     
+                  
+                  
+</footer>
+
+    <script src="http://sedur.salvador.ba.gov.br/templates/sedur/assets/js/js.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<script src="http://sedur.salvador.ba.gov.br/templates/sedur/assets/js/imageMapResizer.min.js"></script>
+	<script type="text/javascript">
+		$('map').imageMapResize();
+	</script>
+
+
+	<script>
+  
+  
+  function popUp(){
+    document.getElementById("dialog-message").style.display = "none";
+};   
+  
+  (function($) {
+$.fn.menumaker = function(options) {  
+ var cssmenu = $(this), settings = $.extend({
+   format: "dropdown",
+   sticky: false
+ }, options);
+ return this.each(function() {
+   $(this).find(".button").on('click', function(){
+     $(this).toggleClass('menu-opened');
+     var mainmenu = $(this).next('ul');
+     if (mainmenu.hasClass('open')) { 
+       mainmenu.slideToggle().removeClass('open');
+     }
+     else {
+       mainmenu.slideToggle().addClass('open');
+       if (settings.format === "dropdown") {
+         mainmenu.find('ul').show();
+       }
+     }
+   });
+   cssmenu.find('li ul').parent().addClass('has-sub');
+multiTg = function() {
+     cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
+     cssmenu.find('.submenu-button').on('click', function() {
+       $(this).toggleClass('submenu-opened');
+       if ($(this).siblings('ul').hasClass('open')) {
+         $(this).siblings('ul').removeClass('open').slideToggle();
+       }
+       else {
+         $(this).siblings('ul').addClass('open').slideToggle();
+       }
+     });
+   };
+   if (settings.format === 'multitoggle') multiTg();
+   else cssmenu.addClass('dropdown');
+   if (settings.sticky === true) cssmenu.css('position', 'fixed');
+resizeFix = function() {
+  var mediasize = 1000;
+     if ($( window ).width() > mediasize) {
+       cssmenu.find('ul').show();
+     }
+     if ($(window).width() <= mediasize) {
+       cssmenu.find('ul').hide().removeClass('open');
+     }
+   };
+   resizeFix();
+   return $(window).on('resize', resizeFix);
+ });
+  };
+})(jQuery);
+
+(function($){
+$(document).ready(function(){
+$("#cssmenu").menumaker({
+   format: "multitoggle"
+});
+});
+})(jQuery);
+$( "li.item-161" ).find( "span" ).css('display', 'none');
+$( "li.item-162" ).find( "span" ).css('display', 'none');
+</script>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+	
+</body>
+	
+	
+	
+</html>
+
+
+
+		
+

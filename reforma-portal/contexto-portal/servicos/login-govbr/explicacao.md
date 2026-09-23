@@ -1,0 +1,8 @@
+# Melhorias
+
+- URGENTE, avisar a TI/NTI: existe uma tela de login de demonstração aberta ao público. O endereço /govbr abre sem nenhum login e mostra “Identifique-se no gov.br com:” seguido de 3 pessoas (nome e CPF com parte oculta) e um botão “Continuar”. Pelo código da página, os campos se chamam “usuario-demo” e o botão envia para /govbr/login. Parece uma ferramenta de teste que ficou publicada no sistema real. Eu não cliquei em “Continuar”, para não entrar como nenhum deles; portanto não sei o que acontece. [a confirmar com a TI se está ativo em produção]
+- Erro de acentuação nessa mesma tela: “Pular para o conteÃºdo principal” (letras trocadas), sinal de codificação errada.
+- Dois textos diferentes para a mesma ação. No topo aparece “Entrar com” (seguido do logo do gov.br) e, no segundo menu da página (provavelmente o de celular), “Entre ou cadastre-se”. O logo do gov.br não tem descrição, então o leitor de tela lê só “Entrar com”.
+- Nenhuma ficha avisa, antes do clique, que “Abrir processo” e “Emissão de DAM” levam ao login do gov.br. A pessoa é jogada para outro site sem saber por quê nem o que terá que fazer lá.
+- O card “Agendamento Serviços” da página inicial também leva ao login, e não ao Agendamento. Marcar um horário exigir gov.br deveria ser dito na tela. [a confirmar o que aparece depois do login]
+- O que acontece depois do login não pude ver (área logada). **Pendente e para ignorar por enquanto:** o Johnny informou (21/09/2026) que o sistema caiu; ele enviará depois os prints do fluxo pelo gov.br (emitir DAM, abrir processo, acompanhar e demais funções). Quando chegarem, gravar em `login-govbr/` e nas pastas dos serviços. Veja também o item sobre “/livewire/update” em `servicos-disponiveis/explicacao.md`.

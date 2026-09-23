@@ -1,0 +1,6 @@
+# Melhorias
+
+- Aba “Taxas” sem informação. Abre uma tabela só com os títulos “Descrição” e “Valor (R$)”, sem nenhuma linha, e o parágrafo padrão sobre a lei. A pessoa não fica sabendo se há taxa ou não. Mostrar o valor, escrever “Sem taxa” ou retirar a aba.
+- Lei sem link. A ficha cita a Lei nº 9.767/2023 (aba “Descrição”; publicada em Legislação › Leis, arquivo https://sedur.salvador.ba.gov.br/images/pdf/lei_9767_2023_renova_centro.pdf) e o Decreto nº 38.305/2024 (aba “Descrição”; publicado em Legislação › Decretos, arquivo https://sedur.salvador.ba.gov.br/images/pdf/dec_38305_2024.pdf), mas não tem link para o texto. Linkar direto para o documento.
+- Poluição visual. A aba “Local e horário” mostra só “N/A”. Quando alguma aba não há conteúdo para mostrar, o melhor a se fazer é retirar a mesma.
+- Programa sem página no site. O Renova Centro (Lei nº 9.767/2023, Decreto nº 38.305/2024) tem esta ficha (na categoria “Empreendimento”, enquanto Incentivos Fiscais e TUL estão em “Desenvolvimento Econômico”) e as normas na Legislação, mas não aparece em “Nossos Projetos” na home do site. Já o Revitalizar, que aparece lá, não tem mais ficha. Ver `../../../../home/projetos/explicacao.md`. [a confirmar se o Renova Centro substituiu o Revitalizar]

@@ -1,0 +1,13 @@
+HTTP/1.1 401 Unauthorized
+Server: nginx/1.24.0
+Date: Mon, 21 Sep 2026 13:18:23 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 13
+Connection: keep-alive
+www-authenticate: Basic realm="Entre com seu usuario e senha da Rede Sedur"
+x-content-type-options: nosniff
+x-envoy-upstream-service-time: 1
+Set-Cookie: cookiesession1=[removido];Expires=Tue, 21 Sep 2027 13:18:23 GMT;Path=/;HttpOnly
+Strict-Transport-Security: max-age=15552000; preload
+Content-Security-Policy: upgrade-insecure-requests
+

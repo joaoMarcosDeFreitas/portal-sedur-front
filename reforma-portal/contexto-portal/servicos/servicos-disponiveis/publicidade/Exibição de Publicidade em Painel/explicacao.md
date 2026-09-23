@@ -1,0 +1,5 @@
+# Melhorias
+
+- Serviço suspenso, mas só se descobre no meio da ficha. A aba “Informações” diz “Bloqueado por força do Decreto 30.095/2018, que suspende por prazo indeterminado, as concessões de Alvarás para engenhos tipo outdoor e painel que divulguem mensagens publicitárias ou mistas”. Quem abre a ficha lê a descrição, os documentos, a taxa e o prazo antes de saber que não pode pedir o serviço, e a ficha fica sem botão sem explicar por quê. Colocar o aviso “Serviço suspenso” no topo da ficha, logo abaixo do título, e não mostrar documentos, taxa e prazo de um serviço que não pode ser pedido.
+- Lei sem link. A ficha cita o Decreto nº 30.095/2018 (aba “Informações”; publicado em Legislação › Decretos, arquivo https://sedur.salvador.ba.gov.br/images/arquivos_processos/2018/09/decreto_30095_2018.pdf), mas não tem link para o texto. Linkar direto para o documento.
+- Poluição visual. A aba “Local e horário” mostra só “N/A”. Quando alguma aba não há conteúdo para mostrar, o melhor a se fazer é retirar a mesma.

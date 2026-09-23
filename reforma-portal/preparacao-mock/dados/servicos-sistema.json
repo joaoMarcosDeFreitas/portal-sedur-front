@@ -1,0 +1,1026 @@
+{
+ "fonte": "https://servicos.sedur.salvador.ba.gov.br",
+ "coletado_em": "2026-09-18 (revisado em 2026-09-21)",
+ "observacao": "Copiado do portal público sem login. Textos como estão no portal (inclusive erros).",
+ "titulo_da_aba_em_todas_as_paginas": "SEDUR - Portal de serviços da Prefeitura Municipal de Salvador",
+ "menu_topo": [
+  "Início",
+  "Carta de Serviços",
+  "Canais de Atendimento",
+  "Entrar com (gov.br)"
+ ],
+ "rodape": {
+  "endereco": "Av. ACM, nº 3224, Caminho das Árvores - Salvador/BA. Edf.Empresarial Thomé de Souza / Térreo - CEP.: 41110-700",
+  "horarios": "Seg. a Sex. 09h às 16h",
+  "copyright": "©SEDUR | Todos os direitos reservados."
+ },
+ "acessibilidade": {
+  "barra": [
+   "Aumentar Texto",
+   "Diminuir Texto",
+   "Escala de Cinza",
+   "Alto Contraste",
+   "Contraste Negativo",
+   "Fundo Claro",
+   "Links Sublinhados",
+   "Fonte Legível",
+   "Reiniciar"
+  ],
+  "vlibras": true
+ },
+ "pagina_inicial": {
+  "url": "https://servicos.sedur.salvador.ba.gov.br/",
+  "frase": "Abra seus processos com facilidade de onde você estiver.",
+  "busca": "O que você procura?",
+  "cards": [
+   {
+    "nome": "Agendamento Serviços",
+    "destino": "login gov.br (não abre o Agendamento)"
+   },
+   {
+    "nome": "Catálogo Geoserviços",
+    "url": "https://servicos.sedur.salvador.ba.gov.br/geoservicos"
+   },
+   {
+    "nome": "Consultas",
+    "url": "https://servicos.sedur.salvador.ba.gov.br/consultas"
+   },
+   {
+    "nome": "Formulários",
+    "url": "https://servicos.sedur.salvador.ba.gov.br/formularios"
+   },
+   {
+    "nome": "Transparência",
+    "url": "https://servicos.sedur.salvador.ba.gov.br/lei-transparencia"
+   }
+  ],
+  "banners_de_imagem": [
+   {
+    "nome": "O serviço de Autorização para Feira está digital",
+    "url": "https://servicos.sedur.salvador.ba.gov.br/eventos/form.jsp?sys=CLE&formID=464570877",
+    "situacao": "em manutenção (Johnny, 21/09/2026)"
+   },
+   {
+    "nome": "Salvador Ruas",
+    "url": "https://ruas.salvador.ba.gov.br"
+   },
+   {
+    "nome": "Consulta Prévia Salvador",
+    "url": "https://consultaprevia.sedur.salvador.ba.gov.br"
+   },
+   {
+    "nome": "Revisão do PDDU",
+    "url": "https://pddu.salvador.ba.gov.br/"
+   }
+  ],
+  "carrossel_fique_por_dentro": [
+   {
+    "descricao_da_imagem": "Imagem destaque",
+    "url": "https://citypro.net.br/"
+   },
+   {
+    "descricao_da_imagem": "Imagem 1",
+    "url": "https://www.ba.gov.br/juceb/servicos/",
+    "observacao": "a página responde 404"
+   },
+   {
+    "descricao_da_imagem": "Imagem 2",
+    "url": "PDF em /storage/portal-servicos/fique-por-dentro/"
+   },
+   {
+    "descricao_da_imagem": "Imagem 3",
+    "url": "PDF em /storage/portal-servicos/fique-por-dentro/"
+   },
+   {
+    "descricao_da_imagem": "Imagem 4",
+    "url": "PDF em /storage/portal-servicos/fique-por-dentro/"
+   }
+  ],
+  "texto_lido": [
+   "Abra seus processos com facilidade de onde você estiver.",
+   "O que você procura?",
+   "Agendamento Serviços",
+   "Catálogo Geoserviços",
+   "Consultas",
+   "Formulários",
+   "Transparência",
+   "Fique por dentro!"
+  ]
+ },
+ "carta_de_servicos": {
+  "url": "https://servicos.sedur.salvador.ba.gov.br/carta-servicos",
+  "grupos": [
+   "Serviços Dispensados de Licenças",
+   "Ambiental",
+   "Auxiliares",
+   "Carnaval",
+   "Desenvolvimento Econômico",
+   "Empreendimento",
+   "Eventos",
+   "Festas Populares",
+   "Obras Especiais",
+   "Parcelamento do Solo",
+   "Publicidade",
+   "Telecomunicações",
+   "Urbanismo",
+   "Viabilidade de Localização"
+  ],
+  "dados": "ver servicos.json"
+ },
+ "servicos_dispensados_de_licenca": {
+  "url": "https://servicos.sedur.salvador.ba.gov.br/carta-servicos/servicos-dispensados-licenca",
+  "texto_lido": [
+   "Serviços Dispensados de Licença",
+   "Voltar",
+   "Reparos Gerais",
+   "Execução de reparos gerais destinados exclusivamente a conservação, que não implique na alteração",
+   "das dimensões do espaço (pintura, revestimento de parede, forro, substituição de piso, instalações",
+   "elétricas e hidráulicas);",
+   "Instalação de tapume em terreno particular;",
+   "Instalação de aparelhos de ar-condicionado;",
+   "Execução de pinturas internas, externas e/ou revestimento de fachadas de edificações;",
+   "Execução de impermeabilização de laje;",
+   "Execução de reparos na cobertura, com substituição da estrutura de cobertura que não implique no",
+   "aumento da altura do mesmo;",
+   "Instalação ou substituição de esquadrias externas;",
+   "Obras em Logradouro Público",
+   "Execução ou recuperação de calçadas ou passeios;",
+   "Execução ou recuperação de meio fio em logradouro público sem alteração de alinhamento de caixa de",
+   "via;",
+   "Especiais",
+   "Execução ou recuperação de muros de alinhamento de gradil do lote ou gleba que faz limite com",
+   "logradouro público existente ou projetado pelo município;",
+   "Execução ou recuperação de muro divisório em parcelamento aprovado com até 2m (dois metros) de",
+   "altura, que não implique na execução de obras de contenção;",
+   "Limpeza e nivelamento de terreno com movimentação de terra de até 50cm (cinquenta centímetros) de",
+   "altura;",
+   "Clique aqui para gerar o documento de Dispensa de Licenciamento para os serviços do",
+   "Grupo I"
+  ]
+ },
+ "consultas": [
+  {
+   "nome": "Alvará de Publicidade",
+   "tecnologia": "página do sistema antigo dentro de janela (iframe) de 500 px",
+   "url": "http://servicos.sedur.salvador.ba.gov.br/paginas/iframe/eyJ1cmxfaWZyYW1lIjoiaHR0cHM6XC9cL2FwaS5zZWR1ci5zYWx2YWRvci5iYS5nb3YuYnJcL2s4c1wvcHJkXC9zZXJ2aWNvc29ubGluZVwvV2ViXC9lbWlzc2FvQWx2YXJhUHVibGljaWRhZGUucGhwIiwidXJsX3ZvbHRhciI6Imh0dHA6XC9cL3NlcnZpY29zLnNlZHVyLnNhbHZhZG9yLmJhLmdvdi5iclwvY29uc3VsdGFzIiwidXJsX3JlZGlyZWN0IjpudWxsLCJ0aXRsZSI6IkFsdmFyXHUwMGUxIGRlIFB1YmxpY2lkYWRlIiwiY292ZXJfdGl0bGUiOiJDb25zdWx0YXMifQ==",
+   "url_do_sistema_antigo": "https://api.sedur.salvador.ba.gov.br/k8s/prd/servicosonline/Web/emissaoAlvaraPublicidade.php",
+   "url_voltar": "http://servicos.sedur.salvador.ba.gov.br/consultas",
+   "titulo_dentro_da_janela": "Alvará de Publicidade",
+   "campos": []
+  },
+  {
+   "nome": "Auto de Infração",
+   "tecnologia": "página do próprio portal (Laravel/Livewire)",
+   "url": "https://servicos.sedur.salvador.ba.gov.br/consultas/auto-de-infracao",
+   "campos": [
+    {
+     "tag": "input",
+     "tipo": "text",
+     "nome": null,
+     "rotulo": "Numero do Auto",
+     "placeholder": null,
+     "texto": null
+    },
+    {
+     "tag": "button",
+     "tipo": "reset",
+     "nome": null,
+     "rotulo": null,
+     "placeholder": null,
+     "texto": "Limpar"
+    },
+    {
+     "tag": "button",
+     "tipo": "submit",
+     "nome": null,
+     "rotulo": null,
+     "placeholder": null,
+     "texto": "Pesquisar"
+    }
+   ]
+  },
+  {
+   "nome": "Atividades para Escritórios Virtuais",
+   "tecnologia": "página do sistema antigo dentro de janela (iframe) de 500 px",
+   "url": "http://servicos.sedur.salvador.ba.gov.br/paginas/iframe/eyJ1cmxfaWZyYW1lIjoiaHR0cHM6XC9cL2FwaS5zZWR1ci5zYWx2YWRvci5iYS5nb3YuYnJcL2s4c1wvcHJkXC9zZXJ2aWNvc29ubGluZVwvV2ViXC9BdGl2aWRhZGVzUGVybWl0aWRhc0VtRXNjcml0b3Jpb1ZpcnR1YWwucGhwIiwidXJsX3ZvbHRhciI6Imh0dHA6XC9cL3NlcnZpY29zLnNlZHVyLnNhbHZhZG9yLmJhLmdvdi5iclwvY29uc3VsdGFzIiwidXJsX3JlZGlyZWN0IjpudWxsLCJ0aXRsZSI6IkF0aXZpZGFkZXMgcGFyYSBFc2NyaXRcdTAwZjNyaW9zIFZpcnR1YWlzIiwiY292ZXJfdGl0bGUiOiJDb25zdWx0YXMifQ==",
+   "url_do_sistema_antigo": "https://api.sedur.salvador.ba.gov.br/k8s/prd/servicosonline/Web/AtividadesPermitidasEmEscritorioVirtual.php",
+   "url_voltar": "http://servicos.sedur.salvador.ba.gov.br/consultas",
+   "titulo_dentro_da_janela": "Atividades para Escritórios Virtuais",
+   "campos": [
+    {
+     "tag": "input",
+     "tipo": "text",
+     "nome": "search",
+     "rotulo": null,
+     "placeholder": "Search",
+     "texto": null
+    }
+   ]
+  },
+  {
+   "nome": "Atividades - Classificação de Risco das Atividades Econômicas",
+   "tecnologia": "página do próprio portal (Laravel/Livewire)",
+   "url": "https://servicos.sedur.salvador.ba.gov.br/consultas/classificacao-risco",
+   "campos": [
+    {
+     "tag": "input",
+     "tipo": "text",
+     "nome": "filtro",
+     "rotulo": null,
+     "placeholder": "Digite sua busca, tecle enter para filtrar",
+     "texto": null
+    }
+   ]
+  },
+  {
+   "nome": "Atividades Permitidas para Profissionais Autonômos",
+   "tecnologia": "página do próprio portal (Laravel/Livewire)",
+   "url": "https://servicos.sedur.salvador.ba.gov.br/consultas/atividades-permitidas-autonomos",
+   "campos": [
+    {
+     "tag": "input",
+     "tipo": "text",
+     "nome": "filtro",
+     "rotulo": null,
+     "placeholder": "Digite sua busca, tecle enter para filtrar",
+     "texto": null
+    }
+   ]
+  },
+  {
+   "nome": "Atividades Permitidas em Residências",
+   "tecnologia": "página do próprio portal (Laravel/Livewire)",
+   "url": "https://servicos.sedur.salvador.ba.gov.br/consultas/atividades-permitidas-residencias",
+   "campos": [
+    {
+     "tag": "input",
+     "tipo": "text",
+     "nome": "filtro",
+     "rotulo": null,
+     "placeholder": "Digite sua busca, tecle enter para filtrar",
+     "texto": null
+    }
+   ]
+  },
+  {
+   "nome": "Renovação de Publicidade (DAM)",
+   "tecnologia": "página do sistema antigo dentro de janela (iframe) de 500 px",
+   "url": "http://servicos.sedur.salvador.ba.gov.br/paginas/iframe/eyJ1cmxfaWZyYW1lIjoiaHR0cHM6XC9cL2FwaS5zZWR1ci5zYWx2YWRvci5iYS5nb3YuYnJcL2s4c1wvcHJkXC9zZXJ2aWNvc29ubGluZVwvV2ViXC9Db25zdWx0YURhbUFiZXJ0b1BvckNHQS5waHAiLCJ1cmxfdm9sdGFyIjoiaHR0cDpcL1wvc2Vydmljb3Muc2VkdXIuc2FsdmFkb3IuYmEuZ292LmJyXC9jb25zdWx0YXMiLCJ1cmxfcmVkaXJlY3QiOm51bGwsInRpdGxlIjoiUmVub3ZhXHUwMGU3XHUwMGUzbyBkZSBQdWJsaWNpZGFkZSAoREFNKSIsImNvdmVyX3RpdGxlIjoiQ29uc3VsdGFzIn0=",
+   "url_do_sistema_antigo": "https://api.sedur.salvador.ba.gov.br/k8s/prd/servicosonline/Web/ConsultaDamAbertoPorCGA.php",
+   "url_voltar": "http://servicos.sedur.salvador.ba.gov.br/consultas",
+   "titulo_dentro_da_janela": "Renovação de Publicidade (DAM)",
+   "campos": [
+    {
+     "tag": "input",
+     "tipo": "text",
+     "nome": "cga",
+     "rotulo": null,
+     "placeholder": null,
+     "texto": null
+    },
+    {
+     "tag": "input",
+     "tipo": "button",
+     "nome": "Consultar",
+     "rotulo": null,
+     "placeholder": null,
+     "texto": null
+    },
+    {
+     "tag": "input",
+     "tipo": "button",
+     "nome": null,
+     "rotulo": null,
+     "placeholder": null,
+     "texto": null
+    }
+   ]
+  },
+  {
+   "nome": "Solicitação de Serviços",
+   "tecnologia": "página do sistema antigo dentro de janela (iframe) de 500 px",
+   "url": "http://servicos.sedur.salvador.ba.gov.br/paginas/iframe/eyJ1cmxfaWZyYW1lIjoiaHR0cHM6XC9cL2FwaS5zZWR1ci5zYWx2YWRvci5iYS5nb3YuYnJcL2s4c1wvcHJkXC9zZXJ2aWNvc29ubGluZVwvV2ViXC9jb25zdWx0YXNlLnBocCIsInVybF92b2x0YXIiOiJodHRwOlwvXC9zZXJ2aWNvcy5zZWR1ci5zYWx2YWRvci5iYS5nb3YuYnJcL2NvbnN1bHRhcyIsInVybF9yZWRpcmVjdCI6bnVsbCwidGl0bGUiOiJTb2xpY2l0YVx1MDBlN1x1MDBlM28gZGUgU2VydmlcdTAwZTdvcyIsImNvdmVyX3RpdGxlIjoiQ29uc3VsdGFzIn0=",
+   "url_do_sistema_antigo": "https://api.sedur.salvador.ba.gov.br/k8s/prd/servicosonline/Web/consultase.php",
+   "url_voltar": "http://servicos.sedur.salvador.ba.gov.br/consultas",
+   "titulo_dentro_da_janela": "Solicitação de Serviços",
+   "campos": [
+    {
+     "tag": "input",
+     "tipo": "text",
+     "nome": "OrigemInf",
+     "rotulo": null,
+     "placeholder": null,
+     "texto": null
+    },
+    {
+     "tag": "input",
+     "tipo": "text",
+     "nome": "Ano_Documento",
+     "rotulo": null,
+     "placeholder": null,
+     "texto": null
+    },
+    {
+     "tag": "input",
+     "tipo": "text",
+     "nome": "Numero_Documento",
+     "rotulo": null,
+     "placeholder": null,
+     "texto": null
+    },
+    {
+     "tag": "input",
+     "tipo": "button",
+     "nome": "Consultar",
+     "rotulo": null,
+     "placeholder": null,
+     "texto": null
+    },
+    {
+     "tag": "input",
+     "tipo": "button",
+     "nome": null,
+     "rotulo": null,
+     "placeholder": null,
+     "texto": null
+    }
+   ]
+  }
+ ],
+ "formularios": {
+  "url": "https://servicos.sedur.salvador.ba.gov.br/formularios",
+  "dados": "ver formularios.json (53 títulos únicos; a tela mostra 55 linhas)"
+ },
+ "geoservicos": {
+  "url": "https://servicos.sedur.salvador.ba.gov.br/geoservicos",
+  "texto_lido": [
+   "Catálogo de Geoserviços",
+   "Voltar",
+   "Link copiado para a área de transferência!",
+   "Geoserviços são serviços web específicos para utilização de dados geoespaciais sob responsabilidade da SEDUR. Contribuindo para a disponibilização da base geográfica. Essas funcionalidades são usadas por meio de ferramentas de GIS.",
+   "Através dos geoserviços é possível exportar informações geoespaciais para uma ampla gama de formatos com o objetivo de formular consultas e mapas.",
+   "A SEDUR adotou WSF (Web Feature Service) um padrão de Open Geospational Consortium (OGC) para a especificação de seus geoserviços. Abaixo são listados os dados geoespaciais disponíveis.",
+   "Nome",
+   "Descrição",
+   "WFS",
+   "PDF",
+   "Metadado",
+   "Cartografia Salvador",
+   "Bairros oficiais",
+   "Delimitação e denominação dos bairros de Salvador de acordo com a lei 9.278/2017 e decreto municipal 32.791/2020",
+   "Logradouros",
+   "Logradouros oficiais do município de Salvador",
+   "Revitalizar",
+   "Poligonal da área de abrangência do Revitalizar"
+  ]
+ },
+ "transparencia_do_portal": {
+  "url": "https://servicos.sedur.salvador.ba.gov.br/lei-transparencia",
+  "itens": [
+   {
+    "nome": "Ações Fiscais - COVID",
+    "tipo": "arquivo PDF",
+    "url": "http://servicos.sedur.salvador.ba.gov.br/anexos/acoesFiscais/AcoesFiscaisCovid _27.08.20.pdf",
+    "observacao": "o endereço tem um espaço no nome do arquivo"
+   },
+   {
+    "nome": "Alvará de Obras em Vias e Logradouros Públicos",
+    "tipo": "painel do sistema antigo dentro de janela (iframe)",
+    "url": "http://servicos.sedur.salvador.ba.gov.br/paginas/iframe/eyJ1cmxfaWZyYW1lIjoiaHR0cHM6XC9cL2FwaS5zZWR1ci5zYWx2YWRvci5iYS5nb3YuYnJcL2s4c1wvcHJkXC9zZXJ2aWNvc29ubGluZVwvV2ViXC9jb25zdWx0YS1vYnJhcy1sb2dyYWRvdXJvcy5waHAiLCJ1cmxfdm9sdGFyIjoiaHR0cDpcL1wvc2Vydmljb3Muc2VkdXIuc2FsdmFkb3IuYmEuZ292LmJyXC9sZWktdHJhbnNwYXJlbmNpYSIsInVybF9yZWRpcmVjdCI6bnVsbCwidGl0bGUiOiJBbHZhclx1MDBlMSBkZSBPYnJhcyBlbSBWaWFzIGUgTG9ncmFkb3Vyb3MgUFx1MDBmYWJsaWNvcyIsImNvdmVyX3RpdGxlIjoiTGVpIGRlIFRyYW5zcGFyZW5jaWEifQ==",
+    "url_do_sistema_antigo": "https://api.sedur.salvador.ba.gov.br/k8s/prd/servicosonline/Web/consulta-obras-logradouros.php",
+    "campos": [
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "numalv",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "origemproc",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "anoproc",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "numproc",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "solicitante",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "button",
+      "nome": "filtra_contato",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "cep",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "parte_logradouro",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "button",
+      "nome": "filtra_logradouro",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "select",
+      "tipo": null,
+      "nome": "logradouro",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "parte_bairro",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "button",
+      "nome": "filtra_bairro",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "select",
+      "tipo": null,
+      "nome": "bairro",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "dtini_ent",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "dtfim_ent",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "dtini_def",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "dtfim_def",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "button",
+      "nome": "consultar",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "button",
+      "nome": "limpar",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     }
+    ]
+   },
+   {
+    "nome": "Alvarás de Construção por Mês",
+    "tipo": "painel do sistema antigo dentro de janela (iframe)",
+    "url": "http://servicos.sedur.salvador.ba.gov.br/paginas/iframe/eyJ1cmxfaWZyYW1lIjoiaHR0cHM6XC9cL2FwaS5zZWR1ci5zYWx2YWRvci5iYS5nb3YuYnJcL2s4c1wvcHJkXC9zZXJ2aWNvc29ubGluZVwvV2ViXC9jb25zdWx0YS1hbHZhcmFzLWxpY2VuY2lhZG9zLnBocCIsInVybF92b2x0YXIiOiJodHRwOlwvXC9zZXJ2aWNvcy5zZWR1ci5zYWx2YWRvci5iYS5nb3YuYnJcL2xlaS10cmFuc3BhcmVuY2lhIiwidXJsX3JlZGlyZWN0IjpudWxsLCJ0aXRsZSI6IkFsdmFyXHUwMGUxcyBkZSBDb25zdHJ1XHUwMGU3XHUwMGUzbyBwb3IgTVx1MDBlYXMiLCJjb3Zlcl90aXRsZSI6IkxlaSBkZSBUcmFuc3BhcmVuY2lhIn0=",
+    "url_do_sistema_antigo": "https://api.sedur.salvador.ba.gov.br/k8s/prd/servicosonline/Web/consulta-alvaras-licenciados.php",
+    "campos": [
+     {
+      "tag": "select",
+      "tipo": null,
+      "nome": "mes",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "ano",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "button",
+      "nome": "consultar",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "button",
+      "nome": "limpar",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     }
+    ]
+   },
+   {
+    "nome": "Alvarás de Habite-se Concedidos",
+    "tipo": "painel do sistema antigo dentro de janela (iframe)",
+    "url": "http://servicos.sedur.salvador.ba.gov.br/paginas/iframe/eyJ1cmxfaWZyYW1lIjoiaHR0cHM6XC9cL2FwaS5zZWR1ci5zYWx2YWRvci5iYS5nb3YuYnJcL2s4c1wvcHJkXC9zZXJ2aWNvc29ubGluZVwvV2ViXC9jb25zdWx0YS1oYWJpdGVzZS5waHAiLCJ1cmxfdm9sdGFyIjoiaHR0cDpcL1wvc2Vydmljb3Muc2VkdXIuc2FsdmFkb3IuYmEuZ292LmJyXC9sZWktdHJhbnNwYXJlbmNpYSIsInVybF9yZWRpcmVjdCI6bnVsbCwidGl0bGUiOiJBbHZhclx1MDBlMXMgZGUgSGFiaXRlLXNlIENvbmNlZGlkb3MiLCJjb3Zlcl90aXRsZSI6IkxlaSBkZSBUcmFuc3BhcmVuY2lhIn0=",
+    "url_do_sistema_antigo": "https://api.sedur.salvador.ba.gov.br/k8s/prd/servicosonline/Web/consulta-habitese.php",
+    "campos": [
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "num_hab",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "num_alv",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "origemproc",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "anoproc",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "numproc",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "nome",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "logradouro",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "num_porta",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "button",
+      "nome": "consultar",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "button",
+      "nome": "limpar",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     }
+    ]
+   },
+   {
+    "nome": "Análise de Orientação Prévia (AOP) Emitidas",
+    "tipo": "painel do sistema antigo dentro de janela (iframe)",
+    "url": "http://servicos.sedur.salvador.ba.gov.br/paginas/iframe/eyJ1cmxfaWZyYW1lIjoiaHR0cHM6XC9cL2FwaS5zZWR1ci5zYWx2YWRvci5iYS5nb3YuYnJcL2s4c1wvcHJkXC9zZXJ2aWNvc29ubGluZVwvV2ViXC9jb25zdWx0YS1BT1AucGhwIiwidXJsX3ZvbHRhciI6Imh0dHA6XC9cL3NlcnZpY29zLnNlZHVyLnNhbHZhZG9yLmJhLmdvdi5iclwvbGVpLXRyYW5zcGFyZW5jaWEiLCJ1cmxfcmVkaXJlY3QiOm51bGwsInRpdGxlIjoiQW5cdTAwZTFsaXNlIGRlIE9yaWVudGFcdTAwZTdcdTAwZTNvIFByXHUwMGU5dmlhIChBT1ApIEVtaXRpZGFzIiwiY292ZXJfdGl0bGUiOiJMZWkgZGUgVHJhbnNwYXJlbmNpYSJ9",
+    "url_do_sistema_antigo": "https://api.sedur.salvador.ba.gov.br/k8s/prd/servicosonline/Web/consulta-AOP.php",
+    "campos": [
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "cep",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "parte_logradouro",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "button",
+      "nome": "filtra_logradouro",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "select",
+      "tipo": null,
+      "nome": "logradouro",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "parte_bairro",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "button",
+      "nome": "filtra_bairro",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "select",
+      "tipo": null,
+      "nome": "bairro",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "dtini_def",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "dtfim_def",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "button",
+      "nome": "consultar",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "button",
+      "nome": "limpar",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     }
+    ]
+   },
+   {
+    "nome": "Estudo de Impacto de Vizinhança – EIV",
+    "tipo": "painel do sistema antigo dentro de janela (iframe)",
+    "url": "http://servicos.sedur.salvador.ba.gov.br/paginas/iframe/eyJ1cmxfaWZyYW1lIjoiaHR0cHM6XC9cL2FwaS5zZWR1ci5zYWx2YWRvci5iYS5nb3YuYnJcL2s4c1wvcHJkXC9zZXJ2aWNvc29ubGluZVwvV2ViXC9jb25zdWx0YS1lc3R1ZG9zLXZpemluaGFuY2EucGhwIiwidXJsX3ZvbHRhciI6Imh0dHA6XC9cL3NlcnZpY29zLnNlZHVyLnNhbHZhZG9yLmJhLmdvdi5iclwvbGVpLXRyYW5zcGFyZW5jaWEiLCJ1cmxfcmVkaXJlY3QiOm51bGwsInRpdGxlIjoiRXN0dWRvIGRlIEltcGFjdG8gZGUgVml6aW5oYW5cdTAwZTdhIFx1MjAxMyBFSVYiLCJjb3Zlcl90aXRsZSI6IkxlaSBkZSBUcmFuc3BhcmVuY2lhIn0=",
+    "url_do_sistema_antigo": "https://api.sedur.salvador.ba.gov.br/k8s/prd/servicosonline/Web/consulta-estudos-vizinhanca.php",
+    "campos": [
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "numalv",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "origemproc",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "anoproc",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "numproc",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "parte_bairro",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "button",
+      "nome": "filtra_bairro",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "select",
+      "tipo": null,
+      "nome": "bairro",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "button",
+      "nome": "consultar",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "button",
+      "nome": "limpar",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     }
+    ]
+   },
+   {
+    "nome": "Eventos Licenciados",
+    "tipo": "painel do sistema antigo dentro de janela (iframe)",
+    "url": "http://servicos.sedur.salvador.ba.gov.br/paginas/iframe/eyJ1cmxfaWZyYW1lIjoiaHR0cHM6XC9cL2FwaS5zZWR1ci5zYWx2YWRvci5iYS5nb3YuYnJcL2s4c1wvcHJkXC9zZXJ2aWNvc29ubGluZVwvV2ViXC9jb25zdWx0YS1ldmVudG9zLWxpY2VuY2lhZG9zLnBocCIsInVybF92b2x0YXIiOiJodHRwOlwvXC9zZXJ2aWNvcy5zZWR1ci5zYWx2YWRvci5iYS5nb3YuYnJcL2xlaS10cmFuc3BhcmVuY2lhIiwidXJsX3JlZGlyZWN0IjpudWxsLCJ0aXRsZSI6IkV2ZW50b3MgTGljZW5jaWFkb3MiLCJjb3Zlcl90aXRsZSI6IkxlaSBkZSBUcmFuc3BhcmVuY2lhIn0=",
+    "url_do_sistema_antigo": "https://api.sedur.salvador.ba.gov.br/k8s/prd/servicosonline/Web/consulta-eventos-licenciados.php",
+    "campos": [
+     {
+      "tag": "select",
+      "tipo": null,
+      "nome": "mes",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "text",
+      "nome": "ano",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "button",
+      "nome": "Consultar",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     }
+    ]
+   },
+   {
+    "nome": "Processos em Convite",
+    "tipo": "painel do sistema antigo dentro de janela (iframe)",
+    "url": "http://servicos.sedur.salvador.ba.gov.br/paginas/iframe/eyJ1cmxfaWZyYW1lIjoiaHR0cHM6XC9cL2FwaS5zZWR1ci5zYWx2YWRvci5iYS5nb3YuYnJcL2s4c1wvcHJkXC9zZXJ2aWNvc29ubGluZVwvV2ViXC9jb25zdWx0YS1wcm9jZXNzb3MtY29udml0ZS1nZXJhbC5waHAiLCJ1cmxfdm9sdGFyIjoiaHR0cDpcL1wvc2Vydmljb3Muc2VkdXIuc2FsdmFkb3IuYmEuZ292LmJyXC9sZWktdHJhbnNwYXJlbmNpYSIsInVybF9yZWRpcmVjdCI6bnVsbCwidGl0bGUiOiJQcm9jZXNzb3MgZW0gQ29udml0ZSIsImNvdmVyX3RpdGxlIjoiTGVpIGRlIFRyYW5zcGFyZW5jaWEifQ==",
+    "url_do_sistema_antigo": "https://api.sedur.salvador.ba.gov.br/k8s/prd/servicosonline/Web/consulta-processos-convite-geral.php",
+    "campos": [
+     {
+      "tag": "select",
+      "tipo": null,
+      "nome": "gruposervico",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     },
+     {
+      "tag": "input",
+      "tipo": "button",
+      "nome": "consultar",
+      "rotulo": null,
+      "placeholder": null,
+      "texto": null
+     }
+    ]
+   }
+  ]
+ },
+ "fiscalizacao_carnaval_2026": {
+  "url": "https://servicos.sedur.salvador.ba.gov.br/transparencia/carnaval",
+  "sem_link_visivel": true,
+  "texto_lido": [
+   "SEDUR - Portal de serviços da Prefeitura Municipal de Salvador",
+   "Fiscalização Carnaval 2026",
+   "Publicidade em Blocos",
+   "Alvarás emitidos",
+   "Exploração de Atividades",
+   "Em construção",
+   "Instalação de Praticável",
+   "Em construção",
+   "Instalação de Balcão",
+   "Em construção"
+  ]
+ },
+ "iptu_verde": {
+  "url": "https://servicos.sedur.salvador.ba.gov.br/paginas/iptu-verde",
+  "sem_link_visivel": true,
+  "texto_lido": [
+   "IPTU Verde",
+   "Sustentabilidade com benefícios",
+   "Um programa que oferece descontos no IPTU para propriedades que adotam práticas sustentáveis.",
+   "Sobre",
+   "O que é o IPTU Verde em Salvador?",
+   "O IPTU Verde é um programa da Prefeitura de Salvador que oferece descontos progressivos no Imposto Predial e Territorial Urbano (IPTU) para proprietários que adotam práticas sustentáveis em seus imóveis. A iniciativa faz parte das políticas municipais de incentivo à sustentabilidade, contribuindo para tornar a cidade mais resiliente, moderna e ambientalmente equilibrada.",
+   "Ao estimular comportamentos que reduzem o impacto ambiental, o IPTU Verde promove uma cultura de responsabilidade socioambiental e incentiva soluções que melhoram a qualidade de vida da população.",
+   "Práticas Sustentáveis",
+   "Quais benefícios o programa oferece?",
+   "Os descontos podem variar conforme a quantidade e o tipo de medidas sustentáveis adotadas no imóvel. Quanto mais ações o proprietário implementar, maior pode ser o desconto no IPTU — em alguns casos chegando a percentuais bastante significativos, conforme regulamentação da prefeitura.",
+   "Captação e reaproveitamento da água da chuva",
+   "Instalação de sistemas de energia solar fotovoltaica ou térmica",
+   "Uso de técnicas de eficiência energética",
+   "Construção de telhados verdes ou jardins verticais",
+   "Separação e destinação adequada de resíduos sólidos",
+   "Permeabilidade do solo para ajudar na drenagem urbana",
+   "Adoção de tecnologias ecoeficientes na construção ou reforma",
+   "Objetivos",
+   "Qual o objetivo do IPTU Verde?",
+   "O programa busca transformar Salvador em uma cidade mais sustentável por meio de ações práticas no dia a dia dos moradores.",
+   "Reduzir o consumo de recursos naturais, como água e energia",
+   "Diminuir a emissão de gases poluentes e a pegada de carbono dos imóveis",
+   "Estimular construções mais eficientes e ambientalmente responsáveis",
+   "Promover áreas verdes, contribuindo para o conforto térmico e controle de enchentes",
+   "Fortalecer a cultura ambiental entre cidadãos e empresas",
+   "Criar uma cidade mais resiliente às mudanças climáticas",
+   "O programa se alinha às metas ambientais, climáticas e urbanísticas da cidade, sendo um instrumento importante para o desenvolvimento sustentável de Salvador.",
+   "Participação",
+   "Quem pode participar?",
+   "Proprietários de imóveis residenciais",
+   "Comerciantes e empresários com imóveis comerciais",
+   "Condomínios que adotem soluções sustentáveis em áreas comuns",
+   "Instituições que implementem projetos de eficiência ambiental",
+   "A solicitação é feita diretamente junto à Prefeitura, mediante apresentação de documentação e comprovação das práticas sustentáveis adotadas.",
+   "Vantagens",
+   "Por que aderir ao IPTU Verde?",
+   "Além do desconto no imposto, o imóvel se torna mais valorizado e sustentável",
+   "Benefícios Adicionais",
+   "Transforme seu imóvel em um espaço mais sustentável e econômico",
+   "Mais econômico (redução nas contas de água e luz)",
+   "Mais valorizado no mercado imobiliário",
+   "Mais confortável e eficiente energeticamente",
+   "Mais alinhado às tendências globais de sustentabilidade",
+   "Mais respeitoso com o meio ambiente e com a cidade",
+   "Participar é uma forma de contribuir para uma Salvador mais verde, moderna e agradável para todos."
+  ]
+ },
+ "canais_de_atendimento": {
+  "url": "https://servicos.sedur.salvador.ba.gov.br/contato",
+  "blocos": {
+   "PORTAL DE SERVIÇOS": "Nele você solicita nossos serviços de forma rápida, fácil e segura, clicando aqui .",
+   "WHATSAPP": "Através do número (71) 99620-5122 você pode tirar dúvidas sobre nossos procedimentos e serviços de segunda a sexta das 08 às 17 horas. Favor enviar apenas mensagens de texto, não ouvimos áudio e nem atendemos ligações.",
+   "ATENDIMENTO PRESENCIAL": "Caso seja necessário atendimento presencial, você deve comparecer mediante agendamento. Agende o dia e horário desejado, clicando aqui .",
+   "E-MAIL": "Caso seja solicitado pela SEDUR documentos complementares ou Atendimento a Convite, os mesmos devem ser encaminhados através do e-mail protocolo.sedur@salvador.ba.gov.br . Para assuntos relacionados a Viabilidade favor enviar e-mail para viabilidade.sedur@salvador.ba.gov.br .",
+   "DENÚNCIAS": "Construção Irregular, Atividade Irregular ou Crime Ambiental: Você deve dirigir-se para Prefeitura-Bairro da sua região mediante agendamento através do site Hora Marcada. Poluição Sonora: As denúncias de poluição sonora devem ser feitas através do Fala Salvador 156 ou pelo Aplicativo Sonora Salvador."
+  }
+ },
+ "paginas_de_erro": {
+  "404": "“Not Found”, em inglês, sem menu, sem rodapé e sem logo",
+  "500": "“Server Error”, em inglês",
+  "/instabilidade": "responde 500"
+ },
+ "login": {
+  "gov.br": "sso.salvador.ba.gov.br (client SedurMais-PortalServicos-Prd)",
+  "tela_demo_aberta": "/govbr abre sem login uma tela de demonstração; ver contexto-portal/servicos/login-govbr/"
+ },
+ "sistemas_parceiros": [
+  {
+   "nome": "Agendamento (Agendamento Sedur)",
+   "url": "https://agendamento.sedur.salvador.ba.gov.br/sas/#agendamento",
+   "situacao": "no ar; página feita sobre modelo, com textos de exemplo não trocados (\"inserir um link\", telefone (+71) 9 9999 9999); o agendamento em si é uma janela de 530 px (form.jsp?sys=SAS); horário informado: 9:00h às 15:30h"
+  },
+  {
+   "nome": "Consulta Prévia",
+   "url": "https://consultaprevia.sedur.salvador.ba.gov.br",
+   "situacao": "a tela só é montada no navegador; conteúdo não visto por fora"
+  },
+  {
+   "nome": "Salvador Ruas",
+   "url": "https://ruas.salvador.ba.gov.br",
+   "situacao": "em manutenção em 21/09/2026 (\"Site em manutenção\")"
+  },
+  {
+   "nome": "Revisão do PDDU",
+   "url": "https://pddu.salvador.ba.gov.br/",
+   "situacao": "no ar; site próprio com menu O que é, Etapas, Processo participativo, Notícias, Arquivos, Participe Ssa!, Ouvidoria, Conecta PDDU"
+  },
+  {
+   "nome": "Autorização para Feira (CLE)",
+   "url": "https://servicos.sedur.salvador.ba.gov.br/eventos/form.jsp?sys=CLE&formID=464570877",
+   "situacao": "em manutenção (informado pelo Johnny em 21/09/2026); ignorar"
+  },
+  {
+   "nome": "Mapeamento Salvador (GIS)",
+   "url": "https://mapeamento.salvador.ba.gov.br",
+   "situacao": "não visitado"
+  }
+ ]
+}

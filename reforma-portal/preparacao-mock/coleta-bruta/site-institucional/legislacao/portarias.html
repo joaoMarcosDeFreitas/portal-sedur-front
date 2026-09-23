@@ -1,0 +1,701 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>
+	<!--ATIVAÇÃO DE COMPATIBILIDADE E PROTEÇÃO CONTRA ATAQUES DO TIPO XSS-->
+	<!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+	<!--meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1,maximum-scale=1,user-scalable=no"-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-XSS-Protection" content="1">
+	<meta http-equiv="x-dns-prefetch-control" content="off">
+	<!--ATIVAÇÃO DE COMPATIBILIDADE E PROTEÇÃO CONTRA ATAQUES DO TIPO XSS-->
+	
+	
+			
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="/var/www/html/sedur/favicon.ico"> -->
+
+	
+	
+	
+	<meta name="google-site-verification" content="3XxLThCC-_tkg2qtziw_KG01DRXRqWTMM91thC8V6RM" />
+	<!--OBS: ENCONTRAM-SE NO TYPE HEAD AS META TAGS DESCRIPTION E KEYWORDS-->
+	<meta charset="utf-8" />
+	<base href="http://sedur.salvador.ba.gov.br/portarias" />
+	<meta name="author" content="Super User" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>SEDUR - Secretaria Municipal de Desenvolvimento Urbano</title>
+	<link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="http://sedur.salvador.ba.gov.br/templates/sedur/assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="http://sedur.salvador.ba.gov.br/templates/sedur/assets/css/template.css" rel="stylesheet" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"cc58fba6727a26d21044603732a83993","system.paths":{"root":"","base":""}}</script>
+
+</head>
+
+	
+<body>
+	
+    <!-- Pop-up de Aviso -->
+          <!-- <div id="dialog-message" style="position: fixed; z-index: 4000; margin-left: 30px; margin-top: 100px; right: 30px;">
+          <div class="d-flex flex-row-reverse">
+        	<button style="margin-bottom: 10px" type="button" class="btn-close btn-lg" aria-label="Close" onclick="popUp()" id="botaoFechar">X</button>
+          </div>
+    		
+          <a href="#">
+            <p>
+              <img src="http://sedur.salvador.ba.gov.br//images/avisoLicenciamento31012025.jpeg" style="width: 600px;">
+			</p>
+          </a>
+		</div> -->
+        <!-- Fim -->
+      
+    
+	<div id="header-section1-internas" class="navbar-fixed-top not-print" style="display:none;">
+        
+  		<div class="wrapper">
+            
+  			<a id="logo-internas" href="http://www.salvador.ba.gov.br" target="_parent" title="Ir para o Portal Salvador">Prefeitura Municipal de Salvador</a>    
+
+            <div class="float-right"> 
+
+                <div class="social-links float-left font-bold">
+                    <ul class="float-left">
+                        <li class="facebook"><a href="https://www.facebook.com/pages/Prefeitura-de-Salvador/472097156139269" target="_blank">Facebook</a></li>
+                        <li class="youtube"><a href="http://www.youtube.com/prefeituradosalvador" target="_blank">YouTube</a></li>
+                        <li class="flickr"><a href="http://www.flickr.com/photos/prefeituradesalvador" target="_blank">Flickr</a></li>
+                        <li class="twitter"><a href="https://twitter.com/prefsalvador" target="_blank">Twitter</a></li>
+                    </ul>
+                </div>  
+
+            </div> 
+  
+        </div>
+</div>
+
+<style type="text/css">
+	#header-section1-internas {
+	    background-color: #34558c;
+	    height: 48px;
+	    border-top: 1px solid #3e66a3;
+	}
+	.wrapper {
+	    width: 100%;
+	    margin: 0 auto;
+	}
+	#logo-internas {
+		display: block;
+		float: left;
+		background: transparent url(http://sedur.salvador.ba.gov.br//images/logo/logo-internas.png) left center no-repeat;
+		/* Mp2 background: transparent url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/logo-internas.png) left center no-repeat;*/
+        width: 284px;
+		height: 43px;
+		text-indent: -5000em;
+		margin-left:10px;
+	}
+	.float-right {
+	    float: right;
+	}
+	.social-links {
+	    /* padding-top: 35px; */
+	    width: 100%;
+	}
+	.float-left {
+	    float: left;
+	}
+	.social-links ul {
+	    list-style: none;
+	    padding: 0;
+	    margin: 5px 0 0 0;
+	}
+	.social-links .facebook {
+    	background-image: url(http://sedur.salvador.ba.gov.br//images/logo/facebook-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/facebook-icon.png); */                    
+	}
+	.social-links .youtube {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/youtube-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/youtube-icon.png); */                       
+	}
+	.social-links .flickr {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/flickr-icon.png);
+       /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/flickr-icon.png); */ 
+	}
+	.social-links .twitter {
+	    background-image: url(http://sedur.salvador.ba.gov.br//images/logo/twitter-icon.png);
+        /* Mp2 background-image: url(http://www.salvador.ba.gov.br/Cabecalho/imagens/imagens_cabecalho/twitter-icon.png); */                       
+	}
+	.social-links ul li {
+	    float: left;
+	    margin-right: 7px;
+	}
+	.social-links ul li a {
+	    width: 35px;
+	    height: 35px;
+	    text-indent: -5000em;
+	    display: block;
+	}
+                        
+                              
+</style>
+	<!-- Começo Navbar -->
+
+	<div class="container-fluid" style="padding-right: 0px; padding-left: 0px; border:0px solid #000">
+		<header>
+			<div class="row" style="margin: 0%; background-color: white; padding: 2% 0; border:0px solid #008000">
+					<div class="col-md-3 offset-1 col-sm-0" style="border:0px solid #000"> 
+						<a href="/index.php">
+							<img id = "img_marca_old" src="http://sedur.salvador.ba.gov.br//images/logo/logo-black.png" class="img-responsive" alt="logo">
+						</a>
+      			    </div>
+					
+                    <div class="barramenu col-md-8 col-sm-12" style="border:0px solid #000">
+                        <nav id='cssmenu'  style="margin-left: 0px;">
+                            <div id="head-mobile" style="border:0px solid #f00"></div>
+                            <div class="button" style="border:0px solid #ff0"></div>
+                            <ul class="nav menu" style="float: right;">
+<li class="item-102 deeper parent menu-style"><a href="#" >INSTITUCIONAL</a><ul class="dropdown-menu"><li class="item-156 menu-style"><a href="/institucional/dirigentes" >Dirigentes</a></li><li class="item-157 menu-style"><a href="/institucional/estrutura-organizacional" >Estrutura Organizacional</a></li><li class="item-149 menu-style"><a href="/institucional/area-de-atuacao" >Área de Atuação</a></li></ul></li><li class="item-106 menu-style"><a href="https://servicos.sedur.salvador.ba.gov.br/#/portal/home" >SERVIÇOS</a></li><li class="item-154 menu-style"><a href="/noticias" >NOTÍCIAS</a></li><li class="item-151 menu-style"><a href="/legislacao" >LEGISLAÇÃO</a></li><li class="item-155 menu-style"><a href="/licitacoes" >LICITAÇÕES</a></li><li class="item-171 menu-style"><a href="/transparencia" >TRANSPARÊNCIA</a></li></ul>
+
+
+
+<!-- <style>
+
+	.item-161{
+		margin-left: 18%;
+	}
+
+
+	@media (min-width: 320px) and (max-width:767px) {
+		.item-161{
+		margin-left: 0%;
+		}
+
+	}
+
+	
+	@media (min-width: 767px) and (max-width:999px) {
+		.item-161{
+			margin-left: 0%;
+		}
+	}
+
+
+</style> -->
+
+
+
+
+                        </nav>	
+                    </div>
+ 			</div>
+				
+		</header>
+	</div>
+
+
+	
+	<!-- Fim Navbar -->
+		
+	
+	              <div class="no-home">
+                  <div class="container-fluid">
+                      <div class="row">
+                         <div class="col-9 offset-2">
+                              
+                              <div class="item-page" itemscope itemtype="https://schema.org/Article">
+	<meta itemprop="inLanguage" content="pt-BR" />
+	
+		
+	
+	     
+            
+      <div class="page-header">
+		
+			<h2 class="artigos_internos" itemprop="headline" style="width: 180px;">Portarias</h2>
+									
+   
+          
+          <!-- Mp2 - Vou inserir 1 div botão voltar linha 301 a 303-->
+     <div class="voltarBTN" style="text-align: right;"><a href="JavaScript: window.history.back();"><button class="btn btn-warning" style="font-size: 15px; font-family: 'Roboto'; color: white; background-color: #006CB5; border-color: #006CB5; font-weight: bold; margin-right: 18px;" type="button">Voltar</button></a>
+     </div>   
+  	<br><br>
+<!-- Mp2 div botao voltar -->          
+      
+          
+          </div>
+         
+  
+          
+					
+		
+	
+	
+		
+							
+<!-- Mp2 Retirei a inclusão de imagem automaticamente das noticias
+      
+<img class="img-responsive" title="" src="/" alt=""/>
+
+fim retirar imagem -->    
+      
+	<div itemprop="articleBody">
+		<div class="col-md-12 col-12 table-responsive" style="text-align: justify; float: center;">
+<table class="table table-striped table-sm" style="width: 100%; height: 87px;">
+<thead>
+<tr>
+<th style="text-align: center; width: 6%;" scope="col">Data</th>
+<th style="text-align: center; width: 16.5518%;" scope="col">Nº Legislação</th>
+<th style="text-align: center; width: 69.4482%;" scope="col">Descrição</th>
+<th style="text-align: center; width: 4%;" scope="col">Arquivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 6%;">21/08/2020</td>
+<td style="width: 16.5518%; text-align: left;">Portaria SEDUR nº 236/2020</td>
+<td style="width: 69.4482%;">Implantação do Sistema eSalvador no âmbito da SEDUR</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2020/08/portaria_236_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">05/06/2020</td>
+<td style="width: 16.5518%; text-align: left;">Portaria SEDUR nº 184/2020</td>
+<td style="width: 69.4482%;">Dispõe sobre as medidas de comunicação previstas no protocolo geral para funcionamento dos estabelecimentos comerciais e de prestação de serviço no município de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2020/06/portaria_sedur_184_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">24/04/2020</td>
+<td style="width: 16.5518%; text-align: left;">Portaria nº 146/2020</td>
+<td style="width: 69.4482%;">Dispõe sobre a execução do Programa de Educação Ambiental (PEA) durante o período de vigência do Decreto Municipal nº 32.268 de 18 de março de 2020.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2020/09/Portaria_146_2020.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">11/04/2019</td>
+<td style="width: 16.5518%; text-align: left;">Portaria Conjunta nº 148/2019</td>
+<td style="width: 69.4482%;">Dispõe sobre os procedimentos para cumprimento, acompanhamento e gestão de CONDICIONANTE de Supressão de Vegetação</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/05/Portaria_conjunta_148_2019.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">23/11/2018</td>
+<td style="width: 16.5518%; text-align: left;">Portaria nº 554/2018</td>
+<td style="width: 69.4482%;">Revogar a Instrução Normativa nº 001/2017 que Dispõe sobre esclarecimentos e padronização de interpretação quanto a inaplicabilidade do parâmetro de gabarito para a instalação de Estação Rádio Base – ERB</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2019/04/Portaria_554_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">21/08/2018</td>
+<td style="width: 16.5518%; text-align: left;">Portaria nº 425/2018</td>
+<td style="width: 69.4482%;">Estabelece regras para uso do novo Terminal de Passageiros do Bilito (Píer Sul), na Ilha de Bom Jesus dos Passos.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2018/08/Portaria_sedur_425_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">21/08/2018</td>
+<td style="width: 16.5518%; text-align: left;">Portaria nº 424/2018</td>
+<td style="width: 69.4482%;">Estabelece regras para uso do novo Terminal de Passageiros no Brito, na Ilha de Bom Jesus dos Passos.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2018/08/Portaria_sedur_424_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">08/08/2018</td>
+<td style="width: 16.5518%; text-align: left;">Portaria nº 372/2018</td>
+<td style="width: 69.4482%;">Portaria Conjunta SEDUR/SEMOB</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2018/08/Portaria_conjunta_372_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">07/02/2018</td>
+<td style="width: 16.5518%; text-align: left;">Portaria SEDUR nº 068/2018</td>
+<td style="width: 69.4482%;">Determina que a solicitação de Aprovação de Projeto ou de Licença de Construção para os empreendimentos do tipo nR2-04 deverá ser precedida de Análise de Orientação Prévia (AOP) e da putras determinações</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2018/02/Portaria_sedur_68_2018.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">20/10/2017</td>
+<td style="width: 16.5518%; text-align: left;">Portaria nº 346/2017</td>
+<td style="width: 69.4482%;">Portaria Conjunta SEDUR/TRANSALVADOR nº 346/2017 – Autoriza a colocação dos recipientes para acondicionamento de entulho fora do alinhamento de gradil do terreno onde se produz entulho, ao longo das vias e em suas marginais, observando o que dispõe o CTB – Código de Trânsito Brasileiro (Lei nº 9.503 de 23 de Setembro de 1997) e Decreto Municipal nº 12.133/1998</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2017/10/Portaria_conjunta_346_2017.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">15/09/2016</td>
+<td style="width: 16.5518%; text-align: left;">Portaria n° 241/2016</td>
+<td style="width: 69.4482%;">Dispõe sobre o licenciamento de Infraestrutura de Suporte e Estação de Rádio Base – ERB na cidade do Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/09/Portaria-241_2016.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">05/08/2016</td>
+<td style="width: 16.5518%; text-align: left;">Portaria n° 299 / 2016</td>
+<td style="width: 69.4482%;">O SECRETÁRIO MUNICIPAL DE URBANISMO, no uso das atribuições que lhe confere o Art. 12, item XI do Regimento Interno da SUCOM, aprovado pelo Decreto nº 25.860 de 10 de março de 2015, publicado no Diário Oficial do Município. Dispõe sobre o procedimento e o número máximo de atividades a serem requeridas nos processos de Termo de Viabilidade de Localização.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/08/Portaria-299-20162.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">10/06/2016</td>
+<td style="width: 16.5518%; text-align: left;">Portaria n° 241/2016</td>
+<td style="width: 69.4482%;">Licenciamento da Estação Rádio Base-ERB na cidade do Salvador. Considerando o disposto na Lei Federal nº 13.116/15, que estabelece normas gerais para implantação e compartilhamento da infraestrutura de telecomunicações;</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/06/Portaria-241-20161.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">24/05/2016</td>
+<td style="width: 16.5518%; text-align: left;">Portaria n° 219/2016</td>
+<td style="width: 69.4482%;">Parcelamento de débitos existentes, vencidos ou não, perante a Secretaria Municipal de Urbanismo – SUCOM.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/05/Portaria-n°-2191.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">30/04/2016</td>
+<td style="width: 16.5518%; text-align: left;">Portaria nº 175/2016</td>
+<td style="width: 69.4482%;">Regulamenta as Multas e Penalidades relativas às infrações cometidas nas Áreas de Proteção Rigorosa (APR), Área Contígua de Proteção Rigorosa (ACPR), e uma Área de Ocupação Controlada (AUC) do Loreto, na Ilha dos Frades, integrantes do sistema de Áreas de Valor Ambiental e Cultural – SAVAM, nos termos definidos na lei 7.400/2008 e lei 8.165/2012, cuja delimitação está prevista na Planta 8 da Lei de nº 8.165/2012 e PLANTA ANEXA a esta Portaria,e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/05/Portaria-175-2016.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">11/01/2016</td>
+<td style="width: 16.5518%; text-align: left;">Portaria 01/2016</td>
+<td style="width: 69.4482%;">Delegação de competência à Coordenadora de Licenciamento Ambiental, para decidir sobre processos.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2016/01/Portaria-01_2016-sucom.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">15/12/2015</td>
+<td style="width: 16.5518%; text-align: left;">Portaria nº 373/2015</td>
+<td style="width: 69.4482%;">Revogar a Portaria Nº 13/1966, publicada no Diário Oficial do Município do Salvador de 21 de maio de 1966, Disciplina a situação dos Profissionais liberais, Engenheiros e Arquitetos, quanto à responsabilidade de projetos e obras.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/12/Portaria_373_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">04/12/2015</td>
+<td style="width: 16.5518%; text-align: left;">Portaria Conjunta 002/2015</td>
+<td style="width: 69.4482%;">Dispõe sobre os procedimentos a serem adotados pelos órgãos municipais, para cumprimento das providências relativas à realização de processo de auditoria, com o fim de apurar os fatos relacionados à Ação Criminal nº 0334470- 44.2015.8.05.0001 movida pelo Ministério Público do Estado da Bahia.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/12/Portaria-Conjunta-002_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">16/11/2015</td>
+<td style="width: 16.5518%; text-align: left;">Portaria n° 0034/2015</td>
+<td style="width: 69.4482%;">IPTU VERDE – Fica disciplinado através desta Portaria que os projetos que apresentarem, no requerimento de obtenção de certificação, conforme consta no Anexo I, Bonificações, Item 62, selo de certificação e orientação ambiental de construções sustentáveis, emitido pelas instituições abaixo designadas, poderão alcançar pontuação máxima no IPTU VERDE.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/11/Portaria-0034_2015-IPTU-VERDE.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">10/11/2015</td>
+<td style="width: 16.5518%; text-align: left;">Portaria n° 173 / 2015</td>
+<td style="width: 69.4482%;">Dispõe sobre o exercício de atividades do comércio informal em Logradouros Públicos, durante o Carnaval de 2016 na cidade de Salvador, e dá outras providências..</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/11/Portaria-n°-173_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">29/06/2015</td>
+<td style="width: 16.5518%; text-align: left;">Portaria n° 0024/2015</td>
+<td style="width: 69.4482%;">IPTU VERDE – Fica disciplinado através desta Portaria que os Projetos que apresentarem no requerimento de obtenção de certificação, conforme consta no anexo I, Bonificações, Item 62, selo de certificação e orientação ambiental de construções sustentáveis, emitido pelas Instituições abaixo designadas, poderão alcançar pontuação máxima no IPTU VERDE.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/08/Portaria-0024_2015-Iptu-Verde.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">25/05/2015</td>
+<td style="width: 16.5518%; text-align: left;">Portaria Ambiental n° 175/2015</td>
+<td style="width: 69.4482%;">Dispõe sobre a Autorização de Supressão de Vegetação em áreas privadas de competência da Secretária Municipal de Urbanismo.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/05/Portaria-Ambiental-n°-175_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">25/05/2015</td>
+<td style="width: 16.5518%; text-align: left;">Portaria Sucom n° 173/2015</td>
+<td style="width: 69.4482%;">Delegação de competência ao Coordenador de Processos Especiais para decidir sobre processos</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/05/Portaria-Sucom-n°-173_20151.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">21/05/2015</td>
+<td style="width: 16.5518%; text-align: left;">Portaria 174/2015.</td>
+<td style="width: 69.4482%;">Delegação de competência ao Coordenador de Empreendimento, para decidir sobre Processos.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/05/Portaria-Sucom-174_2015.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">21/01/2015</td>
+<td style="width: 16.5518%; text-align: left;">Portaria n° 009/2015</td>
+<td style="width: 69.4482%;">Semop- Dispõe sobre o exercicio de atividade do Comércio informal em Logradouros Publicos, durante as Festas Populares 2015</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/01/PORTARIA-SEMOP-009_20151.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">05/12/2013</td>
+<td style="width: 16.5518%; text-align: left;">Portaria SEFAZ nº 307/2013</td>
+<td style="width: 69.4482%;">Disponibiliza o sistema informatizado do Cadastro Informativo Municipal – CADIN Municipal.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Portaria_SEFAZ_307_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/11/2013</td>
+<td style="width: 16.5518%; text-align: left;">Portaria SEMOP nº 200/2013</td>
+<td style="width: 69.4482%;">Dispõe sobre o exercício de atividades do comércio informal em logradouros público, durante as Festas Populares de 2013.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/PortariA_SEFAZ_200_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">27/11/2013</td>
+<td style="width: 16.5518%; text-align: left;">Portaria SEMOP nº 201/2013</td>
+<td style="width: 69.4482%;">Dispõe sobre o exercício de atividades do comércio informal em logradouros públicos, durante o Carnaval 2014 na cidade de Salvador, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/PortariA_SEFAZ_201_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">23/11/2013</td>
+<td style="width: 16.5518%; text-align: left;">Portaria SEMOP Nº 202/2013</td>
+<td style="width: 69.4482%;">Dispõe sobre o Ordenamento e o funcionamento do comércio e serviços na faixa de areia da orla marítima do município do Salvador, e dá outras providências.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Portaria_SEMOP_202_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">23/09/2013</td>
+<td style="width: 16.5518%; text-align: left;">Portaria nº 130/2013</td>
+<td style="width: 69.4482%;">Institui Comissão de Análise de Interferência para estudar os impactos de engenhos extraordinários à terceiros, ao meio antrópico natural e urbanizado e à circulação, conforme Decreto n° 12.642/2000, alterado pelo Decreto nº 23.907/2013. nº. 23.907/2013.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/portaria_130_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">11/09/2013</td>
+<td style="width: 16.5518%; text-align: left;">Portaria nº 127/2013</td>
+<td style="width: 69.4482%;">Dispõe sobre o pedido de Renovação de Licença para Construção.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Portaria_127_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">11/09/2013</td>
+<td style="width: 16.5518%; text-align: left;">Portaria nº 128/2013</td>
+<td style="width: 69.4482%;"> Dispõe sobre a colocação dos recipientes para acondicionamento de entulho.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Portaria_128_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">12/08/2013</td>
+<td style="width: 16.5518%; text-align: left;">Portaria SEMUT nº 182/2013</td>
+<td style="width: 69.4482%;">Dispõe sobre a aplicação de dispositivos constantes da Lei nº 7.400/2008 que trata sobre a avaliação para utilização de Potencial Adicional Construtivo – PAC</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Portaria_SEMUT_182_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">05/06/2013</td>
+<td style="width: 16.5518%; text-align: left;">Portaria nº 076/2013</td>
+<td style="width: 69.4482%;">Institui a Comissão Especial de Recebimento de Material</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Portaria_076_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">04/06/2013</td>
+<td style="width: 16.5518%; text-align: left;">Portaria 078/2013</td>
+<td style="width: 69.4482%;">SUCOM – Veda a utilização de publicidade na realização de eventos licenciados pela SUCOM, que indica.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Portaria_078_2013.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">15/04/2013</td>
+<td style="width: 16.5518%; text-align: left;">Portaria nº 061/2013</td>
+<td style="width: 69.4482%;">Regulamenta a publicidade e afixação de placas nos espaços e equipamentos públicos que integram o patrimônio do Município do Salvador em atendimento ao Decreto nº 23.820/2013.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Portaria_061_2013_sucom.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">23/11/2010</td>
+<td style="width: 16.5518%; text-align: left;">Portara nº 218/2010</td>
+<td style="width: 69.4482%;">Parcelamento do Auto de Infração</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/Portaria_sucom_218_2010.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">29/05/2007</td>
+<td style="width: 16.5518%; text-align: left;">Portaria nº 26/2007</td>
+<td style="width: 69.4482%;">Expedir a IN 001/2007 – Sistema Cartográfico – Expedir a IN 001/2007 do Sistema Cartográfico e Cadastral do Municipio do Salvador – SICAD integrante do Sistema de Informações Municipais – SIM.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/26_2007.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">30/06/2006</td>
+<td style="width: 16.5518%; text-align: left;">Portaria nº 24/2006</td>
+<td style="width: 69.4482%;">Aprova a IN 003/2006, que dispõe a definição dos recuos previstos na LOUOS e PDDU.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/24_2006.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">30/06/2006</td>
+<td style="width: 16.5518%; text-align: left;">Portaria nº 20/2006</td>
+<td style="width: 69.4482%;">Aprova a IN 002/2006 – Circulação interna e de acesso de veículos e pedestres – Aprova a IN 002/2006, que dispõe sobre as normas, critérios e parâmetros de circulação interna e de acesso de veículos e pedestres aos empreendimentos de Salvador.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/20_2006.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">30/06/2006</td>
+<td style="width: 16.5518%; text-align: left;">Portaria nº 19/2006</td>
+<td style="width: 69.4482%;">Aprova a IN 001/2006 – Condições e critérios para áreas de varandas – Aprova a IN 001/2006, que dispõe sobre as condições e critérios para que as áreas de varandas em empreendimenos tipo Edifício de Apartamentos – R-3, não sejam computadas para cálculo de coeficiente de aproveitamento.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/19_2006.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">30/06/2006</td>
+<td style="width: 16.5518%; text-align: left;">Portaria nº 18/2006</td>
+<td style="width: 69.4482%;"> Revoga a IN 001/2004 – Transcon – Revoga a IN 001/2004, que dispõe sobre as condições e critérios para exame e aprovação de projetos de empreendimentos, que queiram utilizar o intrumento da TRANSCON.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2014/11/18_2006.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+<tr>
+<td style="width: 6%;">13/05/1966</td>
+<td style="width: 16.5518%; text-align: left;">Portaria nº 13/1966</td>
+<td style="width: 69.4482%;">Disciplina a situação dos Profissionais liberais, Engenheiros e Arquitetos do DUEP, quanto à responsabilidade de projetos e obras.</td>
+<td style="text-align: center; width: 4%;"><a href="/images/arquivos_processos/2015/12/Portaria_13_1966-2.pdf" target="_blank" rel="noopener noreferrer"><img src="/images/icon/pdf.png" alt="Edital" /></a></td>
+</tr>
+</tbody>
+</table>
+</div> 	</div>
+
+								</div>
+                          </div> 
+                      </div>
+                  </div>
+              </div>
+                            <!--VERIFICAÇÃO PARA INCLUSÃO DE PÁGINA-->
+	</main>
+	
+<footer>
+
+<!-- inicio Mp2 -->
+      
+        
+  	  <div class="container-fluid">
+              <div class="row justify-content-start text-center">
+                  <div class="col-12" style="padding-top:5px; padding-bottom: 1px;"></div>
+              </div>
+      </div>
+       
+      <div class="container-fluid">
+          <div class="row justify-content-start text-center sty">
+              <div class="col-12 endereco">
+                  <b>&copy; 2021 - Secretaria Municipal de Desenvolvimento Urbano. Todos os direitos reservados.</b>
+              </div>
+          </div>
+      </div>
+       
+  	  <div class="container-fluid">
+              <div class="row justify-content-start text-center">
+                  <div class="col-12" style="padding-top:1px; padding-bottom: 1px;"></div>
+              </div>
+      </div>
+       
+         
+    <div class="container-fluid bannerfoot">
+
+              <div class="row">
+
+                    <!-- inic coluna3 ACESSO RAPIDO-->
+                    <div class="bfooter1 col-xs-12 col-sm-6 col-md-3" style="padding-top:30px; padding-left:20px; border:0px solid #fff">
+                       <ul class="none">
+                         <h5><font size="2px" color="#FFD190"><B>ACESSO RÁPIDO</B></font></h5>
+                         <li><a href="https://sedur.salvador.ba.gov.br/acessoremoto/" target="_blank" alt="Acesso Interno SEDUR"><font color="white" style="font-family:'Roboto' sans-serif; font-size:12px">Acesso Interno</font></a></li>
+       					 <li><a href="https://agendamento.sedur.salvador.ba.gov.br/sas/#agendamento" target="_blank" alt="Agendamento"><font color="white" style="font-family:'Roboto', sans-serif;  font-size:12px">Agendamento</font></a></li>
+                    	 <!-- 4ls; Modificação da página Canais de Atendimento-->
+       					 <!-- <li><a href="/./canais-de-atendimento" target="_blanck" alt="Canais Atendimento"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px">Canais de Atendimento</font></a></li> -->
+                    	<li><a href="https://servicos.sedur.salvador.ba.gov.br/#/portal/contacts" target="_blanck" alt="Canais Atendimento"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px">Canais de Atendimento</font></a></li>
+                         <!-- Fim -->
+                         <li><a href="http://www.falasalvador.ba.gov.br/portal/portal/" target="_blank" alt="Portal Fala Salvador"><font color="white" style="font-family:'Roboto', sans-serif; font-size:12px"> Portal Fala Salvador</font></a></li>
+                           <!--<li>
+                           	Prefeitura Municipal de Salvador<br>
+                           	13.927.801/0029-40
+                           </li>-->
+                       </ul>
+                    </div>   
+
+
+                    <!-- inic coluna1 SEDUR -->
+                    <div class="bfooter2 col-xs-12 col-sm-6 col-md-4" style="text-align:left; padding-top:60px; border:0px solid #fff">
+                        <img class = "img-responsive" src="http://sedur.salvador.ba.gov.br//images/logo/logo-white.png" alt="logo SEDUR">
+                    </div>
+
+
+                    <!-- inic coluna2 PREFEITURA -->
+                    <!-- <div class="bfooter3 col-xs-12 col-sm-6 col-md-3" style="text-align:left; padding-top:50px; border:0px solid #fff">
+                        <img id = "img_sedur_branca" src="http://sedur.salvador.ba.gov.br//images/logo/PREFEITURA_RET_COMPL_Branc_Ftrans2.png" alt="logo Prefeitura" width="200px" hight="auto">
+                    </div> -->
+
+
+
+                    <!-- inic coluna4 GOOGLE-->             
+                    <div class="bfooter4 col-xs-12 col-sm-6 col-md-3 offset-2" style="padding-top:10px; font-family:'Roboto', sans-serif; font-size:12px; color:white;">
+                      <a href="https://www.google.com/maps/place/SEDUR+-+Secretaria+Municipal+de+Desenvolvimento+e+Urbanismo/@-12.9847353,-38.4661181,1236a,35y,90h/data=!3m1!1e3!4m5!3m4!1s0x7161b34826018a3:0x6f1379fe7b002977!8m2!3d-12.9876324!4d-38.4666753?hl=pt-BR" target="_blank" alt="Endereo Sedur"><img src="http://sedur.salvador.ba.gov.br//images/imagens/END_SEDUR.png" width="100%" height="auto" style="border:3px solid #ffffff;"></a> 
+       				  <p>Av.ACM, nº3224, Caminho das Árvores - Salvador/Ba. Edf.Empresarial Thomé de Souza / Térreo - CEP.: 41110-700 </p>
+                     </div>
+
+              </div>
+
+    </div>       
+         
+    
+          
+    
+ <!-- fim Mp2 -->  
+     
+                  
+                  
+</footer>
+
+    <script src="http://sedur.salvador.ba.gov.br/templates/sedur/assets/js/js.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<script src="http://sedur.salvador.ba.gov.br/templates/sedur/assets/js/imageMapResizer.min.js"></script>
+	<script type="text/javascript">
+		$('map').imageMapResize();
+	</script>
+
+
+	<script>
+  
+  
+  function popUp(){
+    document.getElementById("dialog-message").style.display = "none";
+};   
+  
+  (function($) {
+$.fn.menumaker = function(options) {  
+ var cssmenu = $(this), settings = $.extend({
+   format: "dropdown",
+   sticky: false
+ }, options);
+ return this.each(function() {
+   $(this).find(".button").on('click', function(){
+     $(this).toggleClass('menu-opened');
+     var mainmenu = $(this).next('ul');
+     if (mainmenu.hasClass('open')) { 
+       mainmenu.slideToggle().removeClass('open');
+     }
+     else {
+       mainmenu.slideToggle().addClass('open');
+       if (settings.format === "dropdown") {
+         mainmenu.find('ul').show();
+       }
+     }
+   });
+   cssmenu.find('li ul').parent().addClass('has-sub');
+multiTg = function() {
+     cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
+     cssmenu.find('.submenu-button').on('click', function() {
+       $(this).toggleClass('submenu-opened');
+       if ($(this).siblings('ul').hasClass('open')) {
+         $(this).siblings('ul').removeClass('open').slideToggle();
+       }
+       else {
+         $(this).siblings('ul').addClass('open').slideToggle();
+       }
+     });
+   };
+   if (settings.format === 'multitoggle') multiTg();
+   else cssmenu.addClass('dropdown');
+   if (settings.sticky === true) cssmenu.css('position', 'fixed');
+resizeFix = function() {
+  var mediasize = 1000;
+     if ($( window ).width() > mediasize) {
+       cssmenu.find('ul').show();
+     }
+     if ($(window).width() <= mediasize) {
+       cssmenu.find('ul').hide().removeClass('open');
+     }
+   };
+   resizeFix();
+   return $(window).on('resize', resizeFix);
+ });
+  };
+})(jQuery);
+
+(function($){
+$(document).ready(function(){
+$("#cssmenu").menumaker({
+   format: "multitoggle"
+});
+});
+})(jQuery);
+$( "li.item-161" ).find( "span" ).css('display', 'none');
+$( "li.item-162" ).find( "span" ).css('display', 'none');
+</script>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+	
+</body>
+	
+	
+	
+</html>
+
+
+
+		
+

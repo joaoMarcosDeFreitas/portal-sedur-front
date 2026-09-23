@@ -1,0 +1,7 @@
+# Melhorias
+
+- Formulário guardado em dois lugares. “Requerimento de Licenciamento Ambiental” está linkado para o site antigo (/arquivos/2017/01/requerimentoGeral2016_SEDUR.pdf), e a página Formulários do portal guarda uma cópia idêntica. Se um dos dois for atualizado, o outro fica desatualizado. Deixar uma cópia só e linkar sempre para ela.
+- Lei sem link. A ficha cita a Lei Municipal nº 8.915/2015 (aba “Descrição”; publicada em Legislação › Leis, arquivo https://sedur.salvador.ba.gov.br/images/arquivos_processos/2015/09/Lei_8915_2015.pdf), mas não tem link para o texto. Linkar direto para o documento.
+- Poluição visual. A aba “Local e horário” mostra só “N/A”. Quando alguma aba não há conteúdo para mostrar, o melhor a se fazer é retirar a mesma.
+- Frase cortada em duas linhas. Na aba “Documentação Exigida”, o nome do documento é completado numa linha separada, como “Observação”, e a leitura fica quebrada: “Documento Comprobatório” + “Observação: da mudança de razão registrada na JUCEB”. Escrever o nome completo numa linha só (ex.: “Documento Comprobatório da mudança de razão registrada na JUCEB”).
+- Erros de português no texto padrão da procuração (aba “Documentação Exigida”): “considerara” (sem acento; o certo é “considerará”), “1(um)” (o certo é “1 (um)”) e “Sedur” (no resto do portal é “SEDUR”). A frase também começa mal (“As procurações sem prazo de vigência, a Sedur…”). Corrigir uma vez no texto padrão e vale para todas as fichas.
