@@ -5,7 +5,7 @@ import { LinkButton } from "@/app/components/atoms/Button";
 import { CategoryListItem } from "@/app/components/molecules/CategoryListItem";
 import { NewsCard } from "@/app/components/molecules/NewsCard";
 import { getCategorias } from "@/lib/data/servicos";
-import { getNoticias } from "@/lib/data/noticias";
+import { buscarNoticias } from "@/lib/data/noticias";
 
 export const metadata: Metadata = {
   title: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 export default async function HomePage() {
-  const [categorias, { itens: noticias }] = await Promise.all([getCategorias(), getNoticias(1, 3)]);
+  const [categorias, { itens: noticias }] = await Promise.all([getCategorias(), buscarNoticias({ porPagina: 3 })]);
 
   return (
     <>

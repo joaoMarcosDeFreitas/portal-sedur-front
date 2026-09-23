@@ -10,7 +10,7 @@ export function PortalShell({ children }: { children: ReactNode }) {
   const [menuAberto, setMenuAberto] = useState(false);
 
   return (
-    <div className="flex min-h-full">
+    <div className="flex flex-1">
       <Sidebar aberta={menuAberto} aoFechar={() => setMenuAberto(false)} />
       <div className="flex min-w-0 flex-1 flex-col">
         <UtilityBar />

@@ -4,6 +4,7 @@ type TextVariant = "display" | "h1" | "h2" | "h3" | "body" | "small" | "eyebrow"
 type TextTone = "default" | "muted" | "inverted" | "accent" | "brand";
 
 interface TextProps {
+  id?: string;
   as?: ElementType;
   variant?: TextVariant;
   tone?: TextTone;
@@ -41,8 +42,12 @@ const DEFAULT_TAG: Record<TextVariant, ElementType> = {
   eyebrow: "span",
 };
 
-export function Text({ as, variant = "body", tone = "default", className = "", children }: TextProps) {
+export function Text({ id, as, variant = "body", tone = "default", className = "", children }: TextProps) {
   const Tag = as ?? DEFAULT_TAG[variant];
   const classes = [VARIANT_CLASSES[variant], TONE_CLASSES[tone], className].filter(Boolean).join(" ");
-  return <Tag className={classes}>{children}</Tag>;
+  return (
+    <Tag id={id} className={classes}>
+      {children}
+    </Tag>
+  );
 }

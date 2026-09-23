@@ -2,41 +2,45 @@
 
 /*
  * Identidade visual do Portal SEDUR (mock).
- * Petróleo como cor de marca, neutros claros (tema padrão é claro) com contraste
- * suficiente para leitura sem ficar pesado, e um acento terracota usado com moderação.
- * Tema escuro disponível via [data-theme="dark"] na tag <html> (alternado pelo usuário).
+ * Cores extraídas do site atual da SEDUR (template.css e logo, em 23/09/2026):
+ * azul da interface #006cb5 como cor de marca, ciano da logo #00b8f1 como acento e neutros
+ * frios (azulados, base #f2f6f8) no lugar dos cinzas quentes. Tema padrão é claro; o escuro
+ * vem de [data-theme="dark"] na tag <html> (alternado pelo usuário).
  */
 :root {
-  --color-primary-50: #eef5f4;
-  --color-primary-100: #d7e7e5;
-  --color-primary-200: #b0cfcc;
-  --color-primary-300: #85b5b1;
-  --color-primary-400: #5a9a95;
-  --color-primary-500: #3b7f79;
-  --color-primary-600: #2a655f;
-  --color-primary-700: #204f4b;
-  --color-primary-800: #163b38;
-  --color-primary-900: #0f2c2a;
+  /* Azul SEDUR: 600 = #006cb5 (menu, botões e títulos do site atual). */
+  --color-primary-50: #eaf4fb;
+  --color-primary-100: #cfe6f6;
+  --color-primary-200: #9fcdec;
+  --color-primary-300: #6bb1e0;
+  --color-primary-400: #3592d0;
+  --color-primary-500: #0a7cc4;
+  --color-primary-600: #006cb5;
+  --color-primary-700: #005a9a;
+  --color-primary-800: #0a4577;
+  --color-primary-900: #0b3050;
 
-  --color-accent-50: #fbf1ea;
-  --color-accent-100: #f5dfcd;
-  --color-accent-200: #ebbfa0;
-  --color-accent-300: #e09e72;
-  --color-accent-400: #d18a5c;
-  --color-accent-500: #c97b4a;
-  --color-accent-600: #b06438;
-  --color-accent-700: #8f4f2c;
+  /* Ciano da logo: 500 = #00b8f1. Para texto sobre claro usar o 700 (contraste). */
+  --color-accent-50: #e6f8fe;
+  --color-accent-100: #c2eefc;
+  --color-accent-200: #85dcf8;
+  --color-accent-300: #40caf4;
+  --color-accent-400: #14c0f3;
+  --color-accent-500: #00b8f1;
+  --color-accent-600: #0098c9;
+  --color-accent-700: #00759c;
 
-  --color-neutral-50: #fbfaf8;
-  --color-neutral-100: #f3f1ec;
-  --color-neutral-200: #e6e3db;
-  --color-neutral-300: #d1cdc2;
-  --color-neutral-400: #aaa598;
-  --color-neutral-500: #85806f;
-  --color-neutral-600: #635f52;
-  --color-neutral-700: #4a4739;
-  --color-neutral-800: #322f26;
-  --color-neutral-900: #211f19;
+  /* Neutros frios: 100 = #f2f6f8 (fundo claro do site atual). */
+  --color-neutral-50: #f8fafb;
+  --color-neutral-100: #f2f6f8;
+  --color-neutral-200: #e3e9ee;
+  --color-neutral-300: #ccd4dc;
+  --color-neutral-400: #9aa5b1;
+  --color-neutral-500: #6b7885;
+  --color-neutral-600: #4d5966;
+  --color-neutral-700: #34404d;
+  --color-neutral-800: #232d38;
+  --color-neutral-900: #141b22;
 
   --color-success: #2f7d52;
   --color-warning: #a3721a;
@@ -51,27 +55,35 @@
   --border-strong: var(--color-neutral-300);
 
   /* Cor de marca para TEXTO (não para fundos sólidos de botão): muda de tom entre os
-     temas pra continuar legível — petróleo escuro no tema claro, petróleo claro no
-     escuro. Sempre usar --brand e --accent-text em texto sobre fundo adaptável
+     temas pra continuar legível — azul escuro no tema claro, azul claro no escuro.
+     Sempre usar --brand e --accent-text em texto sobre fundo adaptável
      (surface, background); as escalas numeradas (primary-100, accent-600 etc.)
      continuam fixas e servem pra fundos sólidos (botões, chips), onde o tom não
      precisa mudar com o tema. */
   --brand: var(--color-primary-700);
-  --accent-text: var(--color-accent-600);
+  --accent-text: var(--color-accent-700);
 }
 
 :root[data-theme="dark"] {
   --background: var(--color-neutral-900);
   --foreground: var(--color-neutral-50);
   --foreground-muted: var(--color-neutral-300);
-  --surface: #2a2822;
-  --surface-muted: #322f27;
+  --surface: #1b242d;
+  --surface-muted: #222d38;
   --border: var(--color-neutral-700);
   --border-strong: var(--color-neutral-600);
 
   --brand: var(--color-primary-300);
   --accent-text: var(--color-accent-400);
+
+  /* Cores de status mais claras no escuro, pra o texto dos selos continuar legível. */
+  --color-success: #5fbf8a;
+  --color-warning: #d9a441;
+  --color-danger: #e07a7a;
 }
+
+/* O tema escuro é escolhido pelo usuário (data-theme), não pelo sistema: o variante `dark:` segue isso. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 @theme inline {
   --color-primary-50: var(--color-primary-50);
@@ -122,6 +134,11 @@
   --font-sans: var(--font-montserrat);
   --font-heading: var(--font-poppins);
   --font-display: var(--font-valley-sans);
+}
+
+/* "Aumentar texto" (UtilityBar): como o Tailwind usa rem, escalar a fonte da raiz aumenta tudo. */
+html[data-text-size="grande"] {
+  font-size: 118.75%;
 }
 
 body {

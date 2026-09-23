@@ -6,7 +6,7 @@ import { Button, LinkButton } from "@/app/components/atoms/Button";
 
 export default function ErrorPage({ reset }: { error: Error & { digest?: string }; reset: () => void }) {
   return (
-    <div className="flex min-h-full flex-1 items-center bg-neutral-50">
+    <div className="flex min-h-full flex-1 items-center">
       <Container className="py-24 text-center">
         <Text as="p" variant="eyebrow" tone="accent">
           Erro inesperado

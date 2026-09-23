@@ -1,21 +1,25 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useSessao } from "@/lib/auth/sessao";
 import {
+  ClipboardList,
   FileText,
   Gavel,
-  ImagePlus,
   Landmark,
   LayoutGrid,
   Newspaper,
   Scale,
+  SearchCheck,
   Eye,
   type LucideIcon,
 } from "lucide-react";
 
 const NAV: { rotulo: string; href: string; icone: LucideIcon }[] = [
   { rotulo: "Serviços", href: "/servicos", icone: LayoutGrid },
+  { rotulo: "Consultas", href: "/consultas", icone: SearchCheck },
   { rotulo: "Legislação", href: "/legislacao", icone: Scale },
   { rotulo: "Notícias", href: "/noticias", icone: Newspaper },
   { rotulo: "Licitações", href: "/licitacoes", icone: Gavel },
@@ -24,6 +28,8 @@ const NAV: { rotulo: string; href: string; icone: LucideIcon }[] = [
   { rotulo: "Formulários", href: "/formularios", icone: FileText },
 ];
 
+const MINHAS_SOLICITACOES = { rotulo: "Minhas solicitações", href: "/minhas-solicitacoes", icone: ClipboardList };
+
 interface SidebarProps {
   aberta: boolean;
   aoFechar: () => void;
@@ -31,6 +37,8 @@ interface SidebarProps {
 
 export function Sidebar({ aberta, aoFechar }: SidebarProps) {
   const pathname = usePathname();
+  const { usuario, hidratado } = useSessao();
+  const itens = hidratado && usuario ? [...NAV, MINHAS_SOLICITACOES] : NAV;
 
   return (
     <>
@@ -46,23 +54,29 @@ export function Sidebar({ aberta, aoFechar }: SidebarProps) {
           aberta ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div>
-          {/* Espaço reservado para a logo oficial da SEDUR, quando o usuário fornecer. */}
-          <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-dashed border-border-strong text-foreground-muted">
-            <ImagePlus className="size-5" aria-hidden="true" />
-          </div>
-          <Link
-            href="/"
-            onClick={aoFechar}
-            className="mt-3 block cursor-pointer font-display text-xl font-semibold text-brand"
-          >
-            Portal SEDUR
-          </Link>
-        </div>
+        {/* Logo oficial da SEDUR: versão escura no tema claro e versão clara no tema escuro. */}
+        <Link href="/" onClick={aoFechar} className="block cursor-pointer" aria-label="SEDUR — página inicial">
+          <Image
+            src="/logo/sedur-logo-escura.png"
+            alt="SEDUR — Secretaria Municipal de Desenvolvimento Urbano"
+            width={1080}
+            height={130}
+            sizes="216px"
+            className="h-auto w-full dark:hidden"
+          />
+          <Image
+            src="/logo/sedur-logo-clara.png"
+            alt="SEDUR — Secretaria Municipal de Desenvolvimento Urbano"
+            width={1080}
+            height={130}
+            sizes="216px"
+            className="hidden h-auto w-full dark:block"
+          />
+        </Link>
 
         <nav aria-label="Navegação principal" className="flex-1">
           <ul className="flex flex-col gap-1">
-            {NAV.map((item) => {
+            {itens.map((item) => {
               const ativo = pathname === item.href || pathname.startsWith(`${item.href}/`);
               const Icone = item.icone;
               return (

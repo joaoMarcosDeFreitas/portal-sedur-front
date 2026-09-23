@@ -5,7 +5,7 @@ export interface Projeto {
   url: string;
   titulo_na_pagina?: string;
   texto: string;
-  links?: { texto: string; url: string; url_original?: string }[];
+  links?: { texto: string; url: string; url_original?: string; arquivo_status_http?: number }[];
 }
 
 export interface InstitucionalData {

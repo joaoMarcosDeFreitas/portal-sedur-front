@@ -10,7 +10,7 @@ const ATENDIMENTO = [
 export function Footer() {
   return (
     <footer className="mt-16">
-      <Container className="flex items-center jus gap-50 py-12 text-center">
+      <Container className="flex flex-col items-center jus gap-10 py-12 text-center md:flex-row md:gap-50">
         <div className="max-w-3xl">
           <p className="font-display text-lg font-semibold text-brand">Portal SEDUR</p>
           <p className="mt-2 text-sm text-foreground-muted">
