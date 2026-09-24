@@ -8,11 +8,16 @@ import { getServicoPorId, getTodosOsServicos, slugDaCategoria, slugDoServico } f
 import { parseDocumentos, parseTaxas } from "@/lib/normalize/servico";
 import { temConteudo } from "@/lib/normalize/texto";
 
-export const metadata: Metadata = { title: "Solicitar serviço" };
-
 export async function generateStaticParams() {
   const servicos = await getTodosOsServicos();
   return servicos.map((servico) => ({ servicoId: servico.id }));
+}
+
+// Título de aba próprio por serviço (WCAG 2.4.2): sem isso as 151 páginas teriam o mesmo título.
+export async function generateMetadata(props: PageProps<"/solicitar/[servicoId]">): Promise<Metadata> {
+  const { servicoId } = await props.params;
+  const servico = await getServicoPorId(servicoId);
+  return { title: servico ? `Solicitar: ${servico.nome}` : "Solicitar serviço" };
 }
 
 export default async function SolicitarPage(props: PageProps<"/solicitar/[servicoId]">) {

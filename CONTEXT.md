@@ -257,10 +257,10 @@ erros), testes de interação em Edge headless e capturas nos temas claro/escuro
   título "Um só portal..." logo abaixo (pedido explícito do usuário).
 - `app/components/organisms/UtilityBar.tsx` — faixa fina acima do TopBar com "Aumentar texto" e o
   toggle de tema claro/escuro (substituiu o antigo "alto contraste" do `AccessibilityBar`, que foi
-  removido).
+  removido). O link "Pular para o conteúdo" agora fica no `PortalShell` (ver Fase 3, passo 1).
 - `app/components/molecules/SearchBar.tsx` — **busca ao vivo** (não navega mais pra `/busca`):
-  digita → debounce de 200ms → `fetch('/api/busca?q=...')` → dropdown com resultados (seções do
-  portal + serviços que batem no nome/categoria). Sem botão "Buscar".
+  digita → debounce de 200ms → `fetch('/api/busca?q=...')` → dropdown com resultados (seções, serviços,
+  consultas, legislação, notícias). Sem botão "Buscar". Navegável por teclado (↑/↓/Enter/Esc — ver Fase 3, passo 1).
 - `app/api/busca/route.ts` — Route Handler que faz a busca no servidor (hoje: seções fixas do
   portal + `getTodosOsServicos()`); ponto de extensão natural pra incluir legislação/notícias
   depois.
@@ -337,8 +337,44 @@ topbar e footer conferidos em tema claro e escuro.
 
 Numeração combinada com o usuário (os 5 passos que faltam depois da Fase 2; o logo já foi feito):
 
-1. **Acessibilidade (AA)** — *não iniciado*: revisar contraste do ciano/acento, foco visível, um H1 por
-   página, navegação por teclado no dropdown da busca (hoje só mouse; `role="option"` sem setas).
+1. **Acessibilidade (AA)** — ***CONCLUÍDO (24/09/2026)***. Medido com **axe-core** (WCAG 2.0/2.1 A+AA + best
+   practices) em Edge headless: ~30 páginas públicas + fluxo logado completo (login → formulário vazio/com
+   erros → detalhe aguardando/pago/concluída → lista), nos temas claro/escuro e em 1280/390px — **0
+   violações**; teste de teclado próprio (`teclado.js`) 100% ok. O que foi feito:
+   - **Contraste**: `--color-warning` `#a3721a`→`#8a5f10` (selo "Em manutenção" dava 3,74:1) e
+     `--color-success` `#2f7d52`→`#2a7048` (selo "Concluída/Pago" dava 4,41:1); agora todos os tons de
+     status passam de 4,5:1 sobre branco e sobre o fundo tingido do selo (danger `#b23b3b` já passava).
+   - **Foco visível global** (`globals.css`): `:focus-visible { outline: 2px solid var(--brand) }` (segue o
+     tema); a busca mantém o próprio anel. `prefers-reduced-motion` respeitado.
+   - **Landmarks**: `PortalShell` agora tem `<header>` (UtilityBar + TopBar) e `<main id="conteudo-principal"
+     tabIndex={-1}>`; a busca tem `role="search"`. O link **"Pular para o conteúdo" é o 1º elemento focável**
+     (antes vinha depois da sidebar; foi movido do `UtilityBar` para o `PortalShell`, aparece ao focar).
+   - **Busca (`SearchBar`) com teclado** (padrão combobox WAI-ARIA): ↑/↓ percorrem (dão a volta), Enter abre a
+     opção destacada (ou a 1ª), Esc fecha, `aria-activedescendant`/`aria-selected`, região `role="status"`
+     anuncia "N resultados disponíveis". As opções deixaram de ser `<Link>` e viraram `<li role="option">` com
+     `router.push` (evita interativo aninhado); perde-se só o prefetch.
+   - **Gaveta mobile da sidebar**: `id="menu-lateral"`; fechada fica `invisible` (sai da ordem de Tab e do
+     leitor de tela); botão hambúrguer com `aria-expanded`/`aria-controls`; ao abrir o foco vai para a
+     gaveta, **Esc fecha**. Armadilha resolvida: a transição de `visibility` só existe no estado *fechado* —
+     se existisse ao abrir, a gaveta ficaria `hidden` no 1º frame e o `focus()` seria ignorado.
+   - **404**: `NaoEncontrado` (organism) usado em `app/not-found.tsx` (com `<main>` próprio, sem shell) e em
+     `app/(public)/not-found.tsx` (dentro do `<main>` do shell — antes gerava dois `<main>`). `error.tsx`
+     também virou `<main>`.
+   - **Um H1 por página**: conferido por crawler no HTML de 1.374 URLs — todas têm exatamente 1 H1 e 1
+     `<main>`. O placeholder do `AuthGuard` ("Verificando sua sessão…") virou o **H1** enquanto a sessão é
+     conferida, então as 151 `/solicitar/*` também passam. **Única exceção conhecida e não corrigível por
+     nós**: HTML de 404 disparado por `notFound()` (ex.: `/noticias/999999`) sai do servidor com o `<body>`
+     vazio (`<html id="__next_error__">`) e a 404 só aparece após o JS rodar (com JS: H1, `<main>`, título e
+     axe ok). **Reproduzido em rota mínima que só chama `notFound()`, fora de qualquer grupo e até com o
+     not-found padrão do Next** — é comportamento do Next 16.3.5, não do nosso código; trocar por 404
+     renderizada inline custaria o status HTTP 404 (pior). URLs sem rota (`/pagina-inexistente`) renderizam
+     completas no servidor. 404s agora têm título "Página não encontrada".
+   - Títulos de aba: `/solicitar/[id]` agora tem `generateMetadata` com o nome do serviço (eram 151 iguais).
+   - Ferramentas (scratchpad, não versionadas): `axe.js` (públicas; passar URLs extras como argumento e usar
+     `MSYS_NO_PATHCONV=1` no Git Bash), `axe-logado.js`, `teclado.js`, `h1.js`. Instalar `axe-core` no
+     scratchpad. **Não** dá para escrever esses scripts por heredoc (perde as `\` do caminho do Edge).
+   - **Limites do automático**: axe pega ~30–40% dos problemas WCAG; ainda vale um teste manual com leitor de
+     tela (NVDA) e zoom 200% antes de dizer "conforme AA" ao chefe.
 2. **Conferir o conteúdo com o usuário** — *em andamento* (o usuário pediu que os ajustes de fidelidade
    das consultas fiquem registrados aqui, porque o passo 3 ainda não começou):
    - **Consultas alinhadas ao portal antigo (feito em 23/09/2026)**. Método: ler o código das páginas
@@ -377,6 +413,27 @@ Numeração combinada com o usuário (os 5 passos que faltam depois da Fase 2; o
 5. **Páginas ocultas do portal antigo não migradas** — *não iniciado, decidir se vale*: IPTU Verde e
    Fiscalização do Carnaval (dados em `servicos-sistema.json` → `iptu_verde`, `fiscalizacao_carnaval_2026`).
 
-Extras/pendências fora dos 5: página `/dev/estilo` (opcional); **nada foi commitado ainda** desde o commit
-"Implementado a home page junto com a barra lateral" (dezenas de arquivos novos/alterados) — perguntar ao
-usuário se quer commit; não há testes automatizados (só verificações manuais/headless).
+Extras/pendências fora dos 5: página `/dev/estilo` (opcional); não há testes automatizados (só
+verificações manuais/headless).
+
+**Estado do git (23/09/2026)**: o usuário commitou tudo por conta própria em `e98db36` ("Sistema pronto,
+necessário polimento e revisão completa.") na branch `desenvolvimento`, árvore limpa e sincronizada com
+`origin/desenvolvimento`. **Desde então (24/09/2026) há alterações NÃO commitadas** — todas do passo 1
+(acessibilidade): `globals.css`, `PortalShell`, `TopBar`, `UtilityBar`, `Sidebar`, `SearchBar`, `not-found`,
+`error`, `(public)/not-found.tsx` e `NaoEncontrado.tsx` (novos), `solicitar/[servicoId]/page.tsx`,
+`AuthGuard.tsx`.
+
+**Pendências que dependem do usuário para fechar a Fase 3 (lista combinada em 24/09/2026)**: (1) print do
+Alvará de Publicidade (consulta + resultado); (2) prints de resultado real de DAM/CGA, Auto de Infração e
+Solicitação de Serviços (só o formato das colunas); (3) decidir se queremos tela de detalhe ao clicar numa
+linha de consulta (conteúdo seria inventado); (4) decidir se migra IPTU Verde e Fiscalização do Carnaval;
+(5) 612 notícias antigas: manter o aviso ou fornecer os textos; (6) confirmar nomes/cargos dos dirigentes;
+(7) commit do passo 1 (ou autorizar o Claude a fazer); (8) opcional: teste com NVDA e zoom 200%. Só (1) e (2)
+dependem de material externo; sem eles seguem fictícios e sinalizados. **Sem depender dele**: passo 3
+(mobile), alinhar os 7 painéis de Transparência (HTML já salvo), passo 4 (README).
+
+**Combinado com o usuário para logo depois do passo 1** (ainda não feito): conversar sobre (a) **hospedagem
+gratuita** do mock (Vercel/Netlify/Cloudflare Pages; atenção: o app usa Route Handlers `/api/busca` e
+`/api/legislacao`, então precisa de runtime Node/serverless — não é export estático puro) e (b) **testes
+automatizados** (sugestão: Playwright para o fluxo do cidadão + axe nas páginas-chave, reaproveitando os
+scripts `axe.js`/`teclado.js`; Vitest para os parsers de `lib/normalize`). Depois seguem os passos 2–5.

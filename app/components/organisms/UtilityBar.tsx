@@ -41,9 +41,6 @@ export function UtilityBar() {
   return (
     <div>
       <div className="flex w-full items-center justify-end gap-4 px-4 py-1.5 text-xs text-foreground-muted lg:px-8">
-        <a href="#conteudo-principal" className="sr-only focus:not-sr-only focus:underline">
-          Pular para o conteúdo
-        </a>
         <button type="button" onClick={alternarTamanho} className="cursor-pointer hover:text-foreground" aria-pressed={tamanho === "grande"}>
           {tamanho === "normal" ? "Aumentar texto" : "Texto normal"}
         </button>

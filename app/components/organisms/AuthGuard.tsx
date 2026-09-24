@@ -27,8 +27,12 @@ export function AuthGuard({ children }: { children: ReactNode }) {
 
   if (!hidratado || !usuario) {
     return (
+      // É o H1 da página enquanto a sessão é conferida (HTML do servidor e 1ª pintura): assim nenhuma
+      // página fica sem título, e o conteúdo real traz o próprio H1 quando aparece.
       <Container className="py-24">
-        <Text tone="muted">Verificando sua sessão…</Text>
+        <Text as="h1" variant="h3" tone="muted">
+          Verificando sua sessão…
+        </Text>
       </Container>
     );
   }

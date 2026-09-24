@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useRef } from "react";
 import { useSessao } from "@/lib/auth/sessao";
 import {
   ClipboardList,
@@ -39,6 +40,22 @@ export function Sidebar({ aberta, aoFechar }: SidebarProps) {
   const pathname = usePathname();
   const { usuario, hidratado } = useSessao();
   const itens = hidratado && usuario ? [...NAV, MINHAS_SOLICITACOES] : NAV;
+  const gavetaRef = useRef<HTMLElement>(null);
+
+  // Gaveta aberta (só existe abaixo de lg): Esc fecha e o foco vai pra dentro dela.
+  useEffect(() => {
+    if (!aberta) return;
+    // Só no próximo frame: no commit a gaveta ainda está `visibility: hidden` e não aceitaria foco.
+    const quadro = requestAnimationFrame(() => gavetaRef.current?.focus());
+    function aoApertarTecla(evento: KeyboardEvent) {
+      if (evento.key === "Escape") aoFechar();
+    }
+    document.addEventListener("keydown", aoApertarTecla);
+    return () => {
+      cancelAnimationFrame(quadro);
+      document.removeEventListener("keydown", aoApertarTecla);
+    };
+  }, [aberta, aoFechar]);
 
   return (
     <>
@@ -49,9 +66,16 @@ export function Sidebar({ aberta, aoFechar }: SidebarProps) {
           aria-hidden="true"
         />
       )}
+      {/* Fechada no mobile, a gaveta fica fora da tela: `max-lg:invisible` a tira também da ordem de Tab
+          e dos leitores de tela. A transição de `visibility` só existe no estado fechado (a saída espera
+          a animação); ao abrir, ela some de propósito para a gaveta ficar visível já no 1º frame e poder
+          receber o foco. */}
       <aside
-        className={`fixed inset-y-0 left-0 z-40 flex w-64 shrink-0 flex-col gap-8 overflow-y-auto border-r border-border bg-surface px-5 py-6 transition-transform duration-200 lg:static lg:z-auto lg:translate-x-0 ${
-          aberta ? "translate-x-0" : "-translate-x-full"
+        id="menu-lateral"
+        ref={gavetaRef}
+        tabIndex={-1}
+        className={`fixed inset-y-0 left-0 z-40 flex w-64 shrink-0 flex-col gap-8 overflow-y-auto border-r border-border bg-surface px-5 py-6 duration-200 focus:outline-none lg:static lg:z-auto lg:translate-x-0 ${
+          aberta ? "translate-x-0 transition-transform" : "-translate-x-full transition-[transform,visibility] max-lg:invisible"
         }`}
       >
         {/* Logo oficial da SEDUR: versão escura no tema claro e versão clara no tema escuro. */}

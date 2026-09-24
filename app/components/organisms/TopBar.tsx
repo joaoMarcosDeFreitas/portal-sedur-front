@@ -8,7 +8,12 @@ import { useSessao } from "@/lib/auth/sessao";
 const BOTAO_CONTA =
   "flex shrink-0 cursor-pointer items-center gap-2 rounded-full border border-border-strong px-4 py-2.5 text-sm font-medium text-brand hover:bg-primary-600/10";
 
-export function TopBar({ aoAbrirMenu }: { aoAbrirMenu: () => void }) {
+interface TopBarProps {
+  aoAbrirMenu: () => void;
+  menuAberto: boolean;
+}
+
+export function TopBar({ aoAbrirMenu, menuAberto }: TopBarProps) {
   const { usuario, hidratado, sair } = useSessao();
 
   return (
@@ -19,6 +24,8 @@ export function TopBar({ aoAbrirMenu }: { aoAbrirMenu: () => void }) {
           onClick={aoAbrirMenu}
           className="flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-full text-foreground-muted hover:bg-surface-muted lg:hidden"
           aria-label="Abrir menu de navegação"
+          aria-expanded={menuAberto}
+          aria-controls="menu-lateral"
         >
           <Menu className="size-5" aria-hidden="true" />
         </button>

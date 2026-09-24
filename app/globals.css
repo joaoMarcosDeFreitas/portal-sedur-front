@@ -42,8 +42,8 @@
   --color-neutral-800: #232d38;
   --color-neutral-900: #141b22;
 
-  --color-success: #2f7d52;
-  --color-warning: #a3721a;
+  --color-success: #2a7048;
+  --color-warning: #8a5f10;
   --color-danger: #b23b3b;
 
   --background: #ffffff;
@@ -144,4 +144,28 @@ html[data-text-size="grande"] {
 body {
   background: var(--color-background);
   color: var(--color-foreground);
+}
+
+/* Foco visível para quem navega por teclado (WCAG 2.4.7): um anel na cor de marca, com contraste
+   nos dois temas, em qualquer link, botão ou campo. Só aparece no foco por teclado, não no clique. */
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+/* O alvo do "Pular para o conteúdo" recebe foco por script; não precisa de anel. */
+main:focus {
+  outline: none;
+}
+
+/* Respeita a preferência do sistema por menos movimento (WCAG 2.3.3). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
