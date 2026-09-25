@@ -17,12 +17,8 @@ interface Sistema {
 }
 
 // Endereços e situação conforme levantamento de 21/09/2026 (reforma-portal/preparacao-mock).
+// O Agendamento deixou de ser sistema à parte: agora é a página /agendamento deste portal.
 const SISTEMAS: Sistema[] = [
-  {
-    nome: "Agendamento SEDUR",
-    descricao: "Agende o atendimento presencial na secretaria.",
-    url: "https://agendamento.sedur.salvador.ba.gov.br/sas/#agendamento",
-  },
   {
     nome: "Consulta Prévia Salvador",
     descricao: "Sistema da Prefeitura de Salvador para consultas prévias.",
@@ -37,6 +33,12 @@ const SISTEMAS: Sistema[] = [
     nome: "Mapeamento Salvador (GIS)",
     descricao: "Mapas e dados geográficos da cidade.",
     url: "https://mapeamento.salvador.ba.gov.br",
+  },
+  {
+    nome: "Autorização para Feira (CLE)",
+    descricao: "Pedido digital de autorização para feiras e congressos.",
+    url: "https://servicos.sedur.salvador.ba.gov.br/eventos/form.jsp?sys=CLE&formID=464570877",
+    emManutencao: true,
   },
   {
     nome: "Salvador Ruas",

@@ -1,4 +1,5 @@
 import type { Servico } from "@/types/servico";
+import { normalizar } from "@/lib/utils/normalizar";
 import { limparTexto, temConteudo } from "./texto";
 
 const ROTULO_ABA: Record<keyof Servico["abas"], string> = {
@@ -122,4 +123,19 @@ export function parseTaxas(texto: string): TaxasFicha {
 export function parsePrazo(texto: string): { principal: string; observacoes: string[] } {
   const [principal = "", ...observacoes] = paraLista(texto);
   return { principal, observacoes };
+}
+
+/** Chave para comparar textos ignorando acento, caixa e pontuação. */
+const chave = (texto: string) => normalizar(texto).replace(/[^a-z0-9 ]+/g, " ").replace(/\s+/g, " ").trim();
+
+/**
+ * Links (modelos em PDF etc.) que pertencem a um documento exigido: o texto do link é o próprio
+ * nome do documento (ou parte dele). Conferido nos dados: os 48 links de documentos das fichas casam.
+ */
+export function linksDoDocumento<T extends { texto: string }>(titulo: string, links: T[]): T[] {
+  const alvo = chave(titulo);
+  return links.filter((link) => {
+    const texto = chave(link.texto);
+    return texto.length > 0 && (alvo.includes(texto) || texto.includes(alvo));
+  });
 }

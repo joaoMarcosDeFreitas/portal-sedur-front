@@ -12,6 +12,7 @@ import { useSessao } from "@/lib/auth/sessao";
 import { criarSolicitacao } from "@/lib/solicitacoes/store";
 import { calcularValorDam, exigeArea, formatarValor } from "@/lib/solicitacoes/dam";
 import type { ItemTaxa } from "@/lib/normalize/servico";
+import type { TipoSolicitacao } from "@/types/solicitacao";
 
 interface DocumentoForm {
   titulo: string;
@@ -20,15 +21,24 @@ interface DocumentoForm {
 
 interface SolicitacaoFormProps {
   servico: { id: string; nome: string; categoria: string };
+  /** "dam" = Emissão de DAM; "processo" = Abrir processo (os dois botões reais das fichas). */
+  acao: TipoSolicitacao;
   documentos: DocumentoForm[];
   taxas: ItemTaxa[];
 }
 
 type Erros = Partial<Record<"imovel" | "bairro" | "area" | "declaracao", string>>;
 
-export function SolicitacaoForm({ servico, documentos, taxas }: SolicitacaoFormProps) {
+/**
+ * Formulário das duas ações do portal atual (o que vem depois do login gov.br não foi coletado; aqui é
+ * simulado):
+ * - Emissão de DAM: confere a taxa (com a área, se for cobrada por m²) e gera o DAM para pagar. Não abre processo.
+ * - Abrir processo: endereço, descrição e documentos; gera o protocolo e segue para análise. Não gera DAM.
+ */
+export function SolicitacaoForm({ servico, acao, documentos, taxas }: SolicitacaoFormProps) {
   const router = useRouter();
   const { usuario } = useSessao();
+  const ehDam = acao === "dam";
 
   const [imovel, setImovel] = useState("");
   const [bairro, setBairro] = useState("");
@@ -38,9 +48,9 @@ export function SolicitacaoForm({ servico, documentos, taxas }: SolicitacaoFormP
   const [declaro, setDeclaro] = useState(false);
   const [erros, setErros] = useState<Erros>({});
 
-  const precisaArea = exigeArea(taxas);
+  const precisaArea = ehDam && exigeArea(taxas);
   const areaNumerica = Number(area.replace(",", ".")) || 0;
-  const valorEstimado = taxas.length > 0 ? calcularValorDam(taxas, areaNumerica) : 0;
+  const valorDam = calcularValorDam(taxas, areaNumerica);
 
   function alternarAnexo(titulo: string) {
     setAnexados((atuais) => (atuais.includes(titulo) ? atuais.filter((t) => t !== titulo) : [...atuais, titulo]));
@@ -49,30 +59,100 @@ export function SolicitacaoForm({ servico, documentos, taxas }: SolicitacaoFormP
   function enviar(evento: FormEvent) {
     evento.preventDefault();
     const novosErros: Erros = {};
-    if (!imovel.trim()) novosErros.imovel = "Informe o endereço do imóvel.";
-    if (!bairro.trim()) novosErros.bairro = "Informe o bairro.";
-    if (precisaArea && areaNumerica <= 0) novosErros.area = "Informe a área da intervenção em m².";
-    if (!declaro) novosErros.declaracao = "Confirme a declaração para enviar.";
+    if (ehDam) {
+      if (precisaArea && areaNumerica <= 0) novosErros.area = "Informe a área da intervenção em m².";
+    } else {
+      if (!imovel.trim()) novosErros.imovel = "Informe o endereço do imóvel.";
+      if (!bairro.trim()) novosErros.bairro = "Informe o bairro.";
+      if (!declaro) novosErros.declaracao = "Confirme a declaração para enviar.";
+    }
     setErros(novosErros);
     if (Object.keys(novosErros).length > 0) return;
 
     const protocolo = criarSolicitacao({
+      tipo: acao,
       servicoId: servico.id,
       servicoNome: servico.nome,
       categoria: servico.categoria,
       requerente: usuario?.nome ?? "Cidadão",
-      imovel: imovel.trim(),
-      bairro: bairro.trim(),
-      descricao: descricao.trim(),
-      area: precisaArea ? areaNumerica : undefined,
-      documentosAnexados: anexados,
-      valorDam: valorEstimado,
+      ...(ehDam
+        ? { area: precisaArea ? areaNumerica : undefined, valorDam }
+        : { imovel: imovel.trim(), bairro: bairro.trim(), descricao: descricao.trim(), documentosAnexados: anexados }),
     });
     router.push(`/minhas-solicitacoes/${protocolo}`);
   }
 
+  if (ehDam) {
+    return (
+      <form onSubmit={enviar} noValidate className="mt-8 flex max-w-2xl flex-col gap-6">
+        <Text tone="muted">
+          O DAM (Documento de Arrecadação Municipal) é a guia para pagar a taxa deste serviço. Confira o valor e emita o DAM
+          para pagar.
+        </Text>
+
+        {taxas.length > 0 ? (
+          <section aria-labelledby="taxas-dam">
+            <Text as="h2" variant="h3" id="taxas-dam">
+              Taxas
+            </Text>
+            <dl className="mt-4 flex flex-col gap-2.5">
+              {taxas.map((taxa, indice) => (
+                <div key={`${taxa.descricao}-${indice}`} className="flex items-baseline justify-between gap-6">
+                  <dt className="text-foreground">{taxa.descricao}</dt>
+                  <dd className="shrink-0 font-medium tabular-nums text-foreground">{taxa.valor}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        ) : (
+          <Text tone="muted">Não encontramos o valor da taxa deste serviço para calcular o DAM.</Text>
+        )}
+
+        {precisaArea && (
+          <FormField
+            id="area"
+            label="Área da intervenção (m²)"
+            hint="Parte da taxa deste serviço é cobrada por metro quadrado."
+            erro={erros.area}
+          >
+            <Input
+              id="area"
+              inputMode="decimal"
+              value={area}
+              onChange={(e) => setArea(e.target.value)}
+              placeholder="Ex.: 120"
+              aria-invalid={Boolean(erros.area)}
+            />
+          </FormField>
+        )}
+
+        <div className="rounded-2xl bg-surface-muted p-5">
+          <Text variant="small" tone="muted">
+            Valor do DAM
+          </Text>
+          <Text as="p" variant="h3" className="mt-1 tabular-nums">
+            {formatarValor(valorDam)}
+          </Text>
+          <Text variant="small" tone="muted" className="mt-1">
+            Requerente: {usuario?.nome ?? "Cidadão"}. O DAM é gerado ao clicar em “Emitir DAM”.
+          </Text>
+        </div>
+
+        <div>
+          <Button type="submit" size="lg" disabled={taxas.length === 0}>
+            Emitir DAM
+          </Button>
+        </div>
+      </form>
+    );
+  }
+
   return (
     <form onSubmit={enviar} noValidate className="mt-8 flex max-w-2xl flex-col gap-6">
+      <Text tone="muted">
+        Informe os dados abaixo. Ao enviar, o processo é aberto e você recebe o número do protocolo para acompanhar.
+      </Text>
+
       <FormField id="imovel" label="Endereço do imóvel" erro={erros.imovel}>
         <Input
           id="imovel"
@@ -92,24 +172,6 @@ export function SolicitacaoForm({ servico, documentos, taxas }: SolicitacaoFormP
           aria-invalid={Boolean(erros.bairro)}
         />
       </FormField>
-
-      {precisaArea && (
-        <FormField
-          id="area"
-          label="Área da intervenção (m²)"
-          hint="Parte da taxa deste serviço é cobrada por metro quadrado."
-          erro={erros.area}
-        >
-          <Input
-            id="area"
-            inputMode="decimal"
-            value={area}
-            onChange={(e) => setArea(e.target.value)}
-            placeholder="Ex.: 120"
-            aria-invalid={Boolean(erros.area)}
-          />
-        </FormField>
-      )}
 
       <FormField id="descricao" label="Descrição da solicitação (opcional)">
         <Textarea
@@ -157,20 +219,6 @@ export function SolicitacaoForm({ servico, documentos, taxas }: SolicitacaoFormP
         </fieldset>
       )}
 
-      {taxas.length > 0 && (
-        <div className="rounded-2xl bg-surface-muted p-5">
-          <Text variant="small" tone="muted">
-            Valor estimado da taxa (DAM)
-          </Text>
-          <Text as="p" variant="h3" className="mt-1 tabular-nums">
-            {formatarValor(valorEstimado)}
-          </Text>
-          <Text variant="small" tone="muted" className="mt-1">
-            O DAM será gerado ao enviar a solicitação.
-          </Text>
-        </div>
-      )}
-
       <div className="flex flex-col gap-1.5">
         <label className="flex cursor-pointer items-start gap-3 text-sm text-foreground">
           <input
@@ -190,7 +238,7 @@ export function SolicitacaoForm({ servico, documentos, taxas }: SolicitacaoFormP
 
       <div>
         <Button type="submit" size="lg">
-          Enviar solicitação
+          Abrir processo
         </Button>
       </div>
     </form>

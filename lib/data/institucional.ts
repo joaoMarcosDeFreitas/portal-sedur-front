@@ -1,3 +1,4 @@
+import paginasRaw from "@/data/paginas-informativas.json";
 import dirigentesRaw from "@/data/dirigentes.json";
 import institucionalRaw from "@/data/institucional.json";
 import organogramaRaw from "@/data/organograma.json";
@@ -6,7 +7,9 @@ import type {
   DirigentesData,
   InstitucionalData,
   OrganogramaData,
+  PaginaInformativa,
   Projeto,
+  BlocoDePagina,
 } from "@/types/institucional";
 import { parseAreas, parseProjeto, type AreaDeAtuacao } from "@/lib/normalize/institucional";
 import { getServicoPorId, slugDaCategoria, slugDoServico } from "@/lib/data/servicos";
@@ -15,6 +18,7 @@ import { sleep } from "@/lib/utils/sleep";
 const dirigentes = dirigentesRaw as unknown as DirigentesData;
 const institucional = institucionalRaw as unknown as InstitucionalData;
 const organograma = organogramaRaw as unknown as OrganogramaData;
+const paginasInformativas = (paginasRaw as unknown as { paginas: PaginaInformativa[] }).paginas;
 const projetos = projetosRaw as unknown as { fonte: string; coletado_em: string; projetos: Projeto[] };
 
 export async function getDirigentes() {
@@ -69,6 +73,9 @@ export interface ProjetoPronto {
   nome: string;
   paragrafos: string[];
   links: LinkDoProjeto[];
+  /** Só nas páginas informativas (IPTU Verde, Revisão do PDDU): frase de abertura e conteúdo em blocos. */
+  resumo?: string;
+  blocos?: BlocoDePagina[];
 }
 
 /** Links de serviço do portal antigo viram links para a ficha do serviço neste portal. */
@@ -101,7 +108,17 @@ async function prepararProjeto(projeto: Projeto): Promise<ProjetoPronto> {
 
 export async function getProjetos(): Promise<ProjetoPronto[]> {
   await sleep();
-  return Promise.all(projetos.projetos.map(prepararProjeto));
+  const dosProjetos = await Promise.all(projetos.projetos.map(prepararProjeto));
+  // Páginas informativas (IPTU Verde, Revisão do PDDU) aparecem junto dos programas e projetos.
+  const informativas: ProjetoPronto[] = paginasInformativas.map((pagina) => ({
+    slug: pagina.slug,
+    nome: pagina.nome,
+    paragrafos: [],
+    resumo: pagina.resumo,
+    blocos: pagina.blocos,
+    links: pagina.links.map((link) => ({ ...link, interno: false })),
+  }));
+  return [...dosProjetos, ...informativas];
 }
 
 export async function getProjetoPorSlug(slug: string): Promise<ProjetoPronto | undefined> {

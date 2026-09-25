@@ -8,6 +8,9 @@ import { Breadcrumb } from "@/app/components/molecules/Breadcrumb";
 import { getNoticiaPorId, getTodasAsNoticias, getVizinhas } from "@/lib/data/noticias";
 import { dataPorExtenso } from "@/lib/normalize/data";
 
+// Só existem as notícias listadas: qualquer outro id é 404 já no servidor (HTML completo, sem depender de JavaScript).
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const noticias = await getTodasAsNoticias();
   return noticias.map((noticia) => ({ id: String(noticia.id) }));
@@ -78,7 +81,7 @@ export default async function NoticiaPage(props: PageProps<"/noticias/[id]">) {
           href={noticia.url}
           target="_blank"
           rel="noreferrer"
-          className="mt-8 inline-flex cursor-pointer items-center gap-2 text-sm text-foreground-muted hover:text-brand"
+          className="toque mt-8 cursor-pointer gap-2 text-sm text-foreground-muted hover:text-brand"
         >
           <ExternalLink className="size-4" aria-hidden="true" />
           Ver publicação original

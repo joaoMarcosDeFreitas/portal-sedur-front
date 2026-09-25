@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { CalendarClock, Eye, FileText, Headset, Layers, Map, SearchCheck, Share2 } from "lucide-react";
 import { Container } from "@/app/components/atoms/Container";
 import { Text } from "@/app/components/atoms/Text";
 import { LinkButton } from "@/app/components/atoms/Button";
+import { IconTile } from "@/app/components/molecules/IconTile";
 import { CategoryListItem } from "@/app/components/molecules/CategoryListItem";
 import { NewsCard } from "@/app/components/molecules/NewsCard";
 import { getCategorias } from "@/lib/data/servicos";
@@ -36,6 +38,25 @@ export default async function HomePage() {
             <LinkButton href="/servicos" size="lg">
               Ver serviços
             </LinkButton>
+          </div>
+        </Container>
+      </section>
+
+      <section>
+        <Container className="pb-14">
+          {/* O que o portal atual põe na página inicial: agendamento, consultas, formulários, geoserviços, transparência, canais e os sistemas parceiros. */}
+          <Text as="h2" variant="h2">
+            Acessos rápidos
+          </Text>
+          <div className="mt-6 flex flex-wrap gap-2">
+            <IconTile href="/agendamento" rotulo="Agendamento de atendimento" icone={<CalendarClock className="size-6" />} />
+            <IconTile href="/consultas" rotulo="Consultas" icone={<SearchCheck className="size-6" />} />
+            <IconTile href="/formularios" rotulo="Formulários" icone={<FileText className="size-6" />} />
+            <IconTile href="/geoservicos" rotulo="Geoserviços" icone={<Layers className="size-6" />} />
+            <IconTile href="/transparencia" rotulo="Transparência" icone={<Eye className="size-6" />} />
+            <IconTile href="/canais-de-atendimento" rotulo="Canais de atendimento" icone={<Headset className="size-6" />} />
+            <IconTile href="/institucional/projetos/revisao-do-pddu" rotulo="Revisão do PDDU" icone={<Map className="size-6" />} />
+            <IconTile href="/sistemas-parceiros" rotulo="Sistemas parceiros" icone={<Share2 className="size-6" />} />
           </div>
         </Container>
       </section>

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "Portal de Serviços, WhatsApp, atendimento presencial, e-mail e denúncias: como falar com a SEDUR.",
 };
 
-const LINK = "cursor-pointer font-medium text-brand hover:underline";
+const LINK = "toque cursor-pointer font-medium text-brand hover:underline";
 
 function Canal({ icone: Icone, titulo, children }: { icone: LucideIcon; titulo: string; children: ReactNode }) {
   return (
@@ -59,9 +59,9 @@ export default function CanaisPage() {
 
         <Canal icone={CalendarClock} titulo="Atendimento presencial">
           <p>O atendimento presencial é feito mediante agendamento. Escolha o dia e o horário desejados.</p>
-          <a href="https://agendamento.sedur.salvador.ba.gov.br/sas/#agendamento" target="_blank" rel="noreferrer" className={LINK}>
+          <Link href="/agendamento" className={LINK}>
             Agendar atendimento
-          </a>
+          </Link>
           <p className="flex items-start gap-2">
             <MapPin className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
             Av. ACM, nº 3224, Caminho das Árvores — Salvador/BA. Seg. a sex., 9h às 16h.

@@ -58,9 +58,15 @@ pelo app ficam em `data/` na raiz do projeto (cópia).
    mais um "arquivo de módulos" separado, essa pasta já é a fonte de verdade do escopo.
 4. **Sem comparação antes/depois na tela** — o mock mostra só a versão nova, corrigida, usando
    conteúdo real mas sem expor os bugs do portal atual.
-5. **Fluxo do cidadão logado é totalmente simulado, mas completo**: abrir solicitação → protocolo →
-   DAM fictício → "pagamento" simulado → acompanhamento com status.
-6. **Identidade visual criada do zero** (o usuário pediu algo "minimalista, elegante, profissional,
+5. **Fluxo do cidadão logado é totalmente simulado, mas completo — e desde 25/09/2026 segue as AÇÕES REAIS de cada ficha**:
+   "Emissão de DAM" (DAM → pagamento simulado → pago) e/ou "Abrir processo" (protocolo → análise); 15 serviços não têm botão.
+   Ver "Fidelidade à realidade".
+6. **REGRA DE AUTORIDADE (24/09/2026): o que já está construído neste front é a referência.** Ao comparar com os
+   portais reais, só trazer o que FALTA de **conteúdo e páginas/acessos do cidadão** (ex.: "Nossos Projetos",
+   IPTU Verde). **Não** "corrigir" o front para copiar chrome ou diferenças de apresentação do portal real:
+   rodapé (mapa, redes sociais, CNPJ, mais/menos links), barra de acessibilidade completa/VLibras, banners e
+   carrossel, menus etc. Vale para tudo, não só o rodapé.
+7. **Identidade visual criada do zero** (o usuário pediu algo "minimalista, elegante, profissional,
    moderna, muito superior ao que está hoje na SEDUR"). Paleta e tipografia definidas e já
    implementadas — ver "Identidade visual implementada" abaixo.
 
@@ -222,6 +228,184 @@ erros), testes de interação em Edge headless e capturas nos temas claro/escuro
   perdidas (aconteceu em `lib/normalize/licitacao.ts`, e de novo ao editar este arquivo); para regex ou
   texto com barras use as ferramentas Edit/Write, não script.
 
+## Fase 3b (24/09/2026): conteúdo e acessos que faltavam vir dos portais reais
+
+**Método**: comparei os dados de origem (`reforma-portal/`, só o que ainda não tinha sido analisado) com o front,
+seguindo a **regra de autoridade** (Decisões, item 6): só entrou conteúdo/página de acesso do cidadão que faltava.
+
+**O que entrou**
+- **Fichas de serviço: downloads dos documentos.** 30 serviços têm links (50) para modelos/anexos em PDF dentro das
+  abas; a ficha ignorava. Agora cada documento exigido mostra "Baixar modelo · PDF" (nome acessível "Baixar X (PDF,
+  abre em nova aba)"; casamento pelo texto do documento — os 48 casaram); a aba Informações lista materiais (manual,
+  .zip). Links que apontam para outra ficha do portal antigo (`.../servico/6879`) viram **link interno** ("Ver o
+  serviço", ex.: Habite-se → Geolocalização do Imóvel); http vira https. Conferi os 30 endereços com uma requisição
+  de cabeçalho por vez, 2 s de pausa (28 ok, 2 redirecionam). Código: `resolverLinkDeFicha` (`lib/data/servicos.ts`),
+  `linksDoDocumento` (`lib/normalize/servico.ts`), `LinkDeArquivo` em `ServiceFicha` (agora `async`).
+- **IPTU Verde** e **Revisão do PDDU** como páginas de conteúdo em **Institucional → Programas e projetos**
+  (`/institucional/projetos/iptu-verde` e `/revisao-do-pddu`). Conteúdo em `data/paginas-informativas.json`
+  (blocos: título, parágrafos, subtítulo, itens, fecho — tipos `PaginaInformativa`/`BlocoDePagina`; `getProjetos`
+  as junta aos 6 projetos e a página `[slug]` renderiza `blocos` quando existem). IPTU Verde ganhou "Como participar"
+  e os **3 formulários Anexo 01/02/03** para baixar (a página antiga não os citava); **nenhum percentual ou lei foi
+  inventado** (o original não diz). PDDU: texto real do site pddu.salvador.ba.gov.br (o que é o Plano Diretor,
+  LOUOS, como é feito, por que revisar) + documentos + inscrição na oficina + link para o site completo; a "Linha do
+  tempo" do original é montada por JS e não estava no HTML salvo.
+- **Fiscalização Carnaval 2026** em **Transparência** (`/transparencia/carnaval`): 4 painéis como no original — só
+  **Publicidade em Blocos (alvarás emitidos)** funciona; **Exploração de Atividades, Instalação de Praticável e
+  Instalação de Balcão** aparecem "Em construção" (o original dava "Server Error" em inglês). O painel usa novo
+  grupo `carnaval` em `consultas.ts` (filtros reais: 15 datas 04/02–18/02 e circuitos Batatinha/Dodô/Osmar; linhas
+  fictícias) com tela de detalhe (`/transparencia/carnaval/[slug]/[registro]`).
+- **Agendamento de atendimento** (`/agendamento`): estava só como link externo em Canais/Sistemas parceiros, mas é o
+  acesso do cidadão mais visível nos dois portais. Agora é **simulado dentro do front**: assunto (as 13 categorias +
+  "outro"), dia (15 próximos dias úteis), horário de **09:00 a 15:30** de meia em meia hora (o sistema real informa
+  9:00 às 15:30), nome/contato, comprovante com protocolo `AGD-aaaa-nnnnnn` e "Meus agendamentos" (cancelar). Sem
+  login, como no original; guarda em `localStorage` (`portal-sedur:agendamentos`); ~1 em 4 horários aparece
+  "indisponível" (determinístico) e o já marcado por você também. Ligações: Canais → "Agendar atendimento" agora
+  interno; Agendamento **saiu** de Sistemas parceiros; entrou em "Mais recursos" (Serviços) e na busca. **DECISÃO CONFIRMADA (24/09/2026): o
+  Agendamento fica interno.** Arquivos: `types/agendamento.ts`,
+  `lib/agendamento/store.ts`, `AgendamentoView.tsx`.
+- Busca global (`/api/busca`) ganhou: Agendamento de atendimento, IPTU Verde, Revisão do PDDU, Fiscalização Carnaval 2026.
+
+**Decidi NÃO trazer (de propósito)** — ou é chrome/apresentação (regra de autoridade) ou não há conteúdo. *(Atualizado em 25/09/2026: a barra de acessibilidade completa, o VLibras e a Autorização para Feira (CLE) **entraram depois** — ver "Fidelidade à realidade".)* rodapé oficial
+(redes sociais, CNPJ, mapa), carrossel/banners da home (os destinos deles viraram "Acessos rápidos"), "Portal Fala
+Salvador" (link morto), **Consulta Prévia Salvador** (a tela só monta no navegador; conteúdo desconhecido — segue
+link externo em Sistemas parceiros), **Salvador Ruas** (em manutenção), **Mapeamento GIS** (mapa de outro sistema),
+Acesso Interno (fora do escopo) e o carrossel "Fique por dentro" do
+Portal de Serviços (banners só com imagem; um leva a 404, outro a site de empresa sem relação confirmada).
+
+**Verificado** (`novos.js` no scratchpad): downloads da ficha, tiles/h1/links das páginas novas, filtros do Carnaval,
+todo o fluxo do Agendamento (validação, teclado nos horários, foco no comprovante, persistência, cancelamento) e axe
+0 violações em cada estado, claro/escuro, 1280 e 390px.
+
+## Backend e natureza provisória do front (decisão do usuário, 24/09/2026)
+
+**Tudo neste front é provisório e sujeito a mudança.** Não há backend; não é certo que um backend novo será criado —
+há ~99% de chance de o front passar a usar o backend que **já existe** (sistemas atuais da SEDUR/Prefeitura). O
+Agendamento, por exemplo, tem relação direta com o backend real. Consequências práticas: (1) as **costuras** com o
+backend são `lib/data/*` (leitura), `lib/store/*` + `lib/auth/sessao.ts` + `lib/solicitacoes/store.ts` +
+`lib/agendamento/store.ts` (escrita/sessão simuladas) — é aí que se troca o mock por chamadas reais, sem reescrever as
+telas; (2) formatos de dados inventados para a demonstração (agendamento, DAM, protocolos, resultados das consultas)
+vão mudar para o que o backend existente devolver; (3) não gastar esforço "blindando" o mock — mantê-lo simples e
+bem separado da interface.
+
+## Ordem combinada (atualizada em 25/09/2026)
+
+Os **passos do plano estão concluídos** (Fases 0–3 e 3b). Em 25/09/2026 o usuário pediu esta ordem: **1º testes
+automatizados (FEITO) → 2º polimento (PRÓXIMO; parte dos apontamentos que ele trará depois de testar o sistema) → 3º
+hospedagem (Vercel, que ele mesmo faz; nenhuma alteração de código é necessária)**. Não puxar hospedagem antes do polimento.
+
+## Deploy na Vercel (24/09/2026)
+
+O usuário vai hospedar na Vercel e pediu **só as alterações necessárias**. Verificado: **nenhuma alteração de código foi
+necessária.** Checagens feitas: raiz do repositório = pasta do projeto; `npm ci` + `next build` a partir de uma **cópia
+limpa** só com os arquivos versionados (simulando o clone da Vercel, com `VERCEL=1 CI=1`) passa; o `package-lock.json`
+traz os binários do Linux (Next SWC, Tailwind oxide, lightningcss, sharp); **todos os imports e nomes versionados
+conferem maiúsculas/minúsculas** (Linux é sensível; script `caso.js`); nada necessário está no `.gitignore`; não há
+variáveis de ambiente. Rotas dinâmicas (`ƒ`: `/api/*`, detalhes das consultas, `/minhas-solicitacoes/[protocolo]` etc.)
+rodam como funções serverless. Configuração na Vercel: framework Next.js (automático), Root Directory = raiz, sem env vars.
+Se o deploy for da branch `desenvolvimento`, ajustar a Production Branch ou usar a URL de Preview.
+
+## Fidelidade à realidade e fechamento antes da apresentação (25/09/2026)
+
+Contexto: o usuário vai subir na Vercel **hoje** e mandar o link para o chefe ver **no computador** (apresentação/segunda-feira);
+testou no **Vivaldi** (Chromium). O chefe quer que **tudo que existe no portal atual esteja no front** e que **processos e
+serviços estejam de acordo com a realidade**. Isso **reabre parte da regra de autoridade** só no que é *acesso do cidadão*
+(barra de acessibilidade, VLibras, atalhos da home, sistemas da página inicial); **o rodapé continua como está** (o usuário
+disse antes que diferenças de rodapé não contam — ficaram de fora: redes sociais, CNPJ, mapa, "Fala Salvador").
+
+- **Ações reais das fichas (a maior correção de fidelidade).** Nos dados reais (`servicos.json` → `acoes`): **81 serviços só têm
+  "Emissão de DAM", 50 só "Abrir processo", 5 têm as duas e 15 não têm botão nenhum**. O front oferecia "Solicitar serviço" em
+  todos e juntava DAM + processo num só fluxo. Agora (`acoesDoServico` em `lib/data/servicos.ts`; textos dos botões = os do portal
+  atual): a ficha mostra **só os botões que existem** (com uma frase explicando "DAM = Documento de Arrecadação Municipal" e
+  que é preciso entrar) e, nos 15 sem botão, um aviso ("não tem botão de solicitação no Portal de Serviços") com link para os
+  Canais. Rotas novas: **`/solicitar/[servicoId]/emitir-dam`** e **`/abrir-processo`** (só existem as que a ficha oferece; o resto é
+  404; o endereço antigo `/solicitar/<id>` redireciona para a 1ª ação, ou para a ficha se não houver).
+  - **Emissão de DAM**: confere as taxas (+ área se for por m²), gera o DAM (protocolo `DAM-aaaa-nnnnnn`), paga (PIX/boleto
+    simulados) e **termina em "Pago" com comprovante** — não abre processo nem vai para "análise".
+  - **Abrir processo**: endereço, bairro, descrição, documentos e declaração; protocolo `SEDUR-aaaa-nnnnnn` e vai direto para
+    "Em análise" — **sem DAM** (o botão "Simular conclusão" só existe aqui). Tipos: `TipoSolicitacao` (`types/solicitacao.ts`),
+    `criarSolicitacao({ tipo, … })`, `rotuloDoStatus`/`ROTULO_TIPO` (`lib/solicitacoes/status.ts`). Solicitações antigas guardadas
+    no navegador (sem `tipo`) mantêm o fluxo combinado antigo.
+  - **Limite honesto**: o que acontece depois do login gov.br no sistema real **nunca foi coletado** (o sistema caiu e o usuário
+    não tem os prints). O fluxo é a melhor aproximação a partir das ações reais; **não inventar mais detalhes**.
+- **Página em branco (404 sem JavaScript) — resolvido.** Causa: no Next 16.3.5, `notFound()` numa página dinâmica entrega um
+  esqueleto vazio (`__next_error__`) que só se completa com JS. Solução em duas partes: (1) rotas de **lista fechada** e sem
+  `searchParams` (notícias, serviços, categorias, projetos, áreas, `/solicitar/…/[acao]`) usam **`dynamicParams = false`** →
+  404 verdadeiro com a página completa no servidor; (2) rotas que **leem filtros da URL** (consultas, painéis, Carnaval, legislação
+  e as 3 fichas de detalhe) mostram `<NaoEncontrado />` **na própria página** (status 200, `robots: noindex`, título
+  "Página não encontrada") em vez de `notFound()`. Testado com **JavaScript desligado** (`navegacao.spec.ts`). `/minhas-solicitacoes/[protocolo]`
+  é área logada e client-side (mostra "Solicitação não encontrada" no próprio componente).
+- **Home: "Acessos rápidos"** (8 ícones, sem fundo/borda): Agendamento, Consultas, Formulários, Geoserviços, Transparência, Canais,
+  Revisão do PDDU e Sistemas parceiros — o que o portal atual põe na página inicial. **Sistemas parceiros** ganhou "Autorização
+  para Feira (CLE)" (em manutenção), que estava omitido.
+- **Barra de acessibilidade completa** (`UtilityBar` + `lib/acessibilidade/preferencias.ts`): além de "Aumentar texto" e do tema
+  (= "contraste negativo"/"fundo claro" do portal atual), há o painel **Acessibilidade** com **Diminuir texto, Escala de cinza, Alto
+  contraste, Links sublinhados, Fonte legível e Reiniciar**. Cada opção é um atributo em `<html>` (`data-text-size`, `data-cinza`,
+  `data-contraste="alto"`, `data-links`, `data-fonte`), CSS em `globals.css`, **salvas em `localStorage`
+  (`portal-sedur:acessibilidade`) e aplicadas antes da 1ª pintura** pelo script do `layout.tsx`. Alto contraste = tokens pretos/brancos/amarelos
+  (`:root[data-contraste="alto"]`) e logo clara forçada. O tamanho do texto agora **persiste** entre páginas. Painel: Esc fecha e devolve o
+  foco, clique fora/Tab para fora fecham. **axe 0 violações** em 13 páginas × 4 modos × 2 temas.
+- **VLibras** (`VLibras.tsx`, no `layout.tsx`): o tradutor de Libras do governo federal (script `https://vlibras.gov.br/app/vlibras-plugin.js`,
+  carregado com `lazyOnload`), mesmo widget do portal atual; confirmado no navegador (botão azul no canto direito). **Desligável com
+  `NEXT_PUBLIC_VLIBRAS=off`** — o `playwright.config.ts` já faz isso no build de teste (`webServer.env`) para os testes não dependerem de
+  serviço externo. **Na Vercel fica ligado** (variável não definida). Se um dia atrapalhar a apresentação, é só definir
+  `NEXT_PUBLIC_VLIBRAS=off` na Vercel e refazer o deploy.
+- **Corrigidos hoje**: classe inválida `jus` removida do `Footer.tsx` (o usuário mandou remover); palavras partidas das licitações
+  ("C ontratação", "necessi dade", "M unicípio", "S alvador", "n o Edital") — lista fechada em `PALAVRAS_PARTIDAS`
+  (`lib/normalize/licitacao.ts`), testada contra os dados reais.
+- **Armadilhas novas**: (1) `next start` deixado aberto em `:3100` faz o Playwright **reaproveitar um build velho** (`reuseExistingServer`) — parar
+  o servidor antes de rodar os testes; (2) `writeFileSync` em `app/layout.tsx` pode falhar com `UNKNOWN` enquanto o `next dev` do usuário está
+  aberto — usar a ferramenta de edição e tentar de novo; (3) `node -e` com `\b` gera caractere de controle: para regex/barras usar a ferramenta de edição; (4) o ESLint precisa ignorar `playwright-report/` e `test-results/` (já está em
+  `eslint.config.mjs`) — sem isso, depois da 1ª rodada de testes o `npm run lint` acusava milhares de erros em arquivos gerados.
+- **Testes**: 120 unitários + 577 de ponta a ponta (fluxos DAM/processo, 404 sem JS, barra de acessibilidade, home).
+
+## Testes automatizados (25/09/2026) — CONCLUÍDO
+
+Primeiro item da ordem combinada **testes → polimento → hospedagem** (o usuário pediu essa ordem em 25/09/2026).
+**521 testes, todos verdes** (`npm run test:all` = lint + `typecheck` + unit + e2e, ~4 min):
+- **Unitários — Vitest** (`vitest.config.mts`, `tests/unit/*.test.ts`, 108 testes, ~1 s): normalizadores
+  (`servico`, `licitacao`, `legislacao`, `transparencia`, `texto`, `data`), DAM, filtros/tons/fichas das consultas,
+  agendamento (horários, dias úteis, disponibilidade simulada, criar/cancelar com `localStorage` simulado),
+  `createLocalStore`, e **integridade dos dados** (151 serviços/13 categorias, slugs únicos, 48 links de documento
+  casam, 804 notícias, 1.079 normas, 53 formulários, IPTU Verde **sem percentual inventado**, 8 projetos).
+  `NEXT_PHASE=phase-production-build` no config faz o `sleep()` não esperar.
+- **Ponta a ponta — Playwright + `@axe-core/playwright`** (`playwright.config.ts`, `tests/e2e/*.spec.ts`, 413 testes):
+  `navegacao` (42 páginas: 200, 1 `h1`, 1 `main`, título, `lang`, **sem erro de console/HTTP** + 404s), `acessibilidade`
+  (axe em todas as páginas × claro/escuro × desktop/celular), `mobile` (360/390/768: sem rolagem horizontal, alvos ≥24px,
+  texto ≥11,5px, rótulos de ícone sem quebrar palavra), `teclado` (pular conteúdo, foco visível, combobox da busca,
+  gaveta), `fluxo-cidadao`, `consultas` (+ painéis e Carnaval), `agendamento`, `conteudo` (fichas com download, IPTU
+  Verde, PDDU, legislação, notícias, licitações, formulários, institucional, transparência), `tema-e-texto`.
+  Lista central de páginas: `PAGINAS_PUBLICAS` em `tests/e2e/helpers.ts` (página nova ali ganha estrutura + axe + mobile).
+- **Como rodam**: `npm test`, `npm run test:e2e` (faz `next build` + `next start -p 3100` sozinho; reaproveita servidor
+  já na 3100), `npm run test:all`. **Usa o Microsoft Edge instalado** (`channel: "msedge"`, sem baixar navegador); em
+  outra máquina `PW_CHANNEL=chromium` + `npx playwright install chromium`. Artefatos ignorados no Git:
+  `playwright-report/`, `test-results/`.
+- **Validação dos testes**: introduzi defeitos de propósito e os testes falharam como devem (unit: DAM sem `max(area,0)`,
+  filtro de período, fim de semana nos dias úteis; e2e: contraste do selo amarelo voltando a `#a3721a` e gaveta do menu
+  focável fechada). Código restaurado.
+- **Armadilhas achadas**: (1) `npm run typecheck` precisa de `next typegen` antes (os tipos `PageProps`/`LayoutProps`
+  são gerados pelo Next e não existem num clone novo) — o script já é `next typegen && tsc --noEmit`; (2) `getByText("X")`
+  casa por **substring e sem diferenciar maiúsculas** (usar `{ exact: true }`); (3) `aria-label` substitui o texto
+  visível no nome acessível (ex.: link "Detalhes" tem nome "Ver detalhes de …"); (4) `page.addInitScript` roda a cada
+  carga (regravava o tema no teste de persistência); (5) ler a tabela logo após clicar em "Consultar" dá corrida —
+  esperar `toHaveURL` antes; (6) o log `[WebServer] ⨯ Error: The destination stream closed early` durante o e2e é ruído
+  benigno (o navegador fecha a conexão ao trocar de página).
+- **Dependências novas (devDependencies)**: `vitest`, `@playwright/test`, `@axe-core/playwright`; `@types/node` subiu de
+  `^20` para `^22` (o Vitest 5 exige). O `package-lock.json` tem os binários do Linux (rolldown/Vite etc.) —
+  **clone limpo com `npm ci` + lint + typecheck + unit + `next build` passou** (compatível com a Vercel).
+- `.github/workflows/testes.yml` roda lint/tipos/unit/e2e (Chromium) a cada push/PR — **ainda não rodou no GitHub**
+  (não validado lá; o usuário faz o git). Os scripts soltos do scratchpad (`axe.js`, `teclado.js`, `novos.js`…) foram
+  **substituídos** por estes testes.
+- Ao mudar textos/rótulos de telas, ajustar o teste correspondente (usam papéis e rótulos acessíveis).
+
+## Correções e polimento (lista do usuário — em aberto)
+
+O usuário disse (24/09/2026) que tem **apontamentos de correção para passar depois de fechar o planejamento** e pediu
+para anotá-los aqui. Ele ainda vai enviá-los: **quando chegarem, registrar cada um abaixo** (item, onde, situação).
+Já conhecidos (achados por mim, ainda não corrigidos):
+1. ~~Textos de licitações com palavra partida~~ — **corrigido em 25/09/2026** (`PALAVRAS_PARTIDAS`).
+2. ~~`jus` inválido no `Footer.tsx`~~ — **removido em 25/09/2026** a pedido do usuário.
+3. ~~404 de rota dinâmica em branco sem JS~~ — **resolvido em 25/09/2026** (ver "Fidelidade à realidade").
+
 ## Estado atual do código (Fase 0 + base do layout)
 
 **Dados e tipos**
@@ -373,10 +557,10 @@ Numeração combinada com o usuário (os 5 passos que faltam depois da Fase 2; o
    - Ferramentas (scratchpad, não versionadas): `axe.js` (públicas; passar URLs extras como argumento e usar
      `MSYS_NO_PATHCONV=1` no Git Bash), `axe-logado.js`, `teclado.js`, `h1.js`. Instalar `axe-core` no
      scratchpad. **Não** dá para escrever esses scripts por heredoc (perde as `\` do caminho do Edge).
-   - **Limites do automático**: axe pega ~30–40% dos problemas WCAG; ainda vale um teste manual com leitor de
-     tela (NVDA) e zoom 200% antes de dizer "conforme AA" ao chefe.
-2. **Conferir o conteúdo com o usuário** — *em andamento* (o usuário pediu que os ajustes de fidelidade
-   das consultas fiquem registrados aqui, porque o passo 3 ainda não começou):
+   - **Limites do automático**: axe pega ~30–40% dos problemas WCAG, então dizer "sem violações no axe" e não
+     "100% conforme". O usuário **recusou** o teste manual com NVDA/zoom — não voltar a sugerir.
+2. **Conferir o conteúdo com o usuário** — ***CONCLUÍDO (24/09/2026)*** (consultas, detalhe, painéis, dirigentes e
+   notícias resolvidos; o que não dá para obter ficou fictício e sinalizado):
    - **Consultas alinhadas ao portal antigo (feito em 23/09/2026)**. Método: ler o código das páginas
      salvas em `reforma-portal/preparacao-mock/coleta-bruta/portal-servicos/` (rótulos, botões, alertas,
      `wire:snapshot` do Livewire) — **sem nenhum pedido novo ao site**.
@@ -397,43 +581,69 @@ Numeração combinada com o usuário (os 5 passos que faltam depois da Fase 2; o
        não achado do original ("SE não encontrada" → escrevemos "Solicitação não encontrada."); resultado fictício.
      - **Auto de Infração**: campo "Número do auto", botões Limpar/Pesquisar (reais); resultado fictício
        (só aparece após pesquisar, casamento exato).
-   - **Ainda NÃO confirmado / a conferir**: (a) **Alvará de Publicidade** — a página salva dessa consulta é a
-     tela de bloqueio do firewall da Prefeitura (COGEL), então não sabemos campos nem resultado; segue como
-     estava (fictício); precisa de um print do portal real. (b) **Painéis de Transparência** (7) — também
-     fictícios e ainda não alinhados; existe HTML salvo de cada painel para minerar do mesmo jeito.
-     (c) Formato real das linhas de DAM e dos resultados de auto/solicitação (só um print de uma consulta
-     real, com CGA/número reais, mostraria). (d) Tela de detalhe ao clicar numa linha: **não existe** hoje
-     (as consultas só têm tabela); perguntar ao usuário se quer (todo o conteúdo do detalhe seria inventado).
-   - Outros itens de conteúdo: nomes/cargos dos dirigentes (a página de origem pode estar desatualizada);
-     texto das 612 notícias antigas (só o índice foi coletado — usam o fallback "ainda não foi migrado").
-3. **Passe visual mais fino no mobile** — *não iniciado*. Já verificado: sem rolagem horizontal (390px) e
-   gaveta da sidebar funcionando; falta revisar tabelas largas (as consultas de risco têm 7 colunas e rolam
-   dentro do container), espaçamentos e toques.
-4. **README do projeto** — *não iniciado* (ainda é o texto padrão do create-next-app).
-5. **Páginas ocultas do portal antigo não migradas** — *não iniciado, decidir se vale*: IPTU Verde e
-   Fiscalização do Carnaval (dados em `servicos-sistema.json` → `iptu_verde`, `fiscalizacao_carnaval_2026`).
+   - **Respostas do usuário (24/09/2026)**: não tem acesso às consultas do portal real, então **nenhum print
+     virá — os resultados de Alvará/DAM/Auto/Solicitação ficam fictícios e sinalizados** (não pedir de novo);
+     dirigentes **estão corretos**; 612 notícias antigas: **só o texto "ainda não foi migrado"** (já é o que
+     existe); **quer tela de detalhe** das consultas (feita, ver abaixo).
+   - **Tela de detalhe das consultas (feita em 24/09/2026)**: cada linha da tabela ganhou "Ver detalhes" →
+     `/consultas/[slug]/[registro]` e `/transparencia/[slug]/[registro]` (registro = `id` da linha; **sem
+     `generateStaticParams`** de propósito — 1.332 só no risco; abrem sob demanda; id inexistente → 404). A
+     URL leva os filtros e a página da lista, e "Voltar aos resultados" reabre a mesma lista preenchida.
+     Componente `DetalheConsultaView`; a "receita" de cada ficha fica em `DETALHES` (`lib/data/consultas.ts`,
+     tipo `DetalheConsulta`: título, subtítulo, selo de situação/risco, resumo, `niveis`, `extras`, `etapas`) e
+     tem fallback genérico (`detalheDe`). Destaques: risco mostra os 4 níveis com selo colorido
+     (`tomDoRisco`) e as **condicionantes por extenso em lista**; auto de infração e solicitação têm **linha do
+     tempo** (`StatusTimeline`, etapas fictícias); situações ganham selo (`tomDaSituacao`); campos que repetem
+     o título/selo não se repetem em "Dados do registro". Dados reais mantêm o aviso "dados oficiais"; o resto
+     "Demonstração… fictícios". Verificado: axe 0 violações em 7 tipos de ficha × claro/escuro × 1280/390,
+     sem rolagem horizontal (`detalhe.js` no scratchpad).
+   - **Painéis de Transparência alinhados ao portal antigo (feito em 24/09/2026)**. Método igual ao das
+     consultas: ler as páginas internas salvas (`transp_interno_*.html` — os painéis são páginas do sistema
+     antigo dentro de iframe; extrator `painel.js` no scratchpad). Os **campos, rótulos, botões e listas agora
+     são os reais**; as colunas de resultado seguem fictícias (o antigo as carrega por JS e não estão no
+     HTML). Botão "Consultar" em todos. Por painel: *Obras em Vias e Logradouros* — nº do alvará, Processo
+     (Origem/Ano/Nº), Nome/Razão Social, CEP, Logradouro, Bairro, Validade (de/até), Deferimento (de/até);
+     *Construção por Mês* e *Eventos Licenciados* — Mês ("Selecione" + 12 meses) e Ano; *Habite-se* — nº
+     habite-se, nº alv. construção, Processo, Nome, Logradouro, Nº Porta; *AOP* — nº do alvará, Processo, Nome,
+     CEP, Logradouro, Bairro, Data de entrada (de/até); *EIV* — nº do alvará, Processo, Bairro; *Processos em
+     Convite* — só "Grupo de Serviço" com as **17 opções reais** (ADMINISTRATIVO … VIABILIDADE DE LOCALIZAÇÃO).
+     Suporte novo em `CampoConsulta`: `grupo` (campos sob um `<fieldset>` com título, ex. "Processo (Origem /
+     Ano / Nº Processo)"), `tipo:"data"` + `limite` (período, coluna em dd/mm/aaaa, filtro em `filtrarLinhas`),
+     `opcaoVazia` ("Selecione"…). Testado (`paineis.js`): filtro por processo, por período e por grupo, axe 0.
+   - **Sem acesso ao portal real para prints** (respondido pelo usuário) → Alvará de Publicidade, DAM, Auto e
+     Solicitação seguem fictícios e sinalizados; **encerrado, não pedir de novo**.
+   - Outros itens de conteúdo: dirigentes **confirmados corretos**; 612 notícias antigas: fica o aviso
+     "ainda não foi migrado" (decidido).
+3. **Passe visual mais fino no mobile** — ***CONCLUÍDO (24/09/2026)***. Varredura automática (`mobile-sweep.js`,
+   360/390/768px, ~37 páginas): 0 rolagem horizontal, 0 alvos de toque <24px, 0 texto <11,5px; capturas
+   conferidas à mão. Corrigido: (a) **`<span class="sr-only">` (position:absolute) dentro de contêiner com
+   `overflow-x-auto` não posicionado escapa do recorte e alarga a PÁGINA inteira** — o contêiner da tabela das
+   consultas agora é `relative` (bug que eu mesmo introduzi com a coluna "Detalhes"; **lição: sr-only dentro
+   de área rolável exige `relative` no contêiner**); (b) utilitário Tailwind **`toque`** (`@utility` em
+   `globals.css`: inline-flex, altura mín. 2rem) aplicado em links/botões de texto (migalhas, Detalhes,
+   Voltar, Limpar, Baixar edital, "Aumentar texto"/"Tema"…) — usar em todo link de texto solto novo;
+   (c) `IconTile`: no celular texto `text-xs tracking-tight` e sem padding lateral (senão "Desenvolvimento" e
+   "Telecomunicações" quebravam no meio da palavra em 112px; hifenização automática não funcionou);
+   (d) `TopBar`: no celular a busca vai para uma linha própria abaixo de menu/"Entrar" (placeholder saía
+   cortado); a ordem do Tab continua menu→busca→Entrar. Tabela larga: células `px-3` e link "Detalhes".
+   Não corrigido (dado de origem): alguns textos de licitação vêm com espaço no meio da palavra
+   ("C ontratação", "M unicípio") — vem assim do portal antigo.
+4. **README do projeto** — ***CONCLUÍDO (24/09/2026)***: `README.md` em português (o que é, como rodar, roteiro
+   de demonstração, real × fictício, estrutura, decisões, limitações). Manter atualizado se algo mudar.
+5. **Páginas ocultas do portal antigo** — ***CONCLUÍDO (24/09/2026)***: o usuário mandou migrar tudo. Ver "Fase 3b".
 
-Extras/pendências fora dos 5: página `/dev/estilo` (opcional); não há testes automatizados (só
-verificações manuais/headless).
+Extras/pendências fora dos 5: página `/dev/estilo` (opcional). Testes automatizados: **feitos** (ver seção própria).
 
-**Estado do git (23/09/2026)**: o usuário commitou tudo por conta própria em `e98db36` ("Sistema pronto,
-necessário polimento e revisão completa.") na branch `desenvolvimento`, árvore limpa e sincronizada com
-`origin/desenvolvimento`. **Desde então (24/09/2026) há alterações NÃO commitadas** — todas do passo 1
-(acessibilidade): `globals.css`, `PortalShell`, `TopBar`, `UtilityBar`, `Sidebar`, `SearchBar`, `not-found`,
-`error`, `(public)/not-found.tsx` e `NaoEncontrado.tsx` (novos), `solicitar/[servicoId]/page.tsx`,
-`AuthGuard.tsx`.
+**Git**: o usuário faz todos os commits e pushs por conta própria (última base: `e98db36`, branch
+`desenvolvimento`). **Não perguntar nem lembrar sobre commit/push.** Só commitar se ele pedir explicitamente.
 
-**Pendências que dependem do usuário para fechar a Fase 3 (lista combinada em 24/09/2026)**: (1) print do
-Alvará de Publicidade (consulta + resultado); (2) prints de resultado real de DAM/CGA, Auto de Infração e
-Solicitação de Serviços (só o formato das colunas); (3) decidir se queremos tela de detalhe ao clicar numa
-linha de consulta (conteúdo seria inventado); (4) decidir se migra IPTU Verde e Fiscalização do Carnaval;
-(5) 612 notícias antigas: manter o aviso ou fornecer os textos; (6) confirmar nomes/cargos dos dirigentes;
-(7) commit do passo 1 (ou autorizar o Claude a fazer); (8) opcional: teste com NVDA e zoom 200%. Só (1) e (2)
-dependem de material externo; sem eles seguem fictícios e sinalizados. **Sem depender dele**: passo 3
-(mobile), alinhar os 7 painéis de Transparência (HTML já salvo), passo 4 (README).
+**Pendências do usuário para fechar a Fase 3 — estado em 24/09/2026**: prints de consultas (Alvará, DAM, Auto,
+Solicitação) → **não terá acesso, ficam fictícios** (encerrado); tela de detalhe → **feita**; 612 notícias →
+**só o texto "não foi migrado"** (encerrado); dirigentes → **confirmados corretos** (encerrado); teste NVDA/zoom
+→ **não quer** (não voltar a sugerir); git → **ele faz os commits/pushes, não perguntar nem lembrar**. **IPTU Verde e Fiscalização Carnaval: o usuário mandou migrar as duas (feito, ver "Fase 3b").** Passos 2, 3, 4 e 5 concluídos.
 
-**Combinado com o usuário para logo depois do passo 1** (ainda não feito): conversar sobre (a) **hospedagem
-gratuita** do mock (Vercel/Netlify/Cloudflare Pages; atenção: o app usa Route Handlers `/api/busca` e
-`/api/legislacao`, então precisa de runtime Node/serverless — não é export estático puro) e (b) **testes
-automatizados** (sugestão: Playwright para o fluxo do cidadão + axe nas páginas-chave, reaproveitando os
-scripts `axe.js`/`teclado.js`; Vitest para os parsers de `lib/normalize`). Depois seguem os passos 2–5.
+**Próximas conversas (estado em 24/09/2026)**: o plano está **concluído** (passo 5 também). O usuário vai **hospedar na
+Vercel por conta própria** (ver "Deploy na Vercel": nenhuma alteração foi necessária) e **vai testar o sistema e trazer
+os apontamentos de correção** (registrar na seção "Correções e polimento"). **Ordem pedida em 25/09/2026: testes automatizados (FEITO) → polimento (PRÓXIMO, depende dos apontamentos do
+usuário) → hospedagem.** Ao retomar uma sessão nova: ler este arquivo, esperar os apontamentos e **não** puxar git,
+NVDA nem hospedagem por conta própria.

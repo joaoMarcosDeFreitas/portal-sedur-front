@@ -8,10 +8,37 @@ import { StatusTimeline, type EtapaTimeline } from "@/app/components/molecules/S
 import { useSessao } from "@/lib/auth/sessao";
 import { concluirSolicitacao, confirmarPagamento, useSolicitacoes } from "@/lib/solicitacoes/store";
 import { formatarValor } from "@/lib/solicitacoes/dam";
-import { formatarData, formatarDataHora, ROTULO_STATUS, TOM_STATUS } from "@/lib/solicitacoes/status";
+import { formatarData, formatarDataHora, ROTULO_TIPO, rotuloDoStatus, TOM_STATUS } from "@/lib/solicitacoes/status";
 import type { Solicitacao } from "@/types/solicitacao";
 
+/**
+ * Linha do tempo por tipo: a emissão de DAM termina no pagamento (com comprovante); a abertura de processo vai do
+ * protocolo à análise e à conclusão, sem DAM. Solicitações antigas (sem tipo) seguem o fluxo combinado anterior.
+ */
 function montarEtapas(s: Solicitacao): EtapaTimeline[] {
+  if (s.tipo === "dam") {
+    const pago = Boolean(s.dam?.pagoEm);
+    return [
+      { titulo: "DAM emitido", detalhe: formatarDataHora(s.criadaEm), estado: "feito" },
+      {
+        titulo: "Pagamento do DAM",
+        detalhe: s.dam?.pagoEm ? `Confirmado em ${formatarDataHora(s.dam.pagoEm)}` : s.dam ? `Vence em ${formatarData(s.dam.vencimento)}` : undefined,
+        estado: pago ? "feito" : "atual",
+      },
+      { titulo: "Comprovante disponível", estado: pago ? "feito" : "pendente" },
+    ];
+  }
+  if (s.tipo === "processo") {
+    return [
+      { titulo: "Processo aberto", detalhe: formatarDataHora(s.criadaEm), estado: "feito" },
+      { titulo: "Análise técnica", estado: s.status === "em_analise" ? "atual" : "feito" },
+      {
+        titulo: "Conclusão",
+        detalhe: s.status === "concluida" ? "Documento disponível" : undefined,
+        estado: s.status === "concluida" ? "feito" : "pendente",
+      },
+    ];
+  }
   const etapas: EtapaTimeline[] = [
     { titulo: "Solicitação protocolada", detalhe: formatarDataHora(s.criadaEm), estado: "feito" },
   ];
@@ -80,9 +107,9 @@ export function DetalheSolicitacao({ protocolo }: { protocolo: string }) {
         </Text>
       </div>
       <div className="mt-3 flex flex-wrap items-center gap-3">
-        <Badge tone={TOM_STATUS[solicitacao.status]}>{ROTULO_STATUS[solicitacao.status]}</Badge>
+        <Badge tone={TOM_STATUS[solicitacao.status]}>{rotuloDoStatus(solicitacao)}</Badge>
         <Text variant="small" tone="muted">
-          Protocolo {solicitacao.protocolo}
+          {solicitacao.tipo ? `${ROTULO_TIPO[solicitacao.tipo]} · ` : ""}Protocolo {solicitacao.protocolo}
         </Text>
       </div>
 
@@ -133,21 +160,24 @@ export function DetalheSolicitacao({ protocolo }: { protocolo: string }) {
 
           <section aria-labelledby="dados">
             <Text as="h2" variant="h3" id="dados">
-              Dados da solicitação
+              Dados do pedido
             </Text>
             <dl className="mt-4 flex flex-col gap-4 text-sm">
               <Dado rotulo="Requerente" valor={solicitacao.requerente} />
-              <Dado rotulo="Imóvel" valor={`${solicitacao.imovel} — ${solicitacao.bairro}`} />
+              <Dado rotulo="Serviço" valor={solicitacao.servicoNome} />
+              {solicitacao.imovel ? <Dado rotulo="Imóvel" valor={`${solicitacao.imovel} — ${solicitacao.bairro}`} /> : null}
               {solicitacao.area ? <Dado rotulo="Área da intervenção" valor={`${solicitacao.area} m²`} /> : null}
               {solicitacao.descricao ? <Dado rotulo="Descrição" valor={solicitacao.descricao} /> : null}
-              <Dado
-                rotulo="Documentos anexados"
-                valor={
-                  solicitacao.documentosAnexados.length > 0
-                    ? `${solicitacao.documentosAnexados.length} documento(s)`
-                    : "Nenhum documento anexado"
-                }
-              />
+              {solicitacao.tipo !== "dam" && (
+                <Dado
+                  rotulo="Documentos anexados"
+                  valor={
+                    solicitacao.documentosAnexados.length > 0
+                      ? `${solicitacao.documentosAnexados.length} documento(s)`
+                      : "Nenhum documento anexado"
+                  }
+                />
+              )}
             </dl>
           </section>
 

@@ -1,0 +1,138 @@
+{
+  "fonte": "Textos do Portal de Serviços (IPTU Verde, /paginas/iptu-verde) e do site da Revisão do PDDU (pddu.salvador.ba.gov.br), coletados em setembro de 2026. Reorganizados em blocos para leitura (na seção de benefícios do IPTU Verde foi omitido o trecho vago sobre percentuais bastante significativos); nenhum número, percentual ou norma foi acrescentado.",
+  "paginas": [
+    {
+      "slug": "iptu-verde",
+      "nome": "IPTU Verde",
+      "resumo": "Sustentabilidade com benefícios: um programa que oferece descontos no IPTU para propriedades que adotam práticas sustentáveis.",
+      "blocos": [
+        {
+          "titulo": "O que é o IPTU Verde em Salvador?",
+          "paragrafos": [
+            "O IPTU Verde é um programa da Prefeitura de Salvador que oferece descontos progressivos no Imposto Predial e Territorial Urbano (IPTU) para proprietários que adotam práticas sustentáveis em seus imóveis. A iniciativa faz parte das políticas municipais de incentivo à sustentabilidade, contribuindo para tornar a cidade mais resiliente, moderna e ambientalmente equilibrada.",
+            "Ao estimular comportamentos que reduzem o impacto ambiental, o IPTU Verde promove uma cultura de responsabilidade socioambiental e incentiva soluções que melhoram a qualidade de vida da população."
+          ]
+        },
+        {
+          "titulo": "Quem pode participar?",
+          "itens": [
+            "Proprietários de imóveis residenciais",
+            "Comerciantes e empresários com imóveis comerciais",
+            "Condomínios que adotem soluções sustentáveis em áreas comuns",
+            "Instituições que implementem projetos de eficiência ambiental"
+          ]
+        },
+        {
+          "titulo": "Como participar",
+          "paragrafos": [
+            "A solicitação é feita diretamente junto à Prefeitura, mediante apresentação de documentação e comprovação das práticas sustentáveis adotadas.",
+            "Os formulários do programa (Anexos 01, 02 e 03) estão disponíveis para baixar logo abaixo."
+          ]
+        },
+        {
+          "titulo": "Quais benefícios o programa oferece?",
+          "paragrafos": [
+            "Os descontos podem variar conforme a quantidade e o tipo de medidas sustentáveis adotadas no imóvel. Quanto mais ações o proprietário implementar, maior pode ser o desconto no IPTU, conforme regulamentação da Prefeitura."
+          ],
+          "subtitulo": "Práticas sustentáveis que podem gerar desconto",
+          "itens": [
+            "Captação e reaproveitamento da água da chuva",
+            "Instalação de sistemas de energia solar fotovoltaica ou térmica",
+            "Uso de técnicas de eficiência energética",
+            "Construção de telhados verdes ou jardins verticais",
+            "Separação e destinação adequada de resíduos sólidos",
+            "Permeabilidade do solo para ajudar na drenagem urbana",
+            "Adoção de tecnologias ecoeficientes na construção ou reforma"
+          ]
+        },
+        {
+          "titulo": "Qual o objetivo do IPTU Verde?",
+          "paragrafos": [
+            "O programa busca transformar Salvador em uma cidade mais sustentável por meio de ações práticas no dia a dia dos moradores."
+          ],
+          "itens": [
+            "Reduzir o consumo de recursos naturais, como água e energia",
+            "Diminuir a emissão de gases poluentes e a pegada de carbono dos imóveis",
+            "Estimular construções mais eficientes e ambientalmente responsáveis",
+            "Promover áreas verdes, contribuindo para o conforto térmico e controle de enchentes",
+            "Fortalecer a cultura ambiental entre cidadãos e empresas",
+            "Criar uma cidade mais resiliente às mudanças climáticas"
+          ],
+          "fecho": "O programa se alinha às metas ambientais, climáticas e urbanísticas da cidade, sendo um instrumento importante para o desenvolvimento sustentável de Salvador."
+        },
+        {
+          "titulo": "Por que aderir ao IPTU Verde?",
+          "paragrafos": ["Além do desconto no imposto, o imóvel se torna mais valorizado e sustentável."],
+          "subtitulo": "Transforme seu imóvel em um espaço mais sustentável e econômico",
+          "itens": [
+            "Mais econômico (redução nas contas de água e luz)",
+            "Mais valorizado no mercado imobiliário",
+            "Mais confortável e eficiente energeticamente",
+            "Mais alinhado às tendências globais de sustentabilidade",
+            "Mais respeitoso com o meio ambiente e com a cidade"
+          ],
+          "fecho": "Participar é uma forma de contribuir para uma Salvador mais verde, moderna e agradável para todos."
+        }
+      ],
+      "links": [
+        {
+          "texto": "Formulário Anexo 01 - IPTU Verde",
+          "url": "https://servicos.sedur.salvador.ba.gov.br/storage/portal-servicos/formularios/1ff9533677b6823b6bceaad2f71d64c5.pdf"
+        },
+        {
+          "texto": "Formulário Anexo 02 - IPTU Verde",
+          "url": "https://servicos.sedur.salvador.ba.gov.br/storage/portal-servicos/formularios/27301da9b6aa48b0bbd203a6660403e0.pdf"
+        },
+        {
+          "texto": "Formulário Anexo 03 - IPTU Verde",
+          "url": "https://servicos.sedur.salvador.ba.gov.br/storage/portal-servicos/formularios/d9fdb3427671cc1779ecb003eb9dc810.pdf"
+        }
+      ]
+    },
+    {
+      "slug": "revisao-do-pddu",
+      "nome": "Revisão do PDDU",
+      "resumo": "O Plano Diretor de Desenvolvimento Urbano (PDDU) é a lei que orienta como Salvador cresce. A revisão é participativa e acontece em site próprio.",
+      "blocos": [
+        {
+          "titulo": "O que é o Plano Diretor?",
+          "paragrafos": [
+            "O Plano Diretor (PDDU) é a bússola da cidade. É a lei que propõe diretrizes para definir a localização de moradias, comércios e serviços; orientar a mobilidade; proteger áreas ambientais e culturais, mapear as áreas de risco e direcionar os investimentos em infraestrutura (escolas, postos de saúde, transporte, praças). O PDDU é construído junto com o cidadão. Liga a visão de futuro aos projetos do dia a dia e dá previsibilidade para quem mora e para quem empreende com responsabilidade.",
+            "Em resumo: o PDDU diz o que pode e o que não pode em cada área da cidade, e como a Prefeitura deve planejar obras e serviços para melhorar a vida de quem mora, trabalha e circula em Salvador."
+          ],
+          "subtitulo": "Para que serve?",
+          "fecho": "O PDDU orienta projetos e obras que impactam sua rotina, como melhorar calçadas e pontos de ônibus; ampliar áreas verdes; proteger encostas; incentivar moradia perto do trabalho e exigir que empreendimentos respeitem o bairro e a vizinhança. Também ajuda a Prefeitura a priorizar investimentos e torna claras as regras para empreender na cidade com responsabilidade."
+        },
+        {
+          "titulo": "O que é a LOUOS?",
+          "paragrafos": [
+            "A LOUOS é a Lei de Ordenamento do Uso e Ocupação do Solo de Salvador. Em outras palavras, é a regra que orienta como a cidade pode crescer de forma ordenada: onde pode construir, o que pode construir, de que forma, qual parâmetro urbanístico é aplicado no local e onde pode exercer determinada atividade. Ela ajuda a organizar o uso dos espaços da cidade, sempre seguindo as diretrizes previstas no Plano Diretor de Desenvolvimento Urbano (PDDU)."
+          ],
+          "subtitulo": "Para que serve?",
+          "fecho": "Basicamente, ela define as regras para o uso e ocupação do solo de Salvador — como a ocupação máxima de um imóvel em função da área do terreno, quais os afastamentos da edificação em relação as divisas de um imóvel, a altura máxima dos prédios em cada região — e também diz como o solo pode ser usado, seja para comércio, moradia ou outras atividades. Além disso, traz orientações sobre como proteger áreas com restrições ambientais e outras áreas importantes para o ordenamento da cidade de Salvador."
+        },
+        {
+          "titulo": "Como é feito?",
+          "paragrafos": [
+            "O PDDU é construído com participação social. Moradores, comerciantes, juventudes, associações e movimentos podem opinar, além dos especialistas, propor mudanças e acompanhar resultados. Assim, as decisões ficam mais transparentes e alinhadas às necessidades de cada território para que Salvador seja mais justa, segura e acolhedora."
+          ]
+        },
+        {
+          "titulo": "Por que revisar?",
+          "paragrafos": [
+            "A revisão atualiza o PDDU à realidade da cidade. É participativa e transparente: tem calendário público, materiais acessíveis e momentos de escuta. Ao final, as contribuições viram diretrizes, mapas e regras. O texto consolidado é debatido com a população e segue para a Câmara de Vereadores como projeto de lei. Revisar é preparar Salvador para os próximos anos: aproximar moradia, trabalho e serviços; melhorar calçadas e transporte; proteger áreas sensíveis; valorizar a memória afro-soteropolitana; e reduzir desigualdades entre bairros."
+          ]
+        }
+      ],
+      "links": [
+        { "texto": "Estatuto da Cidade", "url": "https://pddu.salvador.ba.gov.br/img/arquivos/estatuto-da-cidade/estatuto-da-cidade.pdf" },
+        { "texto": "PDDU 2016", "url": "https://pddu.salvador.ba.gov.br/pddu-2016" },
+        { "texto": "Código de Obras", "url": "https://pddu.salvador.ba.gov.br/img/arquivos/codigo-de-obras/codigo-de-obras.pdf" },
+        { "texto": "LOUOS 2016", "url": "https://pddu.salvador.ba.gov.br/louos-2016" },
+        { "texto": "Cartilha do PDDU", "url": "https://pddu.salvador.ba.gov.br/img/arquivos/SEDUR-PDDU-Cartilha.pdf" },
+        { "texto": "Inscrição na oficina de participação social", "url": "https://pddu.salvador.ba.gov.br/inscricao-oficina" },
+        { "texto": "Site completo da Revisão do PDDU (etapas, processo participativo, notícias e ouvidoria)", "url": "https://pddu.salvador.ba.gov.br" }
+      ]
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat, Poppins } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { VLibras } from "@/app/components/organisms/VLibras";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -27,12 +28,23 @@ export const metadata: Metadata = {
   description: "Portal de informações, serviços, legislação e desenvolvimento urbano de Salvador.",
 };
 
-// Aplica o tema salvo antes da primeira pintura, pra não piscar claro->escuro ao carregar.
+// Aplica o tema e as preferências de acessibilidade salvos antes da primeira pintura, pra página não piscar ao carregar.
 const SCRIPT_TEMA = `
 try {
   var tema = localStorage.getItem("portal-sedur:tema");
   if (!tema) tema = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   document.documentElement.setAttribute("data-theme", tema);
+} catch (e) {}
+try {
+  var p = JSON.parse(localStorage.getItem("portal-sedur:acessibilidade") || "null");
+  if (p) {
+    var h = document.documentElement;
+    if (p.texto) h.setAttribute("data-text-size", p.texto);
+    if (p.cinza) h.setAttribute("data-cinza", "1");
+    if (p.contraste) h.setAttribute("data-contraste", "alto");
+    if (p.sublinhados) h.setAttribute("data-links", "sublinhados");
+    if (p.fonteLegivel) h.setAttribute("data-fonte", "legivel");
+  }
 } catch (e) {}
 `;
 
@@ -46,7 +58,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: SCRIPT_TEMA }} />
       </head>
-      <body className="flex min-h-full flex-col font-sans">{children}</body>
+      <body className="flex min-h-full flex-col font-sans">
+        {children}
+        <VLibras />
+      </body>
     </html>
   );
 }

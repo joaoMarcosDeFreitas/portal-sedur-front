@@ -49,6 +49,11 @@ export default async function TransparenciaPage() {
           icone={<MappedIcon icone={iconeDeTransparencia("audiencias-publicas")} className="size-6" />}
         />
         <IconTile
+          href="/transparencia/carnaval"
+          rotulo="Fiscalização Carnaval 2026"
+          icone={<MappedIcon icone={iconeDeTransparencia("carnaval")} className="size-6" />}
+        />
+        <IconTile
           href="/transparencia/eiv-riv"
           rotulo="Estudos de Impacto de Vizinhança (EIV/RIV)"
           icone={<MappedIcon icone={iconeDeTransparencia("eiv-riv")} className="size-6" />}

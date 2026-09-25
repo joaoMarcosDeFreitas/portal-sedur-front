@@ -1,0 +1,38 @@
+name: Testes
+
+# Roda a cada push e pull request: lint, tipos, testes unitários e testes de ponta a ponta
+# (o site é construído e aberto em um navegador de verdade; ver README, seção "Testes").
+on:
+  push:
+    branches: [main, desenvolvimento]
+  pull_request:
+
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+
+      # No GitHub não há Microsoft Edge instalado como na máquina do desenvolvedor: usa o Chromium do Playwright.
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+        env:
+          PW_CHANNEL: chromium
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: relatorio-playwright
+          path: playwright-report
+          retention-days: 7

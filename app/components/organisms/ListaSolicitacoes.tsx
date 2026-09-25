@@ -7,7 +7,7 @@ import { Badge } from "@/app/components/atoms/Badge";
 import { LinkButton } from "@/app/components/atoms/Button";
 import { useSessao } from "@/lib/auth/sessao";
 import { useSolicitacoes } from "@/lib/solicitacoes/store";
-import { formatarData, ROTULO_STATUS, TOM_STATUS } from "@/lib/solicitacoes/status";
+import { formatarData, ROTULO_TIPO, rotuloDoStatus, TOM_STATUS } from "@/lib/solicitacoes/status";
 
 export function ListaSolicitacoes() {
   const { hidratado } = useSessao();
@@ -37,11 +37,11 @@ export function ListaSolicitacoes() {
             <div className="min-w-0">
               <p className="font-medium text-foreground">{solicitacao.servicoNome}</p>
               <p className="mt-0.5 text-sm text-foreground-muted">
-                {solicitacao.protocolo} · {formatarData(solicitacao.criadaEm)}
+                {solicitacao.tipo ? `${ROTULO_TIPO[solicitacao.tipo]} · ` : ""}{solicitacao.protocolo} · {formatarData(solicitacao.criadaEm)}
               </p>
             </div>
             <div className="flex shrink-0 items-center gap-3">
-              <Badge tone={TOM_STATUS[solicitacao.status]}>{ROTULO_STATUS[solicitacao.status]}</Badge>
+              <Badge tone={TOM_STATUS[solicitacao.status]}>{rotuloDoStatus(solicitacao)}</Badge>
               <ChevronRight className="size-4 text-foreground-muted group-hover:text-brand" aria-hidden="true" />
             </div>
           </Link>

@@ -16,7 +16,7 @@ export function Breadcrumb({ itens }: { itens: MigalhaItem[] }) {
           return (
             <li key={`${item.rotulo}-${indice}`} className="flex items-center gap-1.5">
               {item.href && !ultimo ? (
-                <Link href={item.href} className="cursor-pointer hover:text-brand hover:underline">
+                <Link href={item.href} className="toque cursor-pointer hover:text-brand hover:underline">
                   {item.rotulo}
                 </Link>
               ) : (

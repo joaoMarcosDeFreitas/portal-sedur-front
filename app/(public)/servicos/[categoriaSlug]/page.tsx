@@ -12,6 +12,9 @@ import {
   slugDaCategoria,
 } from "@/lib/data/servicos";
 
+// Só existem os endereços listados abaixo: qualquer outro é 404 já no servidor (página completa, sem depender de JavaScript).
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const categorias = await getCategorias();
   return categorias.map((categoria) => ({ categoriaSlug: slugDaCategoria(categoria) }));

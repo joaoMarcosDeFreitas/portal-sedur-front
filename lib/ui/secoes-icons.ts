@@ -11,10 +11,13 @@ import {
   Footprints,
   HardHat,
   KeyRound,
+  Leaf,
   Lightbulb,
+  Map as MapaIcone,
   Mic,
   Network,
   Paintbrush,
+  PartyPopper,
   ShieldPlus,
   Target,
   TrainFront,
@@ -35,6 +38,7 @@ const ICONE_TRANSPARENCIA: Record<string, LucideIcon> = {
   "acoes-fiscais-covid": ShieldPlus,
   "audiencias-publicas": Mic,
   "eiv-riv": FileStack,
+  carnaval: PartyPopper,
 };
 
 export function iconeDeTransparencia(chave: string): LucideIcon {
@@ -49,6 +53,8 @@ const ICONE_PROJETO: Record<string, LucideIcon> = {
   tul: TrainFront,
   revitalizar: Paintbrush,
   pidi: Lightbulb,
+  "iptu-verde": Leaf,
+  "revisao-do-pddu": MapaIcone,
 };
 
 export function iconeDeProjeto(slug: string): LucideIcon {

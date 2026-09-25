@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { NaoEncontrado } from "@/app/components/organisms/NaoEncontrado";
 import { Container } from "@/app/components/atoms/Container";
 import { Text } from "@/app/components/atoms/Text";
 import { Breadcrumb } from "@/app/components/molecules/Breadcrumb";
@@ -17,14 +17,16 @@ async function achar(idSecao: string, idSub: string) {
 export async function generateMetadata(props: PageProps<"/legislacao/[secao]/[sub]">): Promise<Metadata> {
   const { secao: idSecao, sub: idSub } = await props.params;
   const achado = await achar(idSecao, idSub);
-  return achado ? { title: `${achado.sub.nome} — ${achado.secao.nome}`, description: `${achado.secao.nome}: ${achado.sub.nome}.` } : {};
+  return achado ? { title: `${achado.sub.nome} — ${achado.secao.nome}`, description: `${achado.secao.nome}: ${achado.sub.nome}.` } : { title: "Página não encontrada", robots: { index: false } };
 }
 
 /** Lista de documentos de um subtipo (ex.: CNLU › Comunicados). */
 export default async function SubsecaoPage(props: PageProps<"/legislacao/[secao]/[sub]">) {
   const [{ secao: idSecao, sub: idSub }, busca] = await Promise.all([props.params, props.searchParams]);
   const achado = await achar(idSecao, idSub);
-  if (!achado) notFound();
+  // Sem notFound(): esta página lê os filtros da URL (renderiza a cada visita) e, nesse caso, o Next entrega a 404
+  // como esqueleto vazio que só se completa com JavaScript. Mostrando a tela aqui, ela já vem pronta do servidor.
+  if (!achado) return <NaoEncontrado />;
 
   const { secao, sub } = achado;
   const q = um(busca.q).trim();

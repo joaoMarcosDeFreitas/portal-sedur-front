@@ -44,7 +44,7 @@ export default async function EivRivPage() {
                   .join(" · ")}
               </p>
               <details className="group mt-3">
-                <summary className="inline-flex cursor-pointer items-center gap-2 text-sm font-medium text-brand hover:underline">
+                <summary className="toque cursor-pointer gap-2 text-sm font-medium text-brand hover:underline">
                   Ver {processo.arquivos.length} documentos
                 </summary>
                 <ul className="mt-3 flex flex-col gap-1.5 text-sm">

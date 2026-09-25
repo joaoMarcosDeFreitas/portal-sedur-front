@@ -10,6 +10,9 @@ import {
 import { paraParagrafo } from "@/lib/normalize/servico";
 import { limparTexto } from "@/lib/normalize/texto";
 
+// Só existem os endereços listados abaixo: qualquer outro é 404 já no servidor (página completa, sem depender de JavaScript).
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const servicos = await getTodosOsServicos();
   return servicos.map((servico) => ({

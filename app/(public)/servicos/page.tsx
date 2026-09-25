@@ -11,11 +11,12 @@ export const metadata: Metadata = {
 };
 
 const RECURSOS = [
+  { rotulo: "Agendamento de atendimento", descricao: "Marque o atendimento presencial na SEDUR.", href: "/agendamento" },
   { rotulo: "Consultas", descricao: "Alvarás, autos de infração e atividades permitidas.", href: "/consultas" },
   { rotulo: "Formulários", descricao: "Anexos e modelos de documentos em PDF.", href: "/formularios" },
   { rotulo: "Serviços dispensados de licença", descricao: "Obras simples que não precisam de licença.", href: "/servicos/dispensados-de-licenca" },
   { rotulo: "Geoserviços", descricao: "Dados geoespaciais oficiais da cidade.", href: "/geoservicos" },
-  { rotulo: "Sistemas parceiros", descricao: "Agendamento, consulta prévia e outros sistemas.", href: "/sistemas-parceiros" },
+  { rotulo: "Sistemas parceiros", descricao: "Consulta prévia, revisão do PDDU e outros sistemas.", href: "/sistemas-parceiros" },
   { rotulo: "Canais de atendimento", descricao: "WhatsApp, e-mail, atendimento presencial.", href: "/canais-de-atendimento" },
 ];
 

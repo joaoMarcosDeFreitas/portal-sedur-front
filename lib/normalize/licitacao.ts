@@ -34,6 +34,18 @@ export function chaveDoProcesso(titulo: string, modalidade: Modalidade): string 
   return `${modalidade} ${Number(numero[1])}/${numero[2]}`;
 }
 
+/**
+ * Palavras que o portal antigo entrega partidas por um espaço indevido. É uma lista fechada, conferida
+ * uma a uma nos dados (não uma regra geral, que estragaria "A presente" ou "O aviso").
+ */
+const PALAVRAS_PARTIDAS: [RegExp, string][] = [
+  [/\bC ontrata([çc][ãa]o)\b/g, "Contrata$1"],
+  [/\bnecessi dade\b/g, "necessidade"],
+  [/\bM unicípio\b/g, "Município"],
+  [/\bS alvador\b/g, "Salvador"],
+  [/\bn o Edital\b/g, "no Edital"],
+];
+
 const SIGLAS = new Set(["SEDUR", "RSCC", "SAAS", "PDDU", "TVL", "SMS", "LOUOS", "PE", "II", "III", "IV"]);
 
 /**
@@ -41,12 +53,13 @@ const SIGLAS = new Set(["SEDUR", "RSCC", "SAAS", "PDDU", "TVL", "SMS", "LOUOS", 
  * frase, preservando siglas e nomes próprios conhecidos. Textos que já têm minúsculas ficam como estão.
  */
 export function descricaoLegivel(texto: string): string {
-  const limpo = texto
+  let limpo = texto
     .replace(/\bC ONFORME\b/g, "CONFORME")
     .replace(/\s+([,.;:)])/g, "$1")
     .replace(/\(\s+/g, "(")
     .replace(/\s+/g, " ")
     .trim();
+  for (const [padrao, correcao] of PALAVRAS_PARTIDAS) limpo = limpo.replace(padrao, correcao);
   if (limpo !== limpo.toUpperCase()) return limpo;
 
   let inicioDeFrase = true;

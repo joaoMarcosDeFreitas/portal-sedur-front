@@ -136,9 +136,59 @@
   --font-display: var(--font-valley-sans);
 }
 
-/* "Aumentar texto" (UtilityBar): como o Tailwind usa rem, escalar a fonte da raiz aumenta tudo. */
+/* Tamanho do texto (barra de acessibilidade): como o Tailwind usa rem, escalar a fonte da raiz aumenta tudo. */
+html[data-text-size="pequeno"] {
+  font-size: 87.5%;
+}
+
 html[data-text-size="grande"] {
   font-size: 118.75%;
+}
+
+/* Barra de acessibilidade — as opções do portal atual. Cada uma é um atributo em html, escrito por
+   lib/acessibilidade/preferencias.ts e aplicado antes da 1ª pintura pelo script do layout. */
+
+/* Escala de cinza. */
+html[data-cinza="1"] {
+  filter: grayscale(1);
+}
+
+/* Links sublinhados. */
+html[data-links="sublinhados"] a {
+  text-decoration: underline !important;
+  text-underline-offset: 0.2em;
+}
+
+/* Fonte legível: uma sans-serif de sistema, larga e sem estilo, no lugar das fontes da identidade. */
+html[data-fonte="legivel"] body,
+html[data-fonte="legivel"] body * {
+  font-family: Verdana, Tahoma, "Segoe UI", Arial, sans-serif !important;
+}
+
+/* Alto contraste: fundo preto, texto branco e amarelo nos destaques e links, bordas brancas. Redefine os
+   mesmos tokens de cor do tema (mesma especificidade do tema escuro, e vem depois dele). */
+:root[data-contraste="alto"] {
+  --background: #000000;
+  --foreground: #ffffff;
+  --foreground-muted: #ffffff;
+  --surface: #000000;
+  --surface-muted: #1a1a1a;
+  --border: #ffffff;
+  --border-strong: #ffffff;
+  --brand: #ffe600;
+  --accent-text: #ffe600;
+  --color-success: #7dffb0;
+  --color-warning: #ffd60a;
+  --color-danger: #ff9a9a;
+}
+
+/* No alto contraste o fundo é sempre preto: usa a logo clara, qualquer que seja o tema escolhido. */
+html[data-contraste="alto"] aside img[src*="sedur-logo-escura"] {
+  display: none;
+}
+
+html[data-contraste="alto"] aside img[src*="sedur-logo-clara"] {
+  display: block;
 }
 
 body {
@@ -168,4 +218,12 @@ main:focus {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Alvo de toque confortável para links e botões de texto (WCAG 2.5.8 pede ao menos 24px; usamos 32px):
+   sem isso, um link de uma linha tem ~20px de altura e é difícil de acertar no celular. */
+@utility toque {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
 }

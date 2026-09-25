@@ -37,7 +37,7 @@ export default async function AudienciasPage() {
                   href={audiencia.arquivo}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-3 inline-flex cursor-pointer items-center gap-2 text-sm font-medium text-brand hover:underline"
+                  className="toque mt-3 cursor-pointer gap-2 text-sm font-medium text-brand hover:underline"
                 >
                   <Download className="size-4" aria-hidden="true" /> Baixar edital
                 </a>

@@ -111,7 +111,7 @@ export function LicitacoesLista({ entradas }: { entradas: EntradaLicitacao[] }) 
                         href={documento.url}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex cursor-pointer items-center gap-2 text-brand hover:underline"
+                        className="toque cursor-pointer gap-2 text-brand hover:underline"
                       >
                         <Download className="size-4 shrink-0" aria-hidden="true" />
                         {entrada.documentos.length > 1 ? documento.titulo : "Baixar edital"}

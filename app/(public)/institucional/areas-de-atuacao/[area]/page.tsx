@@ -9,6 +9,9 @@ import { Breadcrumb } from "@/app/components/molecules/Breadcrumb";
 import { getAreasDeAtuacao } from "@/lib/data/institucional";
 import { slugDaCategoria } from "@/lib/data/servicos";
 
+// Só existem os endereços listados abaixo: qualquer outro é 404 já no servidor (página completa, sem depender de JavaScript).
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const { areas } = await getAreasDeAtuacao();
   return areas.map((area) => ({ area: area.slug }));
@@ -57,7 +60,7 @@ export default async function AreaPage(props: PageProps<"/institucional/areas-de
         {area.categoria && (
           <Link
             href={`/servicos/${slugDaCategoria({ id: "", nome: area.categoria })}`}
-            className="mt-8 inline-flex cursor-pointer items-center gap-1.5 font-medium text-brand hover:underline"
+            className="toque mt-8 cursor-pointer gap-1.5 font-medium text-brand hover:underline"
           >
             Ver serviços desta área <ArrowRight className="size-4" aria-hidden="true" />
           </Link>

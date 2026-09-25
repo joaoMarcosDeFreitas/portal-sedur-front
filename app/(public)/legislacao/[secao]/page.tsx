@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import { NaoEncontrado } from "@/app/components/organisms/NaoEncontrado";
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import { Container } from "@/app/components/atoms/Container";
 import { Text } from "@/app/components/atoms/Text";
 import { LegislacaoIcon } from "@/app/components/atoms/LegislacaoIcon";
@@ -14,7 +14,7 @@ const um = (valor: string | string[] | undefined) => (Array.isArray(valor) ? val
 export async function generateMetadata(props: PageProps<"/legislacao/[secao]">): Promise<Metadata> {
   const { secao: id } = await props.params;
   const secao = (await getResumoSecoes()).find((s) => s.id === id);
-  return secao ? { title: `${secao.nome} — Legislação`, description: `Normas do tipo ${secao.nome}.` } : {};
+  return secao ? { title: `${secao.nome} — Legislação`, description: `Normas do tipo ${secao.nome}.` } : { title: "Página não encontrada", robots: { index: false } };
 }
 
 /**
@@ -25,7 +25,9 @@ export default async function SecaoPage(props: PageProps<"/legislacao/[secao]">)
   const [{ secao: id }, busca] = await Promise.all([props.params, props.searchParams]);
   const secoes = await getResumoSecoes();
   const secao = secoes.find((s) => s.id === id);
-  if (!secao) notFound();
+  // Sem notFound(): esta página lê os filtros da URL (renderiza a cada visita) e, nesse caso, o Next entrega a 404
+  // como esqueleto vazio que só se completa com JavaScript. Mostrando a tela aqui, ela já vem pronta do servidor.
+  if (!secao) return <NaoEncontrado />;
 
   const verTodos = um(busca.todos) === "1";
   const q = um(busca.q).trim();
@@ -53,7 +55,7 @@ export default async function SecaoPage(props: PageProps<"/legislacao/[secao]">)
         </div>
         <Link
           href={`/legislacao/${secao.id}?todos=1`}
-          className="mt-8 inline-block cursor-pointer text-sm font-medium text-brand hover:underline"
+          className="toque mt-8 cursor-pointer text-sm font-medium text-brand hover:underline"
         >
           Ver todos os documentos de {secao.nome}
         </Link>

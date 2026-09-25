@@ -102,3 +102,21 @@ export interface FormulariosData {
   coletado_em: string;
   formularios: Formulario[];
 }
+
+/** Um trecho de página informativa: título, texto, lista de itens e fecho. Tudo é opcional, menos o título. */
+export interface BlocoDePagina {
+  titulo: string;
+  paragrafos?: string[];
+  subtitulo?: string;
+  itens?: string[];
+  fecho?: string;
+}
+
+/** Página com conteúdo estruturado (ex.: IPTU Verde, Revisão do PDDU), de `data/paginas-informativas.json`. */
+export interface PaginaInformativa {
+  slug: string;
+  nome: string;
+  resumo: string;
+  blocos: BlocoDePagina[];
+  links: { texto: string; url: string }[];
+}

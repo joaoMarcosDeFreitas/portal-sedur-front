@@ -1,3 +1,10 @@
+/**
+ * O que a pessoa pediu, conforme os botões reais das fichas do portal atual:
+ * "dam" = Emissão de DAM (gera e paga a guia; termina no pagamento) e "processo" = Abrir processo (protocolo e
+ * análise, sem DAM). Solicitações antigas guardadas no navegador não têm `tipo` (fluxo combinado anterior).
+ */
+export type TipoSolicitacao = "dam" | "processo";
+
 export type StatusSolicitacao = "aguardando_pagamento" | "em_analise" | "concluida";
 
 export interface Dam {
@@ -15,6 +22,7 @@ export interface EventoHistorico {
 
 export interface Solicitacao {
   protocolo: string;
+  tipo?: TipoSolicitacao;
   servicoId: string;
   servicoNome: string;
   categoria: string;

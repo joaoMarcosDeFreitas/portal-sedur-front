@@ -18,7 +18,7 @@ export function TopBar({ aoAbrirMenu, menuAberto }: TopBarProps) {
 
   return (
     <div>
-      <div className="flex items-center gap-4 px-4 py-4 sm:px-6 lg:px-8">
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-3 px-4 py-4 sm:flex-nowrap sm:px-6 lg:px-8">
         <button
           type="button"
           onClick={aoAbrirMenu}
@@ -30,12 +30,12 @@ export function TopBar({ aoAbrirMenu, menuAberto }: TopBarProps) {
           <Menu className="size-5" aria-hidden="true" />
         </button>
 
-        <div className="flex-1">
+        <div className="order-last w-full sm:order-none sm:w-auto sm:flex-1">
           <SearchBar />
         </div>
 
         {hidratado && usuario ? (
-          <div className="flex shrink-0 items-center gap-2">
+          <div className="ml-auto flex shrink-0 items-center gap-2 sm:ml-0">
             <Link href="/minhas-solicitacoes" className={BOTAO_CONTA}>
               <UserRound className="size-4" aria-hidden="true" />
               <span className="max-w-32 truncate">{usuario.nome.split(" ")[0]}</span>
@@ -51,7 +51,7 @@ export function TopBar({ aoAbrirMenu, menuAberto }: TopBarProps) {
             </button>
           </div>
         ) : (
-          <Link href="/login" className={BOTAO_CONTA}>
+          <Link href="/login" className={`${BOTAO_CONTA} ml-auto sm:ml-0`}>
             <LogIn className="size-4" aria-hidden="true" />
             Entrar
           </Link>
