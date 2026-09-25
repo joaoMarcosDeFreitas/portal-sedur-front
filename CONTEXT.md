@@ -7,6 +7,38 @@
 > Mantenha-o organizado por seções (não cronológico) e resuma — não cole conversas inteiras aqui.
 > O plano completo aprovado está em `C:\Users\joaom\.claude\plans\quizzical-crafting-simon.md`.
 
+## ONDE PARAMOS (atualizado em 25/09/2026) — leia primeiro
+
+**Estado**: o sistema está **pronto para apresentar** (plano concluído; 120 testes unitários + 577 e2e verdes; ver seções
+"Fidelidade à realidade" e "Testes automatizados"). O usuário vai subir na Vercel e mandar o link ao chefe (apresentação
+hoje/segunda). **Nada disso foi commitado por mim** — ele faz o git.
+
+**O que o usuário vai fazer agora (não fazer por ele):**
+1. **Testar tudo à mão**, no Vivaldi (computador) e no celular, seguindo o passo a passo que montei na conversa (16 blocos: home,
+   menu/busca, tema e acessibilidade, fichas, DAM/processo, consultas, transparência, legislação/notícias/licitações/formulários,
+   institucional, agendamento, canais/parceiros, erros, teclado, celular, como anotar). **O passo a passo NÃO foi salvo em arquivo**
+   (só está no histórico da conversa); se ele pedir de novo, refazer com os números de teste: CGAs `90147`, `69584`, `68802`, `49091`,
+   `92660`; autos `091135` (Regularizado) e `003051` (Multa aplicada); solicitação SEDUR/2026/29505; alvará `2022-0169`; serviços de
+   teste: Alteração de Razão Social (só DAM, id 6876), Autorização de Poda (só processo, 7053), AOP de Parâmetros Urbanísticos (os dois,
+   1354), Defesa de Auto de Infração (nenhum, 7004), Habite-se (link interno para Geolocalização, 632).
+2. **Trazer os apontamentos/correções** do que achar (formato pedido: onde, o que houve/esperado, dispositivo+navegador+tema,
+   print, se bloqueia a apresentação). **Registrar na seção "Correções e polimento"** e só então corrigir.
+3. **Ordem combinada:** testes automatizados (**feito**) → **polimento/correções (PRÓXIMO, depende dos apontamentos)** → hospedagem
+   (Vercel, que ele mesmo faz; nenhuma alteração de código era necessária).
+
+**Último item que eu estava fazendo (interrompido a pedido dele):** o documento de **Requisitos de Experiência do Usuário**,
+arquivo **`docs/requisitos-de-experiencia-do-usuario.md`** (v1.0, 25/09/2026; 12 seções: escopo, diagnóstico do portal atual,
+perfis, princípios, requisitos por área com código/prioridade/situação/verificação, jornadas com critérios de aceite, padrões de
+interface, métricas, validação com usuários, limites e riscos, rastreabilidade, glossário). **Já está escrito no disco, mas o
+usuário ainda NÃO leu nem aprovou** — ele disse que fará isso depois. Pendências conhecidas do documento: (a) a numeração das seções
+pula de 5.9 para 5.11 (falta o 5.10) — renumerar; (b) os perfis são **hipóteses** (não houve pesquisa com usuários); (c) as métricas de
+usuário e desempenho estão como "não medidas"; (d) requisitos marcados **Pendente**: BUS-06 (sinônimos na busca), BUS-07 (página de
+resultados), SRV-10 (siglas CLE/nomes genéricos), FLX-10 (integração real), CON-07 (resultados reais), CNT-06 (texto das 612 notícias),
+ACE-10 (leitor de tela real), MOB-08 (aparelhos reais/Firefox/Safari), DES-05 (Lighthouse). Ele pode querer o documento em Word/página
+para mostrar ao chefe — **oferecer**, sem fazer antes de pedir.
+
+**Não puxar sozinho:** git/commit, teste com NVDA/zoom, hospedagem (antes do polimento).
+
 ## Forma de trabalho do usuário
 
 O usuário às vezes edita arquivos do projeto **diretamente, por fora do Claude Code**, pra ajustes
