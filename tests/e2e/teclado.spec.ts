@@ -75,8 +75,8 @@ test.describe("teclado e leitor de tela", () => {
     test("acha o conteúdo novo: agendamento, IPTU Verde, PDDU e Carnaval", async ({ page }) => {
       const esperados: [string, string][] = [
         ["agendamento", "/agendamento"],
-        ["iptu verde", "/institucional/projetos/iptu-verde"],
-        ["revisão do pddu", "/institucional/projetos/revisao-do-pddu"],
+        ["iptu verde", "/projetos/iptu-verde"],
+        ["revisão do pddu", "/projetos/revisao-do-pddu"],
         ["fiscalização carnaval", "/transparencia/carnaval"],
       ];
       for (const [termo, destino] of esperados) {

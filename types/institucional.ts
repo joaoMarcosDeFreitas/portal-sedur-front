@@ -120,3 +120,27 @@ export interface PaginaInformativa {
   blocos: BlocoDePagina[];
   links: { texto: string; url: string }[];
 }
+
+/** Trecho de texto de uma página coletada do site: pode ser negrito, itálico e/ou link. */
+export interface TrechoDeTexto {
+  texto: string;
+  negrito?: boolean;
+  italico?: boolean;
+  href?: string;
+  /** O link aponta para algo que já não existe no portal atual (404): aparece só como texto. */
+  indisponivel?: boolean;
+}
+
+/** Bloco de conteúdo de `data/projetos-conteudo.json` (o texto dos projetos, com a estrutura do site atual). */
+export type BlocoRico =
+  | { tipo: "paragrafo"; runs: TrechoDeTexto[] }
+  | { tipo: "titulo"; runs: TrechoDeTexto[] }
+  | { tipo: "lista"; ordenada: boolean; itens: TrechoDeTexto[][] }
+  | { tipo: "tabela"; cabecalho: string[]; linhas: string[][] }
+  | { tipo: "imagem"; src: string; alt: string; largura?: number; larguraReal: number; alturaReal: number; href?: string };
+
+export interface ProjetoConteudo {
+  slug: string;
+  url: string;
+  blocos: BlocoRico[];
+}

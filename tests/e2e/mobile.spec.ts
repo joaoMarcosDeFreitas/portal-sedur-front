@@ -53,7 +53,7 @@ for (const largura of [360, 390, 768]) {
 test.describe("celular: rótulos de ícone não quebram no meio da palavra", () => {
   test.use({ viewport: { width: 360, height: 800 }, isMobile: true });
 
-  for (const url of ["/", "/servicos", "/legislacao", "/transparencia", "/institucional", "/institucional/projetos"]) {
+  for (const url of ["/", "/servicos", "/legislacao", "/transparencia", "/institucional", "/projetos"]) {
     test(url, async ({ page }) => {
       await page.goto(url);
       const largas = await page.evaluate(() => {

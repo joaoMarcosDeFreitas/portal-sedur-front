@@ -19,7 +19,7 @@ test.describe("consultas", () => {
     await expect(page.getByText("Em aberto").first()).toBeVisible();
     await expect(page.getByText("Demonstração: os dados desta ficha são fictícios")).toBeVisible();
 
-    await page.getByRole("link", { name: "Voltar aos resultados" }).click();
+    await page.getByRole("button", { name: "Voltar", exact: true }).click();
     await expect(page.getByLabel("CGA", { exact: true })).toHaveValue("90147");
     await expect(page.locator("tbody tr")).toHaveCount(1);
   });

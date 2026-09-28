@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { ArrowLeft, Info } from "lucide-react";
+import { Info } from "lucide-react";
 import { Container } from "@/app/components/atoms/Container";
 import { Text } from "@/app/components/atoms/Text";
 import { Badge } from "@/app/components/atoms/Badge";
@@ -10,10 +9,6 @@ import { detalheDe, tomDoRisco, type ConsultaDef, type LinhaConsulta } from "@/l
 interface DetalheConsultaViewProps {
   def: ConsultaDef;
   linha: LinhaConsulta;
-  /** Caminho da consulta ("/consultas/auto-de-infracao"), para o botão de voltar. */
-  caminho: string;
-  /** Filtros e página da lista de onde a pessoa veio, para o "voltar" reabrir o mesmo resultado. */
-  busca: Record<string, string>;
   migalhas: MigalhaItem[];
 }
 
@@ -24,7 +19,7 @@ const ROTULO = "text-xs font-semibold uppercase tracking-wide text-foreground-mu
  * aparece vem da receita `detalhe` da consulta (ver `lib/data/consultas.ts`): título e selo, os
  * dados em colunas, níveis de risco, condicionantes por extenso e andamento em linha do tempo.
  */
-export function DetalheConsultaView({ def, linha, caminho, busca, migalhas }: DetalheConsultaViewProps) {
+export function DetalheConsultaView({ def, linha, migalhas }: DetalheConsultaViewProps) {
   const receita = detalheDe(def);
   const selo = receita.selo?.(linha);
   const subtitulo = receita.subtitulo?.(linha);
@@ -41,22 +36,9 @@ export function DetalheConsultaView({ def, linha, caminho, busca, migalhas }: De
     ...(receita.extras?.(linha) ?? []),
   ];
 
-  const parametros = new URLSearchParams();
-  for (const [chave, valor] of Object.entries(busca)) if (valor) parametros.set(chave, valor);
-  const texto = parametros.toString();
-  const voltarHref = texto ? `${caminho}?${texto}` : caminho;
-
   return (
     <Container className="py-12">
       <Breadcrumb itens={migalhas} />
-
-      <Link
-        href={voltarHref}
-        className="toque mt-6 cursor-pointer gap-1.5 text-sm font-medium text-brand hover:underline"
-      >
-        <ArrowLeft className="size-4" aria-hidden="true" />
-        Voltar aos resultados
-      </Link>
 
       <header className="mt-6 max-w-3xl">
         <Text as="p" variant="eyebrow" tone="accent">

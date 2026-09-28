@@ -21,7 +21,8 @@ nem consulta sistemas reais.
 | **Notícias** | 804 notícias com busca e filtro por ano |
 | **Licitações** | Editais agrupados por processo, com filtro por modalidade e ano |
 | **Transparência** | 7 painéis, Fiscalização Carnaval 2026, audiências públicas e estudos de impacto de vizinhança |
-| **Institucional** | Áreas de atuação, programas e projetos (incluindo IPTU Verde e Revisão do PDDU), dirigentes e organograma |
+| **Nossos Projetos** | Os 6 projetos do site atual (com imagens, tabelas e documentos) + IPTU Verde e Revisão do PDDU; também na home e na barra lateral |
+| **Institucional** | Áreas de atuação, dirigentes e organograma (e a porta para Nossos Projetos) |
 | **Outros** | Formulários (53), canais de atendimento, geoserviços, sistemas parceiros |
 | **Busca global** | Busca ao vivo (com teclado) em serviços, consultas, legislação, notícias e seções |
 | **Acessibilidade** | Painel com as opções do portal atual (aumentar/diminuir texto, escala de cinza, alto contraste, links sublinhados, fonte legível, reiniciar), tema claro/escuro, **VLibras**, navegação por teclado, contraste AA |

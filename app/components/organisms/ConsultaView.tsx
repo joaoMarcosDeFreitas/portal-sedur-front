@@ -89,7 +89,7 @@ export function ConsultaView({ def, valores, pagina, caminho, migalhas }: Consul
     const texto = parametrosDe(p);
     return texto ? `${caminho}?${texto}` : caminho;
   };
-  // A ficha guarda os filtros e a página na URL para o "Voltar aos resultados" reabrir a mesma lista.
+  // A ficha guarda os filtros e a página na URL: se abrirem a ficha direto, o "Voltar" reabre a mesma lista (ver lib/navegacao/voltar.ts).
   const hrefDetalhe = (id: string) => {
     const texto = parametrosDe(paginaAtual);
     return texto ? `${caminho}/${id}?${texto}` : `${caminho}/${id}`;

@@ -7,17 +7,22 @@
 > Mantenha-o organizado por seções (não cronológico) e resuma — não cole conversas inteiras aqui.
 > O plano completo aprovado está em `C:\Users\joaom\.claude\plans\quizzical-crafting-simon.md`.
 
-## ONDE PARAMOS (atualizado em 25/09/2026) — leia primeiro
+## ONDE PARAMOS (atualizado em 28/09/2026) — leia primeiro
 
-**Estado**: o sistema está **pronto para apresentar** (plano concluído; 120 testes unitários + 577 e2e verdes; ver seções
+**28/09/2026 (dia da apresentação) — o usuário mandou 2 correções, as duas FEITAS** (ver "Correções e polimento", itens 4 e 5):
+(1) **Nossos Projetos** migrado do site atual (`/projetos`, seção na home e item na barra lateral) e (2) **botão "Voltar"** em todas as
+páginas (menos a home). Falta ele **testar de novo** (o `docs/passo-a-passo-de-teste.md` foi atualizado: seções Home, Menu, Institucional e nova 15
+"Botão Voltar") e trazer novos apontamentos; hospedagem na Vercel segue sendo dele.
+
+**Estado**: o sistema está **pronto para apresentar** (plano concluído; 133 testes unitários + 643 e2e verdes em 28/09/2026 (`npm run test:all`: lint, tipos, unit e e2e; o e2e ficou em 641 + 2 corrigidos: a tabela do Revitalizar rolável precisa de `tabIndex`/`role="region"`); ver seções
 "Fidelidade à realidade" e "Testes automatizados"). O usuário vai subir na Vercel e mandar o link ao chefe (apresentação
-hoje/segunda). **Nada disso foi commitado por mim** — ele faz o git.
+hoje/segunda). Novos testes de 28/09: `tests/unit/projetos-e-voltar.test.ts` e `tests/e2e/projetos-e-voltar.spec.ts`; as 6 páginas de projeto entraram em `PAGINAS_PUBLICAS`. **Nada disso foi commitado por mim** — ele faz o git.
 
 **O que o usuário vai fazer agora (não fazer por ele):**
 1. **Testar tudo à mão**, no Vivaldi (computador) e no celular, seguindo o passo a passo que montei na conversa (16 blocos: home,
    menu/busca, tema e acessibilidade, fichas, DAM/processo, consultas, transparência, legislação/notícias/licitações/formulários,
-   institucional, agendamento, canais/parceiros, erros, teclado, celular, como anotar). **O passo a passo NÃO foi salvo em arquivo**
-   (só está no histórico da conversa); se ele pedir de novo, refazer com os números de teste: CGAs `90147`, `69584`, `68802`, `49091`,
+   institucional, agendamento, canais/parceiros, erros, teclado, celular, como anotar). **O passo a passo agora está salvo em `docs/passo-a-passo-de-teste.md`** (28/09/2026);
+   números de teste usados nele: CGAs `90147`, `69584`, `68802`, `49091`,
    `92660`; autos `091135` (Regularizado) e `003051` (Multa aplicada); solicitação SEDUR/2026/29505; alvará `2022-0169`; serviços de
    teste: Alteração de Razão Social (só DAM, id 6876), Autorização de Poda (só processo, 7053), AOP de Parâmetros Urbanísticos (os dois,
    1354), Defesa de Auto de Infração (nenhum, 7004), Habite-se (link interno para Geolocalização, 632).
@@ -239,8 +244,7 @@ erros), testes de interação em Edge headless e capturas nos temas claro/escuro
 - **/institucional — navegação por ÍCONES (mesmo padrão, pedido do usuário)**: a página tem 4 ícones —
   Áreas de atuação (`/institucional/areas-de-atuacao`: 7 ícones, usando o ícone da categoria de serviços
   correspondente; cada um abre `/institucional/areas-de-atuacao/[area]` com o texto, os tópicos e "Ver
-  serviços desta área"), Programas e projetos (`/institucional/projetos`: 6 ícones → `/institucional/projetos/[slug]`;
-  links de serviço do portal antigo viram links para a ficha; links quebrados somem), Dirigentes
+  serviços desta área"), Programas e projetos (**desde 28/09/2026 é "Nossos Projetos" em `/projetos`**, ver "Correções e polimento" item 4; a porta em Institucional continua e aponta para lá), Dirigentes
   (`/institucional/dirigentes`, avatar com iniciais, sem foto) e Estrutura organizacional
   (`/institucional/estrutura-organizacional`, organograma como árvore `OrgTree`). Mapa área→categoria/slug em
   `lib/data/institucional.ts` (`DADOS_DA_AREA`); ícones dos projetos e das 4 portas em `lib/ui/secoes-icons.ts`.
@@ -273,8 +277,8 @@ seguindo a **regra de autoridade** (Decisões, item 6): só entrou conteúdo/pá
   serviço", ex.: Habite-se → Geolocalização do Imóvel); http vira https. Conferi os 30 endereços com uma requisição
   de cabeçalho por vez, 2 s de pausa (28 ok, 2 redirecionam). Código: `resolverLinkDeFicha` (`lib/data/servicos.ts`),
   `linksDoDocumento` (`lib/normalize/servico.ts`), `LinkDeArquivo` em `ServiceFicha` (agora `async`).
-- **IPTU Verde** e **Revisão do PDDU** como páginas de conteúdo em **Institucional → Programas e projetos**
-  (`/institucional/projetos/iptu-verde` e `/revisao-do-pddu`). Conteúdo em `data/paginas-informativas.json`
+- **IPTU Verde** e **Revisão do PDDU** como páginas de conteúdo em **Nossos Projetos**
+  (`/projetos/iptu-verde` e `/projetos/revisao-do-pddu`; antes ficavam em `/institucional/projetos/…`, que redireciona). Conteúdo em `data/paginas-informativas.json`
   (blocos: título, parágrafos, subtítulo, itens, fecho — tipos `PaginaInformativa`/`BlocoDePagina`; `getProjetos`
   as junta aos 6 projetos e a página `[slug]` renderiza `blocos` quando existem). IPTU Verde ganhou "Como participar"
   e os **3 formulários Anexo 01/02/03** para baixar (a página antiga não os citava); **nenhum percentual ou lei foi
@@ -437,6 +441,29 @@ Já conhecidos (achados por mim, ainda não corrigidos):
 1. ~~Textos de licitações com palavra partida~~ — **corrigido em 25/09/2026** (`PALAVRAS_PARTIDAS`).
 2. ~~`jus` inválido no `Footer.tsx`~~ — **removido em 25/09/2026** a pedido do usuário.
 3. ~~404 de rota dinâmica em branco sem JS~~ — **resolvido em 25/09/2026** (ver "Fidelidade à realidade").
+4. ~~**"Nossos Projetos" completo** (pedido de 28/09/2026: "visite sedur.salvador.ba.gov.br… precisa incluir tudo, lá na home e na barra lateral")~~ —
+   **feito em 28/09/2026.** Coletei as 6 páginas do site atual com `scripts/coletar-projetos.mjs` (1 pedido por vez, 2 s de pausa; refazível) →
+   **`data/projetos-conteudo.json`** com o conteúdo **estruturado** (parágrafos com negrito/itálico/links no meio do texto, listas, tabela dos 13
+   bairros do Revitalizar, títulos, imagens). O texto já batia com o de `projetos.json`; o que faltava eram **imagens, tabela, passo a passo com
+   links, banner do Eu Curto Meu Passeio (que é só uma imagem que abre um PDF)**. 9 imagens em `public/projetos/` (6 ilustrações redondas + banner,
+   capa do manual da TUL e mapa da poligonal do Revitalizar). Como ficou:
+   - **Rotas**: `/projetos` (lista: 8 = 6 do site atual + IPTU Verde + Revisão do PDDU, os 2 últimos com ícone porque não têm ilustração) e
+     `/projetos/[slug]`; `next.config.ts` redireciona `/institucional/projetos[/slug]` → `/projetos[/slug]`. Migalha "Nossos Projetos".
+   - **Barra lateral**: novo item "Nossos Projetos" (entre Transparência e Institucional). **Home**: seção "Nossos Projetos" (8 tiles + "Ver todos"),
+     "lisa" (sem fundo/borda), entre Categorias e Notícias. Institucional continua com 4 portas (a dos projetos aponta para `/projetos`).
+   - **Código**: `getProjetos` (`lib/data/institucional.ts`) devolve `ProjetoPronto` com `imagem`, `conteudo` (blocos prontos), `blocos` (páginas
+     informativas) — `resolverTrecho` resolve links: `.../servico/6992` → ficha daqui; `.../categoria-atendimento/370` → `/servicos/desenvolvimento-economico`;
+     raiz do Portal de Serviços → `/servicos`; **os 2 links mortos do Revitalizar (DAM idCategoria=387 e processo 7000, 404 também no site real) viram só texto
+     com "(link indisponível no portal atual)"**. Componentes `ProjetoTile` (ilustração redonda com fundo branco fixo) e `BlocosDoProjeto`
+     (tabela dentro de `relative overflow-x-auto`; imagens com `next/image` usando `larguraReal`/`alturaReal`). Tipos `BlocoRico`/`TrechoDeTexto` em `types/institucional.ts`.
+   - Não inventei nada: o passo a passo do Revitalizar cita valor "R$16,71" e "72 horas" **porque está no site atual**.
+5. ~~**Botão "Voltar"** (pedido de 28/09/2026: "sempre que abrir uma página ou item de uma página deve ter um botão voltar")~~ — **feito em 28/09/2026.**
+   `BotaoVoltar` (client) é renderizado **uma vez, no `PortalShell`** (público e área logada), no topo do `<main>` e antes de trilha/título; **some só na home**.
+   Regra (`lib/navegacao/voltar.ts`): guarda em `sessionStorage` (`portal-sedur:pilha`) as páginas visitadas na aba (com a busca da URL, então filtros
+   contam como passo); se há página anterior → `router.back()`; se a pessoa abriu a página direto (pilha de 1) → **página de cima** (`paginaDeCima`: sobe um
+   nível; `/solicitar/*` → `/servicos`; ficha de consulta/painel/Carnaval **mantém os filtros** na URL da lista). O botão local "Voltar aos resultados" de
+   `DetalheConsultaView` **foi removido** (props `caminho`/`busca` e leitura de `searchParams` nas 3 páginas de detalhe saíram junto). "Voltar aos tipos de norma"
+   (`/legislacao?q=`) permanece. Limitação conhecida: se a pessoa voltar por um link "novo" para a página que acabou de deixar, a pilha entende como "voltou".
 
 ## Estado atual do código (Fase 0 + base do layout)
 

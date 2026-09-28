@@ -15,6 +15,7 @@ import {
   Scale,
   SearchCheck,
   Eye,
+  FolderKanban,
   type LucideIcon,
 } from "lucide-react";
 
@@ -25,6 +26,7 @@ const NAV: { rotulo: string; href: string; icone: LucideIcon }[] = [
   { rotulo: "Notícias", href: "/noticias", icone: Newspaper },
   { rotulo: "Licitações", href: "/licitacoes", icone: Gavel },
   { rotulo: "Transparência", href: "/transparencia", icone: Eye },
+  { rotulo: "Nossos Projetos", href: "/projetos", icone: FolderKanban },
   { rotulo: "Institucional", href: "/institucional", icone: Landmark },
   { rotulo: "Formulários", href: "/formularios", icone: FileText },
 ];

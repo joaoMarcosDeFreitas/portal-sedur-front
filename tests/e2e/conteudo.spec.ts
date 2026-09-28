@@ -42,7 +42,7 @@ test.describe("fichas de serviço", () => {
 
 test.describe("IPTU Verde e Revisão do PDDU", () => {
   test("IPTU Verde: seções claras, 3 formulários e nada de percentual inventado", async ({ page }) => {
-    await page.goto("/institucional/projetos");
+    await page.goto("/projetos");
     await page.getByRole("link", { name: "IPTU Verde" }).click();
     await expect(page.getByRole("heading", { level: 1, name: "IPTU Verde" })).toBeVisible();
     for (const secao of ["O que é o IPTU Verde em Salvador?", "Quem pode participar?", "Como participar", "Quais benefícios o programa oferece?", "Qual o objetivo do IPTU Verde?", "Por que aderir ao IPTU Verde?"]) {
@@ -54,7 +54,7 @@ test.describe("IPTU Verde e Revisão do PDDU", () => {
   });
 
   test("Revisão do PDDU: texto, documentos e link para o site completo", async ({ page }) => {
-    await page.goto("/institucional/projetos/revisao-do-pddu");
+    await page.goto("/projetos/revisao-do-pddu");
     await expect(page.getByRole("heading", { level: 1, name: "Revisão do PDDU" })).toBeVisible();
     await expect(page.getByRole("heading", { level: 2, name: "O que é a LOUOS?" })).toBeVisible();
     await expect(page.getByRole("link", { name: /Cartilha do PDDU/ })).toBeVisible();
@@ -62,7 +62,7 @@ test.describe("IPTU Verde e Revisão do PDDU", () => {
   });
 
   test("todos os links externos abrem em nova aba e dizem isso ao leitor de tela", async ({ page }) => {
-    await page.goto("/institucional/projetos/revisao-do-pddu");
+    await page.goto("/projetos/revisao-do-pddu");
     const externos = page.locator("main a[target=_blank]");
     const total = await externos.count();
     expect(total).toBeGreaterThan(3);
@@ -73,8 +73,8 @@ test.describe("IPTU Verde e Revisão do PDDU", () => {
   });
 
   test("os 6 projetos antigos continuam e há 8 no total", async ({ page }) => {
-    await page.goto("/institucional/projetos");
-    await expect(page.locator("main a[href^='/institucional/projetos/']")).toHaveCount(8);
+    await page.goto("/projetos");
+    await expect(page.locator("main a[href^='/projetos/']")).toHaveCount(8);
     for (const nome of ["Plano de Incentivos Fiscais", "Eu Curto Meu Passeio", "Conselho Municipal Salvador", "TUL", "Revitalizar", "PIDI"]) {
       await expect(page.getByRole("link", { name: nome, exact: true })).toBeVisible();
     }
@@ -176,7 +176,7 @@ test.describe("home: acessos rápidos (o que o portal atual põe na página inic
     const destinos = await links.evaluateAll((as) => as.map((a) => (a as HTMLAnchorElement).getAttribute("href")!));
     expect(destinos).toEqual([
       "/agendamento", "/consultas", "/formularios", "/geoservicos", "/transparencia", "/canais-de-atendimento",
-      "/institucional/projetos/revisao-do-pddu", "/sistemas-parceiros",
+      "/projetos/revisao-do-pddu", "/sistemas-parceiros",
     ]);
     for (const destino of destinos) {
       const resposta = await page.request.get(destino);

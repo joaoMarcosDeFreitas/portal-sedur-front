@@ -30,8 +30,8 @@ export default async function InstitucionalPage() {
           icone={<MappedIcon icone={ICONE_INSTITUCIONAL.areas} className="size-6" />}
         />
         <IconTile
-          href="/institucional/projetos"
-          rotulo="Programas e projetos"
+          href="/projetos"
+          rotulo="Nossos Projetos"
           icone={<MappedIcon icone={ICONE_INSTITUCIONAL.projetos} className="size-6" />}
         />
         <IconTile

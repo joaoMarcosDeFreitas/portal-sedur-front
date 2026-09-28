@@ -9,7 +9,7 @@ const INEXISTENTES_COM_404 = [
   "/noticias/999999",
   "/servicos/nao-existe",
   "/servicos/ambiental/nao-existe-1",
-  "/institucional/projetos/nao-existe",
+  "/projetos/nao-existe",
   "/institucional/areas-de-atuacao/nao-existe",
   "/solicitar/6876/abrir-processo",
   "/solicitar/999999/emitir-dam",
@@ -84,7 +84,7 @@ test.describe("sem JavaScript: nunca uma página em branco", () => {
     });
   }
 
-  for (const url of ["/", "/servicos", "/servicos/ambiental/alteracao-de-razao-social-6876", "/noticias/100", "/legislacao/decretos", "/consultas/classificacao-de-risco-das-atividades", "/institucional/projetos/iptu-verde"]) {
+  for (const url of ["/", "/servicos", "/servicos/ambiental/alteracao-de-razao-social-6876", "/noticias/100", "/legislacao/decretos", "/consultas/classificacao-de-risco-das-atividades", "/projetos/iptu-verde"]) {
     test(`páginas de conteúdo já vêm prontas do servidor: ${url}`, async ({ page }) => {
       await page.goto(url);
       await expect(page.locator("h1")).toHaveCount(1);

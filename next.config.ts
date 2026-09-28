@@ -6,6 +6,13 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: __dirname,
   },
+  // "Nossos Projetos" saiu de dentro de Institucional e ganhou endereço próprio (/projetos).
+  async redirects() {
+    return [
+      { source: "/institucional/projetos", destination: "/projetos", permanent: true },
+      { source: "/institucional/projetos/:slug", destination: "/projetos/:slug", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

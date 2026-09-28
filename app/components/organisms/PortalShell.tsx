@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { Suspense, useState, type ReactNode } from "react";
 import { Sidebar } from "@/app/components/organisms/Sidebar";
 import { TopBar } from "@/app/components/organisms/TopBar";
 import { UtilityBar } from "@/app/components/organisms/UtilityBar";
+import { BotaoVoltar } from "@/app/components/organisms/BotaoVoltar";
 import { Footer } from "@/app/components/organisms/Footer";
 
 export function PortalShell({ children }: { children: ReactNode }) {
@@ -26,6 +27,10 @@ export function PortalShell({ children }: { children: ReactNode }) {
         </header>
         {/* tabIndex -1: permite receber o foco do link "Pular para o conteúdo" sem entrar na ordem de Tab. */}
         <main id="conteudo-principal" tabIndex={-1} className="flex-1">
+          {/* Suspense: o botão lê a URL (useSearchParams), o que não pode segurar a página inteira. */}
+          <Suspense fallback={null}>
+            <BotaoVoltar />
+          </Suspense>
           {children}
         </main>
         <Footer />

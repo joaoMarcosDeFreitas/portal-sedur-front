@@ -5,8 +5,10 @@ import { Text } from "@/app/components/atoms/Text";
 import { LinkButton } from "@/app/components/atoms/Button";
 import { IconTile } from "@/app/components/molecules/IconTile";
 import { CategoryListItem } from "@/app/components/molecules/CategoryListItem";
+import { ProjetoTile } from "@/app/components/molecules/ProjetoTile";
 import { NewsCard } from "@/app/components/molecules/NewsCard";
 import { getCategorias } from "@/lib/data/servicos";
+import { getProjetos } from "@/lib/data/institucional";
 import { buscarNoticias } from "@/lib/data/noticias";
 
 export const metadata: Metadata = {
@@ -18,7 +20,7 @@ export const metadata: Metadata = {
 };
 
 export default async function HomePage() {
-  const [categorias, { itens: noticias }] = await Promise.all([getCategorias(), buscarNoticias({ porPagina: 3 })]);
+  const [categorias, projetos, { itens: noticias }] = await Promise.all([getCategorias(), getProjetos(), buscarNoticias({ porPagina: 3 })]);
 
   return (
     <>
@@ -55,7 +57,7 @@ export default async function HomePage() {
             <IconTile href="/geoservicos" rotulo="Geoserviços" icone={<Layers className="size-6" />} />
             <IconTile href="/transparencia" rotulo="Transparência" icone={<Eye className="size-6" />} />
             <IconTile href="/canais-de-atendimento" rotulo="Canais de atendimento" icone={<Headset className="size-6" />} />
-            <IconTile href="/institucional/projetos/revisao-do-pddu" rotulo="Revisão do PDDU" icone={<Map className="size-6" />} />
+            <IconTile href="/projetos/revisao-do-pddu" rotulo="Revisão do PDDU" icone={<Map className="size-6" />} />
             <IconTile href="/sistemas-parceiros" rotulo="Sistemas parceiros" icone={<Share2 className="size-6" />} />
           </div>
         </Container>
@@ -76,6 +78,24 @@ export default async function HomePage() {
 
       <section>
         <Container className="py-14">
+          <div className="flex items-end justify-between gap-4">
+            <Text as="h2" variant="h2">
+              Nossos Projetos
+            </Text>
+            <LinkButton href="/projetos" variant="ghost" size="sm">
+              Ver todos
+            </LinkButton>
+          </div>
+          <div className="mt-6 flex flex-wrap gap-2">
+            {projetos.map((projeto) => (
+              <ProjetoTile key={projeto.slug} slug={projeto.slug} nome={projeto.nome} imagem={projeto.imagem} />
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section>
+        <Container className="pb-14">
           <div className="flex items-end justify-between gap-4">
             <Text as="h2" variant="h2">
               Notícias

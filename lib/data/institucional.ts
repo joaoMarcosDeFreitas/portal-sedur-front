@@ -3,6 +3,7 @@ import dirigentesRaw from "@/data/dirigentes.json";
 import institucionalRaw from "@/data/institucional.json";
 import organogramaRaw from "@/data/organograma.json";
 import projetosRaw from "@/data/projetos.json";
+import projetosConteudoRaw from "@/data/projetos-conteudo.json";
 import type {
   DirigentesData,
   InstitucionalData,
@@ -10,9 +11,12 @@ import type {
   PaginaInformativa,
   Projeto,
   BlocoDePagina,
+  BlocoRico,
+  ProjetoConteudo,
+  TrechoDeTexto,
 } from "@/types/institucional";
-import { parseAreas, parseProjeto, type AreaDeAtuacao } from "@/lib/normalize/institucional";
-import { getServicoPorId, slugDaCategoria, slugDoServico } from "@/lib/data/servicos";
+import { parseAreas, type AreaDeAtuacao } from "@/lib/normalize/institucional";
+import { getCategorias, getServicoPorId, slugDaCategoria, slugDoServico } from "@/lib/data/servicos";
 import { sleep } from "@/lib/utils/sleep";
 
 const dirigentes = dirigentesRaw as unknown as DirigentesData;
@@ -20,6 +24,7 @@ const institucional = institucionalRaw as unknown as InstitucionalData;
 const organograma = organogramaRaw as unknown as OrganogramaData;
 const paginasInformativas = (paginasRaw as unknown as { paginas: PaginaInformativa[] }).paginas;
 const projetos = projetosRaw as unknown as { fonte: string; coletado_em: string; projetos: Projeto[] };
+const projetosConteudo = projetosConteudoRaw as unknown as { fonte: string; coletado_em: string; projetos: ProjetoConteudo[] };
 
 export async function getDirigentes() {
   await sleep();
@@ -68,52 +73,105 @@ export interface LinkDoProjeto {
   interno: boolean;
 }
 
+/** Trecho de texto já com o link resolvido: `interno` = página deste portal; `indisponivel` = o destino não existe mais. */
+export interface TrechoPronto {
+  texto: string;
+  negrito?: boolean;
+  italico?: boolean;
+  href?: string;
+  interno?: boolean;
+  indisponivel?: boolean;
+}
+
+export type BlocoPronto =
+  | { tipo: "paragrafo" | "titulo"; runs: TrechoPronto[] }
+  | { tipo: "lista"; ordenada: boolean; itens: TrechoPronto[][] }
+  | { tipo: "tabela"; cabecalho: string[]; linhas: string[][] }
+  | { tipo: "imagem"; src: string; alt: string; largura?: number; larguraReal: number; alturaReal: number; href?: string };
+
 export interface ProjetoPronto {
   slug: string;
   nome: string;
-  paragrafos: string[];
-  links: LinkDoProjeto[];
-  /** Só nas páginas informativas (IPTU Verde, Revisão do PDDU): frase de abertura e conteúdo em blocos. */
+  /** Ilustração redonda do projeto no site atual (só os seis projetos originais; os demais usam ícone). */
+  imagem?: string;
+  /** Frase de abertura: nas páginas informativas (IPTU Verde, PDDU) aparece na página; nas demais só descreve. */
   resumo?: string;
+  /** Conteúdo dos seis projetos originais, com a estrutura da página do site atual (texto, lista, tabela, imagem). */
+  conteudo?: BlocoPronto[];
+  /** Páginas informativas (IPTU Verde, Revisão do PDDU): conteúdo em seções. */
   blocos?: BlocoDePagina[];
+  links: LinkDoProjeto[];
 }
 
-/** Links de serviço do portal antigo viram links para a ficha do serviço neste portal. */
-async function resolverLink(texto: string, url: string): Promise<LinkDoProjeto> {
-  const servicoId = url.match(/detalhe-servico\/(\d+)/)?.[1] ?? url.match(/servico\/(\d+)/)?.[1];
+/** As ilustrações que o site atual usa em "Nossos Projetos" (copiadas para public/projetos). */
+const IMAGEM_DO_PROJETO: Record<string, string> = {
+  "plano-de-incentivos-fiscais": "/projetos/incentivos-fiscais.jpg",
+  "eu-curto-meu-passeio": "/projetos/eu-curto-meu-passeio.jpg",
+  "conselho-municipal-salvador": "/projetos/conselho-municipal-salvador.jpg",
+  tul: "/projetos/tul.jpg",
+  revitalizar: "/projetos/revitalizar.jpg",
+  pidi: "/projetos/pidi.jpg",
+};
+
+/**
+ * Links do texto dos projetos: serviço/categoria do portal antigo viram página deste portal; o endereço
+ * raiz do Portal de Serviços vira a lista de serviços; links que já não existem (404) ficam só como texto.
+ */
+async function resolverTrecho(trecho: TrechoDeTexto): Promise<TrechoPronto> {
+  const { href, indisponivel, ...resto } = trecho;
+  if (indisponivel || !href) return indisponivel ? { ...resto, indisponivel: true } : { ...resto };
+
+  const servicoId = href.match(/servico\/(\d+)/)?.[1];
   if (servicoId) {
     const servico = await getServicoPorId(servicoId);
     if (servico) {
       const categoria = slugDaCategoria({ id: servico.categoria_id, nome: servico.categoria });
-      return { texto, url: `/servicos/${categoria}/${slugDoServico(servico)}`, interno: true };
+      return { ...resto, href: `/servicos/${categoria}/${slugDoServico(servico)}`, interno: true };
     }
   }
-  return { texto, url, interno: false };
+  const categoriaId = href.match(/categoria-atendimento\/(\d+)/)?.[1];
+  if (categoriaId) {
+    const categoria = (await getCategorias()).find((c) => c.id === categoriaId);
+    if (categoria) return { ...resto, href: `/servicos/${slugDaCategoria(categoria)}`, interno: true };
+  }
+  if (/^https:\/\/servicos\.sedur\.salvador\.ba\.gov\.br\/?$/.test(href)) return { ...resto, href: "/servicos", interno: true };
+  return { ...resto, href: href.replace(/ /g, "%20") };
 }
 
+async function prepararBloco(bloco: BlocoRico): Promise<BlocoPronto> {
+  switch (bloco.tipo) {
+    case "paragrafo":
+    case "titulo":
+      return { tipo: bloco.tipo, runs: await Promise.all(bloco.runs.map(resolverTrecho)) };
+    case "lista":
+      return { tipo: "lista", ordenada: bloco.ordenada, itens: await Promise.all(bloco.itens.map((item) => Promise.all(item.map(resolverTrecho)))) };
+    default:
+      return bloco;
+  }
+}
+
+const textoDoBloco = (bloco: BlocoRico) => (bloco.tipo === "paragrafo" ? bloco.runs.map((r) => r.texto).join("") : "");
+
 async function prepararProjeto(projeto: Projeto): Promise<ProjetoPronto> {
-  const validos = (projeto.links ?? []).filter((link) => {
-    const status = link.arquivo_status_http;
-    // Some com o que está quebrado (404 etc.); redirecionamentos (301/302) abrem normalmente.
-    return status === undefined || status === 200 || status === 301 || status === 302;
-  });
-  const links = await Promise.all(validos.map((link) => resolverLink(link.texto.trim(), link.url)));
+  const conteudo = projetosConteudo.projetos.find((c) => c.slug === projeto.slug);
+  const primeiro = conteudo?.blocos.map(textoDoBloco).find((texto) => texto.length > 40);
   return {
     slug: projeto.slug,
     nome: projeto.nome,
-    paragrafos: parseProjeto(projeto.texto, projeto.titulo_na_pagina ?? projeto.nome),
-    links: links.filter((link) => link.texto),
+    imagem: IMAGEM_DO_PROJETO[projeto.slug],
+    resumo: primeiro,
+    conteudo: conteudo ? await Promise.all(conteudo.blocos.map(prepararBloco)) : undefined,
+    links: [],
   };
 }
 
 export async function getProjetos(): Promise<ProjetoPronto[]> {
   await sleep();
   const dosProjetos = await Promise.all(projetos.projetos.map(prepararProjeto));
-  // Páginas informativas (IPTU Verde, Revisão do PDDU) aparecem junto dos programas e projetos.
+  // Páginas informativas (IPTU Verde, Revisão do PDDU) aparecem junto dos projetos.
   const informativas: ProjetoPronto[] = paginasInformativas.map((pagina) => ({
     slug: pagina.slug,
     nome: pagina.nome,
-    paragrafos: [],
     resumo: pagina.resumo,
     blocos: pagina.blocos,
     links: pagina.links.map((link) => ({ ...link, interno: false })),

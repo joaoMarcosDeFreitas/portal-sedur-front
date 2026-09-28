@@ -5,6 +5,7 @@ import { ExternalLink, FileText } from "lucide-react";
 import { Container } from "@/app/components/atoms/Container";
 import { Text } from "@/app/components/atoms/Text";
 import { Breadcrumb } from "@/app/components/molecules/Breadcrumb";
+import { BlocosDoProjeto } from "@/app/components/organisms/BlocosDoProjeto";
 import { getProjetoPorSlug, getProjetos } from "@/lib/data/institucional";
 
 // Só existem os endereços listados abaixo: qualquer outro é 404 já no servidor (página completa, sem depender de JavaScript).
@@ -15,13 +16,13 @@ export async function generateStaticParams() {
   return projetos.map((projeto) => ({ slug: projeto.slug }));
 }
 
-export async function generateMetadata(props: PageProps<"/institucional/projetos/[slug]">): Promise<Metadata> {
+export async function generateMetadata(props: PageProps<"/projetos/[slug]">): Promise<Metadata> {
   const { slug } = await props.params;
   const projeto = await getProjetoPorSlug(slug);
-  return projeto ? { title: projeto.nome, description: projeto.paragrafos[0]?.slice(0, 155) } : {};
+  return projeto ? { title: projeto.nome, description: projeto.resumo?.slice(0, 155) } : {};
 }
 
-export default async function ProjetoPage(props: PageProps<"/institucional/projetos/[slug]">) {
+export default async function ProjetoPage(props: PageProps<"/projetos/[slug]">) {
   const { slug } = await props.params;
   const projeto = await getProjetoPorSlug(slug);
   if (!projeto) notFound();
@@ -30,8 +31,7 @@ export default async function ProjetoPage(props: PageProps<"/institucional/proje
     <Container className="py-12">
       <Breadcrumb
         itens={[
-          { rotulo: "Institucional", href: "/institucional" },
-          { rotulo: "Programas e projetos", href: "/institucional/projetos" },
+          { rotulo: "Nossos Projetos", href: "/projetos" },
           { rotulo: projeto.nome },
         ]}
       />
@@ -39,7 +39,7 @@ export default async function ProjetoPage(props: PageProps<"/institucional/proje
         <Text as="h1" variant="h1">
           {projeto.nome}
         </Text>
-        {projeto.resumo && (
+        {projeto.blocos && projeto.resumo && (
           <Text className="mt-3 text-lg">{projeto.resumo}</Text>
         )}
         {projeto.blocos ? (
@@ -69,18 +69,12 @@ export default async function ProjetoPage(props: PageProps<"/institucional/proje
               </div>
             </section>
           ))
+        ) : projeto.conteudo ? (
+          <BlocosDoProjeto blocos={projeto.conteudo} />
         ) : (
-          <div className="mt-6 flex flex-col gap-4">
-            {projeto.paragrafos.length > 0 ? (
-              projeto.paragrafos.map((paragrafo, indice) => (
-                <Text key={indice} tone="muted">
-                  {paragrafo}
-                </Text>
-              ))
-            ) : (
-              <Text tone="muted">O conteúdo deste programa ainda está sendo preparado para o novo portal.</Text>
-            )}
-          </div>
+          <Text tone="muted" className="mt-6">
+            O conteúdo deste programa ainda está sendo preparado para o novo portal.
+          </Text>
         )}
 
         {projeto.links.length > 0 && (
