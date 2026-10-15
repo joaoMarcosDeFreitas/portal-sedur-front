@@ -1,4 +1,4 @@
-# Contexto do projeto — Portal SEDUR (mock para apresentação)
+# Contexto do projeto — Portal SEDUR (Versão 1.0 — finalizada)
 
 > **Regra permanente:** este arquivo é a fonte de verdade sobre o estado do projeto entre sessões.
 > Sempre que houver uma decisão relevante, uma resposta do usuário a uma pergunta em aberto, ou
@@ -9,30 +9,16 @@
 
 ## ONDE PARAMOS (atualizado em 15/10/2026) — leia primeiro
 
-**Decisão do usuário (15/10/2026): NÃO haverá teste manual.** Tudo é verificado por testes automatizados que eu executo
-(`npm run test:all`, e `npm run test:e2e:prod` contra a produção). O `docs/passo-a-passo-de-teste.md` foi apagado — não recriar nem
-sugerir teste manual.
+**Versão 1.0 FINALIZADA e publicada:** https://portal-sedur-front.vercel.app/ (Vercel, sem variáveis de ambiente). O escopo está
+completo (Fases 0–3b, "Nossos Projetos" e botão "Voltar"); não há pendências abertas.
 
-**Deploy feito pelo usuário:** https://portal-sedur-front.vercel.app/ (Vercel; sem env vars). Os e2e podem rodar contra essa URL
-(`E2E_BASE_URL`), ver "Testes automatizados".
+**Verificação (15/10/2026):** lint, tipos, 133 testes unitários e 643 e2e verdes localmente (`npm run test:all`), e os mesmos 643 e2e
+verdes contra a produção (`npm run test:e2e:prod`; usar `--workers=3`, pois com mais workers a rede gera timeouts falsos; o axe ignora
+o widget VLibras, que só existe em produção).
 
-**Estado**: plano concluído (Fases 0–3b); "Nossos Projetos" e botão "Voltar" feitos em 28/09/2026. **15/10/2026: lint + tipos + 133 unit + 643 e2e verdes
-localmente; os 643 e2e também passaram contra a Vercel** (`npm run test:e2e:prod`, usar `--workers=3`: com mais workers a rede
-gera timeouts falsos; o axe ignora o widget VLibras, que só existe em produção). Falta apenas o polimento de qualquer falha que os testes apontarem.
-**Nada foi commitado por mim** — o usuário faz o git.
-
-**Último item que eu estava fazendo (interrompido a pedido dele):** o documento de **Requisitos de Experiência do Usuário**,
-arquivo **`docs/requisitos-de-experiencia-do-usuario.md`** (v1.0, 25/09/2026; 12 seções: escopo, diagnóstico do portal atual,
-perfis, princípios, requisitos por área com código/prioridade/situação/verificação, jornadas com critérios de aceite, padrões de
-interface, métricas, validação com usuários, limites e riscos, rastreabilidade, glossário). **Já está escrito no disco, mas o
-usuário ainda NÃO leu nem aprovou** — ele disse que fará isso depois. Pendências conhecidas do documento: (a) a numeração das seções
-pula de 5.9 para 5.11 (falta o 5.10) — renumerar; (b) os perfis são **hipóteses** (não houve pesquisa com usuários); (c) as métricas de
-usuário e desempenho estão como "não medidas"; (d) requisitos marcados **Pendente**: BUS-06 (sinônimos na busca), BUS-07 (página de
-resultados), SRV-10 (siglas CLE/nomes genéricos), FLX-10 (integração real), CON-07 (resultados reais), CNT-06 (texto das 612 notícias),
-ACE-10 (leitor de tela real), MOB-08 (aparelhos reais/Firefox/Safari), DES-05 (Lighthouse). Ele pode querer o documento em Word/página
-para mostrar ao chefe — **oferecer**, sem fazer antes de pedir.
-
-**Não puxar sozinho:** git/commit, teste manual ou com NVDA/zoom.
+**Decisões do usuário que valem sempre:** a verificação é só por testes automatizados (não há teste manual, nem com NVDA/zoom — não
+sugerir); o git (commits e pushs) é dele — só commitar se pedir; o front é uma demonstração sem backend, e a troca do mock pelo backend
+real acontece apenas nas costuras de `lib/` (ver "Backend e natureza provisória do front").
 
 ## Forma de trabalho do usuário
 
@@ -137,9 +123,6 @@ pelo app ficam em `data/` na raiz do projeto (cópia).
   `*/` no meio do texto (ex.: escrever `primary-*/--color-accent-*` numa frase) fecha o
   comentário antes da hora e quebra o build (`CssSyntaxError: Unknown word`) — já aconteceu
   nesta rodada, revisar comentários longos em CSS antes de salvar.
-- Ainda **não existe** uma página `/dev/estilo` de showcase dos átomos — planejada mas não
-  construída ainda; pode ser útil antes de avançar muito mais para validar a identidade com o
-  usuário visualmente (sugestão, não bloqueante).
 
 ## Fase 1 concluída (23/09/2026): catálogo, ficha, login simulado e fluxo de solicitação
 
@@ -387,14 +370,14 @@ disse antes que diferenças de rodapé não contam — ficaram de fora: redes so
 ## Testes automatizados (25/09/2026) — CONCLUÍDO
 
 Primeiro item da ordem combinada **testes → polimento → hospedagem** (o usuário pediu essa ordem em 25/09/2026).
-**521 testes, todos verdes** (`npm run test:all` = lint + `typecheck` + unit + e2e, ~4 min):
-- **Unitários — Vitest** (`vitest.config.mts`, `tests/unit/*.test.ts`, 108 testes, ~1 s): normalizadores
+**776 testes, todos verdes** (133 unit + 643 e2e; `npm run test:all` = lint + `typecheck` + unit + e2e, ~5 min):
+- **Unitários — Vitest** (`vitest.config.mts`, `tests/unit/*.test.ts`, 133 testes, ~1 s): normalizadores
   (`servico`, `licitacao`, `legislacao`, `transparencia`, `texto`, `data`), DAM, filtros/tons/fichas das consultas,
   agendamento (horários, dias úteis, disponibilidade simulada, criar/cancelar com `localStorage` simulado),
   `createLocalStore`, e **integridade dos dados** (151 serviços/13 categorias, slugs únicos, 48 links de documento
   casam, 804 notícias, 1.079 normas, 53 formulários, IPTU Verde **sem percentual inventado**, 8 projetos).
   `NEXT_PHASE=phase-production-build` no config faz o `sleep()` não esperar.
-- **Ponta a ponta — Playwright + `@axe-core/playwright`** (`playwright.config.ts`, `tests/e2e/*.spec.ts`, 413 testes):
+- **Ponta a ponta — Playwright + `@axe-core/playwright`** (`playwright.config.ts`, `tests/e2e/*.spec.ts`, 643 testes):
   `navegacao` (42 páginas: 200, 1 `h1`, 1 `main`, título, `lang`, **sem erro de console/HTTP** + 404s), `acessibilidade`
   (axe em todas as páginas × claro/escuro × desktop/celular), `mobile` (360/390/768: sem rolagem horizontal, alvos ≥24px,
   texto ≥11,5px, rótulos de ícone sem quebrar palavra), `teclado` (pular conteúdo, foco visível, combobox da busca,
@@ -418,16 +401,14 @@ Primeiro item da ordem combinada **testes → polimento → hospedagem** (o usu�
 - **Dependências novas (devDependencies)**: `vitest`, `@playwright/test`, `@axe-core/playwright`; `@types/node` subiu de
   `^20` para `^22` (o Vitest 5 exige). O `package-lock.json` tem os binários do Linux (rolldown/Vite etc.) —
   **clone limpo com `npm ci` + lint + typecheck + unit + `next build` passou** (compatível com a Vercel).
-- `.github/workflows/testes.yml` roda lint/tipos/unit/e2e (Chromium) a cada push/PR — **ainda não rodou no GitHub**
-  (não validado lá; o usuário faz o git). Os scripts soltos do scratchpad (`axe.js`, `teclado.js`, `novos.js`…) foram
+- `.github/workflows/testes.yml` roda lint/tipos/unit/e2e (Chromium) a cada push/PR.
+  `npm run test:e2e:prod` (`playwright.prod.config.ts`) roda os mesmos e2e contra a Vercel (`E2E_BASE_URL` muda o alvo). Os scripts soltos do scratchpad (`axe.js`, `teclado.js`, `novos.js`…) foram
   **substituídos** por estes testes.
 - Ao mudar textos/rótulos de telas, ajustar o teste correspondente (usam papéis e rótulos acessíveis).
 
-## Correções e polimento (lista do usuário — em aberto)
+## Correções e polimento — concluído
 
-O usuário disse (24/09/2026) que tem **apontamentos de correção para passar depois de fechar o planejamento** e pediu
-para anotá-los aqui. Ele ainda vai enviá-los: **quando chegarem, registrar cada um abaixo** (item, onde, situação).
-Já conhecidos (achados por mim, ainda não corrigidos):
+Todos os itens abaixo foram resolvidos; não há correções em aberto.
 1. ~~Textos de licitações com palavra partida~~ — **corrigido em 25/09/2026** (`PALAVRAS_PARTIDAS`).
 2. ~~`jus` inválido no `Footer.tsx`~~ — **removido em 25/09/2026** a pedido do usuário.
 3. ~~404 de rota dinâmica em branco sem JS~~ — **resolvido em 25/09/2026** (ver "Fidelidade à realidade").
@@ -566,9 +547,9 @@ topbar e footer conferidos em tema claro e escuro.
    inevitável — sincronizar o estado do React com o atributo já aplicado no DOM por um script
    fora do React — ficou com um `eslint-disable-next-line` comentado explicando o motivo).
 
-## Próximos passos — Fase 3 (polimento) e pendências
+## Fase 3 (polimento) — concluída
 
-Numeração combinada com o usuário (os 5 passos que faltam depois da Fase 2; o logo já foi feito):
+Os 5 passos combinados depois da Fase 2 (o logo já foi feito), todos concluídos:
 
 1. **Acessibilidade (AA)** — ***CONCLUÍDO (24/09/2026)***. Medido com **axe-core** (WCAG 2.0/2.1 A+AA + best
    practices) em Edge headless: ~30 páginas públicas + fluxo logado completo (login → formulário vazio/com
@@ -681,18 +662,15 @@ Numeração combinada com o usuário (os 5 passos que faltam depois da Fase 2; o
    de demonstração, real × fictício, estrutura, decisões, limitações). Manter atualizado se algo mudar.
 5. **Páginas ocultas do portal antigo** — ***CONCLUÍDO (24/09/2026)***: o usuário mandou migrar tudo. Ver "Fase 3b".
 
-Extras/pendências fora dos 5: página `/dev/estilo` (opcional). Testes automatizados: **feitos** (ver seção própria).
+Testes automatizados: **feitos** (ver seção própria).
 
 **Git**: o usuário faz todos os commits e pushs por conta própria (última base: `e98db36`, branch
 `desenvolvimento`). **Não perguntar nem lembrar sobre commit/push.** Só commitar se ele pedir explicitamente.
 
-**Pendências do usuário para fechar a Fase 3 — estado em 24/09/2026**: prints de consultas (Alvará, DAM, Auto,
+**Decisões do usuário que fecharam a Fase 3:** prints de consultas (Alvará, DAM, Auto,
 Solicitação) → **não terá acesso, ficam fictícios** (encerrado); tela de detalhe → **feita**; 612 notícias →
 **só o texto "não foi migrado"** (encerrado); dirigentes → **confirmados corretos** (encerrado); teste NVDA/zoom
 → **não quer** (não voltar a sugerir); git → **ele faz os commits/pushes, não perguntar nem lembrar**. **IPTU Verde e Fiscalização Carnaval: o usuário mandou migrar as duas (feito, ver "Fase 3b").** Passos 2, 3, 4 e 5 concluídos.
 
-**Próximas conversas (estado em 24/09/2026)**: o plano está **concluído** (passo 5 também). O usuário vai **hospedar na
-Vercel por conta própria** (ver "Deploy na Vercel": nenhuma alteração foi necessária) e **vai testar o sistema e trazer
-os apontamentos de correção** (registrar na seção "Correções e polimento"). **Ordem pedida em 25/09/2026: testes automatizados (FEITO) → polimento (PRÓXIMO, depende dos apontamentos do
-usuário) → hospedagem.** Ao retomar uma sessão nova: ler este arquivo, esperar os apontamentos e **não** puxar git,
-NVDA nem hospedagem por conta própria.
+**Ao retomar uma sessão:** ler este arquivo. O projeto está na Versão 1.0, finalizado; só mudar algo se o usuário pedir, e
+nesse caso rodar `npm run test:all` antes de encerrar. Não puxar git nem teste manual por conta própria.

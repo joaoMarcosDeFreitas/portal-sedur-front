@@ -1,10 +1,10 @@
-# Portal SEDUR — protótipo navegável
+# Portal SEDUR — Versão 1.0
 
-Protótipo (mock, sem backend) de um **portal único** para a SEDUR — Secretaria Municipal de
+Demonstração (mock, sem backend) de um **portal único** para a SEDUR — Secretaria Municipal de
 Desenvolvimento Urbano de Salvador. Ele reúne em um só lugar o site institucional e o Portal de
 Serviços, que hoje são dois sistemas separados, com uma experiência bem mais simples de usar.
 
-Foi feito para **apresentação**: tudo funciona de ponta a ponta, mas nada é gravado em servidor
+Publicado em https://portal-sedur-front.vercel.app/. Tudo funciona de ponta a ponta, mas nada é gravado em servidor
 nem consulta sistemas reais.
 
 > Contexto completo, decisões e histórico do projeto: [`CONTEXT.md`](./CONTEXT.md).
@@ -45,6 +45,7 @@ npm run lint       # ESLint
 npm run typecheck  # checagem de tipos
 npm test           # testes unitários (ver "Testes")
 npm run test:e2e   # testes de ponta a ponta (ver "Testes")
+npm run test:e2e:prod  # os mesmos e2e contra o site publicado na Vercel
 ```
 
 ## Testes
@@ -53,9 +54,9 @@ Dois níveis de teste automatizado:
 
 | Comando | O que roda | Tempo |
 |---|---|---|
-| `npm test` | **Vitest** — 120 testes unitários em `tests/unit`: normalização de conteúdo, cálculo do DAM, filtros das consultas, agendamento, armazenamento local e integridade dos dados (contagens, slugs únicos, links das fichas, IPTU Verde sem percentual inventado) | ~1 s |
-| `npm run test:e2e` | **Playwright** — 577 testes em `tests/e2e`, num navegador de verdade: abre as ~40 páginas, o fluxo do cidadão, consultas e painéis, agendamento, teclado (busca, menu, "pular para o conteúdo"), tema/texto, **acessibilidade com axe** (claro/escuro × desktop/celular) e **layout mobile** (sem rolagem horizontal, alvos de toque, texto mínimo) | ~3 min |
-| `npm run test:all` | lint + tipos + os dois acima | ~4 min |
+| `npm test` | **Vitest** — 133 testes unitários em `tests/unit`: normalização de conteúdo, cálculo do DAM, filtros das consultas, agendamento, armazenamento local e integridade dos dados (contagens, slugs únicos, links das fichas, IPTU Verde sem percentual inventado) | ~1 s |
+| `npm run test:e2e` | **Playwright** — 643 testes em `tests/e2e`, num navegador de verdade: abre as ~40 páginas, o fluxo do cidadão, consultas e painéis, agendamento, teclado (busca, menu, "pular para o conteúdo"), tema/texto, **acessibilidade com axe** (claro/escuro × desktop/celular) e **layout mobile** (sem rolagem horizontal, alvos de toque, texto mínimo) | ~4 min |
+| `npm run test:all` | lint + tipos + os dois acima | ~5 min |
 
 O `test:e2e` faz o `next build` e sobe o site na porta 3100 sozinho (se já houver um servidor nessa porta, ele
 reaproveita). Por padrão usa o **Microsoft Edge** instalado; em outra máquina use o Chromium do Playwright:
@@ -98,7 +99,7 @@ CGAs de teste (DAM): `90147`, `69584`, `68802`, `49091`, `92660`.
   fictícios são gerados de forma determinística (mesmos valores a cada carga).
 - **Fluxo após o login**: o que acontece dentro do sistema real depois do login gov.br nunca foi coletado; as duas ações (DAM e processo) são
   simuladas a partir dos botões reais de cada ficha.
-- **Não migrado**: o texto de ~600 notícias antigas (aparece um aviso "ainda não foi migrado").
+- **Notícias antigas**: as ~600 notícias mais antigas mostram título e data, com o aviso de que o texto não foi migrado.
 - **Fora do escopo**: o "Acesso Interno" (hub de sistemas internos separados). Consulta Prévia, Salvador Ruas e
   Mapeamento seguem como links para os sistemas originais (em "Sistemas parceiros").
 
@@ -144,7 +145,7 @@ reforma-portal/    auditoria do portal atual (material de origem, não alterar)
 - Comentários em `.css` não podem conter a sequência de fechamento de comentário no meio do texto
   (quebra o build).
 
-## Limitações conhecidas
+## Observações
 
 - Os testes de ponta a ponta usam navegador Chromium (Edge/Chrome). Firefox e Safari não são testados.
 - O **VLibras** carrega um script do governo (`vlibras.gov.br`); para desligá-lo defina `NEXT_PUBLIC_VLIBRAS=off` (os testes já fazem isso).
