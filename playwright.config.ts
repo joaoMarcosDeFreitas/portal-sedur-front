@@ -5,6 +5,8 @@ import { defineConfig } from "@playwright/test";
 // em outra máquina: `PW_CHANNEL=chromium` (depois de `npx playwright install chromium`) ou `PW_CHANNEL=chrome`.
 const PORTA = 3100;
 const canal = process.env.PW_CHANNEL ?? "msedge";
+// Para testar um site já publicado (ex.: Vercel): E2E_BASE_URL=https://... npm run test:e2e:prod (não sobe servidor local).
+const urlExterna = process.env.E2E_BASE_URL;
 
 export default defineConfig({
   testDir: "tests/e2e",
@@ -16,14 +18,14 @@ export default defineConfig({
   workers: process.env.CI ? 2 : undefined,
   reporter: [["list"], ["html", { open: "never", outputFolder: "playwright-report" }]],
   use: {
-    baseURL: `http://localhost:${PORTA}`,
+    baseURL: urlExterna ?? `http://localhost:${PORTA}`,
     channel: canal === "chromium" ? undefined : canal,
     locale: "pt-BR",
     timezoneId: "America/Bahia",
     trace: "retain-on-failure",
     screenshot: "only-on-failure",
   },
-  webServer: {
+  webServer: urlExterna ? undefined : {
     command: `npm run build && npx next start -p ${PORTA}`,
     url: `http://localhost:${PORTA}`,
     // VLibras (widget externo do governo) fica desligado nos testes: não depender de serviço de fora nem misturar o

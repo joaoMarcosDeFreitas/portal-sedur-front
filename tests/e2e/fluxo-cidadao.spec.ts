@@ -166,7 +166,7 @@ test.describe("sessão simulada", () => {
     await page.goto("/login?proximo=https://exemplo-malicioso.com");
     await page.getByRole("button", { name: /Maria Souza/ }).click();
     await expect(page).not.toHaveURL(/exemplo-malicioso/);
-    await expect(page).toHaveURL(/localhost:3100/);
+    expect(new URL(page.url()).origin).toBe(new URL(test.info().project.use.baseURL!).origin);
   });
 
   test("nada é enviado a servidor: a demonstração só grava no navegador", async ({ page }) => {

@@ -7,29 +7,19 @@
 > Mantenha-o organizado por seções (não cronológico) e resuma — não cole conversas inteiras aqui.
 > O plano completo aprovado está em `C:\Users\joaom\.claude\plans\quizzical-crafting-simon.md`.
 
-## ONDE PARAMOS (atualizado em 28/09/2026) — leia primeiro
+## ONDE PARAMOS (atualizado em 15/10/2026) — leia primeiro
 
-**28/09/2026 (dia da apresentação) — o usuário mandou 2 correções, as duas FEITAS** (ver "Correções e polimento", itens 4 e 5):
-(1) **Nossos Projetos** migrado do site atual (`/projetos`, seção na home e item na barra lateral) e (2) **botão "Voltar"** em todas as
-páginas (menos a home). Falta ele **testar de novo** (o `docs/passo-a-passo-de-teste.md` foi atualizado: seções Home, Menu, Institucional e nova 15
-"Botão Voltar") e trazer novos apontamentos; hospedagem na Vercel segue sendo dele.
+**Decisão do usuário (15/10/2026): NÃO haverá teste manual.** Tudo é verificado por testes automatizados que eu executo
+(`npm run test:all`, e `npm run test:e2e:prod` contra a produção). O `docs/passo-a-passo-de-teste.md` foi apagado — não recriar nem
+sugerir teste manual.
 
-**Estado**: o sistema está **pronto para apresentar** (plano concluído; 133 testes unitários + 643 e2e verdes em 28/09/2026 (`npm run test:all`: lint, tipos, unit e e2e; o e2e ficou em 641 + 2 corrigidos: a tabela do Revitalizar rolável precisa de `tabIndex`/`role="region"`); ver seções
-"Fidelidade à realidade" e "Testes automatizados"). O usuário vai subir na Vercel e mandar o link ao chefe (apresentação
-hoje/segunda). Novos testes de 28/09: `tests/unit/projetos-e-voltar.test.ts` e `tests/e2e/projetos-e-voltar.spec.ts`; as 6 páginas de projeto entraram em `PAGINAS_PUBLICAS`. **Nada disso foi commitado por mim** — ele faz o git.
+**Deploy feito pelo usuário:** https://portal-sedur-front.vercel.app/ (Vercel; sem env vars). Os e2e podem rodar contra essa URL
+(`E2E_BASE_URL`), ver "Testes automatizados".
 
-**O que o usuário vai fazer agora (não fazer por ele):**
-1. **Testar tudo à mão**, no Vivaldi (computador) e no celular, seguindo o passo a passo que montei na conversa (16 blocos: home,
-   menu/busca, tema e acessibilidade, fichas, DAM/processo, consultas, transparência, legislação/notícias/licitações/formulários,
-   institucional, agendamento, canais/parceiros, erros, teclado, celular, como anotar). **O passo a passo agora está salvo em `docs/passo-a-passo-de-teste.md`** (28/09/2026);
-   números de teste usados nele: CGAs `90147`, `69584`, `68802`, `49091`,
-   `92660`; autos `091135` (Regularizado) e `003051` (Multa aplicada); solicitação SEDUR/2026/29505; alvará `2022-0169`; serviços de
-   teste: Alteração de Razão Social (só DAM, id 6876), Autorização de Poda (só processo, 7053), AOP de Parâmetros Urbanísticos (os dois,
-   1354), Defesa de Auto de Infração (nenhum, 7004), Habite-se (link interno para Geolocalização, 632).
-2. **Trazer os apontamentos/correções** do que achar (formato pedido: onde, o que houve/esperado, dispositivo+navegador+tema,
-   print, se bloqueia a apresentação). **Registrar na seção "Correções e polimento"** e só então corrigir.
-3. **Ordem combinada:** testes automatizados (**feito**) → **polimento/correções (PRÓXIMO, depende dos apontamentos)** → hospedagem
-   (Vercel, que ele mesmo faz; nenhuma alteração de código era necessária).
+**Estado**: plano concluído (Fases 0–3b); "Nossos Projetos" e botão "Voltar" feitos em 28/09/2026. **15/10/2026: lint + tipos + 133 unit + 643 e2e verdes
+localmente; os 643 e2e também passaram contra a Vercel** (`npm run test:e2e:prod`, usar `--workers=3`: com mais workers a rede
+gera timeouts falsos; o axe ignora o widget VLibras, que só existe em produção). Falta apenas o polimento de qualquer falha que os testes apontarem.
+**Nada foi commitado por mim** — o usuário faz o git.
 
 **Último item que eu estava fazendo (interrompido a pedido dele):** o documento de **Requisitos de Experiência do Usuário**,
 arquivo **`docs/requisitos-de-experiencia-do-usuario.md`** (v1.0, 25/09/2026; 12 seções: escopo, diagnóstico do portal atual,
@@ -42,7 +32,7 @@ resultados), SRV-10 (siglas CLE/nomes genéricos), FLX-10 (integração real), C
 ACE-10 (leitor de tela real), MOB-08 (aparelhos reais/Firefox/Safari), DES-05 (Lighthouse). Ele pode querer o documento em Word/página
 para mostrar ao chefe — **oferecer**, sem fazer antes de pedir.
 
-**Não puxar sozinho:** git/commit, teste com NVDA/zoom, hospedagem (antes do polimento).
+**Não puxar sozinho:** git/commit, teste manual ou com NVDA/zoom.
 
 ## Forma de trabalho do usuário
 
@@ -326,8 +316,8 @@ bem separado da interface.
 ## Ordem combinada (atualizada em 25/09/2026)
 
 Os **passos do plano estão concluídos** (Fases 0–3 e 3b). Em 25/09/2026 o usuário pediu esta ordem: **1º testes
-automatizados (FEITO) → 2º polimento (PRÓXIMO; parte dos apontamentos que ele trará depois de testar o sistema) → 3º
-hospedagem (Vercel, que ele mesmo faz; nenhuma alteração de código é necessária)**. Não puxar hospedagem antes do polimento.
+automatizados (FEITO) → 2º polimento (só do que os testes automatizados apontarem; sem teste manual) → 3º
+hospedagem (FEITA pelo usuário em 15/10/2026)**.
 
 ## Deploy na Vercel (24/09/2026)
 

@@ -67,7 +67,11 @@ export async function definirTema(page: Page, tema: "light" | "dark") {
 
 /** Falha se o axe (WCAG 2.0/2.1 A e AA + boas práticas) achar qualquer violação na página atual. */
 export async function semViolacoesDeAcessibilidade(page: Page) {
+  // O VLibras (widget externo do governo) só existe em produção; o que ele injeta não é código nosso.
   const resultado = await new AxeBuilder({ page })
+    .exclude("#vlibras-access-wrapper")
+    .exclude("#vlibras-popup")
+    .exclude("[vw]")
     .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "best-practice"])
     .analyze();
   const resumo = resultado.violations.map(
