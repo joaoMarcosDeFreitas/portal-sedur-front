@@ -27,6 +27,7 @@ const SECOES: ResultadoBusca[] = [
   { tipo: "secao", titulo: "Canais de atendimento", href: "/canais-de-atendimento" },
   { tipo: "secao", titulo: "Geoserviços", href: "/geoservicos" },
   { tipo: "secao", titulo: "Sistemas parceiros", href: "/sistemas-parceiros" },
+  { tipo: "secao", titulo: "Acesso interno (sistemas da rede SEDUR)", href: "/acesso-interno" },
   { tipo: "secao", titulo: "Serviços dispensados de licença", href: "/servicos/dispensados-de-licenca" },
   { tipo: "secao", titulo: "Agendamento de atendimento", href: "/agendamento" },
   { tipo: "secao", titulo: "IPTU Verde", href: "/projetos/iptu-verde" },

@@ -49,6 +49,8 @@ export const PAGINAS_PUBLICAS = [
   "/formularios",
   "/canais-de-atendimento",
   "/sistemas-parceiros",
+  "/acesso-interno",
+  "/acesso-interno/webmail",
   "/geoservicos",
   "/agendamento",
   "/login",

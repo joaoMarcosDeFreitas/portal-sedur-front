@@ -171,6 +171,7 @@ const PAGINAS_DOS_MODOS = [
   "/agendamento",
   "/institucional/estrutura-organizacional",
   "/sistemas-parceiros",
+  "/acesso-interno",
   "/login",
 ];
 

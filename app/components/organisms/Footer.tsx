@@ -4,7 +4,7 @@ import { Container } from "@/app/components/atoms/Container";
 const ATENDIMENTO = [
   { rotulo: "Canais de atendimento", href: "/canais-de-atendimento" },
   { rotulo: "Formulários", href: "/formularios" },
-  { rotulo: "Acesso interno (rede SEDUR)", href: "https://sedur.salvador.ba.gov.br/acessoremoto/" },
+  { rotulo: "Acesso interno (rede SEDUR)", href: "/acesso-interno" },
 ];
 
 export function Footer() {

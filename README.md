@@ -23,6 +23,7 @@ nem consulta sistemas reais.
 | **Transparência** | 7 painéis, Fiscalização Carnaval 2026, audiências públicas e estudos de impacto de vizinhança |
 | **Nossos Projetos** | Os 6 projetos do site atual (com imagens, tabelas e documentos) + IPTU Verde e Revisão do PDDU; também na home e na barra lateral |
 | **Institucional** | Áreas de atuação, dirigentes e organograma (e a porta para Nossos Projetos) |
+| **Acesso interno** | Os 11 sistemas internos da SEDUR (Portal Sedur, SIGS, GLPI, Revista, e-Salvador, Alfresco, SAPS, Webmail, SedurMap, BI, PDDU) como na tela original. Cada cartão abre o sistema real; os que não abriram durante a produção levam a uma página de aviso |
 | **Outros** | Formulários (53), canais de atendimento, geoserviços, sistemas parceiros |
 | **Busca global** | Busca ao vivo (com teclado) em serviços, consultas, legislação, notícias e seções |
 | **Acessibilidade** | Painel com as opções do portal atual (aumentar/diminuir texto, escala de cinza, alto contraste, links sublinhados, fonte legível, reiniciar), tema claro/escuro, **VLibras**, navegação por teclado, contraste AA |
@@ -54,8 +55,8 @@ Dois níveis de teste automatizado:
 
 | Comando | O que roda | Tempo |
 |---|---|---|
-| `npm test` | **Vitest** — 133 testes unitários em `tests/unit`: normalização de conteúdo, cálculo do DAM, filtros das consultas, agendamento, armazenamento local e integridade dos dados (contagens, slugs únicos, links das fichas, IPTU Verde sem percentual inventado) | ~1 s |
-| `npm run test:e2e` | **Playwright** — 643 testes em `tests/e2e`, num navegador de verdade: abre as ~40 páginas, o fluxo do cidadão, consultas e painéis, agendamento, teclado (busca, menu, "pular para o conteúdo"), tema/texto, **acessibilidade com axe** (claro/escuro × desktop/celular) e **layout mobile** (sem rolagem horizontal, alvos de toque, texto mínimo) | ~4 min |
+| `npm test` | **Vitest** — 137 testes unitários em `tests/unit`: normalização de conteúdo, cálculo do DAM, filtros das consultas, agendamento, armazenamento local e integridade dos dados (contagens, slugs únicos, links das fichas, IPTU Verde sem percentual inventado) | ~1 s |
+| `npm run test:e2e` | **Playwright** — 682 testes em `tests/e2e`, num navegador de verdade: abre as ~40 páginas, o fluxo do cidadão, consultas e painéis, agendamento, teclado (busca, menu, "pular para o conteúdo"), tema/texto, **acessibilidade com axe** (claro/escuro × desktop/celular) e **layout mobile** (sem rolagem horizontal, alvos de toque, texto mínimo) | ~4 min |
 | `npm run test:all` | lint + tipos + os dois acima | ~5 min |
 
 O `test:e2e` faz o `next build` e sobe o site na porta 3100 sozinho (se já houver um servidor nessa porta, ele
@@ -100,7 +101,9 @@ CGAs de teste (DAM): `90147`, `69584`, `68802`, `49091`, `92660`.
 - **Fluxo após o login**: o que acontece dentro do sistema real depois do login gov.br nunca foi coletado; as duas ações (DAM e processo) são
   simuladas a partir dos botões reais de cada ficha.
 - **Notícias antigas**: as ~600 notícias mais antigas mostram título e data, com o aviso de que o texto não foi migrado.
-- **Fora do escopo**: o "Acesso Interno" (hub de sistemas internos separados). Consulta Prévia, Salvador Ruas e
+- **Acesso interno**: a tela reproduz a original (nomes, ordem e endereços dos 11 sistemas). Os sistemas em si não fazem parte deste
+  portal: o cartão abre o endereço real, que pede usuário e senha da Rede SEDUR. Revista SEDUR, SAPS, Webmail e SedurMap não abriram
+  durante a produção e levam à página de aviso. Consulta Prévia, Salvador Ruas e
   Mapeamento seguem como links para os sistemas originais (em "Sistemas parceiros").
 
 A sessão e as solicitações ficam no `localStorage` do navegador: sobrevivem a recarregar a página

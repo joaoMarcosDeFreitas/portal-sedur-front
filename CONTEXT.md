@@ -12,8 +12,8 @@
 **Versão 1.0 FINALIZADA e publicada:** https://portal-sedur-front.vercel.app/ (Vercel, sem variáveis de ambiente). O escopo está
 completo (Fases 0–3b, "Nossos Projetos" e botão "Voltar"); não há pendências abertas.
 
-**Verificação (15/10/2026):** lint, tipos, 133 testes unitários e 643 e2e verdes localmente (`npm run test:all`), e os mesmos 643 e2e
-verdes contra a produção (`npm run test:e2e:prod`; usar `--workers=3`, pois com mais workers a rede gera timeouts falsos; o axe ignora
+**Verificação (15/10/2026):** lint, tipos, 137 testes unitários e 682 e2e verdes localmente (`npm run test:all`); 643 e2e já tinham passado
+contra a produção antes do Acesso interno (rodar `test:e2e:prod` depois do redeploy) (`npm run test:e2e:prod`; usar `--workers=3`, pois com mais workers a rede gera timeouts falsos; o axe ignora
 o widget VLibras, que só existe em produção).
 
 **Decisões do usuário que valem sempre:** a verificação é só por testes automatizados (não há teste manual, nem com NVDA/zoom — não
@@ -52,7 +52,8 @@ auditoria completa do portal real da SEDUR. Isso inclui:
   `reforma-portal/preparacao-mock/README.md` e `modelo-de-dados.md` para o mapeamento completo.
 - `reforma-portal/prints/image.png` — print do "Acesso Interno" (`/acessoremoto/`), mostrando que é
   só um hub de links para ~11 sistemas internos separados (Portal Sedur, SIGS, GLPI, Revista SEDUR,
-  e-Salvador, Alfresco, SAPS, Webmail, SedurMap, BI, PDDU) — **fora do escopo deste projeto**.
+  e-Salvador, Alfresco, SAPS, Webmail, SedurMap, BI, PDDU). **Desde 15/10/2026 a tela do hub existe aqui** (ver "Acesso interno");
+  os sistemas em si seguem fora do escopo.
 
 **Não alterar nada dentro de `reforma-portal/`** — é material de origem, só leitura. Os dados usados
 pelo app ficam em `data/` na raiz do projeto (cópia).
@@ -285,6 +286,21 @@ Portal de Serviços (banners só com imagem; um leva a 404, outro a site de empr
 todo o fluxo do Agendamento (validação, teclado nos horários, foco no comprovante, persistência, cancelamento) e axe
 0 violações em cada estado, claro/escuro, 1280 e 390px.
 
+## Acesso interno (15/10/2026)
+
+O usuário mandou um print da tela do Acesso Interno (11 cartões) e os 11 endereços. **Rota `/acesso-interno`** (cartões com ícone + nome,
+grade 2/3/4 colunas; texto explicando que é área de servidores, pede usuário/senha da Rede SEDUR e a quem pedir acesso = Coordenação de
+TI) e **`/acesso-interno/[sistema]`**, página de **aviso**. Dados em `data/acesso-interno.json` (`slug`, `nome`, `url`, `disponivel`) via
+`lib/data/acesso-interno.ts`. Regra do usuário: todo link quebrado ou que leva a "página de nada" mostra a página de aviso dizendo que,
+ao ser clicado num computador pessoal durante a produção deste site (mock), não levou a página alguma. `disponivel: true` = cartão abre o
+endereço real em nova aba; `false` = cartão leva à página de aviso (só essas têm rota; as demais dão 404, `dynamicParams = false`).
+Marcados `false` em 15/10/2026: **SedurMap** (usuário disse que está quebrado), **Revista SEDUR** (404), **SAPS** (503) e **Webmail**
+(sem resposta) — os três últimos verificados por requisição de cabeçalho a partir da máquina do usuário. BI (401, login Windows), Portal,
+SIGS, GLPI, e-Salvador, Alfresco e PDDU respondem. Para mudar a situação de um sistema basta trocar `disponivel` no JSON.
+O link do rodapé "Acesso interno (rede SEDUR)" e a busca global apontam para `/acesso-interno`. Ícones: lucide (não temos os originais).
+Testes: `tests/unit/acesso-interno.test.ts`, `tests/e2e/acesso-interno.spec.ts`; `/acesso-interno` e `/acesso-interno/webmail` em
+`PAGINAS_PUBLICAS` (estrutura, axe, mobile). **Nenhuma senha foi usada ou pedida.**
+
 ## Backend e natureza provisória do front (decisão do usuário, 24/09/2026)
 
 **Tudo neste front é provisório e sujeito a mudança.** Não há backend; não é certo que um backend novo será criado —
@@ -370,7 +386,7 @@ disse antes que diferenças de rodapé não contam — ficaram de fora: redes so
 ## Testes automatizados (25/09/2026) — CONCLUÍDO
 
 Primeiro item da ordem combinada **testes → polimento → hospedagem** (o usuário pediu essa ordem em 25/09/2026).
-**776 testes, todos verdes** (133 unit + 643 e2e; `npm run test:all` = lint + `typecheck` + unit + e2e, ~5 min):
+**819 testes, todos verdes** (137 unit + 682 e2e; `npm run test:all` = lint + `typecheck` + unit + e2e, ~5 min):
 - **Unitários — Vitest** (`vitest.config.mts`, `tests/unit/*.test.ts`, 133 testes, ~1 s): normalizadores
   (`servico`, `licitacao`, `legislacao`, `transparencia`, `texto`, `data`), DAM, filtros/tons/fichas das consultas,
   agendamento (horários, dias úteis, disponibilidade simulada, criar/cancelar com `localStorage` simulado),

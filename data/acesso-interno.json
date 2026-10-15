@@ -1,0 +1,15 @@
+{
+  "sistemas": [
+    { "slug": "portal-sedur", "nome": "Portal Sedur", "url": "https://sedur.salvador.ba.gov.br/portal/", "disponivel": true },
+    { "slug": "sigs", "nome": "SIGS", "url": "https://sigs.sedur.salvador.ba.gov.br", "disponivel": true },
+    { "slug": "glpi", "nome": "GLPI", "url": "https://chamados.sedur.salvador.ba.gov.br", "disponivel": true },
+    { "slug": "revista-sedur", "nome": "Revista SEDUR", "url": "https://sedur.salvador.ba.gov.br/revista/", "disponivel": false },
+    { "slug": "e-salvador", "nome": "e-Salvador", "url": "https://esalvador.salvador.ba.gov.br/login", "disponivel": true },
+    { "slug": "alfresco", "nome": "Alfresco", "url": "https://alfresco.sedur.salvador.ba.gov.br/share/page/", "disponivel": true },
+    { "slug": "saps", "nome": "SAPS", "url": "https://simplifica.salvador.ba.gov.br/saps/Login", "disponivel": false },
+    { "slug": "webmail", "nome": "Webmail", "url": "https://webmail.salvador.ba.gov.br/zimbra/", "disponivel": false },
+    { "slug": "sedurmap", "nome": "SedurMap", "url": "http://alfresco.sucom.ba.gov.br:8080/share/page/site/sedurmap/document-details?nodeRef=workspace://SpacesStore/2faab3a3-3ce3-40e0-b01f-8bab47c2d45c", "disponivel": false },
+    { "slug": "bi", "nome": "BI", "url": "https://bi.sedur.salvador.ba.gov.br/internal_windows_authentication/?targetId=b9b55971-f21e-48b3-9a84-c1fd7aba3014", "disponivel": true },
+    { "slug": "pddu", "nome": "PDDU", "url": "https://planodiretor.salvador.ba.gov.br/login", "disponivel": true }
+  ]
+}
