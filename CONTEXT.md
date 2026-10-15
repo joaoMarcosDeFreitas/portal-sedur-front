@@ -12,7 +12,7 @@
 **Versão 1.0 FINALIZADA e publicada:** https://portal-sedur-front.vercel.app/ (Vercel, sem variáveis de ambiente). O escopo está
 completo (Fases 0–3b, "Nossos Projetos" e botão "Voltar"); não há pendências abertas.
 
-**Verificação (15/10/2026):** lint, tipos, 137 testes unitários e 682 e2e verdes localmente (`npm run test:all`); 643 e2e já tinham passado
+**Verificação (15/10/2026):** lint, tipos, 137 testes unitários e 683 e2e verdes localmente (`npm run test:all`); 643 e2e já tinham passado
 contra a produção antes do Acesso interno (rodar `test:e2e:prod` depois do redeploy) (`npm run test:e2e:prod`; usar `--workers=3`, pois com mais workers a rede gera timeouts falsos; o axe ignora
 o widget VLibras, que só existe em produção).
 
@@ -297,7 +297,7 @@ endereço real em nova aba; `false` = cartão leva à página de aviso (só essa
 Marcados `false` em 15/10/2026: **SedurMap** (usuário disse que está quebrado), **Revista SEDUR** (404), **SAPS** (503) e **Webmail**
 (sem resposta) — os três últimos verificados por requisição de cabeçalho a partir da máquina do usuário. BI (401, login Windows), Portal,
 SIGS, GLPI, e-Salvador, Alfresco e PDDU respondem. Para mudar a situação de um sistema basta trocar `disponivel` no JSON.
-O link do rodapé "Acesso interno (rede SEDUR)" e a busca global apontam para `/acesso-interno`. Ícones: lucide (não temos os originais).
+O link do rodapé "Acesso interno (rede SEDUR)", a busca global e **um item "Acesso interno" (ícone de cadeado) no fim da barra lateral** (separado dos itens do cidadão por uma linha) apontam para `/acesso-interno`; não vai na home nem nos Acessos rápidos, que são do cidadão. Ícones: lucide (não temos os originais).
 Testes: `tests/unit/acesso-interno.test.ts`, `tests/e2e/acesso-interno.spec.ts`; `/acesso-interno` e `/acesso-interno/webmail` em
 `PAGINAS_PUBLICAS` (estrutura, axe, mobile). **Nenhuma senha foi usada ou pedida.**
 
@@ -386,7 +386,7 @@ disse antes que diferenças de rodapé não contam — ficaram de fora: redes so
 ## Testes automatizados (25/09/2026) — CONCLUÍDO
 
 Primeiro item da ordem combinada **testes → polimento → hospedagem** (o usuário pediu essa ordem em 25/09/2026).
-**819 testes, todos verdes** (137 unit + 682 e2e; `npm run test:all` = lint + `typecheck` + unit + e2e, ~5 min):
+**820 testes, todos verdes** (137 unit + 683 e2e; `npm run test:all` = lint + `typecheck` + unit + e2e, ~5 min):
 - **Unitários — Vitest** (`vitest.config.mts`, `tests/unit/*.test.ts`, 133 testes, ~1 s): normalizadores
   (`servico`, `licitacao`, `legislacao`, `transparencia`, `texto`, `data`), DAM, filtros/tons/fichas das consultas,
   agendamento (horários, dias úteis, disponibilidade simulada, criar/cancelar com `localStorage` simulado),

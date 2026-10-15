@@ -16,6 +16,7 @@ import {
   SearchCheck,
   Eye,
   FolderKanban,
+  Lock,
   type LucideIcon,
 } from "lucide-react";
 
@@ -30,6 +31,9 @@ const NAV: { rotulo: string; href: string; icone: LucideIcon }[] = [
   { rotulo: "Institucional", href: "/institucional", icone: Landmark },
   { rotulo: "Formulários", href: "/formularios", icone: FileText },
 ];
+
+// Entrada de servidores: fica no fim do menu, separada dos itens do cidadão.
+const ACESSO_INTERNO = { rotulo: "Acesso interno", href: "/acesso-interno", icone: Lock };
 
 const MINHAS_SOLICITACOES = { rotulo: "Minhas solicitações", href: "/minhas-solicitacoes", icone: ClipboardList };
 
@@ -58,6 +62,29 @@ export function Sidebar({ aberta, aoFechar }: SidebarProps) {
       document.removeEventListener("keydown", aoApertarTecla);
     };
   }, [aberta, aoFechar]);
+
+  function renderItem(item: (typeof NAV)[number]) {
+    const ativo = pathname === item.href || pathname.startsWith(`${item.href}/`);
+    const Icone = item.icone;
+    return (
+      <li key={item.href}>
+        <Link
+          href={item.href}
+          onClick={aoFechar}
+          aria-current={ativo ? "page" : undefined}
+          className={`flex cursor-pointer items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-colors ${
+            ativo
+              ? "bg-primary-600/10 text-brand"
+              : "text-foreground-muted hover:bg-surface-muted hover:text-foreground"
+          }`}
+        >
+          <Icone className="size-5" strokeWidth={1.75} aria-hidden="true" />
+          {item.rotulo}
+        </Link>
+      </li>
+    );
+
+  }
 
   return (
     <>
@@ -100,30 +127,11 @@ export function Sidebar({ aberta, aoFechar }: SidebarProps) {
           />
         </Link>
 
-        <nav aria-label="Navegação principal" className="flex-1">
+        <nav aria-label="Navegação principal" className="flex flex-1 flex-col">
           <ul className="flex flex-col gap-1">
-            {itens.map((item) => {
-              const ativo = pathname === item.href || pathname.startsWith(`${item.href}/`);
-              const Icone = item.icone;
-              return (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    onClick={aoFechar}
-                    aria-current={ativo ? "page" : undefined}
-                    className={`flex cursor-pointer items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-colors ${
-                      ativo
-                        ? "bg-primary-600/10 text-brand"
-                        : "text-foreground-muted hover:bg-surface-muted hover:text-foreground"
-                    }`}
-                  >
-                    <Icone className="size-5" strokeWidth={1.75} aria-hidden="true" />
-                    {item.rotulo}
-                  </Link>
-                </li>
-              );
-            })}
+            {itens.map(renderItem)}
           </ul>
+          <ul className="mt-6 border-t border-border pt-4">{renderItem(ACESSO_INTERNO)}</ul>
         </nav>
       </aside>
     </>

@@ -23,7 +23,7 @@ nem consulta sistemas reais.
 | **Transparência** | 7 painéis, Fiscalização Carnaval 2026, audiências públicas e estudos de impacto de vizinhança |
 | **Nossos Projetos** | Os 6 projetos do site atual (com imagens, tabelas e documentos) + IPTU Verde e Revisão do PDDU; também na home e na barra lateral |
 | **Institucional** | Áreas de atuação, dirigentes e organograma (e a porta para Nossos Projetos) |
-| **Acesso interno** | Os 11 sistemas internos da SEDUR (Portal Sedur, SIGS, GLPI, Revista, e-Salvador, Alfresco, SAPS, Webmail, SedurMap, BI, PDDU) como na tela original. Cada cartão abre o sistema real; os que não abriram durante a produção levam a uma página de aviso |
+| **Acesso interno** | Os 11 sistemas internos da SEDUR (Portal Sedur, SIGS, GLPI, Revista, e-Salvador, Alfresco, SAPS, Webmail, SedurMap, BI, PDDU) como na tela original. Fica no fim da barra lateral e no rodapé. Cada cartão abre o sistema real; os que não abriram durante a produção levam a uma página de aviso |
 | **Outros** | Formulários (53), canais de atendimento, geoserviços, sistemas parceiros |
 | **Busca global** | Busca ao vivo (com teclado) em serviços, consultas, legislação, notícias e seções |
 | **Acessibilidade** | Painel com as opções do portal atual (aumentar/diminuir texto, escala de cinza, alto contraste, links sublinhados, fonte legível, reiniciar), tema claro/escuro, **VLibras**, navegação por teclado, contraste AA |
@@ -56,7 +56,7 @@ Dois níveis de teste automatizado:
 | Comando | O que roda | Tempo |
 |---|---|---|
 | `npm test` | **Vitest** — 137 testes unitários em `tests/unit`: normalização de conteúdo, cálculo do DAM, filtros das consultas, agendamento, armazenamento local e integridade dos dados (contagens, slugs únicos, links das fichas, IPTU Verde sem percentual inventado) | ~1 s |
-| `npm run test:e2e` | **Playwright** — 682 testes em `tests/e2e`, num navegador de verdade: abre as ~40 páginas, o fluxo do cidadão, consultas e painéis, agendamento, teclado (busca, menu, "pular para o conteúdo"), tema/texto, **acessibilidade com axe** (claro/escuro × desktop/celular) e **layout mobile** (sem rolagem horizontal, alvos de toque, texto mínimo) | ~4 min |
+| `npm run test:e2e` | **Playwright** — 683 testes em `tests/e2e`, num navegador de verdade: abre as ~40 páginas, o fluxo do cidadão, consultas e painéis, agendamento, teclado (busca, menu, "pular para o conteúdo"), tema/texto, **acessibilidade com axe** (claro/escuro × desktop/celular) e **layout mobile** (sem rolagem horizontal, alvos de toque, texto mínimo) | ~4 min |
 | `npm run test:all` | lint + tipos + os dois acima | ~5 min |
 
 O `test:e2e` faz o `next build` e sobe o site na porta 3100 sozinho (se já houver um servidor nessa porta, ele

@@ -44,6 +44,16 @@ test.describe("Acesso interno", () => {
     await expect(page).toHaveURL(/\/acesso-interno$/);
   });
 
+  test("a barra lateral tem 'Acesso interno' no fim do menu, marcado na página", async ({ page }) => {
+    await page.goto("/");
+    const menu = page.getByRole("navigation", { name: "Navegação principal" });
+    const itens = menu.getByRole("link");
+    await expect(itens.last()).toHaveText("Acesso interno");
+    await itens.last().click();
+    await expect(page).toHaveURL(/\/acesso-interno$/);
+    await expect(menu.getByRole("link", { name: "Acesso interno" })).toHaveAttribute("aria-current", "page");
+  });
+
   test("a busca encontra o Acesso interno", async ({ page }) => {
     const resposta = await page.request.get("/api/busca?q=acesso interno");
     const corpo = JSON.stringify(await resposta.json());
